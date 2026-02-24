@@ -13,6 +13,7 @@
     <None Include="wwwroot\css\layout.css" />
     <None Include="wwwroot\css\reset.css" />
     <None Include="wwwroot\css\sidebar.css" />
+    <None Include="wwwroot\js\typewriter.js" />
   </ItemGroup>
 
 </Project>

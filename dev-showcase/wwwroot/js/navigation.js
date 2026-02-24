@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const contentSections = document.querySelectorAll('.content-section');
 
     const changeSection = (targetSection) => {
-        console.log(`Changing to section: ${targetSection}`);
 
         navButtons.forEach(btn => btn.classList.remove('active'));
         contentSections.forEach(section => section.classList.remove('active'));
@@ -49,8 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeProjectInfo();
     initializeImageModal();
     initializeCertificateModal();
-
-    console.log('Navigation system ready');
 });
 
 function initializeSkillsToggle() {
@@ -95,8 +92,6 @@ function initializeSkillsToggle() {
     hardSkillsBtn.addEventListener('click', (e) => { e.preventDefault(); showHardSkills(); });
     softSkillsBtn.addEventListener('click', (e) => { e.preventDefault(); showSoftSkills(); });
     vocationalStatsBtn.addEventListener('click', (e) => { e.preventDefault(); showVocationalStats(); });
-
-    console.log('Skills toggle initialized');
 }
 
 function initializeProjectsToggle() {
@@ -127,8 +122,6 @@ function initializeProjectsToggle() {
 
     professionalBtn.addEventListener('click', (e) => { e.preventDefault(); showProfessionalWork(); });
     personalBtn.addEventListener('click', (e) => { e.preventDefault(); showPersonalProjects(); });
-
-    console.log('Projects toggle initialized');
 }
 
 function initializeEducationToggle() {
@@ -157,8 +150,6 @@ function initializeEducationToggle() {
 
     preparationBtn.addEventListener('click', (e) => { e.preventDefault(); showPreparation(); });
     certificatesBtn.addEventListener('click', (e) => { e.preventDefault(); showCertificates(); });
-
-    console.log('Education toggle initialized');
 }
 
 function initializeProjectInfo() {
@@ -167,7 +158,6 @@ function initializeProjectInfo() {
     const infoCards = document.querySelectorAll('.project-info-card');
 
     const showProjectInfo = (projectId) => {
-        console.log(`Showing info for project: ${projectId}`);
         infoCards.forEach(card => card.classList.remove('active'));
 
         const targetInfo = document.getElementById(`${projectId}-info`);
@@ -186,8 +176,6 @@ function initializeProjectInfo() {
     personalCards.forEach(card => {
         card.addEventListener('click', () => showProjectInfo(card.getAttribute('data-project')));
     });
-
-    console.log('Project info display initialized');
 }
 
 function initializeImageModal() {
@@ -231,8 +219,6 @@ function initializeImageModal() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
     });
-
-    console.log('Image modal initialized');
 }
 
 function initializeCertificateModal() {
