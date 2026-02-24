@@ -1,0 +1,66 @@
+﻿.interactive-panels-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.glow-panel {
+    position: relative;
+    background-color: var(--color-bg-tertiary);
+    border-radius: 12px;
+    padding: 2.5rem;
+    min-height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform var(--transition-speed) var(--transition-easing);
+}
+
+    .glow-panel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 12px;
+        padding: 2px;
+        background: linear-gradient( var(--angle, 0deg), transparent 40%, var(--color-accent-red) 50%, transparent 60% );
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity var(--transition-speed) var(--transition-easing);
+        pointer-events: none;
+    }
+
+    .glow-panel:hover::before {
+        opacity: 1;
+    }
+
+    .glow-panel:hover {
+        transform: translateY(-8px);
+    }
+
+.glow-panel-content {
+    position: relative;
+    z-index: 1;
+}
+
+.glow-panel h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.glow-panel p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.glow-panel .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
