@@ -6,7 +6,7 @@ namespace dev_showcase.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult HomePage()
         {
             return View();
         }
