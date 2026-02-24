@@ -1,0 +1,261 @@
+﻿.vocational-container {
+    margin: 3rem 0;
+}
+
+.vocational-chart-card {
+    background-color: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all var(--transition-speed) var(--transition-easing);
+}
+
+    .vocational-chart-card:hover {
+        border-color: var(--color-border-hover);
+    }
+
+    .vocational-chart-card h5 {
+        color: var(--color-text-primary);
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    margin-top: 1rem;
+}
+
+.chart-container-bar {
+    height: 300px;
+}
+
+.chart-container--cognitive {
+    height: 450px;
+}
+
+.radar-card {
+    position: relative;
+}
+
+.radar-title-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-accent-red);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.cognitive-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #4fc3f7 0%, #f06292 100%);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.radar-legend,
+.cognitive-legend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.radar-legend-item,
+.cognitive-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radar-legend-diamond,
+.cognitive-legend-diamond {
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+
+.radar-legend-item[data-cat="realistic"] .radar-legend-diamond {
+    background-color: #c2185b;
+}
+
+.radar-legend-item[data-cat="investigative"] .radar-legend-diamond {
+    background-color: #e91e63;
+}
+
+.radar-legend-item[data-cat="artistic"] .radar-legend-diamond {
+    background-color: #ffb74d;
+}
+
+.radar-legend-item[data-cat="social"] .radar-legend-diamond {
+    background-color: #ff9800;
+}
+
+.radar-legend-item[data-cat="enterprising"] .radar-legend-diamond {
+    background-color: #ff7043;
+}
+
+.radar-legend-item[data-cat="conventional"] .radar-legend-diamond {
+    background-color: #ec407a;
+}
+
+.cognitive-legend-item[data-cognitive="mine"] .cognitive-legend-diamond {
+    background-color: #4fc3f7;
+}
+
+.cognitive-legend-item[data-cognitive="avg"] .cognitive-legend-diamond {
+    background-color: #f06292;
+}
+
+.radar-legend-item span,
+.cognitive-legend-item span {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.vocational-section-filter {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.vocational-section-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-secondary);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all var(--transition-speed) var(--transition-easing);
+}
+
+    .vocational-section-btn:hover {
+        background-color: var(--color-bg-secondary);
+        color: var(--color-text-primary);
+    }
+
+    .vocational-section-btn.active {
+        background-color: var(--color-accent-red);
+        color: #ffffff;
+    }
+
+.vocational-section-content {
+    display: none;
+}
+
+    .vocational-section-content.active {
+        display: block;
+    }
+
+.vocational-bars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.vocational-bars-grid--cognitive,
+.vocational-bars-grid--single {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vocational-grid-lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.vocational-list-card {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all var(--transition-speed) var(--transition-easing);
+}
+
+    .vocational-list-card:hover {
+        border-color: var(--color-border-hover);
+        transform: translateY(-2px);
+    }
+
+    .vocational-list-card h5 {
+        color: var(--color-text-primary);
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .vocational-list-card ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+        .vocational-list-card ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+
+            .vocational-list-card ul li::before {
+                content: '•';
+                position: absolute;
+                left: 0;
+                color: var(--color-accent-red);
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+.proyecto-top-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.vocational-text-section {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+    .vocational-text-section h5 {
+        color: var(--color-text-primary);
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .vocational-text-section ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+        .vocational-text-section ul li {
+            margin-bottom: 0.75rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+
+            .vocational-text-section ul li strong {
+                color: var(--color-text-primary);
+                font-weight: 600;
+            }
