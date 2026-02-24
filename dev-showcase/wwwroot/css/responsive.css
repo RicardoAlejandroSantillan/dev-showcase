@@ -1,0 +1,229 @@
+﻿@media (max-width: 1200px) {
+    .vocational-bars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .interactive-panels-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+    .main-wrapper {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-overlay {
+        display: block;
+    }
+
+    .language-selector {
+        top: 80px;
+    }
+
+    .project-info {
+        grid-template-columns: 1fr;
+    }
+
+    .vocational-grid-lists {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto-top-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-particles {
+        height: 300px;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content h2 {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.35rem;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+    }
+
+    .vocational-bars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .interactive-panels-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .skill-filter,
+    .project-filter,
+    .education-filter {
+        flex-direction: column;
+    }
+
+    .filter button {
+        width: 100%;
+    }
+
+    .vocational-section-filter {
+        flex-direction: column;
+    }
+
+    .vocational-section-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .carousel-professional-work-card,
+    .carousel-personal-project-card {
+        flex: 0 0 80%;
+    }
+
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+        .carousel-arrow.left {
+            left: -15px;
+        }
+
+        .carousel-arrow.right {
+            right: -15px;
+        }
+
+    .certificates-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .radar-legend,
+    .cognitive-legend {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .language-selector {
+        right: 10px;
+        top: 70px;
+    }
+
+    .header-particles {
+        height: 250px;
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-content h2 {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .glow-panel {
+        padding: 1.5rem;
+        min-height: 150px;
+    }
+
+        .glow-panel .icon {
+            font-size: 2rem;
+        }
+
+    .stat-bar-container {
+        height: 10px;
+    }
+
+    .logos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo-text span {
+        font-size: 1rem;
+    }
+
+    .carousel-professional-work-card,
+    .carousel-personal-project-card {
+        flex: 0 0 100%;
+    }
+
+    .chart-container {
+        height: 300px;
+    }
+
+    .chart-container-bar {
+        height: 250px;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-info-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-info-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .modal-content {
+        max-width: 95%;
+    }
+
+    .modal-close-btn {
+        top: -45px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .glow-panel::before {
+        opacity: 0.5;
+    }
+
+    .carousel-arrow {
+        opacity: 0.8;
+    }
+}
