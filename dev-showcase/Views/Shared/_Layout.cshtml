@@ -1,23 +1,92 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - dev_showcase</title>
-    <script type="importmap"></script>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/dev_showcase.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - Alex Portfolio</title>
+    @* <link rel="icon" type="image/x-icon" href="~/icons/icon.ico"> *@
+
+    <link href="~/css/reset.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/base.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/header-particles.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/layout.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
 </head>
 <body>
-    
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-image-container">
+                    <img src="~/images/profile/profile.webp" alt="Ricardo Alejandro Pérez Santillán" class="profile-image">
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-button active" data-section="introduction" data-translate="navigation.introduction">Introducción</button>
+                <button class="nav-button" data-section="skills" data-translate="navigation.skills">Habilidades</button>
+                <button class="nav-button" data-section="projects" data-translate="navigation.projects">Proyectos & Experiencia</button>
+                <button class="nav-button" data-section="education" data-translate="navigation.education">Educación</button>
+            </nav>
+
+            <div class="cv-download-section">
+                <a href="~/files/RicardoAlejandroPerezSantillan_AnalistaDeDatos.pdf" download id="cvDownloadBtn" class="cv-download-btn" data-translate="navigation.downloadCV">
+                    Descargar CV
+                </a>
+            </div>
+        </aside>
+
+        <div class="main-wrapper">
+            <header class="header-particles">
+                <div class="particles-container">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+
+                <div class="header-content">
+                    <h2 data-translate="header.hello">#HOLA MUNDO</h2>
+                    <h1 data-translate="header.name">Soy Ricardo Alejandro Pérez Santillán</h1>
+                </div>
+            </header>
+
+            <main class="main-content" role="main">
+                @RenderBody()
+            </main>
+        </div>
     </div>
 
+    <div class="language-selector">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="menu-overlay"></div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
