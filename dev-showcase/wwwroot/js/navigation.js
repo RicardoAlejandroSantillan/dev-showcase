@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Navigation system initialized');
 
     const navButtons = document.querySelectorAll('.nav-button');
     const contentSections = document.querySelectorAll('.content-section');
@@ -287,6 +286,4 @@ function initializeCertificateModal() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) closeCertificateModal();
     });
-
-    console.log('Certificate modal initialized');
 }

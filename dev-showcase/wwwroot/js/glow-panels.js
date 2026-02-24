@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Glow panels system initialized');
 
     document.querySelectorAll('.glow-panel').forEach(panel => {
         panel.addEventListener('mousemove', function (e) {
@@ -23,6 +22,4 @@ document.addEventListener('DOMContentLoaded', () => {
             panel.style.setProperty('--angle', '0deg');
         });
     });
-
-    console.log('Glow panels ready');
 });
