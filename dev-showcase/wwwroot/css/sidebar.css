@@ -6,126 +6,149 @@
     height: 100vh;
     background-color: var(--color-bg-secondary);
     border-right: 1px solid var(--color-border);
-    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 1.5rem;
     overflow-y: auto;
     z-index: 100;
     transition: transform var(--transition-speed) var(--transition-easing);
 }
 
+    .sidebar::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 2px;
+    }
+
 .profile-section {
     padding: 0 1.5rem;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .profile-image-container {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid var(--color-accent-red);
+    border: 2px solid var(--color-accent-red);
+    box-shadow: 0 0 20px rgba(255, 23, 68, 0.25);
+    flex-shrink: 0;
 }
 
 .profile-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .nav-menu {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 0 1rem;
-    margin-bottom: 2rem;
+    gap: 0.25rem;
+    padding: 0 0.75rem;
+    margin-bottom: 1.5rem;
 }
 
 .nav-button {
-    padding: 0.875rem 1rem;
+    padding: 0.8rem 0.75rem;
     text-align: left;
-    color: var(--color-text-secondary);
+    color: var(--color-text-tertiary);
     background-color: transparent;
     border-left: 3px solid transparent;
+    border-radius: 0 8px 8px 0;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: all var(--transition-speed) var(--transition-easing);
 }
 
     .nav-button:hover {
-        background-color: var(--color-bg-tertiary);
+        background-color: rgba(255, 255, 255, 0.04);
         color: var(--color-text-primary);
-        border-left-color: var(--color-accent-red);
+        border-left-color: rgba(255, 23, 68, 0.5);
     }
 
     .nav-button.active {
-        background-color: var(--color-bg-tertiary);
+        background-color: rgba(255, 23, 68, 0.08);
         color: var(--color-text-primary);
         border-left-color: var(--color-accent-red);
     }
 
 .cv-download-section {
     padding: 0 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: auto;
 }
 
 .cv-download-btn {
     display: block;
     width: 100%;
-    padding: 0.875rem 1.5rem;
+    padding: 0.75rem 1.25rem;
     background-color: var(--color-accent-red);
     color: #ffffff;
     text-align: center;
     border-radius: 8px;
     font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.3px;
     transition: all var(--transition-speed) var(--transition-easing);
 }
 
     .cv-download-btn:hover {
         background-color: var(--color-accent-red-light);
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(255, 23, 68, 0.3);
+        box-shadow: 0 6px 16px rgba(255, 23, 68, 0.35);
     }
 
 .social-links-sidebar {
-    padding: 0 1.5rem;
+    padding: 1.25rem 1.5rem 0;
     border-top: 1px solid var(--color-border);
-    padding-top: 1.5rem;
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
 }
 
     .social-links-sidebar h3 {
-        font-size: 0.85rem;
+        font-size: 0.72rem;
         font-weight: 600;
-        margin-bottom: 1rem;
+        margin-bottom: 0.875rem;
         color: var(--color-text-tertiary);
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 1.2px;
     }
 
 .social-icons-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 0.5rem;
-    flex-wrap: wrap;
 }
 
 .social-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: var(--color-bg-tertiary);
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--color-border);
-    border-radius: 8px;
-    color: var(--color-text-secondary);
+    border-radius: 10px;
+    color: var(--color-text-tertiary);
     transition: all var(--transition-speed) var(--transition-easing);
     position: relative;
 }
 
     .social-link svg {
-        width: 18px;
-        height: 18px;
+        width: 17px;
+        height: 17px;
         fill: currentColor;
+        transition: fill var(--transition-speed) var(--transition-easing);
+        flex-shrink: 0;
     }
 
     .social-link:hover {
@@ -133,26 +156,26 @@
         border-color: var(--color-accent-red);
         color: #ffffff;
         transform: translateY(-3px);
-        box-shadow: 0 4px 12px rgba(255, 23, 68, 0.3);
+        box-shadow: 0 6px 14px rgba(255, 23, 68, 0.3);
     }
 
     .social-link::after {
         content: attr(data-tooltip);
         position: absolute;
-        bottom: -35px;
+        bottom: calc(100% + 8px);
         left: 50%;
         transform: translateX(-50%);
-        padding: 0.4rem 0.75rem;
-        background-color: var(--color-bg-primary);
+        padding: 0.35rem 0.65rem;
+        background-color: var(--color-bg-tertiary);
         color: var(--color-text-primary);
         border: 1px solid var(--color-border);
         border-radius: 6px;
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         white-space: nowrap;
         opacity: 0;
         pointer-events: none;
-        transition: opacity var(--transition-speed) var(--transition-easing);
-        z-index: 1000;
+        transition: opacity 0.2s ease;
+        z-index: 200;
     }
 
     .social-link:hover::after {
@@ -162,53 +185,76 @@
 .menu-toggle {
     display: none;
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 1rem;
+    left: 1rem;
     z-index: 1001;
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     background-color: var(--color-bg-secondary);
     border: 1px solid var(--color-border);
-    border-radius: 12px;
+    border-radius: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 5px;
+    transition: background var(--transition-speed) var(--transition-easing);
 }
 
     .menu-toggle span {
         display: block;
-        width: 24px;
+        width: 20px;
         height: 2px;
-        background-color: var(--color-text-primary);
+        background-color: var(--color-text-secondary);
+        border-radius: 1px;
         transition: all var(--transition-speed) var(--transition-easing);
     }
 
     .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 8px);
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
     .menu-toggle.active span:nth-child(2) {
         opacity: 0;
+        transform: scaleX(0);
     }
 
     .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
 .menu-overlay {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
     z-index: 99;
     opacity: 0;
     transition: opacity var(--transition-speed) var(--transition-easing);
+    backdrop-filter: blur(2px);
 }
 
     .menu-overlay.active {
         opacity: 1;
     }
+
+@media (max-width: 1024px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+    .main-wrapper {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-overlay {
+        display: block;
+    }
+}

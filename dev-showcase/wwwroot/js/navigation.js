@@ -1,275 +1,235 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const navButtons = document.querySelectorAll('.nav-button');
     const contentSections = document.querySelectorAll('.content-section');
+    const skillFilterBtns = document.querySelectorAll('.skill-filter-btn');
+    const skillSections = document.querySelectorAll('.skill-section');
+    const projectFilterBtns = document.querySelectorAll('.project-filter-btn');
+    const prepBtn = document.getElementById('preparation-btn');
+    const certBtn = document.getElementById('certificates-btn');
+    const prepContent = document.getElementById('preparation-content');
+    const certContent = document.getElementById('certificates-content');
 
-    const changeSection = (targetSection) => {
+    function switchSection(targetId) {
+        contentSections.forEach(section => {
+            section.classList.remove('active');
+        });
 
-        navButtons.forEach(btn => btn.classList.remove('active'));
-        contentSections.forEach(section => section.classList.remove('active'));
-
-        const activeButton = document.querySelector(`[data-section="${targetSection}"]`);
-        if (activeButton) activeButton.classList.add('active');
-
-        const activeSection = document.querySelector(`[data-content="${targetSection}"]`);
-        if (activeSection) {
-            setTimeout(() => {
-                activeSection.classList.add('active');
-                const mainContent = document.querySelector('.main-content');
-                if (mainContent) mainContent.scrollTop = 0;
-            }, 50);
+        const target = document.querySelector(`.content-section[data-content="${targetId}"]`);
+        if (target) {
+            target.classList.add('active');
+            target.scrollTop = 0;
         }
-    };
 
-    navButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetSection = button.dataset.section;
-            if (!button.classList.contains('active')) {
-                changeSection(targetSection);
+        navButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-section') === targetId);
+        });
+    }
+
+    navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const section = btn.getAttribute('data-section');
+            switchSection(section);
+
+            const overlay = document.querySelector('.menu-overlay');
+            const toggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            if (overlay && overlay.classList.contains('active')) {
+                overlay.classList.remove('active');
+                toggle && toggle.classList.remove('active');
+                sidebar && sidebar.classList.remove('open');
             }
         });
     });
 
-    const initializeFromURL = () => {
-        const hash = window.location.hash.substring(1);
-        if (hash) {
-            const section = document.querySelector(`[data-section="${hash}"]`);
-            if (section) changeSection(hash);
-        }
-    };
+    skillFilterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            skillFilterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
-    initializeFromURL();
-    window.addEventListener('hashchange', initializeFromURL);
+            const targetId = btn.id.replace('-btn', '-content');
 
-    initializeSkillsToggle();
-    initializeProjectsToggle();
-    initializeEducationToggle();
-    initializeProjectInfo();
-    initializeImageModal();
-    initializeCertificateModal();
-});
+            skillSections.forEach(section => {
+                section.classList.remove('active');
+            });
 
-function initializeSkillsToggle() {
-    const hardSkillsBtn = document.getElementById('hard-skills');
-    const softSkillsBtn = document.getElementById('soft-skills');
-    const vocationalStatsBtn = document.getElementById('vocational-stats');
-    const hardSkillsContent = document.getElementById('hard-skills-content');
-    const softSkillsContent = document.getElementById('soft-skills-content');
-    const vocationalStatsContent = document.getElementById('vocational-stats-content');
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.classList.add('active');
 
-    if (!hardSkillsBtn || !softSkillsBtn || !vocationalStatsBtn) {
-        return;
-    }
-
-    const showHardSkills = () => {
-        hardSkillsBtn.classList.add('active');
-        softSkillsBtn.classList.remove('active');
-        vocationalStatsBtn.classList.remove('active');
-        hardSkillsContent.classList.add('active');
-        softSkillsContent.classList.remove('active');
-        vocationalStatsContent.classList.remove('active');
-    };
-
-    const showSoftSkills = () => {
-        softSkillsBtn.classList.add('active');
-        hardSkillsBtn.classList.remove('active');
-        vocationalStatsBtn.classList.remove('active');
-        softSkillsContent.classList.add('active');
-        hardSkillsContent.classList.remove('active');
-        vocationalStatsContent.classList.remove('active');
-    };
-
-    const showVocationalStats = () => {
-        vocationalStatsBtn.classList.add('active');
-        hardSkillsBtn.classList.remove('active');
-        softSkillsBtn.classList.remove('active');
-        vocationalStatsContent.classList.add('active');
-        hardSkillsContent.classList.remove('active');
-        softSkillsContent.classList.remove('active');
-    };
-
-    hardSkillsBtn.addEventListener('click', (e) => { e.preventDefault(); showHardSkills(); });
-    softSkillsBtn.addEventListener('click', (e) => { e.preventDefault(); showSoftSkills(); });
-    vocationalStatsBtn.addEventListener('click', (e) => { e.preventDefault(); showVocationalStats(); });
-}
-
-function initializeProjectsToggle() {
-    const professionalBtn = document.getElementById('professional-work-btn');
-    const personalBtn = document.getElementById('personal-project-btn');
-    const professionalContent = document.querySelector('.professional-work');
-    const personalContent = document.querySelector('.personal-project');
-
-    if (!professionalBtn || !personalBtn) {
-        return;
-    }
-
-    professionalContent.classList.add('active');
-
-    const showProfessionalWork = () => {
-        professionalBtn.classList.add('active');
-        personalBtn.classList.remove('active');
-        professionalContent.classList.add('active');
-        personalContent.classList.remove('active');
-    };
-
-    const showPersonalProjects = () => {
-        personalBtn.classList.add('active');
-        professionalBtn.classList.remove('active');
-        personalContent.classList.add('active');
-        professionalContent.classList.remove('active');
-    };
-
-    professionalBtn.addEventListener('click', (e) => { e.preventDefault(); showProfessionalWork(); });
-    personalBtn.addEventListener('click', (e) => { e.preventDefault(); showPersonalProjects(); });
-}
-
-function initializeEducationToggle() {
-    const preparationBtn = document.getElementById('preparation-btn');
-    const certificatesBtn = document.getElementById('certificates-btn');
-    const preparationContent = document.getElementById('preparation-content');
-    const certificatesContent = document.getElementById('certificates-content');
-
-    if (!preparationBtn || !certificatesBtn) {
-        return;
-    }
-
-    const showPreparation = () => {
-        preparationBtn.classList.add('active');
-        certificatesBtn.classList.remove('active');
-        preparationContent.classList.add('active');
-        certificatesContent.classList.remove('active');
-    };
-
-    const showCertificates = () => {
-        certificatesBtn.classList.add('active');
-        preparationBtn.classList.remove('active');
-        certificatesContent.classList.add('active');
-        preparationContent.classList.remove('active');
-    };
-
-    preparationBtn.addEventListener('click', (e) => { e.preventDefault(); showPreparation(); });
-    certificatesBtn.addEventListener('click', (e) => { e.preventDefault(); showCertificates(); });
-}
-
-function initializeProjectInfo() {
-    const professionalCards = document.querySelectorAll('.carousel-professional-work-card');
-    const personalCards = document.querySelectorAll('.carousel-personal-project-card');
-    const infoCards = document.querySelectorAll('.project-info-card');
-
-    const showProjectInfo = (projectId) => {
-        infoCards.forEach(card => card.classList.remove('active'));
-
-        const targetInfo = document.getElementById(`${projectId}-info`);
-        if (targetInfo) {
-            targetInfo.classList.add('active');
-            setTimeout(() => {
-                targetInfo.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 100);
-        }
-    };
-
-    professionalCards.forEach(card => {
-        card.addEventListener('click', () => showProjectInfo(card.getAttribute('data-project')));
-    });
-
-    personalCards.forEach(card => {
-        card.addEventListener('click', () => showProjectInfo(card.getAttribute('data-project')));
-    });
-}
-
-function initializeImageModal() {
-    const modal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    const modalCloseBtn = document.getElementById('modalCloseBtn');
-    const projectImages = document.querySelectorAll('.left-pnl.img-pnl img');
-
-    if (!modal || !modalImage || !modalCloseBtn) {
-        return;
-    }
-
-    if (modal.parentElement !== document.body) {
-        document.body.appendChild(modal);
-    }
-
-    const openModal = (imageSrc, imageAlt) => {
-        modalImage.src = imageSrc;
-        modalImage.alt = imageAlt;
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    };
-
-    const closeModal = () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-        setTimeout(() => {
-            if (!modal.classList.contains('active')) modalImage.src = '';
-        }, 300);
-    };
-
-    projectImages.forEach(img => {
-        img.addEventListener('click', (e) => {
-            e.stopPropagation();
-            openModal(img.src, img.alt);
+                const statBars = target.querySelectorAll('.stat-bar[data-percent]');
+                statBars.forEach(bar => {
+                    const percent = parseInt(bar.getAttribute('data-percent'), 10);
+                    bar.style.setProperty('--target-width', percent + '%');
+                    bar.classList.remove('animated');
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            bar.classList.add('animated');
+                        });
+                    });
+                });
+            }
         });
     });
 
-    modalCloseBtn.addEventListener('click', (e) => { e.stopPropagation(); closeModal(); });
-    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
-    });
-}
+    const projectInfoCards = document.querySelectorAll('.project-info-card');
 
-function initializeCertificateModal() {
-    const modal = document.getElementById('certificateModal');
-    const modalImage = document.getElementById('certificateModalImage');
-    const modalTitle = document.getElementById('certificateModalTitle');
-    const modalDate = document.getElementById('certificateModalDate');
-    const modalCloseBtn = document.getElementById('certificateModalCloseBtn');
+    function showProjectInfo(projectKey) {
+        projectInfoCards.forEach(card => {
+            card.classList.remove('active');
+        });
+        const target = document.getElementById(`${projectKey}-info`);
+        if (target) {
+            target.classList.add('active');
+            const infoContainer = document.querySelector('.carousel-information-container');
+            if (infoContainer) {
+                const parentSection = document.querySelector('.content-section[data-content="projects"]');
+                if (parentSection) {
+                    parentSection.scrollTo({
+                        top: infoContainer.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        }
+    }
+
+    document.querySelectorAll('.carousel-card[data-project]').forEach(card => {
+        card.addEventListener('click', () => {
+            const projectKey = card.getAttribute('data-project');
+            if (projectKey) {
+                showProjectInfo(projectKey);
+            }
+        });
+    });
+
+    if (prepBtn && certBtn && prepContent && certContent) {
+        prepBtn.addEventListener('click', () => {
+            prepBtn.classList.add('active');
+            certBtn.classList.remove('active');
+            prepContent.classList.add('active');
+            certContent.classList.remove('active');
+        });
+
+        certBtn.addEventListener('click', () => {
+            certBtn.classList.add('active');
+            prepBtn.classList.remove('active');
+            certContent.classList.add('active');
+            prepContent.classList.remove('active');
+        });
+    }
+
     const certificateCards = document.querySelectorAll('.certificate-card');
-
-    if (!modal || !modalImage || !modalCloseBtn) {
-        return;
-    }
-
-    if (modal.parentElement !== document.body) {
-        document.body.appendChild(modal);
-    }
-
-    const openCertificateModal = (card) => {
-        const img = card.querySelector('.certificate-image-container img');
-        const titleText = card.querySelector('.certificate-info p').textContent;
-        const dateText = card.querySelector('.certificate-info span').textContent;
-
-        modalImage.src = img.src;
-        modalImage.alt = img.alt;
-        modalTitle.textContent = titleText;
-        modalDate.textContent = dateText;
-
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    };
-
-    const closeCertificateModal = () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-        setTimeout(() => {
-            if (!modal.classList.contains('active')) {
-                modalImage.src = '';
-                modalTitle.textContent = '';
-                modalDate.textContent = '';
-            }
-        }, 300);
-    };
+    const certModal = document.getElementById('certificateModal');
+    const certModalImg = document.getElementById('certificateModalImage');
+    const certModalTitle = document.getElementById('certificateModalTitle');
+    const certModalDate = document.getElementById('certificateModalDate');
+    const certModalClose = document.getElementById('certificateModalCloseBtn');
 
     certificateCards.forEach(card => {
-        card.addEventListener('click', (e) => { e.stopPropagation(); openCertificateModal(card); });
+        card.addEventListener('click', () => {
+            const img = card.querySelector('img');
+            const name = card.querySelector('.certificate-info p:first-child');
+            const date = card.querySelector('.certificate-info span');
+            if (img && certModal) {
+                certModalImg.src = img.src;
+                certModalImg.alt = img.alt;
+                if (certModalTitle) certModalTitle.textContent = name ? name.textContent : '';
+                if (certModalDate) certModalDate.textContent = date ? date.textContent : '';
+                certModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
     });
 
-    modalCloseBtn.addEventListener('click', (e) => { e.stopPropagation(); closeCertificateModal(); });
-    modal.addEventListener('click', (e) => { if (e.target === modal) closeCertificateModal(); });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) closeCertificateModal();
+    if (certModalClose) {
+        certModalClose.addEventListener('click', () => {
+            certModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+
+    if (certModal) {
+        certModal.addEventListener('click', (e) => {
+            if (e.target === certModal) {
+                certModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    const imageModal = document.getElementById('imageModal');
+    const imageModalImg = document.getElementById('modalImage');
+    const imageModalClose = document.getElementById('modalCloseBtn');
+
+    document.querySelectorAll('.left-pnl.img-pnl img').forEach(img => {
+        img.addEventListener('click', () => {
+            if (imageModal && imageModalImg) {
+                imageModalImg.src = img.src;
+                imageModalImg.alt = img.alt;
+                imageModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
     });
-}
+
+    if (imageModalClose) {
+        imageModalClose.addEventListener('click', () => {
+            imageModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+
+    if (imageModal) {
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                imageModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            [certModal, imageModal].forEach(modal => {
+                if (modal && modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+    });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            menuOverlay && menuOverlay.classList.toggle('active');
+            sidebar && sidebar.classList.toggle('open');
+        });
+    }
+
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', () => {
+            menuToggle && menuToggle.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            sidebar && sidebar.classList.remove('open');
+        });
+    }
+
+    const vocationalSectionBtns = document.querySelectorAll('.vocational-section-btn');
+    const vocationalSectionContents = document.querySelectorAll('.vocational-section-content');
+
+    vocationalSectionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-section');
+            vocationalSectionBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            vocationalSectionContents.forEach(content => {
+                content.classList.toggle('active', content.getAttribute('data-section-content') === target);
+            });
+        });
+    });
+});
