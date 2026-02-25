@@ -28,7 +28,7 @@ class InfiniteCarousel {
         if (!this.track || this.originalCards.length === 0) return;
 
         this.totalOriginal = this.originalCards.length;
-        this.visibleSlides = 3.5;
+        this.visibleSlides = window.innerWidth > 1200 ? 2.1 : 1.1;
         this.clonesCount = Math.max(this.totalOriginal, Math.ceil(this.visibleSlides) + 3);
         this.currentIndex = this.clonesCount;
         this.isTransitioning = false;
@@ -39,7 +39,6 @@ class InfiniteCarousel {
         this.currentTranslate = 0;
         this.prevTranslate = 0;
         this.animationID = 0;
-        this.currentPosition = 0;
         this.hasMoved = false;
 
         this.init();
@@ -83,15 +82,13 @@ class InfiniteCarousel {
             clone.classList.add('clone');
             this.track.insertBefore(clone, this.track.firstChild);
         }
-
         this.allSlides = this.track.children;
     }
 
     updateDimensions() {
-        const firstCard = this.originalCards[0];
+        const firstCard = this.track.querySelector('.carousel-card');
         if (!firstCard) return;
 
-        const cardStyle = window.getComputedStyle(firstCard);
         const trackStyle = window.getComputedStyle(this.track);
         const cardWidth = firstCard.getBoundingClientRect().width;
         const gap = parseFloat(trackStyle.gap) || 15;
@@ -106,7 +103,7 @@ class InfiniteCarousel {
     move(direction) {
         if (this.isTransitioning) return;
         this.isTransitioning = true;
-        this.track.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        this.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
 
         if (direction === 'next') this.currentIndex++;
         else this.currentIndex--;
@@ -116,12 +113,8 @@ class InfiniteCarousel {
     }
 
     updatePosition(animate = true) {
-        this.currentPosition = -this.currentIndex * this.slideWidth;
+        const pos = -this.currentIndex * this.slideWidth;
         if (!animate) this.track.style.transition = 'none';
-        this.setSliderPosition(this.currentPosition);
-    }
-
-    setSliderPosition(pos) {
         this.track.style.transform = `translate3d(${pos}px, 0, 0)`;
     }
 
@@ -129,29 +122,10 @@ class InfiniteCarousel {
         this.isTransitioning = false;
 
         if (this.currentIndex >= this.totalOriginal + this.clonesCount) {
-            const diff = this.currentIndex - (this.totalOriginal + this.clonesCount);
-            this.currentIndex = this.clonesCount + diff;
-            this.updatePosition(false);
-        } else if (this.currentIndex < this.clonesCount - this.totalOriginal) {
-            const diff = (this.clonesCount - this.totalOriginal) - this.currentIndex;
-            this.currentIndex = (this.totalOriginal + this.clonesCount) - diff;
-            this.updatePosition(false);
-        } else if (this.currentIndex >= this.totalOriginal + this.clonesCount) {
-            this.currentIndex = this.clonesCount;
+            this.currentIndex -= this.totalOriginal;
             this.updatePosition(false);
         } else if (this.currentIndex < this.clonesCount) {
-            this.currentIndex = this.totalOriginal + this.currentIndex;
-            if (this.currentIndex < this.clonesCount) {
-                this.currentIndex = this.totalOriginal + this.clonesCount - (this.clonesCount - this.currentIndex);
-            }
-            this.updatePosition(false);
-        }
-
-        if (this.currentIndex >= this.totalOriginal + this.clonesCount) {
-            this.currentIndex = this.currentIndex - this.totalOriginal;
-            this.updatePosition(false);
-        } else if (this.currentIndex < this.clonesCount) {
-            this.currentIndex = this.currentIndex + this.totalOriginal;
+            this.currentIndex += this.totalOriginal;
             this.updatePosition(false);
         }
     }
@@ -176,16 +150,6 @@ class InfiniteCarousel {
         this.track.addEventListener('mouseleave', () => { if (this.isDragging) this.touchEnd(); });
 
         this.track.oncontextmenu = (e) => { e.preventDefault(); e.stopPropagation(); return false; };
-        this.track.addEventListener('click', this.handleClick.bind(this), { capture: true });
-    }
-
-    handleClick(e) {
-        if (this.hasMoved) {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-            return false;
-        }
     }
 
     getPositionX(event) {
@@ -198,7 +162,6 @@ class InfiniteCarousel {
         this.hasMoved = false;
         this.startPos = this.getPositionX(event);
         this.prevTranslate = -this.currentIndex * this.slideWidth;
-        this.currentTranslate = this.prevTranslate;
         this.track.classList.add('dragging');
         cancelAnimationFrame(this.animationID);
     }
@@ -210,19 +173,19 @@ class InfiniteCarousel {
 
         if (Math.abs(diff) > 5) {
             this.hasMoved = true;
+            if (event.cancelable && event.type === 'touchmove') event.preventDefault();
         }
 
         this.currentTranslate = this.prevTranslate + diff;
         this.animationID = requestAnimationFrame(() => {
             this.track.style.transition = 'none';
-            this.setSliderPosition(this.currentTranslate);
+            this.track.style.transform = `translate3d(${this.currentTranslate}px, 0, 0)`;
         });
     }
 
     touchEnd() {
         if (!this.isDragging) return;
         this.isDragging = false;
-        cancelAnimationFrame(this.animationID);
         this.track.classList.remove('dragging');
 
         const movedBy = this.currentTranslate - this.prevTranslate;
@@ -230,8 +193,7 @@ class InfiniteCarousel {
         let slidesJump = Math.round(rawSlidesChanged);
 
         if (slidesJump === 0 && Math.abs(movedBy) > 50) {
-            if (movedBy < 0) slidesJump = 1;
-            else slidesJump = -1;
+            slidesJump = movedBy < 0 ? 1 : -1;
         }
 
         this.currentIndex += slidesJump;
@@ -243,22 +205,24 @@ class InfiniteCarousel {
     }
 
     setupCardClickListeners() {
-        Array.from(this.allSlides).forEach(card => {
-            card.onclick = (e) => {
-                if (this.hasMoved) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    return;
+        this.track.addEventListener('click', (e) => {
+            if (this.hasMoved) {
+                e.preventDefault();
+                e.stopPropagation();
+                return;
+            }
+            const card = e.target.closest('.carousel-card');
+            if (!card) return;
+
+            const projectKey = card.dataset.project;
+            if (projectKey) {
+                const infoCard = document.getElementById(`${projectKey}-info`);
+                if (infoCard) {
+                    document.querySelectorAll('.project-info-card').forEach(c => c.classList.remove('active'));
+                    infoCard.classList.add('active');
+                    infoCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
-                setTimeout(() => {
-                    const projectKey = card.dataset.project;
-                    if (!projectKey) return;
-                    const infoContainer = document.querySelector('.carousel-information-container');
-                    if (infoContainer) {
-                        infoContainer.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-                    }
-                }, 50);
-            };
-        });
+            }
+        }, { capture: true });
     }
 }

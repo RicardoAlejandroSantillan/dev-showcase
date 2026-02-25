@@ -1,354 +1,255 @@
-﻿<div class="section-projects">
-    <h2 data-translate="projects.title">Experiencia</h2>
+﻿<div class="projects-layout">
+    <div class="projects-block">
+        <div class="projects-block-header">
+            <h3 data-translate="projects.professional">Experiencia Profesional</h3>
+            <span class="projects-block-tag" data-translate="projects.professionalTag">Trabajo</span>
+        </div>
 
-    <div class="project-filter">
-        <button class="project-filter-btn active" id="professional-work-btn" data-translate="projects.professional">Trabajos</button>
-        <button class="project-filter-btn" id="personal-project-btn" data-translate="projects.personal">Proyectos Personales</button>
-    </div>
+        <div class="carousel-wrapper">
+            <button class="carousel-arrow left carousel-professional-work-arrow" aria-label="Anterior">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
+            </button>
+            <button class="carousel-arrow right carousel-professional-work-arrow" aria-label="Siguiente">
+                <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
+            </button>
 
-    <section class="carouseles-container">
-        <div class="professional-work active">
-            <div class="carousel-professional-work-container">
-                <button class="carousel-professional-work-arrow carousel-arrow left" aria-label="Anterior">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                    </svg>
-                </button>
-                <button class="carousel-professional-work-arrow carousel-arrow right" aria-label="Siguiente">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                    </svg>
-                </button>
+            <div class="carousel-track-container">
                 <div class="carousel-track carousel-professional-work-track">
-                    <div class="carousel-professional-work-card" data-project="Daikin">
-                        <img src="~/images/projects/Daikin/cover.webp" alt="Daikin">
-                        <div class="work-information-content">
-                            <h3 data-translate="projects.daikin.name">Daikin</h3>
-                            <p data-translate="projects.daikin.period">Septiembre 2024 - Diciembre 2025</p>
+                    <div class="carousel-card carousel-professional-work-card" data-project="Daikin">
+                        <img src="~/images/projects/Daikin/cover.webp" alt="Daikin" draggable="false">
+                        <div class="carousel-card-overlay">
+                            <h4 data-translate="projects.daikin.name">Daikin</h4>
+                            <p data-translate="projects.daikin.period">Sep 2024 - Dic 2025</p>
                             <p data-translate="projects.daikin.type">Desarrollador de Software</p>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-pagination carousel-professional-work-pagination">
-                    <span class="current">1</span>/<span class="total">1</span>
-                </div>
+            </div>
+
+            <div class="carousel-pagination carousel-professional-work-pagination">
+                <span class="current">1</span>/<span class="total">1</span>
             </div>
         </div>
+    </div>
 
-        <div class="personal-project">
-            <div class="carousel-personal-project-container">
-                <button class="carousel-personal-project-arrow carousel-arrow left" aria-label="Anterior">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                    </svg>
-                </button>
-                <button class="carousel-personal-project-arrow carousel-arrow right" aria-label="Siguiente">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                    </svg>
-                </button>
+    <div class="projects-block">
+        <div class="projects-block-header">
+            <h3 data-translate="projects.personal">Proyectos Personales</h3>
+            <span class="projects-block-tag projects-block-tag--personal" data-translate="projects.personalTag">Personal &amp; Académico</span>
+        </div>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-arrow left carousel-personal-project-arrow" aria-label="Anterior">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
+            </button>
+            <button class="carousel-arrow right carousel-personal-project-arrow" aria-label="Siguiente">
+                <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
+            </button>
+
+            <div class="carousel-track-container">
                 <div class="carousel-track carousel-personal-project-track">
-                    <div class="carousel-personal-project-card carousel-card" data-project="devportfolio">
-                        <img src="~/images/projects/DevPortfolio/portfolio-cover.webp" alt="devportfolio">
-                        <div class="personal-project-content">
-                            <h3 data-translate="projects.devportfolio.name">DevPortfolio</h3>
-                            <p data-translate="projects.devportfolio.shortDescription">Portafolio profesional de desarrollador con diseño espacial y glasmorfismo</p>
+                    <div class="carousel-card carousel-personal-project-card" data-project="devportfolio">
+                        <img src="~/images/projects/DevPortfolio/portfolio-cover.webp" alt="DevPortfolio" draggable="false">
+                        <div class="carousel-card-overlay">
+                            <h4 data-translate="projects.devportfolio.name">DevPortfolio</h4>
+                            <p data-translate="projects.devportfolio.shortDescription">Portafolio profesional con diseño espacial y glasmorfismo</p>
                         </div>
                     </div>
-                    <div class="carousel-personal-project-card carousel-card" data-project="datathon2022">
-                        <img src="~/images/projects/Datathons/WiDS.webp" alt="WiDS Datathon 2022">
-                        <div class="personal-project-content">
-                            <h3 data-translate="projects.datathon2022.name">WiDS Datathon 2022</h3>
-                            <p data-translate="projects.datathon2022.shortDescription">Datathon enfocado en temas de salud</p>
+                    <div class="carousel-card carousel-personal-project-card" data-project="datathon2022">
+                        <img src="~/images/projects/Datathons/WiDS.webp" alt="WiDS Datathon 2022" draggable="false">
+                        <div class="carousel-card-overlay">
+                            <h4 data-translate="projects.datathon2022.name">WiDS Datathon 2022</h4>
+                            <p data-translate="projects.datathon2022.shortDescription">Modelo predictivo para detección de cáncer de mama</p>
                         </div>
                     </div>
-                    <div class="carousel-personal-project-card carousel-card" data-project="datathon2025">
-                        <img src="~/images/projects/Datathons/WiDS.webp" alt="WiDS Datathon 2025">
-                        <div class="personal-project-content">
-                            <h3 data-translate="projects.datathon2025.name">WiDS Datathon 2025</h3>
-                            <p data-translate="projects.datathon2025.shortDescription">Datathon enfocado en temas de salud</p>
+                    <div class="carousel-card carousel-personal-project-card" data-project="datathon2025">
+                        <img src="~/images/projects/Datathons/WiDS.webp" alt="WiDS Datathon 2025" draggable="false">
+                        <div class="carousel-card-overlay">
+                            <h4 data-translate="projects.datathon2025.name">WiDS Datathon 2025</h4>
+                            <p data-translate="projects.datathon2025.shortDescription">Detección de TDAH y TDA en mujeres adolescentes</p>
                         </div>
                     </div>
-                    <div class="carousel-personal-project-card carousel-card" data-project="bookshelf">
-                        <img src="~/images/projects/BookShelf/cover.webp" alt="bookshelf">
-                        <div class="personal-project-content">
-                            <h3 data-translate="projects.bookshelf.name">BookShelf</h3>
+                    <div class="carousel-card carousel-personal-project-card" data-project="prosalud">
+                        <img src="~/images/projects/proSalud/cover.webp" alt="ProSalud" draggable="false">
+                        <div class="carousel-card-overlay">
+                            <h4 data-translate="projects.prosalud.name">ProSalud</h4>
+                            <p data-translate="projects.prosalud.shortDescription">Sistema de gestión médica para consultorios</p>
+                        </div>
+                    </div>
+                    <div class="carousel-card carousel-personal-project-card" data-project="bookshelf">
+                        <img src="~/images/projects/BookShelf/cover.webp" alt="BookShelf" draggable="false">
+                        <div class="carousel-card-overlay">
+                            <h4 data-translate="projects.bookshelf.name">BookShelf</h4>
                             <p data-translate="projects.bookshelf.shortDescription">Sistema de gestión de biblioteca personal</p>
                         </div>
                     </div>
-                    <div class="carousel-personal-project-card carousel-card" data-project="prosalud">
-                        <img src="~/images/projects/proSalud/cover.webp" alt="prosalud">
-                        <div class="personal-project-content">
-                            <h3 data-translate="projects.prosalud.name">ProSalud</h3>
-                            <p data-translate="projects.prosalud.shortDescription">Sistema de Salud para hospitales</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-pagination carousel-personal-project-pagination">
-                    <span class="current">1</span>/<span class="total">5</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <div class="carousel-information-container">
-        <div class="project-info-card active" id="Daikin-info">
-            <h2 data-translate="projects.daikin.name">Daikin Manufacturing México</h2>
-            <p data-translate="projects.daikin.description">
-                Desarrollo y soporte de aplicaciones empresariales utilizando arquitectura MVC con .NET y SQL Server.
-                Responsable del diseño, implementación y mantenimiento de APIs y bases de datos para sistemas críticos de producción.
-            </p>
-
-            <h3 data-translate="projects.daikin.featuresTitle">Responsabilidades Principales</h3>
-            <ul>
-                <li><p data-translate="projects.daikin.feature1">Mantenimiento y evolución de aplicaciones críticas del negocio</p></li>
-                <li><p data-translate="projects.daikin.feature2">Diseño e implementación de nuevas funcionalidades según especificaciones técnicas</p></li>
-                <li><p data-translate="projects.daikin.feature3">Optimización de consultas SQL y desarrollo de procedimientos almacenados</p></li>
-                <li><p data-translate="projects.daikin.feature4">Mejoras en UX/UI y rendimiento de aplicaciones</p></li>
-                <li><p data-translate="projects.daikin.feature5">Desarrollo colaborativo bajo metodologías ágiles</p></li>
-            </ul>
-
-            <div class="lenguages-tech">
-                <p>
-                    <span data-translate="projects.daikin.techTitle">Stack Tecnológico</span>:
-                    <span data-translate="projects.daikin.techList">ASP.NET MVC, C#, JavaScript, HTML, Bootstrap, Oracle SQL, SQL Server, Oracle, SAP, JQuery y archivos JSon</span>
-                </p>
-            </div>
-
-            <h3 data-translate="projects.daikin.challengesTitle">Desafíos Técnicos Resueltos</h3>
-            <p data-translate="projects.daikin.challenge1">Integración de requisitos complejos en entornos empresariales de alta disponibilidad</p>
-            <p data-translate="projects.daikin.challenge2">Colaboración efectiva en equipos multidisciplinarios</p>
-            <p data-translate="projects.daikin.challenge3">Implementación de mejoras continuas en sistemas legacy</p>
-
-            <h3 data-translate="projects.daikin.projectsTitle">Proyectos Destacados</h3>
-            <div class="img-project-container">
-                <div class="project-info">
-                    <div class="left-pnl img-pnl">
-                        <img src="~/images/projects/Daikin/overimeRequest page.webp" alt="OverTime Request maintenance">
-                    </div>
-                    <div class="right-pnl info-pnl">
-                        <h4 data-translate="projects.daikin.overtime.title">Aplicacion de escritorio OverTime Request</h4>
-                        <p data-translate="projects.daikin.overtime.description">
-                            Desarrollo y soporte del módulo de cálculo automatizado de costos de tiempo extra,
-                            incluyendo la estimación de gastos de alimentación y transporte para personal de producción.
-                            Implementación de lógica de negocio compleja y validaciones de datos.
-                        </p>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="left-pnl img-pnl">
-                        <img src="~/images/projects/Daikin/Etiquetas.webp" alt="Etiquetas desktop app">
-                    </div>
-                    <div class="right-pnl info-pnl">
-                        <h4 data-translate="projects.daikin.etiquetas.title">Aplicacion de escritorio Etiquetas</h4>
-                        <p data-translate="projects.daikin.etiquetas.description">
-                            Desarrollo de aplicación para el área de almacén que consulta información de proveedores en Oracle,
-                            genera etiquetas dinámicas y gestiona la impresión automatizada.
-                            Sistema configurable mediante archivos JSON para máxima flexibilidad operativa.
-                        </p>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="left-pnl img-pnl">
-                        <img src="~/images/projects/Daikin/MasterLabel.webp" alt="MasterLabel register app">
-                    </div>
-                    <div class="right-pnl info-pnl">
-                        <h4 data-translate="projects.daikin.masterLabel.title">Aplicacion web Master Label</h4>
-                        <p data-translate="projects.daikin.masterLabel.description">
-                            Diseño e implementación de sistema web para el registro y análisis de errores en Master Labels,
-                            facilitando la identificación de patrones y causas raíz mediante reportes y dashboards.
-                        </p>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="left-pnl img-pnl">
-                        <img src="~/images/projects/Daikin/budgetControl.webp" alt="Budget Control maintenance">
-                    </div>
-                    <div class="right-pnl info-pnl">
-                        <h4 data-translate="projects.daikin.budgetControl.title">Aplicacion web Budget Control</h4>
-                        <p data-translate="projects.daikin.budgetControl.description">
-                            Desarrollo de aplicación para el área de finanzas que automatiza procesos repetitivos,
-                            integra múltiples fuentes de datos Excel, y calcula presupuestos y costos de manera eficiente.
-                            Reducción significativa de tiempos de procesamiento manual.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-info-card" id="devportfolio-info">
-            <h2 data-translate="projects.devportfolio.name">DevPortfolio</h2>
-            <p data-translate="projects.devportfolio.description">
-                Portafolio web profesional con diseño único que integra elementos espaciales y efectos glassmorphism,
-                presentando de manera visual e interactiva habilidades técnicas, proyectos y trayectoria profesional.
-            </p>
-
-            <h3 data-translate="projects.devportfolio.featuresTitle">Caracteristicas Principales</h3>
-            <ul>
-                <li><p data-translate="projects.devportfolio.feature1">Diseño espacial con animaciones de estrellas y estrella fugaz</p></li>
-                <li><p data-translate="projects.devportfolio.feature2">Interfaz moderna con efectos de glasmorfismo</p></li>
-                <li><p data-translate="projects.devportfolio.feature3">Sistema de vistas parciales para navegación dinámica</p></li>
-                <li><p data-translate="projects.devportfolio.feature4">Carrusel interactivo de proyectos</p></li>
-                <li><p data-translate="projects.devportfolio.feature5">Integración de redes sociales con efectos animados</p></li>
-                <li><p data-translate="projects.devportfolio.feature6">Diseño completamente responsivo</p></li>
-                <li><p data-translate="projects.devportfolio.feature7">Animaciones y transiciones fluidas</p></li>
-            </ul>
-
-            <div class="lenguages-tech">
-                <p>
-                    <span data-translate="projects.devportfolio.techTitle">Tecnologias implementadas</span>:
-                    <span data-translate="projects.devportfolio.techList">ASP.NET MVC, C#, JavaScript, HTML5, CSS3, jQuery</span>
-                </p>
-            </div>
-
-            <h3 data-translate="projects.devportfolio.challengesTitle">Desafíos Técnicos</h3>
-            <p data-translate="projects.devportfolio.challenge1">Implementación de animaciones de espacio optimizadas para rendimiento</p>
-            <p data-translate="projects.devportfolio.challenge2">Desarrollo de carrusel personalizado con controles avanzados</p>
-            <p data-translate="projects.devportfolio.challenge3">Integración de efectos glassmorphism manteniendo compatibilidad cross-browser</p>
-            <p data-translate="projects.devportfolio.challenge4">Sistema robusto de gestión de transiciones y estado de navegación</p>
-
-            <div class="img-project-container">
-                <img src="~/images/projects/DevPortfolio/portfolio-interface.webp" alt="DevPortfolio interface app">
-            </div>
-        </div>
-
-        <div class="project-info-card" id="datathon2022-info">
-            <h2 data-translate="projects.datathon2022.title">WiDS Datathon 2022 - Detección temprana de cáncer de mama</h2>
-            <p data-translate="projects.datathon2022.description">
-                Desarrollo de modelo predictivo para la detección temprana de cáncer de mama
-                mediante técnicas de machine learning aplicadas a datos clínicos,
-                enfocado en la clasificación precisa de riesgo.
-            </p>
-
-            <h3 data-translate="projects.datathon2022.featuresTitle">Características Técnicas</h3>
-            <ul>
-                <li><p data-translate="projects.datathon2022.feature1">Limpieza y preprocesamiento de datasets médicos complejos</p></li>
-                <li><p data-translate="projects.datathon2022.feature2">Implementación de modelos de clasificación (árboles de decisión y regresión)</p></li>
-                <li><p data-translate="projects.datathon2022.feature3">Evaluación con métricas especializadas para datos desbalanceados (AUC, F1, recall)</p></li>
-                <li><p data-translate="projects.datathon2022.feature4">Validación cruzada para garantizar robustez del modelo</p></li>
-            </ul>
-
-            <div class="lenguages-tech">
-                <p>
-                    <span data-translate="projects.datathon2022.techTitle">Tecnologías implementadas</span>:
-                    <span data-translate="projects.datathon2022.techList">Jupyter, Python, Pandas, Scikit-learn, NumPy, Matplotlib</span>
-                </p>
-            </div>
-
-            <h3 data-translate="projects.datathon2022.challengesTitle">Desafíos Técnicos</h3>
-            <p data-translate="projects.datathon2022.challenge1">Tratamiento de desbalance de clases en diagnósticos positivos</p>
-            <p data-translate="projects.datathon2022.challenge2">Optimización de hiperparámetros de modelos</p>
-            <p data-translate="projects.datathon2022.challenge3">Selección de features con relevancia clínica y estadística</p>
-        </div>
-
-        <div class="project-info-card" id="datathon2025-info">
-            <h2 data-translate="projects.datathon2025.title">WiDS Datathon 2025 - Detección de TDAH y TDA en mujeres adolescentes</h2>
-            <p data-translate="projects.datathon2025.description">
-                Desarrollo de modelo predictivo para la identificación temprana de patrones asociados a TDAH y TDA
-                en población femenina adolescente, abordando el desafío de síntomas atípicos y subrepresentación en datos de entrenamiento.
-            </p>
-
-            <h3 data-translate="projects.datathon2025.featuresTitle">Características Técnicas</h3>
-            <ul>
-                <li><p data-translate="projects.datathon2025.feature1">Limpieza y estructuración de datasets neurocognitivos complejos</p></li>
-                <li><p data-translate="projects.datathon2025.feature2">Procesamiento de variables neurocognitivas y conductuales</p></li>
-                <li><p data-translate="projects.datathon2025.feature3">Desarrollo de modelos de clasificación multietiqueta</p></li>
-                <li><p data-translate="projects.datathon2025.feature4">Análisis de señales y extracción de variables psicológicas relevantes</p></li>
-                <li><p data-translate="projects.datathon2025.feature5">Implementación de técnicas de regularización para mejorar generalización</p></li>
-                <li><p data-translate="projects.datathon2025.feature6">Validación cruzada estratificada por edad y género</p></li>
-            </ul>
-
-            <div class="lenguages-tech">
-                <p>
-                    <span data-translate="projects.datathon2025.techTitle">Tecnologías implementadas</span>:
-                    <span data-translate="projects.datathon2025.techList">Jupyter, Python, Pandas, Scikit-learn, NumPy, XGBoost</span>
-                </p>
-            </div>
-
-            <h3 data-translate="projects.datathon2025.challengesTitle">Desafíos Técnicos</h3>
-            <p data-translate="projects.datathon2025.challenge1">Manejo de ruido en datos por alta variabilidad neuropsicológica individual</p>
-            <p data-translate="projects.datathon2025.challenge2">Separación de síntomas con alta correlación entre TDA y TDAH</p>
-            <p data-translate="projects.datathon2025.challenge3">Balanceo de clases y perfiles clínicos diversos</p>
-            <p data-translate="projects.datathon2025.challenge4">Validación de sesgo de género en predicciones</p>
-        </div>
-
-        <div class="project-info-card" id="prosalud-info">
-            <h2 data-translate="projects.prosalud.title">ProSalud - Sistema de gestión médica</h2>
-            <p data-translate="projects.prosalud.description">
-                Plataforma integral para la gestión de consultorios médicos que automatiza procesos administrativos y clínicos,
-                desde la programación de citas hasta el manejo de historiales médicos y facturación.
-            </p>
-
-            <h3 data-translate="projects.prosalud.featuresTitle">Caracteristicas Principales</h3>
-            <ul>
-                <li><p data-translate="projects.prosalud.feature1">Gestión completa de historiales clínicos y expedientes de pacientes</p></li>
-                <li><p data-translate="projects.prosalud.feature2">Sistema de agendamiento de citas y calendarios médicos</p></li>
-                <li><p data-translate="projects.prosalud.feature3">Administración de personal médico y especialidades</p></li>
-                <li><p data-translate="projects.prosalud.feature4">Módulo de facturación integrado y programa de fidelización VIP</p></li>
-                <li><p data-translate="projects.prosalud.feature5">Sistema de diagnóstico basado en clasificación CIE-10</p></li>
-                <li><p data-translate="projects.prosalud.feature6">Seguimiento de tratamientos y prescripciones médicas</p></li>
-            </ul>
-
-            <div class="lenguages-tech">
-                <p>
-                    <span data-translate="projects.prosalud.techTitle">Stack Tecnológico</span>:
-                    <span data-translate="projects.prosalud.techList">ASP.NET MVC, C#, SQL Server, Dapper, jQuery, Bootstrap, HTML5, CSS3, JavaScript</span>
-                </p>
-            </div>
-
-            <h3 data-translate="projects.prosalud.challengesTitle">Desafíos Técnicos</h3>
-            <p data-translate="projects.prosalud.challenge1">Diseño de arquitectura para manejo de datos médicos sensibles</p>
-            <p data-translate="projects.prosalud.challenge2">Implementación de interfaz intuitiva con Bootstrap</p>
-            <p data-translate="projects.prosalud.challenge3">Modelado de base de datos relacional compleja para sector salud</p>
-
-            <div class="img-project-container">
-                <img src="~/images/projects/proSalud/page.webp" alt="ProSalud app interface">
-            </div>
-        </div>
-
-        <div class="project-info-card" id="bookshelf-info">
-            <h2 data-translate="projects.bookshelf.name">BookShelf</h2>
-            <p data-translate="projects.bookshelf.description">
-                Sistema de gestión de biblioteca personal con catalogación de libros, autores y géneros literarios,
-                proporcionando una solución completa para organizar y administrar colecciones bibliográficas.
-            </p>
-
-            <h3 data-translate="projects.bookshelf.featuresTitle">Caracteristicas Principales</h3>
-            <ul>
-                <li><p data-translate="projects.bookshelf.feature1">Administración integral de libros, autores y géneros</p></li>
-                <li><p data-translate="projects.bookshelf.feature2">Interfaz intuitiva con paneles expandibles</p></li>
-                <li><p data-translate="projects.bookshelf.feature3">Formularios dinámicos para captura de datos</p></li>
-                <li><p data-translate="projects.bookshelf.feature4">Carga asíncrona de datos mediante AJAX</p></li>
-                <li><p data-translate="projects.bookshelf.feature5">Sistema avanzado de clasificación y búsqueda</p></li>
-                <li><p data-translate="projects.bookshelf.feature6">Etiquetado personalizado y categorización flexible</p></li>
-            </ul>
-
-            <div class="lenguages-tech">
-                <p>
-                    <span data-translate="projects.bookshelf.techTitle">Stack Tecnológico</span>:
-                    <span data-translate="projects.bookshelf.techList">ASP.NET MVC, C#, SQL Server, Dapper, jQuery, Bootstrap, HTML5, CSS3, JavaScript</span>
-                </p>
-            </div>
-
-            <h3 data-translate="projects.bookshelf.challengesTitle">Desafíos Técnicos</h3>
-            <p data-translate="projects.bookshelf.challenge1">Diseño de sistema de relaciones complejas entre entidades</p>
-            <p data-translate="projects.bookshelf.challenge2">Implementación de UI responsive con Bootstrap</p>
-            <p data-translate="projects.bookshelf.challenge3">Arquitectura de base de datos normalizada para bibliotecas</p>
-
-            <div class="img-project-container">
-                <img src="~/images/projects/BookShelf/page.webp" alt="BookShelf interface app">
+            <div class="carousel-pagination carousel-personal-project-pagination">
+                <span class="current">1</span>/<span class="total">5</span>
             </div>
         </div>
     </div>
 </div>
 
+<div class="carousel-information-container">
+    <div class="project-info-card active" id="Daikin-info">
+        <h2 data-translate="projects.daikin.name">Daikin Manufacturing México</h2>
+        <p data-translate="projects.daikin.description">Desarrollo y soporte de aplicaciones empresariales utilizando arquitectura MVC con .NET y SQL Server. Responsable del diseño, implementación y mantenimiento de APIs y bases de datos para sistemas críticos de producción.</p>
+
+        <h3 data-translate="projects.daikin.featuresTitle">Responsabilidades Principales</h3>
+        <ul>
+            <li><p data-translate="projects.daikin.feature1">Mantenimiento y evolución de aplicaciones críticas del negocio</p></li>
+            <li><p data-translate="projects.daikin.feature2">Diseño e implementación de nuevas funcionalidades según especificaciones técnicas</p></li>
+            <li><p data-translate="projects.daikin.feature3">Optimización de consultas SQL y desarrollo de procedimientos almacenados</p></li>
+            <li><p data-translate="projects.daikin.feature4">Mejoras en UX/UI y rendimiento de aplicaciones</p></li>
+            <li><p data-translate="projects.daikin.feature5">Desarrollo colaborativo bajo metodologías ágiles</p></li>
+        </ul>
+
+        <div class="lenguages-tech">
+            <p><span data-translate="projects.daikin.techTitle">Stack Tecnológico</span>: <span data-translate="projects.daikin.techList">ASP.NET MVC, C#, JavaScript, HTML, Bootstrap, Oracle SQL, SQL Server, Oracle, SAP, jQuery y archivos JSON</span></p>
+        </div>
+
+        <h3 data-translate="projects.daikin.challengesTitle">Desafíos Técnicos Resueltos</h3>
+        <p data-translate="projects.daikin.challenge1">Integración de requisitos complejos en entornos empresariales de alta disponibilidad</p>
+        <p data-translate="projects.daikin.challenge2">Colaboración efectiva en equipos multidisciplinarios</p>
+        <p data-translate="projects.daikin.challenge3">Implementación de mejoras continuas en sistemas legacy</p>
+
+        <h3 data-translate="projects.daikin.projectsTitle">Proyectos Destacados</h3>
+        <div class="img-project-container">
+            <div class="project-info">
+                <div class="left-pnl img-pnl">
+                    <img src="~/images/projects/Daikin/overimeRequest page.webp" alt="OverTime Request">
+                </div>
+                <div class="right-pnl info-pnl">
+                    <h4 data-translate="projects.daikin.overtime.title">Aplicacion de escritorio OverTime Request</h4>
+                    <p data-translate="projects.daikin.overtime.description">Desarrollo y soporte del módulo de cálculo automatizado de costos de tiempo extra, incluyendo la estimación de gastos de alimentación y transporte para personal de producción.</p>
+                </div>
+            </div>
+            <div class="project-info">
+                <div class="left-pnl img-pnl">
+                    <img src="~/images/projects/Daikin/Etiquetas.webp" alt="Etiquetas">
+                </div>
+                <div class="right-pnl info-pnl">
+                    <h4 data-translate="projects.daikin.etiquetas.title">Aplicacion de escritorio Etiquetas</h4>
+                    <p data-translate="projects.daikin.etiquetas.description">Desarrollo de aplicación para el área de almacén que consulta información de proveedores en Oracle y gestiona la impresión automatizada mediante archivos JSON.</p>
+                </div>
+            </div>
+            <div class="project-info">
+                <div class="left-pnl img-pnl">
+                    <img src="~/images/projects/Daikin/MasterLabel.webp" alt="MasterLabel">
+                </div>
+                <div class="right-pnl info-pnl">
+                    <h4 data-translate="projects.daikin.masterLabel.title">Aplicacion web Master Label</h4>
+                    <p data-translate="projects.daikin.masterLabel.description">Diseño e implementación de sistema web para el registro y análisis de errores en Master Labels, facilitando la identificación de causas raíz mediante dashboards.</p>
+                </div>
+            </div>
+            <div class="project-info">
+                <div class="left-pnl img-pnl">
+                    <img src="~/images/projects/Daikin/budgetControl.webp" alt="Budget Control">
+                </div>
+                <div class="right-pnl info-pnl">
+                    <h4 data-translate="projects.daikin.budgetControl.title">Aplicacion web Budget Control</h4>
+                    <p data-translate="projects.daikin.budgetControl.description">Desarrollo de aplicación para el área de finanzas que automatiza procesos repetitivos e integra múltiples fuentes de datos Excel para el cálculo de presupuestos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-info-card" id="devportfolio-info">
+        <h2 data-translate="projects.devportfolio.name">DevPortfolio</h2>
+        <p data-translate="projects.devportfolio.description">Portafolio web profesional con diseño único que integra elementos espaciales y efectos glassmorphism, presentando de manera visual e interactiva habilidades técnicas.</p>
+        <h3 data-translate="projects.devportfolio.featuresTitle">Caracteristicas Principales</h3>
+        <ul>
+            <li><p data-translate="projects.devportfolio.feature1">Diseño espacial con animaciones de estrellas y estrella fugaz</p></li>
+            <li><p data-translate="projects.devportfolio.feature2">Interfaz moderna con efectos de glasmorfismo</p></li>
+            <li><p data-translate="projects.devportfolio.feature3">Sistema de vistas parciales para navegación dinámica</p></li>
+            <li><p data-translate="projects.devportfolio.feature4">Carrusel interactivo de proyectos</p></li>
+            <li><p data-translate="projects.devportfolio.feature6">Diseño completamente responsivo</p></li>
+        </ul>
+        <div class="lenguages-tech">
+            <p><span data-translate="projects.devportfolio.techTitle">Tecnologias implementadas</span>: <span data-translate="projects.devportfolio.techList">ASP.NET MVC, C#, JavaScript, HTML5, CSS3, jQuery</span></p>
+        </div>
+        <h3 data-translate="projects.devportfolio.challengesTitle">Desafíos Técnicos</h3>
+        <p data-translate="projects.devportfolio.challenge1">Implementación de animaciones de espacio optimizadas para rendimiento</p>
+        <p data-translate="projects.devportfolio.challenge2">Desarrollo de carrusel personalizado con controles avanzados</p>
+        <div class="img-project-container">
+            <img src="~/images/projects/DevPortfolio/portfolio-interface.webp" alt="DevPortfolio interface">
+        </div>
+    </div>
+
+    <div class="project-info-card" id="datathon2022-info">
+        <h2 data-translate="projects.datathon2022.title">WiDS Datathon 2022 - Detección temprana de cáncer de mama</h2>
+        <p data-translate="projects.datathon2022.description">Desarrollo de modelo predictivo para la detección temprana de cáncer de mama mediante técnicas de machine learning aplicadas a datos clínicos.</p>
+        <h3 data-translate="projects.datathon2022.featuresTitle">Características Técnicas</h3>
+        <ul>
+            <li><p data-translate="projects.datathon2022.feature1">Limpieza y preprocesamiento de datasets médicos complejos</p></li>
+            <li><p data-translate="projects.datathon2022.feature2">Implementación de modelos de clasificación</p></li>
+            <li><p data-translate="projects.datathon2022.feature3">Evaluación con métricas AUC, F1 y recall</p></li>
+        </ul>
+        <div class="lenguages-tech">
+            <p><span data-translate="projects.datathon2022.techTitle">Tecnologías implementadas</span>: <span data-translate="projects.datathon2022.techList">Jupyter, Python, Pandas, Scikit-learn, NumPy</span></p>
+        </div>
+    </div>
+
+    <div class="project-info-card" id="datathon2025-info">
+        <h2 data-translate="projects.datathon2025.title">WiDS Datathon 2025 - Detección de TDAH y TDA en mujeres adolescentes</h2>
+        <p data-translate="projects.datathon2025.description">Modelo predictivo para la identificación temprana de patrones asociados a TDAH y TDA en población femenina adolescente.</p>
+        <h3 data-translate="projects.datathon2025.featuresTitle">Características Técnicas</h3>
+        <ul>
+            <li><p data-translate="projects.datathon2025.feature3">Desarrollo de modelos de clasificación multietiqueta</p></li>
+            <li><p data-translate="projects.datathon2025.feature5">Implementación de técnicas de regularización</p></li>
+            <li><p data-translate="projects.datathon2025.feature6">Validación cruzada estratificada</p></li>
+        </ul>
+        <div class="lenguages-tech">
+            <p><span data-translate="projects.datathon2025.techTitle">Tecnologías implementadas</span>: <span data-translate="projects.datathon2025.techList">Jupyter, Python, Pandas, Scikit-learn, XGBoost</span></p>
+        </div>
+    </div>
+
+    <div class="project-info-card" id="prosalud-info">
+        <h2 data-translate="projects.prosalud.title">ProSalud - Sistema de gestión médica</h2>
+        <p data-translate="projects.prosalud.description">Plataforma integral para la gestión de consultorios médicos que automatiza procesos administrativos y clínicos.</p>
+        <h3 data-translate="projects.prosalud.featuresTitle">Caracteristicas Principales</h3>
+        <ul>
+            <li><p data-translate="projects.prosalud.feature1">Gestión completa de historiales clínicos</p></li>
+            <li><p data-translate="projects.prosalud.feature2">Sistema de agendamiento de citas</p></li>
+            <li><p data-translate="projects.prosalud.feature5">Sistema de diagnóstico basado en clasificación CIE-10</p></li>
+        </ul>
+        <div class="lenguages-tech">
+            <p><span data-translate="projects.prosalud.techTitle">Stack Tecnológico</span>: <span data-translate="projects.prosalud.techList">ASP.NET MVC, C#, SQL Server, Dapper, jQuery, Bootstrap</span></p>
+        </div>
+        <div class="img-project-container">
+            <img src="~/images/projects/proSalud/page.webp" alt="ProSalud interface">
+        </div>
+    </div>
+
+    <div class="project-info-card" id="bookshelf-info">
+        <h2 data-translate="projects.bookshelf.name">BookShelf</h2>
+        <p data-translate="projects.bookshelf.description">Sistema de gestión de biblioteca personal con catalogación de libros, autores y géneros literarios.</p>
+        <h3 data-translate="projects.bookshelf.featuresTitle">Caracteristicas Principales</h3>
+        <ul>
+            <li><p data-translate="projects.bookshelf.feature1">Administración integral de libros y autores</p></li>
+            <li><p data-translate="projects.bookshelf.feature4">Carga asíncrona de datos mediante AJAX</p></li>
+            <li><p data-translate="projects.bookshelf.feature5">Sistema avanzado de clasificación y búsqueda</p></li>
+        </ul>
+        <div class="lenguages-tech">
+            <p><span data-translate="projects.bookshelf.techTitle">Stack Tecnológico</span>: <span data-translate="projects.bookshelf.techList">ASP.NET MVC, C#, SQL Server, Dapper, jQuery, Bootstrap</span></p>
+        </div>
+        <div class="img-project-container">
+            <img src="~/images/projects/BookShelf/page.webp" alt="BookShelf interface">
+        </div>
+    </div>
+</div>
+</div>
+
 <div class="image-modal" id="imageModal">
     <div class="modal-content">
-        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar" data-translate-aria="modal.close">
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar">
             <svg viewBox="0 0 24 24" fill="none">
                 <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" />
             </svg>
         </button>
-        <img src="" alt="Imagen ampliada" id="modalImage" data-translate-alt="modal.imageAlt">
+        <img src="" alt="Imagen ampliada" id="modalImage">
     </div>
 </div>
