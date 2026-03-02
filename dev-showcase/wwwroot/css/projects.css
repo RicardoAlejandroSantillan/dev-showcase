@@ -391,27 +391,3 @@
         flex: 0 0 calc(33.333% - 8px);
     }
 }
-
-@media (max-width: 768px) {
-    .project-info {
-        grid-template-columns: 1fr;
-    }
-
-    .carousel-card {
-        flex: 0 0 calc(50% - 6px);
-    }
-
-    .project-info-card h2 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-card {
-        flex: 0 0 100%;
-    }
-
-    .projects-block {
-        padding: 1rem;
-    }
-}

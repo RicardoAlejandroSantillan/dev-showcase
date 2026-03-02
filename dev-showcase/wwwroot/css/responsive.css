@@ -1,4 +1,12 @@
 ﻿@media (max-width: 1200px) {
+    .projects-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-card {
+        flex: 0 0 calc(33.333% - 8px);
+    }
+
     .vocational-bars-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -41,10 +49,7 @@
         grid-template-columns: 1fr;
     }
 
-    .vocational-grid-lists {
-        grid-template-columns: 1fr;
-    }
-
+    .vocational-grid-lists,
     .proyecto-top-grid {
         grid-template-columns: 1fr;
     }
@@ -90,26 +95,19 @@
 
     .skill-filter,
     .project-filter,
-    .education-filter {
-        flex-direction: column;
-    }
-
-    .filter button {
-        width: 100%;
-    }
-
+    .education-filter,
     .vocational-section-filter {
         flex-direction: column;
     }
 
+    .filter button,
     .vocational-section-btn {
         width: 100%;
         text-align: center;
     }
 
-    .carousel-professional-work-card,
-    .carousel-personal-project-card {
-        flex: 0 0 80%;
+    .carousel-card {
+        flex: 0 0 calc(50% - 6px);
     }
 
     .carousel-arrow {
@@ -182,9 +180,12 @@
         font-size: 1rem;
     }
 
-    .carousel-professional-work-card,
-    .carousel-personal-project-card {
+    .carousel-card {
         flex: 0 0 100%;
+    }
+
+    .projects-block {
+        padding: 1rem;
     }
 
     .chart-container {
