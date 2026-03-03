@@ -79,7 +79,6 @@
 
         .credentials-content ul li::before,
         .professional-goals-content ul li::before {
-            content: '→';
             position: absolute;
             left: 0;
             color: var(--color-accent-red);
@@ -135,7 +134,6 @@
     }
 
         .soft-skills-content ul li::before {
-            content: '✓';
             position: absolute;
             left: 0;
             color: var(--color-accent-red);

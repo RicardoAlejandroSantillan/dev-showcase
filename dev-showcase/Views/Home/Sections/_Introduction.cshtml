@@ -1,69 +1,196 @@
-﻿<div class="section-intro">
-    <h2 data-translate="introduction.greeting">¡Hola! Soy Alejandro</h2>
-    <h3 data-translate="introduction.role">Científico de Datos</h3>
+﻿<section class="section-intro">
 
-    <section class="about-me-content">
-        <h4 data-translate="introduction.aboutMe.title">Acerca de Mi</h4>
-        <p data-translate="introduction.aboutMe.description">
-            Soy desarrollador de software con enfoque reciente en Ciencia de Datos.
-            He trabajado con .NET, SQL Server y automatizaciones, pero en 2025 inicié una transición formal
-            hacia análisis y modelado de datos. He explorado retos reales como los datathones WiDS 2022
-            y WiDS 2025. Actualmente me estoy formando para construir proyectos end-to-end hacia 2026.
+    <div class="about-me-content">
+        <h2 data-translate="introduction.aboutTitle">Acerca de Mí</h2>
+        <p data-translate="introduction.aboutContent">
+            Soy desarrollador de software con enfoque reciente en Ciencia de Datos. He trabajado con .NET,
+            SQL Server y automatizaciones, pero en 2025 inicié una transición formal hacia análisis y modelado
+            de datos. He explorado retos reales como los datathones WiDS 2022 (detección de cáncer de mama) y
+            WiDS 2025 (detección de TDAH en mujeres). Actualmente me estoy formando en diversas herramientas
+            de ciencia de datos con el objetivo de construir proyectos completos end-to-end de aquí a inicios
+            de 2026. Mi base sólida en ingeniería me permite abordar la ciencia de datos desde una perspectiva
+            práctica, estructurada y orientada a producto.
         </p>
-    </section>
+    </div>
 
-    <section class="habilities-content">
-        <h4 data-translate="introduction.skills.title">Habilidades y Tecnologías</h4>
+    <div class="habilities-content">
+        <h2 data-translate="introduction.skillsTitle">Habilidades y Tecnologías</h2>
+
+        <div class="interactive-panels-grid">
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🌐</span>
+                    <h3 data-translate="introduction.panels.webDev">Desarrollo Web</h3>
+                    <p>ASP.NET, Bootstrap, HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🖥️</span>
+                    <h3 data-translate="introduction.panels.desktopDev">Desarrollo de Escritorio</h3>
+                    <p>C#, C, C++, Python, Java</p>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🗄️</span>
+                    <h3 data-translate="introduction.panels.databases">Bases de Datos</h3>
+                    <p>SQL Server, Derby</p>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🏢</span>
+                    <h3 data-translate="introduction.panels.erp">ERP</h3>
+                    <p>Oracle</p>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🔀</span>
+                    <h3 data-translate="introduction.panels.versionControl">Control de Versiones</h3>
+                    <p>Git, GitHub</p>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">⚙️</span>
+                    <h3 data-translate="introduction.panels.methodologies">Metodologías</h3>
+                    <p>Ágil, Scrum</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-logos-section">
+            <div class="logos-grid">
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.5 15.97l.41 2.44c-.26.14-.68.27-1.24.39-.57.13-1.24.2-2.01.2-2.21-.04-3.87-.7-4.98-1.96C2.57 15.77 2 14.16 2 12.21c.05-2.31.72-4.08 2-5.32C5.32 5.64 6.96 5 8.9 5c.75 0 1.4.07 1.95.2.54.13.94.27 1.2.4l-.58 2.49-1.06-.31c-.4-.1-.86-.15-1.39-.15-1.16-.01-2.diplom07.44-2.72 1.32-.66.89-.99 2.08-.99 3.57 0 1.38.3 2.46.9 3.23.6.78 1.47 1.17 2.62 1.17.44 0 .86-.04 1.27-.13.41-.1.77-.22 1.08-.38l.32 1.46zm4.24-10.97h2.86l-3.22 16h-2.86l3.22-16zm5.97 0h2.79l-1.39 8.56 3.89-8.56h2.99l-3.22 16h-2.79l2.25-11.09-5.04 11.09h-2.99l3.51-16z" />
+                        </svg>
+                        <span>C#</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm-.535 4.005h.535c3.866 0 7 3.134 7 7 0 .618-.08 1.217-.232 1.787L12 6.005v-2zm0 3.999l5.965 5.965c-.633 2.307-2.71 4.026-5.195 4.026-2.968 0-5.374-2.406-5.374-5.374 0-2.485 1.719-4.562 4.026-5.195l.578.578zm-.535 8.991c-3.866 0-7-3.134-7-7 0-.618.08-1.217.232-1.787L11.465 15.9c-.498.064-1.009.095-1.535.095z" />
+                        </svg>
+                        <span>Python</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" />
+                        </svg>
+                        <span>HTML</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" />
+                        </svg>
+                        <span>CSS</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
+                        </svg>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.956v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.325-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186C2.603 3.637 3.616 2.438 4.985 2.438H19.017c1.37 0 2.382 1.2 2.337 2.498-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.988-2.ignored16-2.818-2.38v-.043c1.576-.375 2.415-1.369 2.415-2.68 0-1.808-1.425-2.967-3.745-2.967H8.177v11.032h4.248c2.487 0 3.648-1.249 3.648-2.962z" />
+                        </svg>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" />
+                        </svg>
+                        <span>Git</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0V0zm2.182 0h19.636C22.999 0 24 1.001 24 2.182v19.636C24 22.999 22.999 24 21.818 24H2.182C1.001 24 0 22.999 0 21.818V2.182C0 1.001 1.001 0 2.182 0zm14.292 12.758l-2.22-2.22 6.148-6.148-2.16-2.16-6.148 6.148-2.22-2.22-1.08 5.46 7.68-1.08-.001.22z" />
+                        </svg>
+                        <span>SQL Server</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.585 11.692h4.328s2.432.039 2.432-2.35c0-2.388-2.346-2.303-2.346-2.303h-4.414v4.653zm0 6.46h4.502s2.695.09 2.695-2.71c0-2.755-2.432-2.628-2.432-2.628H9.585v5.338zM0 0l2.128 2.697V21.35L0 24h21.9s2.1 0 2.1-2.1V2.1S24 0 21.9 0H0zm20.47 16.971c-.401 2.715-2.963 3.324-5.306 3.324H5.37V3.705h9.507s4.773-.257 4.773 4.185c0 4.441-3.516 3.97-3.516 3.97s4.164.257 4.336 5.111z" />
+                        </svg>
+                        <span>Power BI</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.228 0H4.772A4.772 4.772 0 000 4.772v14.456A4.772 4.772 0 004.772 24h14.456A4.772 4.772 0 0024 19.228V4.772A4.772 4.772 0 0019.228 0zM14.4 18H9.6v-1.893h1.552V7.893H9.6V6h4.8v1.893h-1.552v8.214H14.4V18z" />
+                        </svg>
+                        <span>Java</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.996 0C5.373 0 0 5.372 0 11.996 0 18.62 5.372 24 11.996 24c6.622 0 12.004-5.38 12.004-12.004C24 5.372 18.618 0 11.996 0zM7.737 18.75l-1.1-1.1 8.113-8.112H9.525v-1.56h7.251v7.252h-1.56V9.979L7.737 18.75z" />
+                        </svg>
+                        <span>Excel</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.412 4.412H7.588C3.398 4.412 0 7.81 0 12s3.398 7.588 7.588 7.588h8.824C20.602 19.588 24 16.19 24 12s-3.398-7.588-7.588-7.588zm-.177 12.47H7.765a4.882 4.882 0 010-9.764h8.47a4.882 4.882 0 010 9.765z" />
+                        </svg>
+                        <span>Oracle</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="credentials-content">
+        <h2 data-translate="introduction.certificationsTitle">Certificaciones</h2>
         <ul>
-            <li>
-                <p>
-                    <span data-translate="introduction.skills.webDev">Desarrollo Web: </span>
-                    <span data-translate="introduction.skills.webDevList">ASP.NET, Bootstrap, HTML, CSS, JavaScript</span>
-                </p>
-            </li>
-            <li>
-                <p>
-                    <span data-translate="introduction.skills.desktopDev">Desarrollo de Escritorio: </span>
-                    <span data-translate="introduction.skills.desktopDevList">C#, C, C++, Python, Java</span>
-                </p>
-            </li>
-            <li>
-                <p>
-                    <span data-translate="introduction.skills.databases">Bases de Datos: </span>
-                    <span data-translate="introduction.skills.databasesList">SQL y Derby</span>
-                </p>
-            </li>
-            <li>
-                <p>
-                    <span data-translate="introduction.skills.erp">ERP: </span>
-                    <span data-translate="introduction.skills.erpList">Oracle, SAP</span>
-                </p>
-            </li>
+            <li data-translate="introduction.certifications.linguaskill">Certificado Linguaskill B1 — Junio 2024</li>
+            <li data-translate="introduction.certifications.excel">Excel Microsoft Office Specialist — 2019</li>
+            <li data-translate="introduction.certifications.word">Word Microsoft Office Specialist — 2019</li>
+            <li data-translate="introduction.certifications.powerpoint">PowerPoint Microsoft Office Specialist — 2019</li>
         </ul>
-        <p data-translate="introduction.skills.closing">
-            Me destaco por mi pasión por el aprendizaje continuo y adaptabilidad a nuevas tecnologías.
+    </div>
+
+    <div class="professional-goals-content">
+        <h2 data-translate="introduction.goalTitle">Meta Profesional</h2>
+        <p data-translate="introduction.goalContent">
+            Evolucionar hacia roles de Ciencia de Datos mientras continúo creciendo como Desarrollador Full Stack.
         </p>
-    </section>
+    </div>
 
-    <section class="credentials-content">
-        <h4 data-translate="introduction.certifications.title">Certificaciones</h4>
-        <ul>
-            <li><p data-translate="introduction.certifications.linguaskill">Certificado Linguaskill B1 - Junio 2024</p></li>
-            <li><p data-translate="introduction.certifications.excel">Excel Microsoft Office Specialist - 2019</p></li>
-            <li><p data-translate="introduction.certifications.word">Word Microsoft Office Specialist - 2019</p></li>
-            <li><p data-translate="introduction.certifications.powerpoint">PowerPoint Microsoft Office Specialist - 2019</p></li>
-        </ul>
-    </section>
-
-    <section class="professional-goals-content">
-        <h4 data-translate="introduction.goals.title">Meta Profesional</h4>
-        <p data-translate="introduction.goals.description">Evolucionar hacia roles de Ciencia de Datos mientras continúo creciendo como Desarrollador Full Stack.</p>
-
-        <h4 data-translate="introduction.goals.journeyTitle">Mi Trayectoria</h4>
-        <p data-translate="introduction.goals.journeyDescription">
-            Mi trayectoria me llevó a estudiar en 2022 la carrera de Ingeniería en TI en UTAN campus industrias.
-            Mi experiencia desarrollando aplicaciones de escritorio fortaleció mi interés en la experiencia del usuario
-            y el potencial de combinar el desarrollo con el análisis de datos.
+    <div class="about-me-content">
+        <h2 data-translate="introduction.journeyTitle">Mi Trayectoria</h2>
+        <p data-translate="introduction.journeyContent">
+            Mi trayectoria a través de la tecnología me llevó a estudiar en 2022 la carrera de Ingeniería en
+            Tecnologías de la Información en UTAN campus industrias. Lo que me apasiona del desarrollo es el
+            proceso creativo de construir soluciones personalizadas para cada proyecto a resolver. Mi experiencia
+            desarrollando aplicaciones de escritorio fortaleció mi interés en crear soluciones que impacten
+            directamente en la experiencia del usuario. Este camino me ha llevado a interesarme en la ciencia de
+            datos, donde veo el potencial de combinar el desarrollo con el análisis de datos para crear
+            soluciones más completas.
         </p>
-    </section>
-</div>
+    </div>
+
+</section>

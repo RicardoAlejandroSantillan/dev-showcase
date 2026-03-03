@@ -1,119 +1,549 @@
-﻿<div class="section-skills">
+﻿<section class="section-skills">
+
     <h2 data-translate="skills.title">Habilidades</h2>
 
-    <section class="skill-filter filter">
-        <button class="hard-skills active" id="hard-skills" data-translate="skills.filterHard">Habilidades Técnicas</button>
-        <button class="soft-skills" id="soft-skills" data-translate="skills.filterSoft">Habilidades Blandas</button>
-        <button class="vocational-stats" id="vocational-stats" data-translate="skills.filterStats">Estadísticas</button>
-    </section>
-
-    <div class="skills-content">
-        <section class="hard-skills-content active" id="hard-skills-content">
-            <h4 data-translate="skills.hardSkills.title">Habilidades Técnicas</h4>
-            <ul>
-                <li>
-                    <h5 data-translate="skills.hardSkills.webDevelopment">Desarrollo Web</h5>
-                    <ul>
-                        <li><p data-translate="skills.hardSkills.mvc">Modelo Vista Controlador (MVC) ASP .Net</p></li>
-                        <li><p>C#</p></li>
-                        <li><p>HTML</p></li>
-                        <li><p>CSS</p></li>
-                        <li><p>JavaScript</p></li>
-                        <li><p>Bootstrap</p></li>
-                    </ul>
-                </li>
-                <li>
-                    <h5 data-translate="skills.hardSkills.dataScience">Ciencia de Datos</h5>
-                    <ul>
-                        <li><p>Python</p></li>
-                        <li><p>Pandas</p></li>
-                        <li><p>NumPy</p></li>
-                        <li><p>Matplotlib</p></li>
-                        <li><p>Seaborn</p></li>
-                        <li><p>Power BI</p></li>
-                        <li><p>Excel</p></li>
-                    </ul>
-                </li>
-                <li>
-                    <h5 data-translate="skills.hardSkills.databases">Bases de Datos</h5>
-                    <ul>
-                        <li>SQL Server</li>
-                        <li>MySQL</li>
-                        <li>Oracle SQL</li>
-                        <li>Derby DB</li>
-                    </ul>
-                </li>
-                <li>
-                    <h5 data-translate="skills.hardSkills.desktopDevelopment">Desarrollo de escritorio</h5>
-                    <ul>
-                        <li><p>C#</p></li>
-                        <li><p>Java</p></li>
-                    </ul>
-                </li>
-                <li>
-                    <h5 data-translate="skills.hardSkills.versionControl">Control de Versiones</h5>
-                    <ul>
-                        <li><p>Git</p></li>
-                        <li><p>GitHub</p></li>
-                    </ul>
-                </li>
-                <li>
-                    <h5 data-translate="skills.hardSkills.generalProgramming">Programación General</h5>
-                    <ul>
-                        <li><p>C</p></li>
-                        <li><p>C++</p></li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <section class="soft-skills-content" id="soft-skills-content">
-            <h4 data-translate="skills.softSkills.title">Habilidades Blandas</h4>
-            <ul>
-                <li><p><strong data-translate="skills.softSkills.criticalThinking">Pensamiento Crítico</strong></p></li>
-                <li><p><strong data-translate="skills.softSkills.analyticalThinking">Pensamiento Analítico</strong></p></li>
-                <li><p><strong data-translate="skills.softSkills.communication">Comunicación Efectiva</strong></p></li>
-                <li><p data-translate="skills.softSkills.teamwork">Trabajo en Equipo</p></li>
-                <li><p data-translate="skills.softSkills.adaptability">Adaptabilidad</p></li>
-                <li><p data-translate="skills.softSkills.timeManagement">Gestión del Tiempo</p></li>
-                <li><p data-translate="skills.softSkills.attention">Atención al detalle</p></li>
-                <li><p data-translate="skills.softSkills.persistence">Persistencia</p></li>
-                <li><p data-translate="skills.softSkills.workEthic">Ética Laboral</p></li>
-            </ul>
-        </section>
-
-        <section class="vocational-stats-content" id="vocational-stats-content">
-            <h4 data-translate="skills.vocationalStats.title">Perfil Vocacional</h4>
-
-            <div class="interactive-panels-grid">
-                <div class="glow-panel" data-panel="1">
-                    <div class="glow-panel-content">
-                        <div class="icon">&#9889;</div>
-                        <h3 data-translate="skills.panels.performance.title">Rendimiento</h3>
-                        <p data-translate="skills.panels.performance.description">Optimizado al máximo para ofrecer la mejor experiencia de usuario.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="vocational-container">
-                <div class="vocational-chart-card radar-card" id="radarCardWrapper">
-                    <div class="radar-title-badge"><span data-translate="skills.vocationalStats.radarBadge">Vocacional</span></div>
-                    <div class="chart-container"><canvas id="vocationalRadarChart"></canvas></div>
-                </div>
-
-                <div class="vocational-grid-lists">
-                    <div class="vocational-list-card">
-                        <h5 data-translate="skills.vocationalStats.aptitudesDesarrolladas">Mis Aptitudes Desarrolladas</h5>
-                        <ul>
-                            <li data-translate="skills.aptitudes.developed.numeric">Capacidad numérica</li>
-                            <li data-translate="skills.aptitudes.developed.analysis">Analizar para encontrar soluciones</li>
-                            <li data-translate="skills.aptitudes.developed.reading">Inclinación a la lectura</li>
-                            <li data-translate="skills.aptitudes.developed.observation">Capacidad de observación</li>
-                            <li data-translate="skills.aptitudes.developed.organize">Organizar actividades</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="filter">
+        <button class="skill-filter-btn active" id="hard-skills-btn" data-translate="skills.filters.technical">
+            Habilidades Técnicas
+        </button>
+        <button class="skill-filter-btn" id="soft-skills-btn" data-translate="skills.filters.soft">
+            Habilidades Blandas
+        </button>
+        <button class="skill-filter-btn" id="vocational-stats-btn" data-translate="skills.filters.stats">
+            Estadísticas
+        </button>
     </div>
-</div>
+
+    <div class="skill-section active" id="hard-skills-content">
+
+        <div class="interactive-panels-grid">
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🌐</span>
+                    <h3 data-translate="skills.panels.webDev">Desarrollo Web</h3>
+                    <p>ASP.NET MVC, C#, HTML, CSS, JavaScript, Bootstrap</p>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">📊</span>
+                    <h3 data-translate="skills.panels.dataScience">Ciencia de Datos</h3>
+                    <p>Python, Pandas, NumPy, Matplotlib, Seaborn, Power BI, Excel</p>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🗄️</span>
+                    <h3 data-translate="skills.panels.databases">Bases de Datos</h3>
+                    <p>SQL Server, MySQL, Oracle SQL, Derby DB</p>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🖥️</span>
+                    <h3 data-translate="skills.panels.desktopDev">Desarrollo de Escritorio</h3>
+                    <p>C#, Java</p>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🔀</span>
+                    <h3 data-translate="skills.panels.versionControl">Control de Versiones</h3>
+                    <p>Git, GitHub</p>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">⚙️</span>
+                    <h3 data-translate="skills.panels.generalProgramming">Programación General</h3>
+                    <p>C, C++</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-stats-section">
+            <h4 data-translate="skills.stats.webTitle">Desarrollo Web</h4>
+            <p class="skills-stats-subtitle" data-translate="skills.stats.webSubtitle">Dominio por tecnología</p>
+
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">ASP.NET MVC</span>
+                    <span class="stat-percentage">85%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="85"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">C#</span>
+                    <span class="stat-percentage">85%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="85"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">HTML / CSS</span>
+                    <span class="stat-percentage">90%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="90"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">JavaScript</span>
+                    <span class="stat-percentage">80%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="80"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">Bootstrap</span>
+                    <span class="stat-percentage">80%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="80"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-stats-section">
+            <h4 data-translate="skills.stats.dataTitle">Ciencia de Datos</h4>
+            <p class="skills-stats-subtitle" data-translate="skills.stats.dataSubtitle">Dominio por tecnología</p>
+
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">Python</span>
+                    <span class="stat-percentage">75%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="75"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">Pandas / NumPy</span>
+                    <span class="stat-percentage">70%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="70"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">Matplotlib / Seaborn</span>
+                    <span class="stat-percentage">65%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="65"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">Power BI</span>
+                    <span class="stat-percentage">70%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="70"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">Excel</span>
+                    <span class="stat-percentage">90%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="90"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-stats-section">
+            <h4 data-translate="skills.stats.dbTitle">Bases de Datos</h4>
+            <p class="skills-stats-subtitle" data-translate="skills.stats.dbSubtitle">Dominio por tecnología</p>
+
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">SQL Server</span>
+                    <span class="stat-percentage">85%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="85"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">MySQL</span>
+                    <span class="stat-percentage">75%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="75"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">Oracle SQL</span>
+                    <span class="stat-percentage">70%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="70"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label">Derby DB</span>
+                    <span class="stat-percentage">60%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="60"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-logos-section">
+            <h4 data-translate="skills.logosTitle">Tecnologías</h4>
+            <p class="tech-logos-subtitle" data-translate="skills.logosSubtitle">Stack de herramientas y lenguajes</p>
+
+            <div class="logos-grid">
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.5 15.97l.41 2.44c-.26.14-.68.27-1.24.39-.57.13-1.24.2-2.01.2-2.21-.04-3.87-.7-4.98-1.96C2.57 15.77 2 14.16 2 12.21c.05-2.31.72-4.08 2-5.32C5.32 5.64 6.96 5 8.9 5c.75 0 1.4.07 1.95.2.54.13.94.27 1.2.4l-.58 2.49-1.06-.31c-.4-.1-.86-.15-1.39-.15-1.16-.01-2.07.44-2.72 1.32-.66.89-.99 2.08-.99 3.57 0 1.38.3 2.46.9 3.23.6.78 1.47 1.17 2.62 1.17.44 0 .86-.04 1.27-.13.41-.1.77-.22 1.08-.38l.32 1.46zm4.24-10.97h2.86l-3.22 16h-2.86l3.22-16zm5.97 0h2.79l-1.39 8.56 3.89-8.56h2.99l-3.22 16h-2.79l2.25-11.09-5.04 11.09h-2.99l3.51-16z" />
+                    </svg>
+                    <span>C#</span>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05 1.07.13zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09-.33.22zM21.1 6.11l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.04zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09-.33.22z" />
+                    </svg>
+                    <span>Python</span>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" />
+                    </svg>
+                    <span>HTML</span>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" />
+                    </svg>
+                    <span>CSS</span>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
+                    </svg>
+                    <span>JavaScript</span>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" />
+                    </svg>
+                    <span>Git</span>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                    <span>GitHub</span>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.585 11.692h4.328s2.432.039 2.432-2.35c0-2.388-2.346-2.303-2.346-2.303h-4.414v4.653zm0 6.46h4.502s2.695.09 2.695-2.71c0-2.755-2.432-2.628-2.432-2.628H9.585v5.338zM0 0l2.128 2.697V21.35L0 24h21.9s2.1 0 2.1-2.1V2.1S24 0 21.9 0H0zm20.47 16.971c-.401 2.715-2.963 3.324-5.306 3.324H5.37V3.705h9.507s4.773-.257 4.773 4.185c0 4.441-3.516 3.97-3.516 3.97s4.164.257 4.336 5.111z" />
+                    </svg>
+                    <span>Power BI</span>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.412 4.412H7.588C3.398 4.412 0 7.81 0 12s3.398 7.588 7.588 7.588h8.824C20.602 19.588 24 16.19 24 12s-3.398-7.588-7.588-7.588zm-.177 12.47H7.765a4.882 4.882 0 010-9.764h8.47a4.882 4.882 0 010 9.765z" />
+                    </svg>
+                    <span>Oracle</span>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0zm15.63 16.463c.476.43 1.093.643 1.85.643.59 0 1.1-.148 1.528-.443.432-.297.648-.66.648-1.088h1.856c-.012.65-.22 1.235-.625 1.758-.403.52-.946.925-1.627 1.215-.683.29-1.416.435-2.2.435-1.547 0-2.77-.484-3.674-1.452-.9-.97-1.35-2.303-1.35-4v-.27c0-1.647.446-2.963 1.34-3.947.893-.986 2.114-1.479 3.66-1.479 1.358 0 2.443.386 3.254 1.156.812.77 1.225 1.797 1.237 3.083h-1.855c0-.69-.216-1.248-.647-1.675-.432-.43-.997-.644-1.697-.644-.882 0-1.558.306-2.025.918-.467.612-.703 1.535-.71 2.77v.37c0 1.262.232 2.198.697 2.81zm-6.87.61l1.31-8.267H7.994l-1.31 8.267H4.828l1.31-8.267H3.63l.27-1.706h8.732l-.27 1.706h-2.508l-1.31 8.267H6.76z" />
+                    </svg>
+                    <span>C / C++</span>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.228 0H4.772A4.772 4.772 0 000 4.772v14.456A4.772 4.772 0 004.772 24h14.456A4.772 4.772 0 0024 19.228V4.772A4.772 4.772 0 0019.228 0zM14.4 18H9.6v-1.893h1.552V7.893H9.6V6h4.8v1.893h-1.552v8.214H14.4V18z" />
+                    </svg>
+                    <span>Java</span>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.17 3.25Q21.5 3.25 21.76 3.5 22 3.74 22 4.08v15.84q0 .34-.24.58-.24.25-.59.25H7.15q-.34 0-.59-.25-.24-.24-.24-.58v-3.84H2.83q-.34 0-.59-.25-.24-.24-.24-.58V8.83q0-.34.24-.58.25-.25.59-.25H6.32V4.08q0-.34.24-.58.25-.25.59-.25zM6.32 9.67H3.66v4.66H6.32zm6.26 9.58v2.66h8.33V4.92H13.5v2.66h5.17v11.67zm-5.17-9.58v4.66h5.17V9.67zM13.5 8.83V7.41h-5.6v9.18h5.6v-1.42h-4.17V8.83z" />
+                    </svg>
+                    <span>SQL Server</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="skill-section" id="soft-skills-content">
+
+        <div class="interactive-panels-grid">
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🧠</span>
+                    <h3 data-translate="skills.soft.criticalThinking">Pensamiento Crítico</h3>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🔍</span>
+                    <h3 data-translate="skills.soft.analyticalThinking">Pensamiento Analítico</h3>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">💬</span>
+                    <h3 data-translate="skills.soft.communication">Comunicación Efectiva</h3>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🤝</span>
+                    <h3 data-translate="skills.soft.teamwork">Trabajo en Equipo</h3>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🔄</span>
+                    <h3 data-translate="skills.soft.adaptability">Adaptabilidad</h3>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">⏱️</span>
+                    <h3 data-translate="skills.soft.timeManagement">Gestión del Tiempo</h3>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">🎯</span>
+                    <h3 data-translate="skills.soft.attention">Atención al Detalle</h3>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">💪</span>
+                    <h3 data-translate="skills.soft.persistence">Persistencia</h3>
+                </div>
+            </div>
+            <div class="glow-panel">
+                <div class="glow-panel-content">
+                    <span class="glow-panel-icon">⚖️</span>
+                    <h3 data-translate="skills.soft.workEthic">Ética Laboral</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-stats-section">
+            <h4 data-translate="skills.soft.statsTitle">Competencias Específicas</h4>
+            <p class="skills-stats-subtitle" data-translate="skills.soft.statsSubtitle">Nivel de desarrollo por competencia</p>
+
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label" data-translate="skills.soft.competencies.teamwork">Trabajo en Equipo</span>
+                    <span class="stat-percentage">88%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="88"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label" data-translate="skills.soft.competencies.confidence">Confianza</span>
+                    <span class="stat-percentage">82%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="82"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label" data-translate="skills.soft.competencies.independence">Independencia</span>
+                    <span class="stat-percentage">85%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="85"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label" data-translate="skills.soft.competencies.initiative">Iniciativa</span>
+                    <span class="stat-percentage">80%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="80"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <span class="stat-label" data-translate="skills.soft.competencies.problemSolving">Solución de Problemas</span>
+                    <span class="stat-percentage">90%</span>
+                </div>
+                <div class="stat-bar-container">
+                    <div class="stat-bar" data-percent="90"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="skill-section" id="vocational-stats-content">
+
+        <div class="vocational-section-filter">
+            <button class="vocational-section-btn active" data-section="profile" data-translate="skills.vocational.filters.profile">
+                Perfil Vocacional
+            </button>
+            <button class="vocational-section-btn" data-section="aptitudes" data-translate="skills.vocational.filters.aptitudes">
+                Análisis de Aptitudes
+            </button>
+        </div>
+
+        <div class="vocational-section-content active" data-section-content="profile">
+
+            <div class="vocational-chart-card radar-card">
+                <span class="radar-title-badge" data-translate="skills.vocational.radarBadge">RIASEC</span>
+                <h5 data-translate="skills.vocational.radarTitle">Perfil Vocacional</h5>
+                <div class="chart-container">
+                    <canvas id="vocationalRadarChart"></canvas>
+                </div>
+                <div class="radar-legend">
+                    <div class="radar-legend-item" data-cat="realistic">
+                        <div class="radar-legend-diamond"></div>
+                        <span data-translate="skills.vocational.legend.realistic">Realista</span>
+                    </div>
+                    <div class="radar-legend-item" data-cat="investigative">
+                        <div class="radar-legend-diamond"></div>
+                        <span data-translate="skills.vocational.legend.investigative">Investigador</span>
+                    </div>
+                    <div class="radar-legend-item" data-cat="artistic">
+                        <div class="radar-legend-diamond"></div>
+                        <span data-translate="skills.vocational.legend.artistic">Artístico</span>
+                    </div>
+                    <div class="radar-legend-item" data-cat="social">
+                        <div class="radar-legend-diamond"></div>
+                        <span data-translate="skills.vocational.legend.social">Social</span>
+                    </div>
+                    <div class="radar-legend-item" data-cat="enterprising">
+                        <div class="radar-legend-diamond"></div>
+                        <span data-translate="skills.vocational.legend.enterprising">Emprendedor</span>
+                    </div>
+                    <div class="radar-legend-item" data-cat="conventional">
+                        <div class="radar-legend-diamond"></div>
+                        <span data-translate="skills.vocational.legend.conventional">Convencional</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vocational-bars-grid">
+                <div class="vocational-chart-card">
+                    <h5 data-translate="skills.vocational.topSkills">Aptitudes Destacadas</h5>
+                    <div class="chart-container chart-container-bar">
+                        <canvas id="topSkillsChart"></canvas>
+                    </div>
+                </div>
+                <div class="vocational-chart-card">
+                    <h5 data-translate="skills.vocational.topInterests">Intereses Principales</h5>
+                    <div class="chart-container chart-container-bar">
+                        <canvas id="topInterestsChart"></canvas>
+                    </div>
+                </div>
+                <div class="vocational-chart-card">
+                    <h5 data-translate="skills.vocational.topCareers">Carreras Afines</h5>
+                    <div class="chart-container chart-container-bar">
+                        <canvas id="topCareersChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vocational-bars-grid">
+                <div class="vocational-chart-card">
+                    <h5 data-translate="skills.vocational.lowSkills">Aptitudes por Desarrollar</h5>
+                    <div class="chart-container chart-container-bar">
+                        <canvas id="lowSkillsChart"></canvas>
+                    </div>
+                </div>
+                <div class="vocational-chart-card">
+                    <h5 data-translate="skills.vocational.lowInterests">Intereses Menores</h5>
+                    <div class="chart-container chart-container-bar">
+                        <canvas id="lowInterestsChart"></canvas>
+                    </div>
+                </div>
+                <div class="vocational-chart-card">
+                    <h5 data-translate="skills.vocational.lowCareers">Carreras Menos Afines</h5>
+                    <div class="chart-container chart-container-bar">
+                        <canvas id="lowCareersChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="vocational-section-content" data-section-content="aptitudes">
+
+            <div class="vocational-chart-card radar-card">
+                <span class="cognitive-badge" data-translate="skills.vocational.cognitiveBadge">Perfil Cognitivo</span>
+                <h5 data-translate="skills.vocational.cognitiveTitle">Aptitudes Cognitivas (Escala 0–60)</h5>
+                <div class="chart-container chart-container--cognitive">
+                    <canvas id="cognitiveRadarChart"></canvas>
+                </div>
+                <div class="cognitive-legend">
+                    <div class="cognitive-legend-item" data-cognitive="mine">
+                        <div class="cognitive-legend-diamond"></div>
+                        <span data-translate="skills.vocational.cognitiveMe">Mi Resultado</span>
+                    </div>
+                    <div class="cognitive-legend-item" data-cognitive="avg">
+                        <div class="cognitive-legend-diamond"></div>
+                        <span data-translate="skills.vocational.cognitiveAvg">Promedio General</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vocational-bars-grid vocational-bars-grid--single">
+                <div class="vocational-chart-card">
+                    <h5 data-translate="skills.vocational.valoresTitle">Valores Ocupacionales</h5>
+                    <div class="chart-container chart-container-bar">
+                        <canvas id="valoresOcupacionalesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vocational-grid-lists">
+                <div class="vocational-list-card">
+                    <h5 data-translate="skills.vocational.aptitudesDeveloped">Aptitudes Desarrolladas</h5>
+                    <ul>
+                        <li data-translate="skills.vocational.developed.numerical">Capacidad numérica</li>
+                        <li data-translate="skills.vocational.developed.problemAnalysis">Análisis de problemas</li>
+                        <li data-translate="skills.vocational.developed.studyInclination">Inclinación al estudio</li>
+                        <li data-translate="skills.vocational.developed.observation">Observación</li>
+                        <li data-translate="skills.vocational.developed.leadership">Liderazgo de actividades</li>
+                    </ul>
+                </div>
+                <div class="vocational-list-card">
+                    <h5 data-translate="skills.vocational.aptitudesToDevelop">Aptitudes por Desarrollar</h5>
+                    <ul>
+                        <li data-translate="skills.vocational.toDevelop.authority">Autoridad</li>
+                        <li data-translate="skills.vocational.toDevelop.physicalCondition">Estado físico</li>
+                        <li data-translate="skills.vocational.toDevelop.persuasion">Persuasión</li>
+                        <li data-translate="skills.vocational.toDevelop.quickReflexes">Reflejos rápidos</li>
+                        <li data-translate="skills.vocational.toDevelop.composure">Templanza</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
