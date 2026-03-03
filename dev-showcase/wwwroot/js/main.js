@@ -16,14 +16,14 @@ function initializeMenuToggle() {
 
     function toggleMenu() {
         menuToggle.classList.toggle('active');
-        sidebar.classList.toggle('active');
+        sidebar.classList.toggle('open');
         menuOverlay.classList.toggle('active');
-        document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
     }
 
     function closeMenu() {
         menuToggle.classList.remove('active');
-        sidebar.classList.remove('active');
+        sidebar.classList.remove('open');
         menuOverlay.classList.remove('active');
         document.body.style.overflow = '';
     }
@@ -46,7 +46,7 @@ function initializeMenuToggle() {
     });
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+        if (e.key === 'Escape' && sidebar.classList.contains('open')) {
             closeMenu();
         }
     });
