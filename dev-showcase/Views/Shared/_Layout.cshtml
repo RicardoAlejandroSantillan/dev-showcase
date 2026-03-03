@@ -8,13 +8,13 @@
 
     <link href="~/css/reset.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/css/base.css" rel="stylesheet" asp-append-version="true" />
-    <link href="~/css/header-particles.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/css/layout.css" rel="stylesheet" asp-append-version="true" />
-    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
-    <link href="~/css/projects.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/header-particles.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/css/sidebar.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/css/panels-glow.css" rel="stylesheet" asp-append-version="true" />
+    @* <link href="~/css/skills.css" rel="stylesheet" asp-append-version="true" /> *@
     <link href="~/css/tech-logos.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/projects.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/css/charts.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/css/carousel.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/css/modal.css" rel="stylesheet" asp-append-version="true" />
@@ -110,6 +110,7 @@
     <div class="menu-overlay"></div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="~/js/main.js" asp-append-version="true"></script>
     <script src="~/js/navigation.js" asp-append-version="true"></script>
     <script src="~/js/glow-panels.js" asp-append-version="true"></script>
@@ -118,7 +119,6 @@
     <script src="~/js/carousel.js" asp-append-version="true"></script>
     <script src="~/js/typewriter.js" asp-append-version="true"></script>
     <script src="~/js/translation.js" asp-append-version="true"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -29,15 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             const section = btn.getAttribute('data-section');
             switchSection(section);
-
-            const overlay = document.querySelector('.menu-overlay');
-            const toggle = document.querySelector('.menu-toggle');
-            const sidebar = document.querySelector('.sidebar');
-            if (overlay && overlay.classList.contains('active')) {
-                overlay.classList.remove('active');
-                toggle && toggle.classList.remove('active');
-                sidebar && sidebar.classList.remove('open');
-            }
         });
     });
 
@@ -68,6 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 });
             }
+        });
+    });
+
+    projectFilterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            projectFilterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
         });
     });
 
@@ -197,39 +195,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-    });
-
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuOverlay = document.querySelector('.menu-overlay');
-    const sidebar = document.querySelector('.sidebar');
-
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            menuOverlay && menuOverlay.classList.toggle('active');
-            sidebar && sidebar.classList.toggle('open');
-        });
-    }
-
-    if (menuOverlay) {
-        menuOverlay.addEventListener('click', () => {
-            menuToggle && menuToggle.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            sidebar && sidebar.classList.remove('open');
-        });
-    }
-
-    const vocationalSectionBtns = document.querySelectorAll('.vocational-section-btn');
-    const vocationalSectionContents = document.querySelectorAll('.vocational-section-content');
-
-    vocationalSectionBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const target = btn.getAttribute('data-section');
-            vocationalSectionBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            vocationalSectionContents.forEach(content => {
-                content.classList.toggle('active', content.getAttribute('data-section-content') === target);
-            });
-        });
     });
 });
