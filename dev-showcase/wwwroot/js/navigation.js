@@ -20,8 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
             target.scrollTop = 0;
         }
 
-        navButtons.forEach(btn => {
-            btn.classList.toggle('active', btn.getAttribute('data-section') === targetId);
+        projectFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                projectFilterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const targetId = btn.id.replace('-btn', '-content');
+                document.querySelectorAll('.professional-work, .personal-project').forEach(el => {
+                    el.classList.remove('active');
+                });
+                const target = document.getElementById(targetId);
+                if (target) target.classList.add('active');
+            });
         });
     }
 
