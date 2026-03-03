@@ -1,120 +1,4 @@
-﻿* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html, body {
-    height: 100%;
-    background-color: var(--color-bg-primary);
-    color: var(--color-text-primary);
-    font-family: 'Segoe UI', Arial, sans-serif;
-    overflow: hidden;
-}
-
-.app-container {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.main-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-left: 280px;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.main-content {
-    flex: 1;
-    overflow: hidden;
-    position: relative;
-}
-
-.content-section {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    padding: 2rem;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(16px);
-    transition: opacity 0.35s var(--transition-easing), transform 0.35s var(--transition-easing);
-}
-
-    .content-section.active {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
-    }
-
-    .content-section::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    .content-section::-webkit-scrollbar-track {
-        background: transparent;
-    }
-
-    .content-section::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.12);
-        border-radius: 3px;
-    }
-
-        .content-section::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.22);
-        }
-
-h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--color-text-primary);
-}
-
-h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: var(--color-text-primary);
-}
-
-h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--color-text-secondary);
-    margin-bottom: 1.25rem;
-}
-
-p {
-    color: var(--color-text-secondary);
-    line-height: 1.7;
-    font-size: 0.95rem;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-    background: none;
-    color: inherit;
-    font-family: inherit;
-}
-
-.filter {
+﻿.filter {
     display: flex;
     gap: 0.75rem;
     margin-bottom: 2rem;
@@ -160,30 +44,6 @@ button {
         display: block;
     }
 
-.interactive-panels-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-    margin-bottom: 2.5rem;
-}
-
-.glow-panel-icon {
-    font-size: 2rem;
-    margin-bottom: 0.85rem;
-    display: block;
-}
-
-.glow-panel-content h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-}
-
-.glow-panel-content p {
-    font-size: 0.875rem;
-    color: var(--color-text-tertiary);
-    line-height: 1.55;
-}
-
 .skills-stats-section {
     margin-bottom: 2.5rem;
 }
@@ -191,6 +51,8 @@ button {
     .skills-stats-section h4 {
         margin-bottom: 0.35rem;
         color: var(--color-text-primary);
+        font-size: 1rem;
+        font-weight: 600;
     }
 
 .skills-stats-subtitle {
@@ -241,15 +103,6 @@ button {
 
     .stat-bar.animated {
         width: var(--target-width, 0%);
-    }
-
-.tech-logos-section {
-    margin-bottom: 2rem;
-}
-
-    .tech-logos-section h4 {
-        margin-bottom: 0.35rem;
-        color: var(--color-text-primary);
     }
 
 .tech-logos-subtitle {
@@ -307,3 +160,50 @@ button {
     .logo-item:hover span {
         color: var(--color-text-primary);
     }
+
+.glow-panel-icon {
+    font-size: 2rem;
+    margin-bottom: 0.85rem;
+    display: block;
+}
+
+.glow-panel-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.glow-panel-content p {
+    font-size: 0.875rem;
+    color: var(--color-text-tertiary);
+    line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+    .logos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .logos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .filter {
+        flex-direction: column;
+    }
+
+    .skill-filter-btn,
+    .project-filter-btn,
+    .preparation-btn,
+    .certificates-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
