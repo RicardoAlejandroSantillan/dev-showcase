@@ -1,153 +1,205 @@
-﻿<div class="section-education">
+﻿<section class="section-education">
+
     <h2 data-translate="education.title">Educación</h2>
 
-    <section class="education-filter filter">
-        <button class="preparation-btn active" id="preparation-btn" data-translate="education.filterPreparation">Preparación</button>
-        <button class="certificates-btn" id="certificates-btn" data-translate="education.filterCertificates">Certificados</button>
-    </section>
+    <div class="filter">
+        <button class="preparation-btn active" id="preparation-btn" data-translate="education.filters.preparation">
+            Preparación
+        </button>
+        <button class="certificates-btn" id="certificates-btn" data-translate="education.filters.certificates">
+            Certificados
+        </button>
+    </div>
 
     <div class="education-content">
-        <section class="preparation-content active" id="preparation-content">
-            <h4 data-translate="education.preparation.title">Formación Académica</h4>
 
-            <div class="academic-training-card">
-                <h4>
-                    <span data-translate="education.forge.name">Fundación Forge</span> |
-                    <span data-translate="education.forge.period">Noviembre 2025 - Diciembre 2025</span>
-                </h4>
-                <p data-translate="education.forge.current">Programa de desarrollo de competencias profesionales</p>
-                <p data-translate="education.forge.focus">Especialización en habilidades para el entorno laboral corporativo</p>
+        <section class="active" id="preparation-content">
+
+            <div class="about-me-content">
+                <h3 data-translate="education.academic.title">Formación Académica</h3>
             </div>
 
             <div class="academic-training-card">
-                <h4>
-                    <span data-translate="education.smart.name">Smart Teaching</span> |
-                    <span data-translate="education.smart.period">Febrero 2025 - Noviembre 2025</span>
-                </h4>
-                <p data-translate="education.smart.description">Programa intensivo de perfeccionamiento del idioma inglés</p>
-                <p data-translate="education.smart.focus">Nivel objetivo: B2 TOEFL IBT</p>
+                <h4 data-translate="education.academic.forge.institution">Fundación Forge</h4>
+                <p data-translate="education.academic.forge.program">Competencias profesionales</p>
+                <p class="lenguages-tech">
+                    <span data-translate="education.labels.period">Período:</span>
+                    <span data-translate="education.academic.forge.period">Nov 2025 – Dic 2025</span>
+                </p>
             </div>
 
             <div class="academic-training-card">
-                <h4>
-                    <span data-translate="education.university.name">Universidad Tangamanga | Ingenieria en Tecnologías de la información</span> |
-                    <span data-translate="education.university.period">Julio 2022 - Agosto 2025</span>
-                </h4>
-                <p data-translate="education.university.current">Ingeniería en Tecnologías de la Información</p>
-                <p data-translate="education.university.focus">Especialización en desarrollo de software y soluciones empresariales</p>
+                <h4 data-translate="education.academic.smart.institution">Smart Teaching</h4>
+                <p data-translate="education.academic.smart.program">Inglés Nivel B2 TOEFL IBT</p>
+                <p class="lenguages-tech">
+                    <span data-translate="education.labels.period">Período:</span>
+                    <span data-translate="education.academic.smart.period">Feb 2025 – Nov 2025</span>
+                </p>
             </div>
 
-            <section class="professional-development-content">
-                <h4 data-translate="education.professionalDevelopment">Desarrollo Profesional</h4>
-                <div class="professional-development-card">
-                    <h5 data-translate="education.cluster.name">Cluster Automotriz | Universidad Tangamanga</h5>
-                    <p data-translate="education.cluster.focus">Enfoque en tendencias tecnológicas del sector automotriz</p>
-                </div>
-            </section>
+            <div class="academic-training-card">
+                <h4 data-translate="education.academic.utan.institution">Universidad Tangamanga</h4>
+                <p data-translate="education.academic.utan.program">Ingeniería en Tecnologías de la Información</p>
+                <p class="lenguages-tech">
+                    <span data-translate="education.labels.period">Período:</span>
+                    <span data-translate="education.academic.utan.period">Jul 2022 – Ago 2025</span>
+                </p>
+            </div>
+
+            <div class="about-me-content">
+                <h3 data-translate="education.professional.title">Desarrollo Profesional</h3>
+            </div>
+
+            <div class="professional-development-card">
+                <h5 data-translate="education.professional.cluster.institution">Cluster Automotriz</h5>
+                <p data-translate="education.professional.cluster.program">Tendencias tecnológicas del sector automotriz</p>
+            </div>
+
         </section>
 
-        <section class="certificates-content" id="certificates-content">
-            <h4 data-translate="education.certificates.title">Certificados</h4>
+        <section id="certificates-content">
+
+            <div class="about-me-content">
+                <h3 data-translate="education.certificates.forge.title">Insignias Forge</h3>
+            </div>
 
             <div class="certificates-grid">
-                <div class="certificate-card" data-certificate="forge_trabajo_equipo">
+
+                <div class="certificate-card">
                     <div class="certificate-image-container">
-                        <img src="~/images/certificates/forge_trabajoenequipo.webp" alt="Insignia Forge Trabajo en Equipo" data-translate-alt="insignia.forge.trabajo.en.equipo.alt">
+                        <img src="~/images/certificates/forge-compromiso.webp"
+                             alt="Compromiso con el Aprendizaje" />
                     </div>
                     <div class="certificate-info">
-                        <p data-translate="insignia.forge.trabajo.en.equipo.f_title">Forge</p>
-                        <p data-translate="insignia.forge.trabajo.en.equipo.name">Trabajo en equipo</p>
-                        <span data-translate="education.forge.trabajo.en.equipo.date">Febrero 2026</span>
+                        <p data-translate="education.certificates.forge.commitment">Compromiso con el Aprendizaje</p>
+                        <span data-translate="education.certificates.forge.year">2025</span>
                     </div>
                 </div>
 
-                <div class="certificate-card" data-certificate="forge_orientacion_logro">
+                <div class="certificate-card">
                     <div class="certificate-image-container">
-                        <img src="~/images/certificates/forge_orientacionallogro.webp" alt="Insignia Forge Orientacion al Logro" data-translate-alt="insignia.forge.orientacion.al.logro.alt">
+                        <img src="~/images/certificates/forge-teamwork.webp"
+                             alt="Trabajo en Equipo" />
                     </div>
                     <div class="certificate-info">
-                        <p data-translate="insignia.forge.orientacion.al.logro.f_title">Forge</p>
-                        <p data-translate="insignia.forge.orientacion.al.logro.name">Orientación al Logro</p>
-                        <span data-translate="education.forge.orientacion.al.logro.date">Enero 2026</span>
+                        <p data-translate="education.certificates.forge.teamwork">Trabajo en Equipo</p>
+                        <span data-translate="education.certificates.forge.year">2025</span>
                     </div>
                 </div>
 
-                <div class="certificate-card" data-certificate="forge_liderazgo">
+                <div class="certificate-card">
                     <div class="certificate-image-container">
-                        <img src="~/images/certificates/forge_liderazgoPersonal.webp" alt="Insignia Forge Liderazgo Personal" data-translate-alt="insignia.forge.liderazgo.personal.alt">
+                        <img src="~/images/certificates/forge-logro.webp"
+                             alt="Orientación al Logro" />
                     </div>
                     <div class="certificate-info">
-                        <p data-translate="insignia.forge.liderazgo.personal.f_title">Forge</p>
-                        <p data-translate="insignia.forge.liderazgo.personal.name">Liderazgo Personal</p>
-                        <span data-translate="education.certificates.forge.liderazgo.date">Enero 2026</span>
+                        <p data-translate="education.certificates.forge.achievement">Orientación al Logro</p>
+                        <span data-translate="education.certificates.forge.year">2025</span>
                     </div>
                 </div>
 
-                <div class="certificate-card" data-certificate="js_udemy">
+                <div class="certificate-card">
                     <div class="certificate-image-container">
-                        <img src="~/images/certificates/js_desde_principiante_a_experto.webp" alt="JavaScript Udemy Certificate" data-translate-alt="education.certificates.js.alt">
+                        <img src="~/images/certificates/forge-liderazgo.webp"
+                             alt="Liderazgo Personal" />
                     </div>
                     <div class="certificate-info">
-                        <p data-translate="education.certificates.js.name">JavaScript desde Principiante hasta Experto</p>
-                        <span data-translate="education.certificates.js.date">Octubre 2025</span>
+                        <p data-translate="education.certificates.forge.leadership">Liderazgo Personal</p>
+                        <span data-translate="education.certificates.forge.year">2025</span>
                     </div>
                 </div>
 
-                <div class="certificate-card" data-certificate="python_udemy">
-                    <div class="certificate-image-container">
-                        <img src="~/images/certificates/python_desde_cero.webp" alt="Python Udemy Certificate" data-translate-alt="education.certificates.python.alt">
-                    </div>
-                    <div class="certificate-info">
-                        <p data-translate="education.certificates.python.datascience.name">Python desde Cero + Data Analysis y Matplot</p>
-                        <span data-translate="education.certificates.python.datascience.date">Marzo 2025</span>
-                    </div>
-                </div>
-
-                <div class="certificate-card" data-certificate="mos_excel">
-                    <div class="certificate-image-container">
-                        <img src="~/images/certificates/excel_mos.webp" alt="Excel MOS Certificate" data-translate-alt="education.certificates.excel.alt">
-                    </div>
-                    <div class="certificate-info">
-                        <p data-translate="education.certificates.excel.name">Excel Microsoft Office Specialist (MOS)</p>
-                        <span data-translate="education.certificates.excel.date">Diciembre 2019</span>
-                    </div>
-                </div>
-
-                <div class="certificate-card" data-certificate="mos_word">
-                    <div class="certificate-image-container">
-                        <img src="~/images/certificates/word_mos.webp" alt="Word MOS Certificate" data-translate-alt="education.certificates.word.alt">
-                    </div>
-                    <div class="certificate-info">
-                        <p data-translate="education.certificates.word.name">Word Microsoft Office Specialist (MOS)</p>
-                        <span data-translate="education.certificates.word.date">Octubre 2019</span>
-                    </div>
-                </div>
-
-                <div class="certificate-card" data-certificate="mos_powerpoint">
-                    <div class="certificate-image-container">
-                        <img src="~/images/certificates/powerpoint_mos.webp" alt="PowerPoint MOS Certificate" data-translate-alt="education.certificates.powerpoint.alt">
-                    </div>
-                    <div class="certificate-info">
-                        <p data-translate="education.certificates.powerpoint.name">PowerPoint Microsoft Office Specialist (MOS)</p>
-                        <span data-translate="education.certificates.powerpoint.date">Septiembre 2019</span>
-                    </div>
-                </div>
             </div>
-        </section>
-    </div>
-</div>
 
-<div class="certificate-modal" id="certificateModal">
-    <div class="modal-content">
-        <button class="modal-close-btn" id="certificateModalCloseBtn" aria-label="Cerrar" data-translate-aria="modal.close">
-            <svg viewBox="0 0 24 24" fill="none">
-                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" />
-            </svg>
-        </button>
-        <img src="" alt="Certificado ampliado" id="certificateModalImage" data-translate-alt="education.certificates.modal.imageAlt">
-        <div class="certificate-modal-info">
-            <h3 id="certificateModalTitle"></h3>
-            <p id="certificateModalDate"></p>
+            <div class="about-me-content">
+                <h3 data-translate="education.certificates.udemy.title">Udemy</h3>
+            </div>
+
+            <div class="certificates-grid">
+
+                <div class="certificate-card">
+                    <div class="certificate-image-container">
+                        <img src="~/images/certificates/udemy-javascript.webp"
+                             alt="JavaScript Experto" />
+                    </div>
+                    <div class="certificate-info">
+                        <p data-translate="education.certificates.udemy.javascript">JavaScript — Experto</p>
+                        <span data-translate="education.certificates.udemy.javascriptDate">2024</span>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image-container">
+                        <img src="~/images/certificates/udemy-python.webp"
+                             alt="Python Data Analysis" />
+                    </div>
+                    <div class="certificate-info">
+                        <p data-translate="education.certificates.udemy.python">Python — Data Analysis</p>
+                        <span data-translate="education.certificates.udemy.pythonDate">2025</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-me-content">
+                <h3 data-translate="education.certificates.mos.title">Microsoft Office Specialist</h3>
+            </div>
+
+            <div class="certificates-grid">
+
+                <div class="certificate-card">
+                    <div class="certificate-image-container">
+                        <img src="~/images/certificates/mos-excel.webp"
+                             alt="MOS Excel 2019" />
+                    </div>
+                    <div class="certificate-info">
+                        <p data-translate="education.certificates.mos.excel">Excel — MOS 2019</p>
+                        <span data-translate="education.certificates.mos.year">2019</span>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image-container">
+                        <img src="~/images/certificates/mos-word.webp"
+                             alt="MOS Word 2019" />
+                    </div>
+                    <div class="certificate-info">
+                        <p data-translate="education.certificates.mos.word">Word — MOS 2019</p>
+                        <span data-translate="education.certificates.mos.year">2019</span>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image-container">
+                        <img src="~/images/certificates/mos-powerpoint.webp"
+                             alt="MOS PowerPoint 2019" />
+                    </div>
+                    <div class="certificate-info">
+                        <p data-translate="education.certificates.mos.powerpoint">PowerPoint — MOS 2019</p>
+                        <span data-translate="education.certificates.mos.year">2019</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <div id="certificateModal" class="certificate-modal">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="certificateModalCloseBtn" aria-label="Cerrar">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <img id="certificateModalImage" src="" alt="" />
+            <div class="certificate-modal-info">
+                <h3 id="certificateModalTitle"></h3>
+                <p id="certificateModalDate"></p>
+            </div>
         </div>
     </div>
-</div>
+
+</section>
