@@ -20,19 +20,40 @@ document.addEventListener('DOMContentLoaded', () => {
             target.scrollTop = 0;
         }
 
-        projectFilterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                projectFilterBtns.forEach(b => b.classList.remove('active'));
+        navButtons.forEach(btn => {
+            if (btn.getAttribute('data-section') === targetId) {
                 btn.classList.add('active');
-
-                const targetId = btn.id.replace('-btn', '-content');
-                document.querySelectorAll('.professional-work, .personal-project').forEach(el => {
-                    el.classList.remove('active');
-                });
-                const target = document.getElementById(targetId);
-                if (target) target.classList.add('active');
-            });
+            } else {
+                btn.classList.remove('active');
+            }
         });
+
+        if (targetId === 'education') {
+            if (prepContent && !prepContent.classList.contains('active') && !certContent.classList.contains('active')) {
+                prepContent.classList.add('active');
+                if (prepBtn) prepBtn.classList.add('active');
+            }
+        }
+
+        if (targetId === 'skills') {
+            const activeSkillSection = document.querySelector('.skill-section.active');
+            if (!activeSkillSection) {
+                const firstSkillSection = document.getElementById('hard-skills-content');
+                if (firstSkillSection) firstSkillSection.classList.add('active');
+                const firstBtn = document.getElementById('hard-skills-btn');
+                if (firstBtn) firstBtn.classList.add('active');
+            }
+        }
+
+        if (targetId === 'projects') {
+            const activeProjSection = document.querySelector('.professional-work.active, .personal-project.active');
+            if (!activeProjSection) {
+                const firstProj = document.getElementById('professional-work-content');
+                if (firstProj) firstProj.classList.add('active');
+                const firstBtn = document.getElementById('professional-work-btn');
+                if (firstBtn) firstBtn.classList.add('active');
+            }
+        }
     }
 
     navButtons.forEach(btn => {
@@ -76,6 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             projectFilterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+
+            const targetId = btn.id.replace('-btn', '-content');
+            document.querySelectorAll('.professional-work, .personal-project').forEach(el => {
+                el.classList.remove('active');
+            });
+            const target = document.getElementById(targetId);
+            if (target) target.classList.add('active');
         });
     });
 

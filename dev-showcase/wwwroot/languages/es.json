@@ -1,0 +1,312 @@
+{
+  "header": {
+    "hello": "#HOLA MUNDO",
+    "name": "Soy Ricardo Alejandro Pérez Santillán"
+  },
+  "navigation": {
+    "introduction": "Introducción",
+    "skills": "Habilidades",
+    "projects": "Proyectos & Experiencia",
+    "education": "Educación",
+    "downloadCV": "Descargar CV"
+  },
+  "sidebar": {
+    "socialTitle": "Redes Sociales",
+    "tooltips": {
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "gmail": "Gmail"
+    }
+  },
+  "introduction": {
+    "aboutTitle": "Acerca de Mí",
+    "aboutContent": "Soy desarrollador de software con enfoque reciente en Ciencia de Datos. He trabajado con .NET, SQL Server y automatizaciones, pero en 2025 inicié una transición formal hacia análisis y modelado de datos. He explorado retos reales como los datathones WiDS 2022 (detección de cáncer de mama) y WiDS 2025 (detección de TDAH en mujeres). Actualmente me estoy formando en diversas herramientas de ciencia de datos con el objetivo de construir proyectos completos end-to-end de aquí a inicios de 2026. Mi base sólida en ingeniería me permite abordar la ciencia de datos desde una perspectiva práctica, estructurada y orientada a producto.",
+    "skillsTitle": "Habilidades y Tecnologías",
+    "panels": {
+      "webDev": "Desarrollo Web",
+      "desktopDev": "Desarrollo de Escritorio",
+      "databases": "Bases de Datos",
+      "erp": "ERP",
+      "versionControl": "Control de Versiones",
+      "methodologies": "Metodologías"
+    },
+    "certificationsTitle": "Certificaciones",
+    "certifications": {
+      "linguaskill": "Certificado Linguaskill B1 — Junio 2024",
+      "excel": "Excel Microsoft Office Specialist — 2019",
+      "word": "Word Microsoft Office Specialist — 2019",
+      "powerpoint": "PowerPoint Microsoft Office Specialist — 2019"
+    },
+    "goalTitle": "Meta Profesional",
+    "goalContent": "Evolucionar hacia roles de Ciencia de Datos mientras continúo creciendo como Desarrollador Full Stack.",
+    "journeyTitle": "Mi Trayectoria",
+    "journeyContent": "Mi trayectoria a través de la tecnología me llevó a estudiar en 2022 la carrera de Ingeniería en Tecnologías de la Información en UTAN campus industrias. Lo que me apasiona del desarrollo es el proceso creativo de construir soluciones personalizadas para cada proyecto a resolver. Mi experiencia desarrollando aplicaciones de escritorio fortaleció mi interés en crear soluciones que impacten directamente en la experiencia del usuario. Este camino me ha llevado a interesarme en la ciencia de datos, donde veo el potencial de combinar el desarrollo con el análisis de datos para crear soluciones más completas."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "filters": {
+      "technical": "Habilidades Técnicas",
+      "soft": "Habilidades Blandas",
+      "stats": "Estadísticas"
+    },
+    "panels": {
+      "webDev": "Desarrollo Web",
+      "dataScience": "Ciencia de Datos",
+      "databases": "Bases de Datos",
+      "desktopDev": "Desarrollo de Escritorio",
+      "versionControl": "Control de Versiones",
+      "generalProgramming": "Programación General"
+    },
+    "stats": {
+      "webTitle": "Desarrollo Web",
+      "webSubtitle": "Dominio por tecnología",
+      "dataTitle": "Ciencia de Datos",
+      "dataSubtitle": "Dominio por tecnología",
+      "dbTitle": "Bases de Datos",
+      "dbSubtitle": "Dominio por tecnología"
+    },
+    "logosTitle": "Tecnologías",
+    "logosSubtitle": "Stack de herramientas y lenguajes",
+    "soft": {
+      "criticalThinking": "Pensamiento Crítico",
+      "analyticalThinking": "Pensamiento Analítico",
+      "communication": "Comunicación Efectiva",
+      "teamwork": "Trabajo en Equipo",
+      "adaptability": "Adaptabilidad",
+      "timeManagement": "Gestión del Tiempo",
+      "attention": "Atención al Detalle",
+      "persistence": "Persistencia",
+      "workEthic": "Ética Laboral",
+      "statsTitle": "Competencias Específicas",
+      "statsSubtitle": "Nivel de desarrollo por competencia",
+      "competencies": {
+        "teamwork": "Trabajo en Equipo",
+        "confidence": "Confianza",
+        "independence": "Independencia",
+        "initiative": "Iniciativa",
+        "problemSolving": "Solución de Problemas"
+      }
+    },
+    "vocational": {
+      "filters": {
+        "profile": "Perfil Vocacional",
+        "aptitudes": "Análisis de Aptitudes"
+      },
+      "radarBadge": "RIASEC",
+      "radarTitle": "Perfil Vocacional",
+      "legend": {
+        "realistic": "Realista",
+        "investigative": "Investigador",
+        "artistic": "Artístico",
+        "social": "Social",
+        "enterprising": "Emprendedor",
+        "conventional": "Convencional"
+      },
+      "topSkills": "Aptitudes Destacadas",
+      "topInterests": "Intereses Principales",
+      "topCareers": "Carreras Afines",
+      "lowSkills": "Aptitudes por Desarrollar",
+      "lowInterests": "Intereses Menores",
+      "lowCareers": "Carreras Menos Afines",
+      "cognitiveBadge": "Perfil Cognitivo",
+      "cognitiveTitle": "Aptitudes Cognitivas (Escala 0–60)",
+      "cognitiveMe": "Mi Resultado",
+      "cognitiveAvg": "Promedio General",
+      "valoresTitle": "Valores Ocupacionales",
+      "aptitudesDeveloped": "Aptitudes Desarrolladas",
+      "aptitudesToDevelop": "Aptitudes por Desarrollar",
+      "developed": {
+        "numerical": "Capacidad numérica",
+        "problemAnalysis": "Análisis de problemas",
+        "studyInclination": "Inclinación al estudio",
+        "observation": "Observación",
+        "leadership": "Liderazgo de actividades"
+      },
+      "toDevelop": {
+        "authority": "Autoridad",
+        "physicalCondition": "Estado físico",
+        "persuasion": "Persuasión",
+        "quickReflexes": "Reflejos rápidos",
+        "composure": "Templanza"
+      }
+    }
+  },
+  "projects": {
+    "title": "Experiencia",
+    "filters": {
+      "work": "Trabajos",
+      "personal": "Proyectos Personales"
+    },
+    "labels": {
+      "stack": "Stack:",
+      "role": "Rol",
+      "description": "Descripción",
+      "responsibilities": "Responsabilidades",
+      "internalProjects": "Proyectos Internos",
+      "highlights": "Destacados",
+      "period": "Período:"
+    },
+    "work": {
+      "blockTitle": "Experiencia Profesional",
+      "blockTag": "Laboral",
+      "daikin": {
+        "name": "Daikin Manufacturing México",
+        "role": "Desarrollador de Software",
+        "period": "Sept 2024 – Dic 2025",
+        "description": "Desarrollo y soporte de aplicaciones empresariales en entorno .NET / SQL Server para planta manufacturera.",
+        "resp": {
+          "maintenance": "Mantenimiento de aplicaciones críticas de producción",
+          "apis": "Diseño e implementación de APIs internas",
+          "sql": "Optimización de consultas SQL y procedimientos almacenados",
+          "ux": "Mejoras de UX/UI en sistemas internos",
+          "agile": "Participación en metodologías ágiles y Scrum"
+        },
+        "projects": {
+          "overtime": "OverTime Request — Gestión de solicitudes de tiempo extra",
+          "etiquetas": "Etiquetas — Sistema de generación de etiquetas de producción",
+          "masterLabel": "Master Label — Control maestro de etiquetado",
+          "budget": "Budget Control — Módulo de control presupuestal"
+        },
+        "img1": {
+          "title": "Vista Principal",
+          "desc": "Dashboard principal de la aplicación con acceso a los módulos principales del sistema."
+        },
+        "img2": {
+          "title": "OverTime Request",
+          "desc": "Módulo de gestión y aprobación de solicitudes de tiempo extra con flujo de autorización multinivel."
+        }
+      }
+    },
+    "personal": {
+      "blockTitle": "Proyectos Personales & Datathones",
+      "blockTag": "Personal",
+      "devportfolio": {
+        "name": "DevPortfolio",
+        "short": "Portafolio profesional",
+        "description": "Portafolio web profesional con diseño espacial y glasmorfismo. Sección de introducción, habilidades con estadísticas y gráficas vocacionales, proyectos con carrusel interactivo y sección de educación con certificados.",
+        "h1": "Diseño dark mode con partículas animadas",
+        "h2": "Soporte multiidioma ES/EN con JSON dinámico",
+        "h3": "Gráficas vocacionales con Chart.js",
+        "h4": "Carrusel infinito con soporte táctil",
+        "h5": "CV descargable en dos idiomas",
+        "img1": {
+          "title": "Sección Introducción",
+          "desc": "Vista principal con efecto typewriter, partículas animadas y sidebar de navegación."
+        }
+      },
+      "wids2022": {
+        "name": "WiDS Datathon 2022",
+        "short": "Detección de cáncer de mama",
+        "description": "Participación en el datathon WiDS 2022 con enfoque en la detección temprana de cáncer de mama mediante modelos de Machine Learning sobre datos clínicos reales.",
+        "h1": "Análisis exploratorio de datos clínicos",
+        "h2": "Preprocesamiento y manejo de valores faltantes",
+        "h3": "Entrenamiento de modelos de clasificación binaria",
+        "h4": "Evaluación con métricas AUC-ROC",
+        "img1": {
+          "title": "Análisis Exploratorio",
+          "desc": "Visualización de distribuciones y correlaciones en el dataset clínico."
+        }
+      },
+      "wids2025": {
+        "name": "WiDS Datathon 2025",
+        "short": "Detección de TDAH en mujeres",
+        "description": "Participación en el datathon WiDS 2025 orientado a la detección de TDAH y TDA en mujeres adolescentes usando datos de neuroimagen y variables socioeconómicas.",
+        "h1": "Modelado con XGBoost para clasificación multiclase",
+        "h2": "Feature engineering sobre datos de neuroimagen",
+        "h3": "Análisis de importancia de variables",
+        "h4": "Pipeline completo de preprocesamiento",
+        "img1": {
+          "title": "Modelo XGBoost",
+          "desc": "Resultados del modelo y visualización de importancia de features."
+        }
+      },
+      "prosalud": {
+        "name": "ProSalud",
+        "short": "Sistema de gestión médica",
+        "description": "Sistema de gestión médica con soporte para codificación CIE-10, historial clínico de pacientes y módulo de facturación de servicios médicos.",
+        "h1": "Catálogo y búsqueda de diagnósticos CIE-10",
+        "h2": "Gestión de historial clínico por paciente",
+        "h3": "Módulo de facturación y generación de recibos",
+        "h4": "Autenticación y roles de usuario",
+        "img1": {
+          "title": "Dashboard Principal",
+          "desc": "Vista general del sistema con accesos directos a pacientes, citas y facturación."
+        }
+      },
+      "bookshelf": {
+        "name": "BookShelf",
+        "short": "Gestión de biblioteca personal",
+        "description": "Aplicación web para gestión de biblioteca personal. Permite registrar, categorizar y hacer seguimiento de libros con actualizaciones dinámicas vía AJAX y acceso a datos optimizado con Dapper.",
+        "h1": "CRUD completo con actualizaciones AJAX sin recarga",
+        "h2": "Acceso a datos con Dapper sobre SQL Server",
+        "h3": "Filtrado y búsqueda por categoría y autor",
+        "h4": "Interfaz responsiva con Bootstrap",
+        "img1": {
+          "title": "Catálogo de Libros",
+          "desc": "Vista principal del catálogo con opciones de filtrado y búsqueda en tiempo real."
+        }
+      }
+    }
+  },
+  "education": {
+    "title": "Educación",
+    "filters": {
+      "preparation": "Preparación",
+      "certificates": "Certificados"
+    },
+    "labels": {
+      "period": "Período:"
+    },
+    "academic": {
+      "title": "Formación Académica",
+      "forge": {
+        "institution": "Fundación Forge",
+        "program": "Competencias profesionales",
+        "period": "Nov 2025 – Dic 2025"
+      },
+      "smart": {
+        "institution": "Smart Teaching",
+        "program": "Inglés Nivel B2 TOEFL IBT",
+        "period": "Feb 2025 – Nov 2025"
+      },
+      "utan": {
+        "institution": "Universidad Tangamanga",
+        "program": "Ingeniería en Tecnologías de la Información",
+        "period": "Jul 2022 – Ago 2025"
+      }
+    },
+    "professional": {
+      "title": "Desarrollo Profesional",
+      "cluster": {
+        "institution": "Cluster Automotriz",
+        "program": "Tendencias tecnológicas del sector automotriz"
+      }
+    },
+    "certificates": {
+      "forge": {
+        "title": "Insignias Forge",
+        "commitment": "Compromiso con el Aprendizaje",
+        "teamwork": "Trabajo en Equipo",
+        "achievement": "Orientación al Logro",
+        "leadership": "Liderazgo Personal",
+        "year": "2025"
+      },
+      "udemy": {
+        "title": "Udemy",
+        "javascript": "JavaScript — Experto",
+        "javascriptDate": "2024",
+        "python": "Python — Data Analysis",
+        "pythonDate": "2025"
+      },
+      "mos": {
+        "title": "Microsoft Office Specialist",
+        "excel": "Excel — MOS 2019",
+        "word": "Word — MOS 2019",
+        "powerpoint": "PowerPoint — MOS 2019",
+        "year": "2019"
+      }
+    }
+  }
+}

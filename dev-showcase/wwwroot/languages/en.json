@@ -1,0 +1,312 @@
+{
+  "header": {
+    "hello": "#HELLO WORLD",
+    "name": "I'm Ricardo Alejandro Pérez Santillán"
+  },
+  "navigation": {
+    "introduction": "Introduction",
+    "skills": "Skills",
+    "projects": "Projects & Experience",
+    "education": "Education",
+    "downloadCV": "Download CV"
+  },
+  "sidebar": {
+    "socialTitle": "Social Media",
+    "tooltips": {
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "gmail": "Gmail"
+    }
+  },
+  "introduction": {
+    "aboutTitle": "About Me",
+    "aboutContent": "I am a software developer with a recent focus on Data Science. I have worked with .NET, SQL Server and automations, but in 2025 I started a formal transition toward data analysis and modeling. I have explored real challenges such as the WiDS 2022 datathon (breast cancer detection) and WiDS 2025 (ADHD detection in women). I am currently training in various data science tools with the goal of building complete end-to-end projects by early 2026. My solid engineering background allows me to approach data science from a practical, structured and product-oriented perspective.",
+    "skillsTitle": "Skills & Technologies",
+    "panels": {
+      "webDev": "Web Development",
+      "desktopDev": "Desktop Development",
+      "databases": "Databases",
+      "erp": "ERP",
+      "versionControl": "Version Control",
+      "methodologies": "Methodologies"
+    },
+    "certificationsTitle": "Certifications",
+    "certifications": {
+      "linguaskill": "Linguaskill B1 Certificate — June 2024",
+      "excel": "Excel Microsoft Office Specialist — 2019",
+      "word": "Word Microsoft Office Specialist — 2019",
+      "powerpoint": "PowerPoint Microsoft Office Specialist — 2019"
+    },
+    "goalTitle": "Professional Goal",
+    "goalContent": "Evolve toward Data Science roles while continuing to grow as a Full Stack Developer.",
+    "journeyTitle": "My Journey",
+    "journeyContent": "My journey through technology led me to study Information Technology Engineering at UTAN campus industrias in 2022. What I love about development is the creative process of building customized solutions for each project. My experience developing desktop applications strengthened my interest in creating solutions that directly impact the user experience. This path has led me to become interested in data science, where I see the potential to combine development with data analysis to create more complete solutions."
+  },
+  "skills": {
+    "title": "Skills",
+    "filters": {
+      "technical": "Technical Skills",
+      "soft": "Soft Skills",
+      "stats": "Statistics"
+    },
+    "panels": {
+      "webDev": "Web Development",
+      "dataScience": "Data Science",
+      "databases": "Databases",
+      "desktopDev": "Desktop Development",
+      "versionControl": "Version Control",
+      "generalProgramming": "General Programming"
+    },
+    "stats": {
+      "webTitle": "Web Development",
+      "webSubtitle": "Proficiency by technology",
+      "dataTitle": "Data Science",
+      "dataSubtitle": "Proficiency by technology",
+      "dbTitle": "Databases",
+      "dbSubtitle": "Proficiency by technology"
+    },
+    "logosTitle": "Technologies",
+    "logosSubtitle": "Tools and languages stack",
+    "soft": {
+      "criticalThinking": "Critical Thinking",
+      "analyticalThinking": "Analytical Thinking",
+      "communication": "Effective Communication",
+      "teamwork": "Teamwork",
+      "adaptability": "Adaptability",
+      "timeManagement": "Time Management",
+      "attention": "Attention to Detail",
+      "persistence": "Persistence",
+      "workEthic": "Work Ethics",
+      "statsTitle": "Specific Competencies",
+      "statsSubtitle": "Development level by competency",
+      "competencies": {
+        "teamwork": "Teamwork",
+        "confidence": "Confidence",
+        "independence": "Independence",
+        "initiative": "Initiative",
+        "problemSolving": "Problem Solving"
+      }
+    },
+    "vocational": {
+      "filters": {
+        "profile": "Vocational Profile",
+        "aptitudes": "Aptitude Analysis"
+      },
+      "radarBadge": "RIASEC",
+      "radarTitle": "Vocational Profile",
+      "legend": {
+        "realistic": "Realistic",
+        "investigative": "Investigative",
+        "artistic": "Artistic",
+        "social": "Social",
+        "enterprising": "Enterprising",
+        "conventional": "Conventional"
+      },
+      "topSkills": "Top Aptitudes",
+      "topInterests": "Main Interests",
+      "topCareers": "Related Careers",
+      "lowSkills": "Aptitudes to Develop",
+      "lowInterests": "Minor Interests",
+      "lowCareers": "Less Related Careers",
+      "cognitiveBadge": "Cognitive Profile",
+      "cognitiveTitle": "Cognitive Aptitudes (Scale 0–60)",
+      "cognitiveMe": "My Score",
+      "cognitiveAvg": "General Average",
+      "valoresTitle": "Occupational Values",
+      "aptitudesDeveloped": "Developed Aptitudes",
+      "aptitudesToDevelop": "Aptitudes to Develop",
+      "developed": {
+        "numerical": "Numerical ability",
+        "problemAnalysis": "Problem analysis",
+        "studyInclination": "Inclination to study",
+        "observation": "Observation",
+        "leadership": "Activity leadership"
+      },
+      "toDevelop": {
+        "authority": "Authority",
+        "physicalCondition": "Physical condition",
+        "persuasion": "Persuasion",
+        "quickReflexes": "Quick reflexes",
+        "composure": "Composure"
+      }
+    }
+  },
+  "projects": {
+    "title": "Experience",
+    "filters": {
+      "work": "Work",
+      "personal": "Personal Projects"
+    },
+    "labels": {
+      "stack": "Stack:",
+      "role": "Role",
+      "description": "Description",
+      "responsibilities": "Responsibilities",
+      "internalProjects": "Internal Projects",
+      "highlights": "Highlights",
+      "period": "Period:"
+    },
+    "work": {
+      "blockTitle": "Professional Experience",
+      "blockTag": "Work",
+      "daikin": {
+        "name": "Daikin Manufacturing México",
+        "role": "Software Developer",
+        "period": "Sept 2024 – Dec 2025",
+        "description": "Development and support of enterprise applications in a .NET / SQL Server environment for a manufacturing plant.",
+        "resp": {
+          "maintenance": "Maintenance of critical production applications",
+          "apis": "Design and implementation of internal APIs",
+          "sql": "SQL query and stored procedure optimization",
+          "ux": "UX/UI improvements in internal systems",
+          "agile": "Participation in agile methodologies and Scrum"
+        },
+        "projects": {
+          "overtime": "OverTime Request — Overtime request management",
+          "etiquetas": "Labels — Production label generation system",
+          "masterLabel": "Master Label — Master labeling control",
+          "budget": "Budget Control — Budget control module"
+        },
+        "img1": {
+          "title": "Main View",
+          "desc": "Application main dashboard with access to the system's main modules."
+        },
+        "img2": {
+          "title": "OverTime Request",
+          "desc": "Overtime request management and approval module with multi-level authorization flow."
+        }
+      }
+    },
+    "personal": {
+      "blockTitle": "Personal Projects & Datathons",
+      "blockTag": "Personal",
+      "devportfolio": {
+        "name": "DevPortfolio",
+        "short": "Professional portfolio",
+        "description": "Professional web portfolio with spatial design and glassmorphism. Introduction section, skills with statistics and vocational charts, projects with interactive carousel and education section with certificates.",
+        "h1": "Dark mode design with animated particles",
+        "h2": "Multilanguage ES/EN support with dynamic JSON",
+        "h3": "Vocational charts with Chart.js",
+        "h4": "Infinite carousel with touch support",
+        "h5": "Downloadable CV in two languages",
+        "img1": {
+          "title": "Introduction Section",
+          "desc": "Main view with typewriter effect, animated particles and navigation sidebar."
+        }
+      },
+      "wids2022": {
+        "name": "WiDS Datathon 2022",
+        "short": "Breast cancer detection",
+        "description": "Participation in the WiDS 2022 datathon focused on early breast cancer detection using Machine Learning models on real clinical data.",
+        "h1": "Exploratory analysis of clinical data",
+        "h2": "Preprocessing and missing value handling",
+        "h3": "Binary classification model training",
+        "h4": "Evaluation with AUC-ROC metrics",
+        "img1": {
+          "title": "Exploratory Analysis",
+          "desc": "Visualization of distributions and correlations in the clinical dataset."
+        }
+      },
+      "wids2025": {
+        "name": "WiDS Datathon 2025",
+        "short": "ADHD detection in women",
+        "description": "Participation in the WiDS 2025 datathon aimed at detecting ADHD and ADD in adolescent women using neuroimaging data and socioeconomic variables.",
+        "h1": "XGBoost modeling for multiclass classification",
+        "h2": "Feature engineering on neuroimaging data",
+        "h3": "Variable importance analysis",
+        "h4": "Complete preprocessing pipeline",
+        "img1": {
+          "title": "XGBoost Model",
+          "desc": "Model results and feature importance visualization."
+        }
+      },
+      "prosalud": {
+        "name": "ProSalud",
+        "short": "Medical management system",
+        "description": "Medical management system with support for ICD-10 coding, patient clinical history and medical services billing module.",
+        "h1": "ICD-10 diagnosis catalog and search",
+        "h2": "Clinical history management per patient",
+        "h3": "Billing module and receipt generation",
+        "h4": "Authentication and user roles",
+        "img1": {
+          "title": "Main Dashboard",
+          "desc": "System overview with quick access to patients, appointments and billing."
+        }
+      },
+      "bookshelf": {
+        "name": "BookShelf",
+        "short": "Personal library management",
+        "description": "Web application for personal library management. Allows registering, categorizing and tracking books with dynamic AJAX updates and optimized data access with Dapper.",
+        "h1": "Full CRUD with AJAX updates without reload",
+        "h2": "Data access with Dapper on SQL Server",
+        "h3": "Filtering and search by category and author",
+        "h4": "Responsive interface with Bootstrap",
+        "img1": {
+          "title": "Book Catalog",
+          "desc": "Main catalog view with filtering and real-time search options."
+        }
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "filters": {
+      "preparation": "Training",
+      "certificates": "Certificates"
+    },
+    "labels": {
+      "period": "Period:"
+    },
+    "academic": {
+      "title": "Academic Training",
+      "forge": {
+        "institution": "Fundación Forge",
+        "program": "Professional competencies",
+        "period": "Nov 2025 – Dec 2025"
+      },
+      "smart": {
+        "institution": "Smart Teaching",
+        "program": "English Level B2 TOEFL IBT",
+        "period": "Feb 2025 – Nov 2025"
+      },
+      "utan": {
+        "institution": "Universidad Tangamanga",
+        "program": "Information Technology Engineering",
+        "period": "Jul 2022 – Aug 2025"
+      }
+    },
+    "professional": {
+      "title": "Professional Development",
+      "cluster": {
+        "institution": "Automotive Cluster",
+        "program": "Technological trends in the automotive sector"
+      }
+    },
+    "certificates": {
+      "forge": {
+        "title": "Forge Badges",
+        "commitment": "Commitment to Learning",
+        "teamwork": "Teamwork",
+        "achievement": "Achievement Orientation",
+        "leadership": "Personal Leadership",
+        "year": "2025"
+      },
+      "udemy": {
+        "title": "Udemy",
+        "javascript": "JavaScript — Expert",
+        "javascriptDate": "2024",
+        "python": "Python — Data Analysis",
+        "pythonDate": "2025"
+      },
+      "mos": {
+        "title": "Microsoft Office Specialist",
+        "excel": "Excel — MOS 2019",
+        "word": "Word — MOS 2019",
+        "powerpoint": "PowerPoint — MOS 2019",
+        "year": "2019"
+      }
+    }
+  }
+}
