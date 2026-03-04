@@ -219,7 +219,7 @@
     }
 }
 
-@media (hover: none) and (pointer: coarse) {
+@media (hover: none) and (pointer: coarse) {oñ
     .glow-panel::before {
         opacity: 0.5;
     }

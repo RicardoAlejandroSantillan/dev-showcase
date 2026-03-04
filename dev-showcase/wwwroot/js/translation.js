@@ -1,76 +1,93 @@
 ﻿const DEFAULT_LANGUAGE = 'es';
+const SUPPORTED_LANGUAGES = ['es', 'en'];
 
-const getCurrentLanguageFromBackend = async () => {
-    try {
-        const response = await fetch('/Home/GetCurrentLanguage');
-        if (response.ok) {
-            const data = await response.json();
-            return data.language || DEFAULT_LANGUAGE;
-        }
-    } catch (error) {
-        return DEFAULT_LANGUAGE;
-    }
+const resolveInitialLanguage = () => {
+    const pathMatch = window.location.pathname.match(/^\/(es|en)(?:\/|$)/);
+    if (pathMatch) return pathMatch[1];
+
+    const stored = localStorage.getItem('preferredLanguage');
+    if (stored && SUPPORTED_LANGUAGES.includes(stored)) return stored;
+
+    const browserLang = (navigator.language || '').slice(0, 2).toLowerCase();
+    if (SUPPORTED_LANGUAGES.includes(browserLang)) return browserLang;
+
     return DEFAULT_LANGUAGE;
 };
 
+const translationCache = {};
+
 const loadTranslations = async (language) => {
+    if (translationCache[language]) return translationCache[language];
+
     try {
         const response = await fetch(`/languages/${language}.json`);
-        if (!response.ok) {
-            return null;
-        }
-        return await response.json();
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        translationCache[language] = data;
+        return data;
     } catch (error) {
+        if (language !== DEFAULT_LANGUAGE) {
+            return loadTranslations(DEFAULT_LANGUAGE);
+        }
         return null;
     }
 };
 
+const resolvePath = (obj, path) => {
+    if (!path || obj == null) return undefined;
+    return path.split('.').reduce((acc, key) => acc?.[key], obj);
+};
+
 const updateContent = (translations) => {
-    if (!translations) {
-        return;
-    }
+    if (!translations) return;
 
-    const elements = document.querySelectorAll('[data-translate]');
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        if (element.matches('.header-content h1')) return;
 
-    elements.forEach(element => {
-        const key = element.dataset.translate;
+        const value = resolvePath(translations, element.dataset.translate);
+        if (value === undefined || value === null) return;
 
-        if (element.matches('.header-content h1')) {
-            return;
-        }
-
-        const keys = key.split('.');
-        let value = translations;
-        for (const k of keys) {
-            value = value?.[k];
-        }
-
-        if (value) {
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                if (element.hasAttribute('placeholder')) {
-                    element.placeholder = value;
-                } else {
-                    element.value = value;
-                }
-            } else {
-                element.textContent = value;
-            }
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.hasAttribute('placeholder')
+                ? (element.placeholder = value)
+                : (element.value = value);
+        } else {
+            element.textContent = value;
         }
     });
 
-    const tooltipElements = document.querySelectorAll('[data-tooltip-translate]');
-    tooltipElements.forEach(element => {
-        const key = element.dataset.tooltipTranslate;
-        const keys = key.split('.');
+    document.querySelectorAll('[data-tooltip-translate]').forEach(element => {
+        const value = resolvePath(translations, element.dataset.tooltipTranslate);
+        if (value) element.dataset.tooltip = value;
+    });
+};
 
-        let value = translations;
-        for (const k of keys) {
-            value = value?.[k];
-        }
+const applyProgressBars = (translations) => {
+    const pBars = translations?.skills?.progressBars;
+    if (!pBars) return;
 
-        if (value) {
-            element.dataset.tooltip = value;
-        }
+    document.querySelectorAll('.stat-bar[data-bar-key]').forEach(bar => {
+        const value = resolvePath(pBars, bar.getAttribute('data-bar-key'));
+        if (typeof value !== 'number') return;
+
+        bar.setAttribute('data-percent', value);
+        bar.style.setProperty('--target-width', value + '%');
+
+        const percentSpan = bar.closest('.stat-item')?.querySelector('.stat-percentage');
+        if (percentSpan) percentSpan.textContent = value + '%';
+    });
+};
+
+const animateVisibleBars = () => {
+    const activeSection = document.querySelector('.skill-section.active');
+    if (!activeSection) return;
+
+    activeSection.querySelectorAll('.stat-bar[data-percent]').forEach(bar => {
+        const percent = parseInt(bar.getAttribute('data-percent'), 10);
+        if (!percent) return;
+        bar.style.setProperty('--target-width', percent + '%');
+        bar.classList.remove('animated');
+        requestAnimationFrame(() => requestAnimationFrame(() => bar.classList.add('animated')));
     });
 };
 
@@ -81,86 +98,84 @@ const updateActiveButton = (language) => {
 };
 
 const updateURL = (language) => {
-    const currentPath = window.location.pathname;
-    let newPath;
+    const path = window.location.pathname;
+    const hasLangPrefix = /^\/(es|en)(\/|$)/.test(path);
 
-    if (currentPath.startsWith('/es') || currentPath.startsWith('/en')) {
-        newPath = currentPath.replace(/^\/(es|en)/, `/${language}`);
-    } else {
-        if (currentPath === '/' || currentPath === '') {
-            newPath = `/${language}`;
-        } else {
-            newPath = `/${language}${currentPath}`;
-        }
-    }
+    const newPath = hasLangPrefix
+        ? path.replace(/^\/(es|en)/, `/${language}`)
+        : `/${language}${path === '/' ? '' : path}`;
 
     window.history.pushState({ language }, '', newPath);
 };
 
+const showLanguageError = (language) => {
+    const existing = document.getElementById('lang-error-banner');
+    if (existing) existing.remove();
+
+    const banner = document.createElement('div');
+    banner.id = 'lang-error-banner';
+    banner.setAttribute('role', 'alert');
+    banner.style.cssText = `
+        position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);
+        background:#ff1744;color:#fff;padding:.6rem 1.2rem;
+        border-radius:8px;font-size:.875rem;z-index:9999;
+        box-shadow:0 4px 12px rgba(0,0,0,.4);
+    `;
+    banner.textContent = `No se pudo cargar el idioma "${language}". Mostrando versión en español.`;
+    document.body.appendChild(banner);
+    setTimeout(() => banner.remove(), 4000);
+};
+
+const syncLanguageWithServer = (language, returnUrl) => {
+    const formData = new FormData();
+    formData.append('language', language);
+    formData.append('returnUrl', returnUrl);
+    fetch('/Home/SetLanguage', { method: 'POST', body: formData }).catch(() => { });
+};
+
 const changeLanguage = async (language) => {
+    if (!SUPPORTED_LANGUAGES.includes(language)) language = DEFAULT_LANGUAGE;
+
     const translations = await loadTranslations(language);
 
-    if (translations) {
-        localStorage.setItem('preferredLanguage', language);
-        document.documentElement.lang = language;
-        updateContent(translations);
-        updateActiveButton(language);
-        updateURL(language);
-
-        if (window.updateCVLink) {
-            window.updateCVLink();
-        }
-
-        if (window.initTypewriter) {
-            window.initTypewriter(language);
-        }
-
-        if (window.refreshVocationalCharts) {
-            window.refreshVocationalCharts();
-        }
-    } else {
+    if (!translations) {
+        showLanguageError(language);
         return;
     }
 
-    try {
-        const formData = new FormData();
-        formData.append('language', language);
-        formData.append('returnUrl', window.location.pathname);
+    window.currentTranslations = translations;
 
-        await fetch('/Home/SetLanguage', {
-            method: 'POST',
-            body: formData
-        });
-    } catch (error) {
-    }
+    document.documentElement.lang = language;
+    updateContent(translations);
+    applyProgressBars(translations);
+    animateVisibleBars();
+    updateActiveButton(language);
+    updateURL(language);
+
+    localStorage.setItem('preferredLanguage', language);
+
+    if (typeof window.initTypewriter === 'function') window.initTypewriter(language);
+    if (typeof window.updateCVLink === 'function') window.updateCVLink();
+    if (typeof window.refreshVocationalCharts === 'function') window.refreshVocationalCharts();
+
+    syncLanguageWithServer(language, window.location.pathname);
 };
 
+window.changeLanguage = changeLanguage;
+
 document.addEventListener('DOMContentLoaded', async () => {
-    let currentLanguage = await getCurrentLanguageFromBackend();
-
-    const pathLanguage = window.location.pathname.match(/^\/(es|en)/)?.[1];
-    if (pathLanguage) {
-        currentLanguage = pathLanguage;
-    }
-
-    await changeLanguage(currentLanguage);
+    const initialLanguage = resolveInitialLanguage();
+    await changeLanguage(initialLanguage);
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', async (e) => {
             e.preventDefault();
-            const language = btn.dataset.lang;
-
-            if (btn.classList.contains('active')) {
-                return;
-            }
-
-            await changeLanguage(language);
+            if (!btn.classList.contains('active')) await changeLanguage(btn.dataset.lang);
         });
     });
 
     window.addEventListener('popstate', async (event) => {
-        if (event.state && event.state.language) {
-            await changeLanguage(event.state.language);
-        }
+        const lang = event.state?.language || resolveInitialLanguage();
+        await changeLanguage(lang);
     });
 });

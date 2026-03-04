@@ -207,3 +207,11 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.education-section {
+    display: none;
+}
+
+    .education-section.active {
+        display: block;
+    }

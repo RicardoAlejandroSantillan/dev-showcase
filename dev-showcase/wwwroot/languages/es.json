@@ -1,4 +1,12 @@
 {
+  "typewriter": {
+    "prefix": "Soy ",
+    "phrases": [
+      "Ricardo Alejandro Pérez Santillán",
+      "un amante de los Datos",
+      "un loco por las automatizaciones"
+    ]
+  },
   "header": {
     "hello": "#HOLA MUNDO",
     "name": "Soy Ricardo Alejandro Pérez Santillán"
@@ -69,6 +77,34 @@
     },
     "logosTitle": "Tecnologías",
     "logosSubtitle": "Stack de herramientas y lenguajes",
+    "progressBars": {
+      "webDev": {
+        "aspnet": 85,
+        "csharp": 85,
+        "htmlcss": 90,
+        "javascript": 80
+      },
+      "dataScience": {
+        "python": 75,
+        "pandasnumpy": 70,
+        "matplotlibseaborn": 65,
+        "powerbi": 70,
+        "excel": 90
+      },
+      "databases": {
+        "sqlserver": 85,
+        "mysql": 75,
+        "oracle": 70,
+        "derby": 60
+      },
+      "softSkills": {
+        "teamwork": 88,
+        "confidence": 82,
+        "independence": 85,
+        "initiative": 80,
+        "problemSolving": 90
+      }
+    },
     "soft": {
       "criticalThinking": "Pensamiento Crítico",
       "analyticalThinking": "Pensamiento Analítico",
@@ -104,12 +140,50 @@
         "enterprising": "Emprendedor",
         "conventional": "Convencional"
       },
+      "radarLabels": [
+        "Mecánica",
+        "Destreza manual",
+        "Físicas",
+        "Científicas",
+        "Visualización",
+        "Investigación",
+        "Creatividad",
+        "Expresión",
+        "Comunicación",
+        "Ayudar a otros",
+        "Enseñar",
+        "Conocer gente",
+        "Negocios",
+        "Emprendedor",
+        "Dirigir gente",
+        "Administración",
+        "Organización",
+        "Gestión de datos"
+      ],
+      "datasets": {
+        "realistic": "Realista",
+        "investigative": "Investigador",
+        "artistic": "Artístico",
+        "social": "Sociales",
+        "enterprising": "Emprendedor",
+        "conventional": "Convencional"
+      },
       "topSkills": "Aptitudes Destacadas",
       "topInterests": "Intereses Principales",
       "topCareers": "Carreras Afines",
       "lowSkills": "Aptitudes por Desarrollar",
       "lowInterests": "Intereses Menores",
       "lowCareers": "Carreras Menos Afines",
+      "barLabels": {
+        "topSkills": [ "Visualización", "Gestión de datos", "Administración" ],
+        "topInterests": [ "Convencionales", "Investigación" ],
+        "topCareers": [ "Administración Pública", "Mercadotecnia", "Auditor" ],
+        "lowSkills": [ "Expresión", "Físicas", "Ayudar a otros" ],
+        "lowInterests": [ "Artístico", "Realistas", "Sociales" ],
+        "lowCareers": [ "Planeación Territorial", "Metalurgia y Materiales", "Urbana" ],
+        "valoresOcupacionales": [ "Esfuerzo", "Honestidad", "Respeto", "Responsabilidad", "Servicio" ]
+      },
+      "cognitiveLabels": [ "Verbal", "Numérico", "Lógico" ],
       "cognitiveBadge": "Perfil Cognitivo",
       "cognitiveTitle": "Aptitudes Cognitivas (Escala 0–60)",
       "cognitiveMe": "Mi Resultado",
@@ -131,6 +205,29 @@
         "quickReflexes": "Reflejos rápidos",
         "composure": "Templanza"
       }
+    }
+  },
+  "chartsData": {
+    "riasec": {
+      "realistic": [ 50, 44, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+      "investigative": [ 0, 0, 0, 56, 91, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+      "artistic": [ 0, 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+      "social": [ 0, 0, 0, 0, 0, 0, 0, 0, 36, 18, 70, 54, 0, 0, 0, 0, 0, 0 ],
+      "enterprising": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 68, 47, 0, 0, 0 ],
+      "conventional": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 83, 62, 83 ]
+    },
+    "cognitive": {
+      "mine": [ 47, 40, 47 ],
+      "avg": [ 44, 34, 51 ]
+    },
+    "bars": {
+      "topSkills": [ 91.89, 88.96, 88.78 ],
+      "topInterests": [ 76.85, 62.16 ],
+      "topCareers": [ 78.38, 73.0, 71.6 ],
+      "lowSkills": [ 1.25, 14.86, 18.92 ],
+      "lowInterests": [ 28.38, 30.63, 37.84 ],
+      "lowCareers": [ 24.3, 24.3, 24.3 ],
+      "valoresOcupacionales": [ 95, 98, 96, 97, 90 ]
     }
   },
   "projects": {
@@ -242,7 +339,7 @@
         "h1": "CRUD completo con actualizaciones AJAX sin recarga",
         "h2": "Acceso a datos con Dapper sobre SQL Server",
         "h3": "Filtrado y búsqueda por categoría y autor",
-        "h4": "Interfaz responsiva con Bootstrap",
+        "h4": "Interfaz responsiva con CSS personalizado",
         "img1": {
           "title": "Catálogo de Libros",
           "desc": "Vista principal del catálogo con opciones de filtrado y búsqueda en tiempo real."

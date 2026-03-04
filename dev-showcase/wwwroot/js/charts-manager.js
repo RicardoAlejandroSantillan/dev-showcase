@@ -4,63 +4,9 @@
     let cognitiveChart = null;
     let barCharts = {};
 
-    const LABELS = {
-        es: {
-            radar: [
-                'Mecánica', 'Destreza manual', 'Físicas', 'Científicas', 'Visualización',
-                'Investigación', 'Creatividad', 'Expresión', 'Comunicación', 'Ayudar a otros',
-                'Enseñar', 'Conocer gente', 'Negocios', 'Emprendedor', 'Dirigir gente',
-                'Administración', 'Organización', 'Gestión de datos'
-            ],
-            datasets: {
-                realistic: 'Realista',
-                investigative: 'Investigador',
-                artistic: 'Artístico',
-                social: 'Sociales',
-                enterprising: 'Emprendedor',
-                conventional: 'Convencional'
-            },
-            topSkills: ['Visualización', 'Gestión de datos', 'Administración'],
-            topInterests: ['Convencionales', 'Investigación'],
-            topCareers: ['Administración Pública', 'Mercadotecnia', 'Auditor'],
-            lowSkills: ['Expresión', 'Físicas', 'Ayudar a otros'],
-            lowInterests: ['Artístico', 'Realistas', 'Sociales'],
-            lowCareers: ['Planeación Territorial', 'Metalurgia y Materiales', 'Urbana'],
-            valoresOcupacionales: ['Esfuerzo', 'Honestidad', 'Respeto', 'Responsabilidad', 'Servicio'],
-            cognitive: ['Verbal', 'Numérico', 'Lógico'],
-            cognitiveMe: 'Mi Resultado',
-            cognitiveAvg: 'Promedio General'
-        },
-        en: {
-            radar: [
-                'Mechanical', 'Manual dexterity', 'Physical', 'Scientific', 'Visualization',
-                'Research', 'Creativity', 'Expression', 'Communication', 'Helping others',
-                'Teaching', 'Meeting people', 'Business', 'Entrepreneurial', 'Leading people',
-                'Administration', 'Organization', 'Data management'
-            ],
-            datasets: {
-                realistic: 'Realistic',
-                investigative: 'Investigative',
-                artistic: 'Artistic',
-                social: 'Social',
-                enterprising: 'Enterprising',
-                conventional: 'Conventional'
-            },
-            topSkills: ['Visualization', 'Data management', 'Administration'],
-            topInterests: ['Conventional', 'Research'],
-            topCareers: ['Public Administration', 'Marketing', 'Auditor'],
-            lowSkills: ['Expression', 'Physical', 'Helping others'],
-            lowInterests: ['Artistic', 'Realistic', 'Social'],
-            lowCareers: ['Territorial Planning', 'Metallurgy & Materials', 'Urban Planning'],
-            valoresOcupacionales: ['Effort', 'Honesty', 'Respect', 'Responsibility', 'Service'],
-            cognitive: ['Verbal', 'Numerical', 'Logical'],
-            cognitiveMe: 'My Score',
-            cognitiveAvg: 'General Average'
-        }
-    };
-
-    function getCurrentLang() { return localStorage.getItem('preferredLanguage') || 'es'; }
-    function getL() { return LABELS[getCurrentLang()] || LABELS.es; }
+    const getT = () => window.currentTranslations ?? {};
+    const getVoc = () => getT()?.skills?.vocational ?? {};
+    const getChartData = () => getT()?.chartsData ?? {};
 
     const RIASEC_COLORS = {
         realistic: { border: '#c2185b', fill: 'rgba(194,24,91,0.18)', point: '#c2185b' },
@@ -79,85 +25,92 @@
     const BAR_TOP = { bg: 'rgba(79,195,247,0.75)', border: 'rgba(79,195,247,1)' };
     const BAR_LOW = { bg: 'rgba(236,64,122,0.70)', border: 'rgba(236,64,122,1)' };
 
-    function makeEmpty(len) { return new Array(len).fill(0); }
+    const buildRadarData = () => {
+        const voc = getVoc();
+        const nums = getChartData()?.riasec ?? {};
 
-    function buildRadarData(l) {
-        const len = l.radar.length;
-        const realisticVals = makeEmpty(len);
-        realisticVals[0] = 50; realisticVals[1] = 44; realisticVals[2] = 14;
-        const investigativeVals = makeEmpty(len);
-        investigativeVals[3] = 56; investigativeVals[4] = 91; investigativeVals[5] = 37;
-        const artisticVals = makeEmpty(len);
-        artisticVals[6] = 33; artisticVals[7] = 0;
-        const socialVals = makeEmpty(len);
-        socialVals[8] = 36; socialVals[9] = 18; socialVals[10] = 70; socialVals[11] = 54;
-        const enterprisingVals = makeEmpty(len);
-        enterprisingVals[12] = 55; enterprisingVals[13] = 68; enterprisingVals[14] = 47;
-        const conventionalVals = makeEmpty(len);
-        conventionalVals[15] = 83; conventionalVals[16] = 62; conventionalVals[17] = 83;
-
-        const makeDs = (label, vals, col) => ({
-            label, data: vals,
-            backgroundColor: col.fill, borderColor: col.border, borderWidth: 1.5,
-            pointBackgroundColor: col.point, pointBorderColor: '#fff',
-            pointRadius: 3, pointHoverRadius: 5
+        const makeDs = (key, col) => ({
+            label: voc.datasets?.[key] ?? key,
+            data: nums[key] ?? [],
+            backgroundColor: col.fill,
+            borderColor: col.border,
+            borderWidth: 1.5,
+            pointBackgroundColor: col.point,
+            pointBorderColor: '#fff',
+            pointRadius: 3,
+            pointHoverRadius: 5
         });
 
         return {
-            labels: l.radar,
+            labels: voc.radarLabels ?? [],
             datasets: [
-                makeDs(l.datasets.realistic, realisticVals, RIASEC_COLORS.realistic),
-                makeDs(l.datasets.investigative, investigativeVals, RIASEC_COLORS.investigative),
-                makeDs(l.datasets.artistic, artisticVals, RIASEC_COLORS.artistic),
-                makeDs(l.datasets.social, socialVals, RIASEC_COLORS.social),
-                makeDs(l.datasets.enterprising, enterprisingVals, RIASEC_COLORS.enterprising),
-                makeDs(l.datasets.conventional, conventionalVals, RIASEC_COLORS.conventional)
+                makeDs('realistic', RIASEC_COLORS.realistic),
+                makeDs('investigative', RIASEC_COLORS.investigative),
+                makeDs('artistic', RIASEC_COLORS.artistic),
+                makeDs('social', RIASEC_COLORS.social),
+                makeDs('enterprising', RIASEC_COLORS.enterprising),
+                makeDs('conventional', RIASEC_COLORS.conventional)
             ]
         };
-    }
+    };
 
-    function buildCognitiveData(l) {
+    const buildCognitiveData = () => {
+        const voc = getVoc();
+        const nums = getChartData()?.cognitive ?? {};
+
+        const makeDs = (key, label, col, extra = {}) => ({
+            label,
+            data: nums[key] ?? [],
+            backgroundColor: col.fill,
+            borderColor: col.border,
+            borderWidth: 2,
+            pointBackgroundColor: col.point,
+            pointBorderColor: '#ffffff',
+            pointRadius: 5,
+            pointHoverRadius: 7,
+            pointBorderWidth: 2,
+            ...extra
+        });
+
         return {
-            labels: l.cognitive,
+            labels: voc.cognitiveLabels ?? [],
             datasets: [
-                {
-                    label: l.cognitiveMe, data: [47, 40, 47],
-                    backgroundColor: COGNITIVE_COLORS.mine.fill, borderColor: COGNITIVE_COLORS.mine.border,
-                    borderWidth: 2, pointBackgroundColor: COGNITIVE_COLORS.mine.point,
-                    pointBorderColor: '#ffffff', pointRadius: 5, pointHoverRadius: 7, pointBorderWidth: 2
-                },
-                {
-                    label: l.cognitiveAvg, data: [44, 34, 51],
-                    backgroundColor: COGNITIVE_COLORS.avg.fill, borderColor: COGNITIVE_COLORS.avg.border,
-                    borderWidth: 2, borderDash: [6, 3], pointBackgroundColor: COGNITIVE_COLORS.avg.point,
-                    pointBorderColor: '#ffffff', pointRadius: 4, pointHoverRadius: 6, pointBorderWidth: 2
-                }
+                makeDs('mine', voc.cognitiveMe ?? 'My Score', COGNITIVE_COLORS.mine),
+                makeDs('avg', voc.cognitiveAvg ?? 'General Average', COGNITIVE_COLORS.avg, { borderDash: [6, 3], pointRadius: 4, pointHoverRadius: 6 })
             ]
         };
-    }
+    };
 
-    function makeBarDataset(data, color) {
-        return [{
-            label: 'Porcentaje', data,
-            backgroundColor: color.bg, borderColor: color.border,
-            borderWidth: 1.5, borderRadius: 6, borderSkipped: false
-        }];
-    }
+    const makeBarDataset = (data, color) => [{
+        label: 'Porcentaje',
+        data,
+        backgroundColor: color.bg,
+        borderColor: color.border,
+        borderWidth: 1.5,
+        borderRadius: 6,
+        borderSkipped: false
+    }];
 
-    function buildBarData(l) {
+    const buildBarData = () => {
+        const voc = getVoc();
+        const labels = voc.barLabels ?? {};
+        const nums = getChartData()?.bars ?? {};
+
+        const make = (key, color) => ({
+            labels: labels[key] ?? [],
+            datasets: makeBarDataset(nums[key] ?? [], color)
+        });
+
         return {
-            topSkills: { labels: l.topSkills, datasets: makeBarDataset([91.89, 88.96, 88.78], BAR_TOP) },
-            topInterests: { labels: l.topInterests, datasets: makeBarDataset([76.85, 62.16], BAR_TOP) },
-            topCareers: { labels: l.topCareers, datasets: makeBarDataset([78.38, 73.0, 71.6], BAR_TOP) },
-            lowSkills: { labels: l.lowSkills, datasets: makeBarDataset([1.25, 14.86, 18.92], BAR_LOW) },
-            lowInterests: { labels: l.lowInterests, datasets: makeBarDataset([28.38, 30.63, 37.84], BAR_LOW) },
-            lowCareers: { labels: l.lowCareers, datasets: makeBarDataset([24.3, 24.3, 24.3], BAR_LOW) },
-            valoresOcupacionales: {
-                labels: l.valoresOcupacionales,
-                datasets: makeBarDataset([95, 98, 96, 97, 90], BAR_TOP)
-            }
+            topSkills: make('topSkills', BAR_TOP),
+            topInterests: make('topInterests', BAR_TOP),
+            topCareers: make('topCareers', BAR_TOP),
+            lowSkills: make('lowSkills', BAR_LOW),
+            lowInterests: make('lowInterests', BAR_LOW),
+            lowCareers: make('lowCareers', BAR_LOW),
+            valoresOcupacionales: make('valoresOcupacionales', BAR_TOP)
         };
-    }
+    };
 
     const radarOptions = {
         responsive: true, maintainAspectRatio: false,
@@ -239,78 +192,62 @@
         proyecto: []
     };
 
-    function getActiveSectionKey() {
+    const getActiveSectionKey = () => {
         const el = document.querySelector('.vocational-section-content.active');
-        return el ? el.getAttribute('data-section-content') : 'profile';
-    }
+        return el?.getAttribute('data-section-content') ?? 'profile';
+    };
 
-    function createRadar() {
+    const createRadar = () => {
         if (radarChart) return;
         const ctx = document.getElementById('vocationalRadarChart');
         if (!ctx) return;
-        radarChart = new Chart(ctx, { type: 'radar', data: buildRadarData(getL()), options: radarOptions });
-    }
+        radarChart = new Chart(ctx, { type: 'radar', data: buildRadarData(), options: radarOptions });
+    };
 
-    function destroyRadar() {
-        if (radarChart) {
-            radarChart.destroy();
-            radarChart = null;
-        }
-    }
+    const destroyRadar = () => { radarChart?.destroy(); radarChart = null; };
 
-    function updateRadarLabels() {
+    const updateRadarLabels = () => {
         if (!radarChart) return;
-        radarChart.data = buildRadarData(getL());
+        radarChart.data = buildRadarData();
         radarChart.update();
-    }
+    };
 
-    function createCognitiveChart() {
+    const createCognitiveChart = () => {
         if (cognitiveChart) return;
         const ctx = document.getElementById('cognitiveRadarChart');
         if (!ctx) return;
-        cognitiveChart = new Chart(ctx, { type: 'radar', data: buildCognitiveData(getL()), options: cognitiveOptions });
-    }
+        cognitiveChart = new Chart(ctx, { type: 'radar', data: buildCognitiveData(), options: cognitiveOptions });
+    };
 
-    function destroyCognitiveChart() {
-        if (cognitiveChart) {
-            cognitiveChart.destroy();
-            cognitiveChart = null;
-        }
-    }
+    const destroyCognitiveChart = () => { cognitiveChart?.destroy(); cognitiveChart = null; };
 
-    function updateCognitiveLabels() {
+    const updateCognitiveLabels = () => {
         if (!cognitiveChart) return;
-        cognitiveChart.data = buildCognitiveData(getL());
+        cognitiveChart.data = buildCognitiveData();
         cognitiveChart.update();
-    }
+    };
 
-    function syncCognitiveChart() {
-        const sectionKey = getActiveSectionKey();
-        if (sectionKey === 'aptitudes') {
+    const syncCognitiveChart = () => {
+        if (getActiveSectionKey() === 'aptitudes') {
             setTimeout(createCognitiveChart, 100);
         } else {
             destroyCognitiveChart();
         }
-    }
+    };
 
-    function destroyBarCharts() {
-        Object.keys(barCharts).forEach(k => {
-            if (barCharts[k] && typeof barCharts[k].destroy === 'function') {
-                barCharts[k].destroy();
-            }
-        });
+    const destroyBarCharts = () => {
+        Object.values(barCharts).forEach(chart => chart?.destroy?.());
         barCharts = {};
-    }
+    };
 
-    function createBarCharts() {
-        const l = getL();
-        const bar = buildBarData(l);
+    const createBarCharts = () => {
         const sectionKey = getActiveSectionKey();
-        const allowedIds = SECTION_BAR_CHARTS[sectionKey] || [];
-
+        const allowedIds = SECTION_BAR_CHARTS[sectionKey] ?? [];
         if (!allowedIds.length) return;
 
-        const allPairs = [
+        const bar = buildBarData();
+
+        const ALL_PAIRS = [
             ['topSkillsChart', bar.topSkills],
             ['topInterestsChart', bar.topInterests],
             ['topCareersChart', bar.topCareers],
@@ -320,37 +257,32 @@
             ['valoresOcupacionalesChart', bar.valoresOcupacionales]
         ];
 
-        allPairs.forEach(([id, data]) => {
+        ALL_PAIRS.forEach(([id, data]) => {
             if (!allowedIds.includes(id)) return;
             const ctx = document.getElementById(id);
-            if (ctx) {
-                barCharts[id] = new Chart(ctx, { type: 'bar', data, options: barOptions });
-            }
+            if (ctx) barCharts[id] = new Chart(ctx, { type: 'bar', data, options: barOptions });
         });
-    }
+    };
 
-    window.refreshVocationalCharts = function () {
+    window.refreshVocationalCharts = () => {
         const statsContent = document.getElementById('vocational-stats-content');
-        if (!statsContent || !statsContent.classList.contains('active')) return;
-
+        if (!statsContent?.classList.contains('active')) return;
         updateRadarLabels();
         updateCognitiveLabels();
         destroyBarCharts();
         createBarCharts();
     };
 
-    const sectionButtons = document.querySelectorAll('.vocational-section-btn');
-    const sectionContents = document.querySelectorAll('.vocational-section-content');
-
-    sectionButtons.forEach(btn => {
+    document.querySelectorAll('.vocational-section-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const targetSection = btn.getAttribute('data-section');
 
-            sectionButtons.forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.vocational-section-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            sectionContents.forEach(content => {
-                content.classList.toggle('active', content.getAttribute('data-section-content') === targetSection);
+            document.querySelectorAll('.vocational-section-content').forEach(content => {
+                content.classList.toggle('active',
+                    content.getAttribute('data-section-content') === targetSection);
             });
 
             setTimeout(() => {
