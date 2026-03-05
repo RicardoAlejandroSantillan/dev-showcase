@@ -3,6 +3,7 @@
         const bars = container.querySelectorAll('.stat-bar[data-percent]');
         bars.forEach(bar => {
             const percent = parseInt(bar.getAttribute('data-percent'), 10);
+            if (isNaN(percent)) return;
             bar.style.setProperty('--target-width', percent + '%');
             requestAnimationFrame(() => {
                 requestAnimationFrame(() => {
@@ -11,6 +12,8 @@
             });
         });
     }
+
+    window.animateStatBars = animateStatBars;
 
     const skillSections = document.querySelectorAll('.skill-section');
 
@@ -32,15 +35,23 @@
         hardSkillsBtn.addEventListener('click', () => {
             setTimeout(() => {
                 const hardSkillsSection = document.getElementById('hard-skills-content');
-                if (hardSkillsSection) {
-                    animateStatBars(hardSkillsSection);
-                }
+                if (hardSkillsSection) animateStatBars(hardSkillsSection);
+            }, 150);
+        });
+    }
+
+    const softSkillsBtn = document.getElementById('soft-skills-btn');
+    if (softSkillsBtn) {
+        softSkillsBtn.addEventListener('click', () => {
+            setTimeout(() => {
+                const softSkillsSection = document.getElementById('soft-skills-content');
+                if (softSkillsSection) animateStatBars(softSkillsSection);
             }, 150);
         });
     }
 
     const activeSection = document.querySelector('.skill-section.active');
     if (activeSection) {
-        setTimeout(() => animateStatBars(activeSection), 300);
+        setTimeout(() => animateStatBars(activeSection), 350);
     }
 });
