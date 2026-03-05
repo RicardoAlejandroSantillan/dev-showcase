@@ -252,19 +252,19 @@
         "name": "Daikin Manufacturing México",
         "role": "Desarrollador de Software",
         "period": "Sept 2024 – Dic 2025",
-        "description": "Desarrollo y soporte de aplicaciones empresariales en entorno .NET / SQL Server para planta manufacturera.",
+        "description": "Desarrollo y soporte de aplicaciones empresariales utilizando arquitectura MVC con .NET y SQL Server, además del diseño, implementación y mantenimiento de APIs y bases de datos para sistemas críticos de producción.",
         "resp": {
           "maintenance": "Mantenimiento de aplicaciones críticas de producción",
-          "apis": "Diseño e implementación de APIs internas",
-          "sql": "Optimización de consultas SQL y procedimientos almacenados",
+          "apis": "Implementación de nuevas funcionalidades según especificaciones técnicas",
+          "sql": "Optimización de consultas SQL y desarrollo de procedimientos almacenados",
           "ux": "Mejoras de UX/UI en sistemas internos",
-          "agile": "Participación en metodologías ágiles y Scrum"
+          "agile": "Trabajo colaborativo con metodologías ágiles y Scrum"
         },
         "projects": {
-          "overtime": "OverTime Request — Gestión de solicitudes de tiempo extra",
-          "etiquetas": "Etiquetas — Sistema de generación de etiquetas de producción",
-          "masterLabel": "Master Label — Control maestro de etiquetado",
-          "budget": "Budget Control — Módulo de control presupuestal"
+          "overtime": "OverTime Request — Aplicación de escritorio para el cálculo automatizado de costos de tiempo extra",
+          "etiquetas": "Etiquetas — Aplicación de escritorio para la gestión de impresión de almacenes",
+          "masterLabel": "Master Label — Aplicación web para el registro y análisis de errores",
+          "budget": "Budget Control — Aplicación web para la automatización de procesos financieros"
         },
         "img1": {
           "title": "Vista Principal",
@@ -273,6 +273,18 @@
         "img2": {
           "title": "OverTime Request",
           "desc": "Módulo de gestión y aprobación de solicitudes de tiempo extra con flujo de autorización multinivel."
+        },
+        "img3": {
+          "title": "Etiquetas",
+          "desc": "Aplicación de escritorio para la gestión de impresión de etiquetas en almacenes de producción."
+        },
+        "img4": {
+          "title": "Master Label",
+          "desc": "Aplicación web para el registro centralizado y análisis de errores de etiquetado."
+        },
+        "img5": {
+          "title": "Budget Control",
+          "desc": "Aplicación web para la automatización de procesos financieros y control presupuestal."
         }
       }
     },
@@ -282,7 +294,7 @@
       "devportfolio": {
         "name": "DevPortfolio",
         "short": "Portafolio profesional",
-        "description": "Portafolio web profesional con diseño espacial y glasmorfismo. Sección de introducción, habilidades con estadísticas y gráficas vocacionales, proyectos con carrusel interactivo y sección de educación con certificados.",
+        "description": "Portafolio web profesional con diseño espacial, animaciones de estrellas, interfaz con efectos de glasmorfismo, carrusel interactivo y diseño responsivo.",
         "h1": "Diseño dark mode con partículas animadas",
         "h2": "Soporte multiidioma ES/EN con JSON dinámico",
         "h3": "Gráficas vocacionales con Chart.js",
@@ -296,7 +308,7 @@
       "wids2022": {
         "name": "WiDS Datathon 2022",
         "short": "Detección de cáncer de mama",
-        "description": "Participación en el datathon WiDS 2022 con enfoque en la detección temprana de cáncer de mama mediante modelos de Machine Learning sobre datos clínicos reales.",
+        "description": "Proyecto enfocado en la detección temprana de cáncer de mama mediante un modelo predictivo con machine learning. Se realizó la limpieza de datasets, implementación de modelos de clasificación (árboles y regresión) y validación cruzada.",
         "h1": "Análisis exploratorio de datos clínicos",
         "h2": "Preprocesamiento y manejo de valores faltantes",
         "h3": "Entrenamiento de modelos de clasificación binaria",
@@ -309,7 +321,7 @@
       "wids2025": {
         "name": "WiDS Datathon 2025",
         "short": "Detección de TDAH en mujeres",
-        "description": "Participación en el datathon WiDS 2025 orientado a la detección de TDAH y TDA en mujeres adolescentes usando datos de neuroimagen y variables socioeconómicas.",
+        "description": "Modelo predictivo para la identificación temprana de patrones asociados a TDAH y TDA en mujeres adolescentes. El proyecto abordó síntomas atípicos y sesgo de género mediante modelos de clasificación multietiqueta y procesamiento neurocognitivo.",
         "h1": "Modelado con XGBoost para clasificación multiclase",
         "h2": "Feature engineering sobre datos de neuroimagen",
         "h3": "Análisis de importancia de variables",
@@ -322,7 +334,7 @@
       "prosalud": {
         "name": "ProSalud",
         "short": "Sistema de gestión médica",
-        "description": "Sistema de gestión médica con soporte para codificación CIE-10, historial clínico de pacientes y módulo de facturación de servicios médicos.",
+        "description": "Sistema de gestión médica para consultorios que automatiza procesos administrativos y clínicos como citas, historiales y facturación, con seguimiento de tratamientos y gestión de personal.",
         "h1": "Catálogo y búsqueda de diagnósticos CIE-10",
         "h2": "Gestión de historial clínico por paciente",
         "h3": "Módulo de facturación y generación de recibos",
@@ -335,7 +347,7 @@
       "bookshelf": {
         "name": "BookShelf",
         "short": "Gestión de biblioteca personal",
-        "description": "Aplicación web para gestión de biblioteca personal. Permite registrar, categorizar y hacer seguimiento de libros con actualizaciones dinámicas vía AJAX y acceso a datos optimizado con Dapper.",
+        "description": "Sistema de gestión de biblioteca personal para catalogar libros, autores y géneros literarios, con carga asíncrona mediante AJAX, formularios dinámicos y sistemas de búsqueda avanzada.",
         "h1": "CRUD completo con actualizaciones AJAX sin recarga",
         "h2": "Acceso a datos con Dapper sobre SQL Server",
         "h3": "Filtrado y búsqueda por categoría y autor",

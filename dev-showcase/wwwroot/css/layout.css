@@ -94,16 +94,6 @@
     flex-wrap: wrap;
 }
 
-.skills-content > section,
-.education-content > section {
-    display: none;
-}
-
-    .skills-content > section.active,
-    .education-content > section.active {
-        display: block;
-    }
-
 .hard-skills-content ul,
 .soft-skills-content ul {
     padding-left: 1.5rem;

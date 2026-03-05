@@ -1,6 +1,5 @@
 ﻿.image-modal,
 .certificate-modal {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -8,16 +7,18 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 2000;
+    display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
+    pointer-events: none;
     transition: opacity var(--transition-speed) var(--transition-easing);
 }
 
     .image-modal.active,
     .certificate-modal.active {
-        display: flex;
         opacity: 1;
+        pointer-events: auto;
     }
 
 .modal-content {
@@ -94,6 +95,7 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .certificate-card {
@@ -121,6 +123,11 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform var(--transition-speed) var(--transition-easing);
+    }
+
+    .certificate-image-container:hover img {
+        transform: scale(1.04);
     }
 
 .certificate-info {
@@ -133,11 +140,6 @@
         font-size: 0.95rem;
         margin-bottom: 0.25rem;
     }
-
-        .certificate-info p:last-of-type {
-            font-weight: 500;
-            color: var(--color-text-secondary);
-        }
 
     .certificate-info span {
         display: block;

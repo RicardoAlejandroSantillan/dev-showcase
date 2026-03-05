@@ -175,15 +175,48 @@
       "lowInterests": "Minor Interests",
       "lowCareers": "Less Related Careers",
       "barLabels": {
-        "topSkills": [ "Visualization", "Data management", "Administration" ],
-        "topInterests": [ "Conventional", "Research" ],
-        "topCareers": [ "Public Administration", "Marketing", "Auditor" ],
-        "lowSkills": [ "Expression", "Physical", "Helping others" ],
-        "lowInterests": [ "Artistic", "Realistic", "Social" ],
-        "lowCareers": [ "Territorial Planning", "Metallurgy & Materials", "Urban Planning" ],
-        "valoresOcupacionales": [ "Effort", "Honesty", "Respect", "Responsibility", "Service" ]
+        "topSkills": [
+          "Visualization",
+          "Data management",
+          "Administration"
+        ],
+        "topInterests": [
+          "Conventional",
+          "Research"
+        ],
+        "topCareers": [
+          "Public Administration",
+          "Marketing",
+          "Auditor"
+        ],
+        "lowSkills": [
+          "Expression",
+          "Physical",
+          "Helping others"
+        ],
+        "lowInterests": [
+          "Artistic",
+          "Realistic",
+          "Social"
+        ],
+        "lowCareers": [
+          "Territorial Planning",
+          "Metallurgy & Materials",
+          "Urban Planning"
+        ],
+        "valoresOcupacionales": [
+          "Effort",
+          "Honesty",
+          "Respect",
+          "Responsibility",
+          "Service"
+        ]
       },
-      "cognitiveLabels": [ "Verbal", "Numerical", "Logical" ],
+      "cognitiveLabels": [
+        "Verbal",
+        "Numerical",
+        "Logical"
+      ],
       "cognitiveBadge": "Cognitive Profile",
       "cognitiveTitle": "Cognitive Aptitudes (Scale 0–60)",
       "cognitiveMe": "My Score",
@@ -209,25 +242,176 @@
   },
   "chartsData": {
     "riasec": {
-      "realistic": [ 50, 44, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "investigative": [ 0, 0, 0, 56, 91, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "artistic": [ 0, 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-      "social": [ 0, 0, 0, 0, 0, 0, 0, 0, 36, 18, 70, 54, 0, 0, 0, 0, 0, 0 ],
-      "enterprising": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 68, 47, 0, 0, 0 ],
-      "conventional": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 83, 62, 83 ]
+      "realistic": [
+        50,
+        44,
+        14,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "investigative": [
+        0,
+        0,
+        0,
+        56,
+        91,
+        37,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "artistic": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        33,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "social": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        36,
+        18,
+        70,
+        54,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "enterprising": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        55,
+        68,
+        47,
+        0,
+        0,
+        0
+      ],
+      "conventional": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        83,
+        62,
+        83
+      ]
     },
     "cognitive": {
-      "mine": [ 47, 40, 47 ],
-      "avg": [ 44, 34, 51 ]
+      "mine": [
+        47,
+        40,
+        47
+      ],
+      "avg": [
+        44,
+        34,
+        51
+      ]
     },
     "bars": {
-      "topSkills": [ 91.89, 88.96, 88.78 ],
-      "topInterests": [ 76.85, 62.16 ],
-      "topCareers": [ 78.38, 73.0, 71.6 ],
-      "lowSkills": [ 1.25, 14.86, 18.92 ],
-      "lowInterests": [ 28.38, 30.63, 37.84 ],
-      "lowCareers": [ 24.3, 24.3, 24.3 ],
-      "valoresOcupacionales": [ 95, 98, 96, 97, 90 ]
+      "topSkills": [
+        91.89,
+        88.96,
+        88.78
+      ],
+      "topInterests": [
+        76.85,
+        62.16
+      ],
+      "topCareers": [
+        78.38,
+        73.0,
+        71.6
+      ],
+      "lowSkills": [
+        1.25,
+        14.86,
+        18.92
+      ],
+      "lowInterests": [
+        28.38,
+        30.63,
+        37.84
+      ],
+      "lowCareers": [
+        24.3,
+        24.3,
+        24.3
+      ],
+      "valoresOcupacionales": [
+        95,
+        98,
+        96,
+        97,
+        90
+      ]
     }
   },
   "projects": {
@@ -273,6 +457,18 @@
         "img2": {
           "title": "OverTime Request",
           "desc": "Overtime request management and approval module with multi-level authorization flow."
+        },
+        "img3": {
+          "title": "Labels",
+          "desc": "Desktop application for managing label printing across production warehouse areas."
+        },
+        "img4": {
+          "title": "Master Label",
+          "desc": "Web application for centralized registration and analysis of labeling errors."
+        },
+        "img5": {
+          "title": "Budget Control",
+          "desc": "Web application for automating financial processes and budget control."
         }
       }
     },
