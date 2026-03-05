@@ -22,6 +22,10 @@
         overflow: hidden;
     }
 
+    .tech-logos-section .skills-grid {
+        display: contents;
+    }
+
     .tech-logos-section .logo-item {
         aspect-ratio: 1;
         display: flex;
@@ -43,6 +47,7 @@
             box-shadow: none;
         }
 
+/* ── Contenedor del ícono + texto ── */
 .logo-text {
     display: flex;
     flex-direction: column;
@@ -52,22 +57,47 @@
     transition: all 0.4s var(--transition-easing);
 }
 
+    /* ── Imágenes de devicons ── */
+    .logo-text img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        transition: transform 0.4s var(--transition-easing), filter 0.4s var(--transition-easing);
+        /* Sin filter por defecto: conservan sus colores originales */
+    }
+
+    /* ── SVG inline (Power BI) ── */
     .logo-text svg {
         width: 50px;
         height: 50px;
-        fill: currentColor;
-        transition: all 0.4s var(--transition-easing);
+        transition: transform 0.4s var(--transition-easing), filter 0.4s var(--transition-easing);
+        /* fill se define directamente en el SVG, no aquí */
     }
 
+    /* ── Texto del nombre de la tecnología ── */
     .logo-text span {
         font-size: 1.1rem;
         font-weight: 600;
+        transition: color 0.4s var(--transition-easing);
     }
 
-.tech-logos-section .logo-item:hover .logo-text {
-    color: #ffffff;
+/* ── Hover: escala del ícono ── */
+.tech-logos-section .logo-item:hover .logo-text img,
+.tech-logos-section .logo-item:hover .logo-text svg {
+    transform: scale(1.15);
 }
 
-    .tech-logos-section .logo-item:hover .logo-text svg {
-        transform: scale(1.1);
-    }
+/* ── Hover: brillo sutil en imágenes ── */
+.tech-logos-section .logo-item:hover .logo-text img {
+    filter: brightness(1.15) drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
+}
+
+/* ── Hover: brillo en SVG de Power BI ── */
+.tech-logos-section .logo-item:hover .logo-text svg {
+    filter: brightness(1.2) drop-shadow(0 0 6px rgba(242, 200, 17, 0.4));
+}
+
+/* ── Hover: color del texto ── */
+.tech-logos-section .logo-item:hover .logo-text span {
+    color: #ffffff;
+}
