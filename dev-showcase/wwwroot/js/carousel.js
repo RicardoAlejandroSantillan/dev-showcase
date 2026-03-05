@@ -28,8 +28,7 @@ class InfiniteCarousel {
         if (!this.track || this.originalCards.length === 0) return;
 
         this.totalOriginal = this.originalCards.length;
-        this.visibleSlides = window.innerWidth > 1200 ? 2.1 : 1.1;
-        this.clonesCount = Math.max(this.totalOriginal, Math.ceil(this.visibleSlides) + 3);
+        this.clonesCount = Math.max(this.totalOriginal, Math.ceil(this.getVisibleSlides()) + 3);
         this.currentIndex = this.clonesCount;
         this.isTransitioning = false;
         this.slideWidth = 0;
@@ -41,7 +40,13 @@ class InfiniteCarousel {
         this.animationID = 0;
         this.hasMoved = false;
 
+        this.resizeTimer = null;
+
         this.init();
+    }
+
+    getVisibleSlides() {
+        return window.innerWidth > 1200 ? 2.1 : 1.1;
     }
 
     init() {
@@ -54,13 +59,19 @@ class InfiniteCarousel {
         this.track.addEventListener('transitionend', () => this.handleTransitionEnd());
 
         window.addEventListener('resize', () => {
-            this.updateDimensions();
-            this.updatePosition(false);
+            clearTimeout(this.resizeTimer);
+            this.resizeTimer = setTimeout(() => {
+                this.updateDimensions();
+                this.updatePosition(false);
+            }, 100);
         });
 
         const resizeObserver = new ResizeObserver(() => {
-            this.updateDimensions();
-            this.updatePosition(false);
+            clearTimeout(this.resizeTimer);
+            this.resizeTimer = setTimeout(() => {
+                this.updateDimensions();
+                this.updatePosition(false);
+            }, 100);
         });
         resizeObserver.observe(this.track);
 
@@ -94,10 +105,6 @@ class InfiniteCarousel {
         const gap = parseFloat(trackStyle.gap) || 15;
 
         this.slideWidth = cardWidth + gap;
-
-        if (!this.isDragging) {
-            this.updatePosition(false);
-        }
     }
 
     move(direction) {
@@ -133,10 +140,7 @@ class InfiniteCarousel {
     updatePagination() {
         let realIndex = (this.currentIndex - this.clonesCount) % this.totalOriginal;
         if (realIndex < 0) realIndex += this.totalOriginal;
-
-        if (this.currentSpan) {
-            this.currentSpan.textContent = realIndex + 1;
-        }
+        if (this.currentSpan) this.currentSpan.textContent = realIndex + 1;
     }
 
     addTouchEvents() {
@@ -212,16 +216,24 @@ class InfiniteCarousel {
                 return;
             }
             const card = e.target.closest('.carousel-card');
-            if (!card) return;
+            if (!card || card.classList.contains('clone')) return;
 
             const projectKey = card.dataset.project;
-            if (projectKey) {
-                const infoCard = document.getElementById(`${projectKey}-info`);
-                if (infoCard) {
-                    document.querySelectorAll('.project-info-card').forEach(c => c.classList.remove('active'));
-                    infoCard.classList.add('active');
-                    infoCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+            if (!projectKey) return;
+
+            const infoCard = document.getElementById(`${projectKey}-info`);
+            if (!infoCard) return;
+
+            document.querySelectorAll('.project-info-card').forEach(c => c.classList.remove('active'));
+            infoCard.classList.add('active');
+
+            const parentSection = document.querySelector('.content-section[data-content="projects"]');
+            const infoContainer = document.querySelector('.carousel-information-container');
+            if (parentSection && infoContainer) {
+                parentSection.scrollTo({
+                    top: infoContainer.offsetTop - 20,
+                    behavior: 'smooth'
+                });
             }
         }, { capture: true });
     }
