@@ -193,6 +193,11 @@ class InfiniteCarousel {
         this.isDragging = false;
         this.track.classList.remove('dragging');
 
+        if (!this.hasMoved) {
+            this.updatePosition(false);
+            return;
+        }
+
         const movedBy = this.currentTranslate - this.prevTranslate;
         const rawSlidesChanged = -movedBy / this.slideWidth;
         let slidesJump = Math.round(rawSlidesChanged);
@@ -231,11 +236,14 @@ class InfiniteCarousel {
 
             const parentSection = document.querySelector('.content-section[data-content="projects"]');
             const infoContainer = document.querySelector('.carousel-information-container');
+
             if (parentSection && infoContainer) {
-                parentSection.scrollTo({
-                    top: infoContainer.offsetTop - 20,
-                    behavior: 'smooth'
-                });
+                setTimeout(() => {
+                    parentSection.scrollTo({
+                        top: infoContainer.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }, 450);
             }
         }, { capture: true });
     }
