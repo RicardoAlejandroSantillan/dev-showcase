@@ -1,0 +1,22 @@
+﻿@{
+    var label = ViewData["Label"] as string ?? "";
+    var barKey = ViewData["BarKey"] as string ?? "";
+    var translateKey = ViewData["TranslateKey"] as string ?? "";
+}
+
+<div class="stat-item">
+    <div class="stat-header">
+        @if (!string.IsNullOrEmpty(translateKey))
+        {
+            <span class="stat-label" data-translate="@translateKey">@label</span>
+        }
+        else
+        {
+            <span class="stat-label">@label</span>
+        }
+        <span class="stat-percentage"></span>
+    </div>
+    <div class="stat-bar-container">
+        <div class="stat-bar" data-bar-key="@barKey"></div>
+    </div>
+</div>

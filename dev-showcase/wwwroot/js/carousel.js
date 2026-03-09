@@ -93,6 +93,7 @@ class InfiniteCarousel {
             clone.classList.add('clone');
             this.track.insertBefore(clone, this.track.firstChild);
         }
+
         this.allSlides = this.track.children;
     }
 
@@ -215,6 +216,7 @@ class InfiniteCarousel {
                 e.stopPropagation();
                 return;
             }
+
             const card = e.target.closest('.carousel-card');
             if (!card || card.classList.contains('clone')) return;
 

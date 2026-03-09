@@ -1,0 +1,11 @@
+﻿@model (string ImageSrc, string ImageAlt, string TitleTranslate, string DescTranslate, string FallbackTitle, string FallbackDesc)
+
+<div class="project-info">
+    <div class="left-pnl img-pnl">
+        <img src="@Model.ImageSrc" alt="@Model.ImageAlt" />
+    </div>
+    <div class="right-pnl info-pnl">
+        <h4 data-translate="@Model.TitleTranslate">@Model.FallbackTitle</h4>
+        <p data-translate="@Model.DescTranslate">@Model.FallbackDesc</p>
+    </div>
+</div>
