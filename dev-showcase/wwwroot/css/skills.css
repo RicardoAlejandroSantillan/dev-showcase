@@ -114,18 +114,19 @@
 .logos-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
+    gap: 0.65rem;
 }
 
 .logo-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.55rem;
-    padding: 1rem 0.75rem;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.35rem 0.25rem;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--color-border);
-    border-radius: 12px;
+    border-radius: 8px;
     transition: all var(--transition-speed) var(--transition-easing);
     cursor: default;
 }
@@ -133,8 +134,14 @@
     .logo-item:hover {
         background: rgba(255, 23, 68, 0.08);
         border-color: rgba(255, 23, 68, 0.3);
-        transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(255, 23, 68, 0.12);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(255, 23, 68, 0.12);
+    }
+
+    .logo-item img {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
     }
 
     .logo-item svg {
@@ -149,7 +156,7 @@
     }
 
     .logo-item span {
-        font-size: 0.72rem;
+        font-size: 0.6rem;
         font-weight: 500;
         color: var(--color-text-tertiary);
         text-align: center;

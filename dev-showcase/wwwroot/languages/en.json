@@ -79,23 +79,23 @@
     "logosSubtitle": "Tools and languages stack",
     "progressBars": {
       "webDev": {
+        "htmlcss": 90,
         "aspnet": 85,
         "csharp": 85,
-        "htmlcss": 90,
-        "javascript": 80
+        "javascript": 65
       },
       "dataScience": {
+        "excel": 90,
         "python": 75,
+        "powerbi": 75,
         "pandasnumpy": 70,
-        "matplotlibseaborn": 65,
-        "powerbi": 70,
-        "excel": 90
+        "matplotlibseaborn": 65
       },
       "databases": {
         "sqlserver": 85,
-        "mysql": 75,
-        "oracle": 70,
-        "derby": 60
+        "oracle": 85,
+        "mysql": 80,
+        "derby": 30
       },
       "softSkills": {
         "teamwork": 88,
@@ -450,10 +450,6 @@
           "masterLabel": "Master Label — Master labeling control",
           "budget": "Budget Control — Budget control module"
         },
-        "img1": {
-          "title": "Main View",
-          "desc": "Application main dashboard with access to the system's main modules."
-        },
         "img2": {
           "title": "OverTime Request",
           "desc": "Overtime request management and approval module with multi-level authorization flow."
@@ -505,7 +501,7 @@
       "wids2025": {
         "name": "WiDS Datathon 2025",
         "short": "ADHD detection in women",
-        "description": "Participation in the WiDS 2025 datathon aimed at detecting ADHD and ADD in adolescent women using neuroimaging data and socioeconomic variables.",
+        "description": "Participation in the WiDS 2025 datathon aimed at detecting ADHD and ADD in adolescent women using neuroimaging data.",
         "h1": "XGBoost modeling for multiclass classification",
         "h2": "Feature engineering on neuroimaging data",
         "h3": "Variable importance analysis",
@@ -531,7 +527,7 @@
       "bookshelf": {
         "name": "BookShelf",
         "short": "Personal library management",
-        "description": "Web application for personal library management. Allows registering, categorizing and tracking books with dynamic AJAX updates and optimized data access with Dapper.",
+        "description": "Web application for personal library management with dynamic AJAX updates and optimized data access with Dapper.",
         "h1": "Full CRUD with AJAX updates without reload",
         "h2": "Data access with Dapper on SQL Server",
         "h3": "Filtering and search by category and author",
