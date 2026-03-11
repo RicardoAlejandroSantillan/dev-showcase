@@ -143,11 +143,17 @@
     position: relative;
 }
 
-    .social-link svg {
-        width: 17px;
-        height: 17px;
+    .social-link svg,
+    .social-link i {
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         fill: currentColor;
-        transition: fill var(--transition-speed) var(--transition-easing);
+        color: inherit;
+        transition: all var(--transition-speed) var(--transition-easing);
         flex-shrink: 0;
     }
 

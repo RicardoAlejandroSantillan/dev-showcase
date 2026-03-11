@@ -44,6 +44,21 @@ const updateContent = (translations) => {
     document.querySelectorAll('[data-translate]').forEach(element => {
         if (element.matches('.header-content h1')) return;
 
+        if (element.dataset.translate === "introduction.aboutContent") {
+            const path = window.location.pathname.toLowerCase();
+            let profileKey = "aboutContent_webDev";
+
+            if (path.includes('/datascience')) {
+                profileKey = "aboutContent_dataScience";
+            } else if (path.includes('/dataanalyst') || path.includes('/dataanalysis')) {
+                profileKey = "aboutContent_dataAnalyst";
+            }
+
+            const value = translations.introduction[profileKey];
+            element.textContent = value || translations.introduction.aboutContent_webDev;
+            return;
+        }
+
         const value = resolvePath(translations, element.dataset.translate);
         if (value === undefined || value === null) return;
 
@@ -131,6 +146,22 @@ const syncLanguageWithServer = (language, returnUrl) => {
     formData.append('language', language);
     formData.append('returnUrl', returnUrl);
     fetch('/Home/SetLanguage', { method: 'POST', body: formData }).catch(() => { });
+};
+
+window.updateCVLink = () => {
+    const btn = document.getElementById('cvDownloadBtn');
+    if (!btn) return;
+
+    const lang = document.documentElement.lang || DEFAULT_LANGUAGE;
+    const path = window.location.pathname.toLowerCase();
+
+    if (path.includes('/dataanalyst') || path.includes('/dataanalysis')) {
+        btn.href = lang === 'en'
+            ? '/files/RicardoAlejandroPerezSantillan_DataAnalyst.pdf'
+            : '/files/RicardoAlejandroPerezSantillan_AnalistaDeDatos.pdf';
+    } else {
+        btn.href = lang === 'en' ? '/documents/cv_en.pdf' : '/documents/cv.pdf';
+    }
 };
 
 const changeLanguage = async (language) => {

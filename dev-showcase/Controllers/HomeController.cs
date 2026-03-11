@@ -1,16 +1,20 @@
 using dev_showcase.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
 
 namespace dev_showcase.Controllers
 {
     public class HomeController : Controller
     {
-        private static readonly HashSet<string> ValidProfiles = new()
+        private static readonly HashSet<string> ValidProfiles = new(StringComparer.OrdinalIgnoreCase)
         {
             "dataScience",
             "webDev",
-            "dataAnalyst"
+            "dataAnalyst",
+            "DataAnalysis"
         };
 
         public IActionResult Profile(string profile)
