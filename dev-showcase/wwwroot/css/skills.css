@@ -10,6 +10,7 @@
 .preparation-btn,
 .certificates-btn {
     padding: 0.6rem 1.25rem;
+    min-height: 44px;
     border-radius: 8px;
     background: var(--color-bg-tertiary);
     border: 1px solid var(--color-border);
@@ -17,6 +18,9 @@
     font-size: 0.9rem;
     font-weight: 500;
     transition: all var(--transition-speed) var(--transition-easing);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    white-space: nowrap;
 }
 
     .skill-filter-btn:hover,
@@ -123,12 +127,13 @@
     align-items: center;
     justify-content: center;
     gap: 0.25rem;
-    padding: 0.35rem 0.25rem;
+    padding: 0.5rem 0.25rem;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--color-border);
     border-radius: 8px;
     transition: all var(--transition-speed) var(--transition-easing);
     cursor: default;
+    min-height: 64px;
 }
 
     .logo-item:hover {
@@ -185,6 +190,20 @@
     line-height: 1.55;
 }
 
+.education-section {
+    display: none;
+}
+
+    .education-section.active {
+        display: block;
+    }
+
+@media (max-width: 1200px) {
+    .logos-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
 @media (max-width: 1024px) {
     .logos-grid {
         grid-template-columns: repeat(4, 1fr);
@@ -192,6 +211,24 @@
 }
 
 @media (max-width: 768px) {
+    .logos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .filter {
+        gap: 0.5rem;
+    }
+
+    .skill-filter-btn,
+    .project-filter-btn,
+    .preparation-btn,
+    .certificates-btn {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
     .logos-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -205,20 +242,11 @@
     .preparation-btn,
     .certificates-btn {
         width: 100%;
-        text-align: center;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 360px) {
     .logos-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-.education-section {
-    display: none;
-}
-
-    .education-section.active {
-        display: block;
-    }

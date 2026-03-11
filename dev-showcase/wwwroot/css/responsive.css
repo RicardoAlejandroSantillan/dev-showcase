@@ -1,18 +1,6 @@
 ﻿@media (max-width: 1200px) {
-    .projects-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .carousel-card {
-        flex: 0 0 calc(33.333% - 8px);
-    }
-
     .vocational-bars-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .logos-grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 
     .interactive-panels-grid {
@@ -21,40 +9,13 @@
 }
 
 @media (max-width: 1024px) {
-    .sidebar {
-        transform: translateX(-100%);
-        width: 280px;
-    }
-
-        .sidebar.active {
-            transform: translateX(0);
-        }
-
     .main-wrapper {
         margin-left: 0 !important;
     }
 
-    .menu-toggle {
-        display: flex;
-    }
-
-    .menu-overlay {
-        display: block;
-    }
-
-        .menu-overlay.active {
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 998;
-        }
-
     .language-selector {
-        top: 80px;
+        top: 0.75rem;
+        right: 0.75rem;
     }
 
     .project-info {
@@ -69,57 +30,37 @@
 
 @media (max-width: 768px) {
     .header-particles {
-        height: 300px;
+        height: 280px;
     }
 
     .header-content h1 {
-        font-size: 2rem;
+        font-size: clamp(1.4rem, 5vw, 2rem);
     }
 
     .header-content h2 {
-        font-size: 1.25rem;
-    }
-
-    h2 {
-        font-size: 1.75rem;
-    }
-
-    h3 {
-        font-size: 1.35rem;
+        font-size: clamp(0.9rem, 3vw, 1.25rem);
     }
 
     .main-content {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 
     .vocational-bars-grid {
         grid-template-columns: 1fr;
     }
 
-    .logos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .interactive-panels-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
-    .skill-filter,
-    .project-filter,
-    .education-filter,
-    .vocational-section-filter {
-        flex-direction: column;
+    .certificates-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     }
 
-    .filter button,
-    .vocational-section-btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    .carousel-card {
-        flex: 0 0 calc(50% - 6px);
+    .radar-legend,
+    .cognitive-legend {
+        grid-template-columns: 1fr;
     }
 
     .carousel-arrow {
@@ -128,112 +69,115 @@
     }
 
         .carousel-arrow.left {
-            left: -15px;
+            left: 4px;
         }
 
         .carousel-arrow.right {
-            right: -15px;
+            right: 4px;
         }
 
-    .certificates-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
-    .radar-legend,
-    .cognitive-legend {
-        grid-template-columns: 1fr;
+    .language-selector {
+        top: 0.75rem;
+        right: 0.75rem;
     }
 }
 
 @media (max-width: 640px) {
-    .logos-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .certificates-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .chart-container {
+        height: 280px;
+    }
+
+    .chart-container-bar {
+        height: 220px;
     }
 }
 
 @media (max-width: 480px) {
-    .sidebar {
-        width: 100%;
-    }
-
-    .language-selector {
-        right: 10px;
-        top: 70px;
-    }
-
     .header-particles {
-        height: 250px;
-    }
-
-    .header-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .header-content h2 {
-        font-size: 1rem;
+        height: 240px;
     }
 
     .main-content {
-        padding: 1rem;
+        padding: 0.875rem;
     }
 
     .glow-panel {
-        padding: 1.5rem;
-        min-height: 150px;
+        padding: 1.25rem;
+        min-height: 140px;
     }
 
         .glow-panel .icon {
-            font-size: 2rem;
+            font-size: 1.75rem;
         }
 
     .stat-bar-container {
-        height: 10px;
+        height: 8px;
     }
 
-    .logos-grid {
+    .certificates-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .logo-text span {
-        font-size: 1rem;
+    .project-info-card h2 {
+        font-size: 1.35rem;
     }
 
-    .carousel-card {
-        flex: 0 0 100%;
+    .project-info-card h3 {
+        font-size: 1.05rem;
     }
 
-    .projects-block {
-        padding: 1rem;
+    .modal-content {
+        max-width: 95%;
+        margin: 1rem;
+    }
+
+    .modal-close-btn {
+        top: -45px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .language-selector {
+        top: 0.75rem;
+        right: 0.75rem;
+        padding: 0.25rem;
+    }
+
+    .lang-btn {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.75rem;
     }
 
     .chart-container {
-        height: 300px;
+        height: 260px;
     }
 
     .chart-container-bar {
-        height: 250px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+    .main-content {
+        padding: 0.75rem;
     }
 
     .certificates-grid {
         grid-template-columns: 1fr;
     }
 
-    .project-info-card h2 {
-        font-size: 1.5rem;
-    }
-
-    .project-info-card h3 {
-        font-size: 1.25rem;
-    }
-
     .modal-content {
-        max-width: 95%;
+        max-width: 100%;
+        margin: 0.5rem;
+        border-radius: 12px;
     }
 
-    .modal-close-btn {
-        top: -45px;
-        width: 35px;
-        height: 35px;
+    .chart-container {
+        height: 220px;
     }
 }
 
@@ -243,6 +187,14 @@
     }
 
     .carousel-arrow {
-        opacity: 0.8;
+        opacity: 0.85;
+    }
+
+    .logo-item:hover {
+        transform: none;
+    }
+
+    .cv-download-btn:hover {
+        transform: none;
     }
 }

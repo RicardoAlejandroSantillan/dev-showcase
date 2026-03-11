@@ -1,6 +1,6 @@
 ﻿.projects-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
     align-items: stretch;
@@ -15,6 +15,7 @@
     border-radius: 16px;
     padding: 1.5rem;
     transition: transform 0.3s ease, border-color 0.3s ease;
+    min-width: 0;
 }
 
     .projects-block:hover {
@@ -28,6 +29,7 @@
     gap: 0.75rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--color-border);
+    flex-wrap: wrap;
 }
 
     .projects-block-header h3 {
@@ -100,6 +102,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 0;
 }
 
     .carousel-card:hover {
@@ -137,6 +140,7 @@
     padding: 1rem;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.3) 100%);
     backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
@@ -181,6 +185,8 @@
     opacity: 0;
     transition: all 0.3s ease;
     backdrop-filter: blur(8px);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .carousel-wrapper:hover .carousel-arrow {
@@ -247,11 +253,12 @@
 }
 
 .project-info-card h2 {
-    font-size: 1.75rem;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
     margin-bottom: 1rem;
     background: linear-gradient(90deg, #fff, rgba(255,255,255,0.7));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .project-info-card h3 {
@@ -331,13 +338,14 @@
 
 .project-info {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: clamp(200px, 30%, 320px) 1fr;
     gap: 1.5rem;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--color-border);
     border-radius: 14px;
     padding: 1.5rem;
     transition: all 0.3s ease;
+    min-width: 0;
 }
 
     .project-info:hover {
@@ -365,6 +373,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.75rem;
+    min-width: 0;
 }
 
     .right-pnl.info-pnl h4 {
@@ -387,6 +396,69 @@
     }
 
     .carousel-card {
-        flex: 0 0 calc(33.333% - 8px);
+        flex: 0 0 calc(50% - 6px);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-info {
+        grid-template-columns: 1fr;
+    }
+
+        .project-info:hover {
+            transform: none;
+        }
+
+    .projects-block {
+        padding: 1rem;
+    }
+
+    .carousel-card {
+        flex: 0 0 calc(50% - 6px);
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-card {
+        flex: 0 0 100%;
+    }
+
+    .projects-block {
+        padding: 0.875rem;
+        border-radius: 12px;
+    }
+
+    .projects-layout {
+        gap: 1rem;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .carousel-card-overlay {
+        opacity: 1;
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+    }
+
+    .carousel-arrow {
+        opacity: 0.85;
+        width: 44px;
+        height: 44px;
+    }
+
+        .carousel-arrow.left {
+            left: 4px;
+        }
+
+        .carousel-arrow.right {
+            right: 4px;
+        }
+
+    .project-info:hover {
+        transform: none;
+    }
+
+    .carousel-card:hover {
+        transform: none;
     }
 }
