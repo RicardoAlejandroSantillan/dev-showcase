@@ -62,6 +62,32 @@
     color: var(--color-text-tertiary);
 }
 
+.location-relocation {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--color-text-tertiary);
+    padding: 0.3rem 0.75rem;
+    border: 1px solid rgba(255, 23, 68, 0.2);
+    border-radius: 20px;
+    background: rgba(255, 23, 68, 0.05);
+    transition: border-color var(--transition-speed) var(--transition-easing), background var(--transition-speed) var(--transition-easing);
+}
+
+    .location-relocation:hover {
+        border-color: rgba(255, 23, 68, 0.4);
+        background: rgba(255, 23, 68, 0.08);
+    }
+
+    .location-relocation svg {
+        width: 14px;
+        height: 14px;
+        fill: var(--color-accent-red);
+        flex-shrink: 0;
+        opacity: 0.8;
+    }
+
 .availability-dot {
     width: 8px;
     height: 8px;
@@ -125,36 +151,4 @@
 
 .map-container.map-active .map-interaction-hint {
     opacity: 0;
-}
-
-@media (max-width: 768px) {
-    .map-container {
-        height: 320px;
-    }
-
-    .location-meta {
-        gap: 0.75rem;
-        padding: 0.875rem 1rem;
-    }
-
-    .location-availability {
-        margin-left: 0;
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .map-container {
-        height: 260px;
-    }
-
-    .location-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .location-availability {
-        width: auto;
-    }
 }

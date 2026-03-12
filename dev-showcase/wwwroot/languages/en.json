@@ -53,7 +53,12 @@
     "goalTitle": "Professional Goal",
     "goalContent": "Evolve toward Data Science roles while continuing to grow as a Full Stack Developer.",
     "journeyTitle": "My Journey",
-    "journeyContent": "My journey through technology led me to study Information Technology Engineering at UTAN campus industrias in 2022. What I love about development is the creative process of building customized solutions for each project. My experience developing desktop applications strengthened my interest in creating solutions that directly impact the user experience. This path has led me to become interested in data science, where I see the potential to combine development with data analysis to create more complete solutions."
+    "journeyContent": "My journey through technology led me to study Information Technology Engineering at UTAN campus industrias in 2022. What I love about development is the creative process of building customized solutions for each project. My experience developing desktop applications strengthened my interest in creating solutions that directly impact the user experience. This path has led me to become interested in data science, where I see the potential to combine development with data analysis to create more complete solutions.",
+    "locationTitle": "Location",
+    "locationSubtitle": "Base of operations and geographic availability",
+    "locationAvailable": "Available for opportunities",
+    "locationRelocation": "Available for relocation if needed",
+    "mapHint": "Click the map to interact"
   },
   "skills": {
     "title": "Skills",
@@ -245,176 +250,25 @@
   },
   "chartsData": {
     "riasec": {
-      "realistic": [
-        50,
-        44,
-        14,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "investigative": [
-        0,
-        0,
-        0,
-        56,
-        91,
-        37,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "artistic": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        33,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "social": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        36,
-        18,
-        70,
-        54,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "enterprising": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        55,
-        68,
-        47,
-        0,
-        0,
-        0
-      ],
-      "conventional": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        83,
-        62,
-        83
-      ]
+      "realistic": [ 50, 44, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+      "investigative": [ 0, 0, 0, 56, 91, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+      "artistic": [ 0, 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+      "social": [ 0, 0, 0, 0, 0, 0, 0, 0, 36, 18, 70, 54, 0, 0, 0, 0, 0, 0 ],
+      "enterprising": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 68, 47, 0, 0, 0 ],
+      "conventional": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 83, 62, 83 ]
     },
     "cognitive": {
-      "mine": [
-        47,
-        40,
-        47
-      ],
-      "avg": [
-        44,
-        34,
-        51
-      ]
+      "mine": [ 47, 40, 47 ],
+      "avg": [ 44, 34, 51 ]
     },
     "bars": {
-      "topSkills": [
-        91.89,
-        88.96,
-        88.78
-      ],
-      "topInterests": [
-        76.85,
-        62.16
-      ],
-      "topCareers": [
-        78.38,
-        73.0,
-        71.6
-      ],
-      "lowSkills": [
-        1.25,
-        14.86,
-        18.92
-      ],
-      "lowInterests": [
-        28.38,
-        30.63,
-        37.84
-      ],
-      "lowCareers": [
-        24.3,
-        24.3,
-        24.3
-      ],
-      "valoresOcupacionales": [
-        95,
-        98,
-        96,
-        97,
-        90
-      ]
+      "topSkills": [ 91.89, 88.96, 88.78 ],
+      "topInterests": [ 76.85, 62.16 ],
+      "topCareers": [ 78.38, 73.0, 71.6 ],
+      "lowSkills": [ 1.25, 14.86, 18.92 ],
+      "lowInterests": [ 28.38, 30.63, 37.84 ],
+      "lowCareers": [ 24.3, 24.3, 24.3 ],
+      "valoresOcupacionales": [ 95, 98, 96, 97, 90 ]
     }
   },
   "projects": {
