@@ -153,15 +153,10 @@ window.updateCVLink = () => {
     if (!btn) return;
 
     const lang = document.documentElement.lang || DEFAULT_LANGUAGE;
-    const path = window.location.pathname.toLowerCase();
 
-    if (path.includes('/dataanalyst') || path.includes('/dataanalysis')) {
-        btn.href = lang === 'en'
-            ? '/files/RicardoAlejandroPerezSantillan_DataAnalyst.pdf'
-            : '/files/RicardoAlejandroPerezSantillan_AnalistaDeDatos.pdf';
-    } else {
-        btn.href = lang === 'en' ? '/documents/cv_en.pdf' : '/documents/cv.pdf';
-    }
+    btn.href = lang === 'en'
+        ? '/files/RicardoAlejandroPerezSantillan_DataAnalyst.pdf'
+        : '/files/RicardoAlejandroPerezSantillan_AnalistaDeDatos.pdf';
 };
 
 const changeLanguage = async (language) => {
