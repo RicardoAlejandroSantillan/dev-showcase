@@ -51,11 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     navButtons.forEach(btn => {
-        btn.addEventListener('click', () => switchSection(btn.getAttribute('data-section')));
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            switchSection(btn.getAttribute('data-section'));
+        });
     });
 
     skillFilterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+
             skillFilterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
@@ -73,7 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     projectFilterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+
             projectFilterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
@@ -86,14 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (prepBtn && certBtn && prepContent && certContent) {
-        prepBtn.addEventListener('click', () => {
+        prepBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             prepBtn.classList.add('active');
             certBtn.classList.remove('active');
             prepContent.classList.add('active');
             certContent.classList.remove('active');
         });
 
-        certBtn.addEventListener('click', () => {
+        certBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             certBtn.classList.add('active');
             prepBtn.classList.remove('active');
             certContent.classList.add('active');

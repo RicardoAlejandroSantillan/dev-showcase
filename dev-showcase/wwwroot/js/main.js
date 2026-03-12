@@ -1,38 +1,68 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menuToggle');
-    const sidebar = document.getElementById('sidebar');
-    const menuOverlay = document.getElementById('menuOverlay');
-    const navButtons = document.querySelectorAll('.nav-button');
+    var menuToggle = document.getElementById('menuToggle');
+    var sidebar = document.getElementById('sidebar');
+    var menuOverlay = document.getElementById('menuOverlay');
+    var navButtons = document.querySelectorAll('.nav-button');
 
-    function toggleMenu() {
-        sidebar.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-        menuOverlay.classList.toggle('active');
-        document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+    if (!menuToggle || !sidebar || !menuOverlay) {
+        console.warn('[main.js] Elementos del menú no encontrados en el DOM.');
+        return;
     }
 
-    if (menuToggle) {
-        menuToggle.addEventListener('click', toggleMenu);
+    var isOpen = false;
+
+    function openMenu() {
+        isOpen = true;
+        sidebar.classList.add('active');
+        menuToggle.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.documentElement.classList.add('menu-is-open');
     }
 
-    if (menuOverlay) {
-        menuOverlay.addEventListener('click', toggleMenu);
+    function closeMenu() {
+        isOpen = false;
+        sidebar.classList.remove('active');
+        menuToggle.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.documentElement.classList.remove('menu-is-open');
     }
 
-    navButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            if (window.innerWidth <= 1024 && sidebar.classList.contains('active')) {
-                toggleMenu();
+    function handleToggleClick(e) {
+        e.preventDefault();
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    }
+
+    menuToggle.addEventListener('click', handleToggleClick);
+    menuToggle.addEventListener('touchend', function (e) {
+        e.preventDefault();
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    }, { passive: false });
+
+    menuOverlay.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('touchend', function (e) {
+        e.preventDefault();
+        closeMenu();
+    }, { passive: false });
+
+    navButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            if (window.innerWidth <= 1024 && isOpen) {
+                closeMenu();
             }
         });
     });
 
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 1024 && sidebar.classList.contains('active')) {
-            sidebar.classList.remove('active');
-            menuToggle.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = '';
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 1024 && isOpen) {
+            closeMenu();
         }
     });
 });

@@ -1,6 +1,16 @@
-﻿.app-container {
+﻿html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.app-container {
     display: flex;
     min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    position: relative;
+    max-width: 100vw;
 }
 
 .main-wrapper {
@@ -8,23 +18,31 @@
     display: flex;
     flex-direction: column;
     margin-left: 280px;
+    min-width: 0;
+    max-width: calc(100vw - 280px);
+    overflow-x: hidden;
 }
 
 .main-content {
     flex: 1;
-    padding: 2rem;
+    padding: var(--content-padding, 2rem);
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .content-sections-container {
     position: relative;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .content-section {
     display: none;
     animation: fadeIn 0.4s var(--transition-easing);
+    min-width: 0;
 }
 
     .content-section.active {
@@ -173,3 +191,10 @@
         font-weight: 600;
         color: var(--color-text-primary);
     }
+
+@media (max-width: 1024px) {
+    .main-wrapper {
+        margin-left: 0;
+        max-width: 100vw;
+    }
+}
