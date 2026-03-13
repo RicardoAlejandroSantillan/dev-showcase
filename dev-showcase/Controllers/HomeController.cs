@@ -14,7 +14,11 @@ namespace dev_showcase.Controllers
             "dataScience",
             "webDev",
             "dataAnalyst",
-            "DataAnalysis"
+            "DataAnalysis",
+            "DataEngineer",
+            "PyDev",
+            "JavaDev",
+            "CDev"
         };
 
         public IActionResult Profile(string profile)

@@ -38,22 +38,25 @@ const resolvePath = (obj, path) => {
     return path.split('.').reduce((acc, key) => acc?.[key], obj);
 };
 
+const resolveProfileKey = (path) => {
+    if (path.includes('/datascience')) return 'aboutContent_dataScience';
+    if (path.includes('/dataanalyst') ||
+        path.includes('/dataanalysis')) return 'aboutContent_dataAnalyst';
+    if (path.includes('/dataengineer')) return 'aboutContent_dataEngineer';
+    if (path.includes('/pydev')) return 'aboutContent_pyDev';
+    if (path.includes('/javadev')) return 'aboutContent_javaDev';
+    if (path.includes('/cdev')) return 'aboutContent_cDev';
+    return 'aboutContent_webDev';
+};
+
 const updateContent = (translations) => {
     if (!translations) return;
 
     document.querySelectorAll('[data-translate]').forEach(element => {
         if (element.matches('.header-content h1')) return;
 
-        if (element.dataset.translate === "introduction.aboutContent") {
-            const path = window.location.pathname.toLowerCase();
-            let profileKey = "aboutContent_webDev";
-
-            if (path.includes('/datascience')) {
-                profileKey = "aboutContent_dataScience";
-            } else if (path.includes('/dataanalyst') || path.includes('/dataanalysis')) {
-                profileKey = "aboutContent_dataAnalyst";
-            }
-
+        if (element.dataset.translate === 'introduction.aboutContent') {
+            const profileKey = resolveProfileKey(window.location.pathname.toLowerCase());
             const value = translations.introduction[profileKey];
             element.textContent = value || translations.introduction.aboutContent_webDev;
             return;
@@ -148,15 +151,27 @@ const syncLanguageWithServer = (language, returnUrl) => {
     fetch('/Home/SetLanguage', { method: 'POST', body: formData }).catch(() => { });
 };
 
+const CV_MAP = {
+    datascience: { es: 'CientificoDeDatos', en: 'DataScience' },
+    dataanalyst: { es: 'AnalistaDeDatos', en: 'DataAnalyst' },
+    dataanalysis: { es: 'AnalistaDeDatos', en: 'DataAnalyst' },
+    dataengineer: { es: 'IngenieroDeDatos', en: 'DataEngineer' },
+    pydev: { es: 'DesarrolladorPython', en: 'PythonDeveloper' },
+    javadev: { es: 'DesarrolladorJava', en: 'JavaDeveloper' },
+    cdev: { es: 'DesarrolladorC', en: 'cDeveloper' },
+};
+
 window.updateCVLink = () => {
     const btn = document.getElementById('cvDownloadBtn');
     if (!btn) return;
 
     const lang = document.documentElement.lang || DEFAULT_LANGUAGE;
+    const path = window.location.pathname.toLowerCase();
 
-    btn.href = lang === 'en'
-        ? '/files/RicardoAlejandroPerezSantillan_DataAnalyst.pdf'
-        : '/files/RicardoAlejandroPerezSantillan_AnalistaDeDatos.pdf';
+    const matchedKey = Object.keys(CV_MAP).find(key => path.includes(`/${key}`));
+    const profile = matchedKey ? CV_MAP[matchedKey] : { es: 'DesarrolladorWeb', en: 'WebDeveloper' };
+
+    btn.href = `/files/RicardoAlejandroPerezSantillan_${lang === 'en' ? profile.en : profile.es}.pdf`;
 };
 
 const changeLanguage = async (language) => {
