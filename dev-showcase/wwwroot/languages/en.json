@@ -302,38 +302,38 @@
       "blockTag": "Work",
       "daikin": {
         "name": "Daikin Manufacturing México",
-        "role": "IT Trainee — Software Developer",
+        "role": "IT Trainee — Software Developer (Probecarios)",
         "period": "Sept 2024 – Mar 2026",
-        "description": "Internship period subcontracted by Probecarios to collaborate in the IT department of Daikin Manufacturing México, participating in internal application development, Oracle ERP support, and operational data analysis.",
+        "description": "Internship period subcontracted by Probecarios to collaborate within the IT department of Daikin Manufacturing México. During this time I participated in the development and maintenance of internal enterprise applications, Oracle ERP support, and operational data analysis for production, finance, and warehouse areas.",
         "resp": {
-          "development": "Development and maintenance of internal web and desktop applications",
-          "oracle": "Oracle ERP user support: account management, responsibility assignments, and correction of supplier and site data",
-          "sql": "SQL query optimization and stored procedure development in SQL Server and Oracle SQL",
-          "analysis": "Operational data analysis and Excel dashboard generation for root cause identification",
-          "ux": "UX/UI improvements in internal systems",
-          "agile": "Collaborative work with agile methodologies, Jira, and ServiceNow"
+          "development": "Development and maintenance of internal web and desktop applications for various operational areas of the plant",
+          "oracle": "Oracle ERP support: user account management, system responsibility assignments, and correction of errors in supplier and site data to maintain information consistency",
+          "sql": "SQL query optimization and stored procedure development in SQL Server and Oracle SQL for critical production systems",
+          "analysis": "Operational data analysis through Excel export and construction of dynamic tables and dashboards to identify patterns, root causes, and improvement opportunities",
+          "ux": "UX/UI improvements in internal systems aimed at reducing operational friction for end users",
+          "agile": "Collaborative work using agile methodologies with Jira for task management and ServiceNow for incident tracking"
         },
         "projects": {
-          "budget": "Budget Control — Web application for monitoring variances between actual and budgeted expenses, integrating AP and GL from Oracle",
-          "etiquetas": "Labels — Desktop application for label generation and printing in Warehouse, reducing process time by over 50%",
-          "masterLabel": "Master Label — Web system for reprint analysis that reduced errors from ~8,000 to ~100 per month",
-          "overtime": "Overtime Request — Maintenance of the overtime cost calculation system with corporate SSO"
-        },
-        "img2": {
-          "title": "Overtime Request",
-          "desc": "Maintenance of the system used by finance to calculate snack and transportation costs for production staff during overtime. Integrates SSO with corporate accounts, plant supervisor records, and transport routes with stops."
-        },
-        "img3": {
-          "title": "Labels",
-          "desc": "Desktop application for Warehouse that queries supplier information from Oracle via API, generates barcode labels using iText, and manages printing. Configurable via JSON to adjust label size without developer intervention. Reduced process time by over 50%."
-        },
-        "img4": {
-          "title": "Master Label",
-          "desc": "Web system developed to investigate massive Master Label reprints (8,000 in December 2024). The analysis identified the issue in two specific production lines; the implemented solution reduced reprints from ~8,000 to ~100 per month."
+          "budget": "Budget Control — Web application for monitoring variances between actual and budgeted expenses, consolidating AP and GL data from Oracle",
+          "etiquetas": "Labels — Desktop application for label generation and printing in Warehouse with Oracle API integration, reducing process time by over 50%",
+          "masterLabel": "Master Label — Web system for label reprint analysis that reduced errors from ~8,000 to ~100 per month",
+          "overtime": "Overtime Request — Maintenance of the automated overtime cost calculation system with corporate SSO authentication"
         },
         "img5": {
           "title": "Budget Control",
-          "desc": "Finance tool that automates the processing of accounts payable (AP) and general ledger journals (GL) from Oracle, generating consolidated Excel files for cash flow analysis and budget variance monitoring."
+          "desc": "Web tool developed for the finance area to mitigate operational risks by monitoring variances between actual and budgeted expenses. It automates the processing of accounts payable (AP) and general ledger journal entries (GL) from Oracle, consolidating account catalogs, departments, and locations. Generates Excel files with structured calculations to facilitate cash flow analysis. Built with ASP.NET Core 8.0 MVC, C#, SQL Server, Microsoft Identity, and EPPlus for Excel file handling."
+        },
+        "img3": {
+          "title": "Labels",
+          "desc": "Desktop application developed for the Warehouse area to improve supplier traceability for each product. It queries Oracle via API using the order number to retrieve the Supplier Part Number and Daikin Part Number, then sends the data to the printer to generate a label including a barcode for easy scanning. Label generation was implemented using iText NuGet 5.5.13.5. The system includes a JSON configuration file that allows users to adjust the label size without requiring code changes. Reduced process time by over 50%."
+        },
+        "img4": {
+          "title": "Master Label",
+          "desc": "Web system developed to investigate a critical issue: in December 2024, approximately 8,000 Master Labels were printed without information, generating a high level of rework. The application stored detailed data for each label including production line, description, Job, Item, Serial, LPN, OrdLine, OrdNumber, Sub Inventory, Address, and process status. The collected data was exported to Excel where dynamic tables and dashboards identified that most reprints originated in two specific production lines. Analysis revealed the issue was scanning speed preventing the system from assigning the LPN before printing. The solution was a 1.5-second delay implemented by the Oracle team, reducing reprints from ~8,000 to ~100 per month."
+        },
+        "img2": {
+          "title": "Overtime Request",
+          "desc": "Maintenance of the system used by the finance area to calculate costs generated by snacks and transportation for production staff during overtime. The application manages supervisor records by plant, transport routes and stops, automatically calculating costs associated with these services. Built with C#, ASP.NET, and Bootstrap, it integrates SSO authentication with Daikin corporate accounts to ensure secure and controlled access."
         }
       }
     },
@@ -343,67 +343,67 @@
       "devportfolio": {
         "name": "DevPortfolio",
         "short": "Professional portfolio",
-        "description": "Professional web portfolio with dark mode design, animated particles, typewriter effect, interactive carousel with touch support, vocational charts with Chart.js, and dynamic ES/EN multilanguage support.",
-        "h1": "Dark mode design with animated particles",
-        "h2": "Multilanguage ES/EN support with dynamic JSON",
-        "h3": "Vocational charts with Chart.js",
-        "h4": "Infinite carousel with touch support",
-        "h5": "Downloadable CV in two languages",
+        "description": "Professional web portfolio built on ASP.NET MVC with a simulated SPA architecture: all sections are rendered on the first server request and JS navigation hides and shows content without additional AJAX calls. Features dark mode design, animated header particles, multilingual typewriter effect, ES/EN translation system with dynamic JSON loading, RIASEC vocational charts with Chart.js, infinite carousel with touch support, and a downloadable CV that adapts to both language and active profile.",
+        "h1": "Dark mode design with animated particles in the header",
+        "h2": "ES/EN i18n system with dynamic JSON loading and data-translate contract",
+        "h3": "RIASEC vocational dashboard with 9 Chart.js instances",
+        "h4": "Infinite carousel by card cloning with drag and touch support",
+        "h5": "Dynamic downloadable CV: language and profile determine the file served",
         "img1": {
           "title": "Introduction Section",
-          "desc": "Main view with typewriter effect, animated particles and navigation sidebar."
+          "desc": "Main view with character-by-character typewriter animation, 20 floating particles generated in the header, SPA navigation sidebar, and language selector. The role title updates automatically based on the active profile route."
         }
       },
       "wids2025": {
         "name": "WiDS Datathon 2025",
         "short": "ADHD detection in women",
-        "description": "Predictive model focused on early detection of ADHD/ADD in adolescent women, addressing the historical diagnostic bias against women. A classification model was designed and implemented using XGBoost, with a thorough data cleaning and preparation process prior to training.",
-        "h1": "XGBoost modeling for multiclass classification",
-        "h2": "Feature engineering on neuroimaging data",
-        "h3": "Variable importance analysis",
-        "h4": "Complete data cleaning and preprocessing pipeline",
+        "description": "Development of a predictive model for early identification of Attention Deficit Hyperactivity Disorder (ADHD/ADD) in adolescent women, with the goal of addressing the historical diagnostic bias affecting this group. The project used neuroimaging data from the WiDS 2025 datathon, applying a deep data cleaning process, feature engineering, and multiclass classification model training using XGBoost.",
+        "h1": "Multiclass classification model with XGBoost for ADHD/ADD detection",
+        "h2": "Feature engineering on neuroimaging data to improve class separability",
+        "h3": "Variable importance analysis to identify the most relevant diagnostic factors",
+        "h4": "Complete pipeline for cleaning, normalization, and preprocessing of neurological data",
         "img1": {
           "title": "XGBoost Model",
-          "desc": "Model results and feature importance visualization for ADHD/ADD detection in adolescent women."
+          "desc": "Model results including classification metrics and feature importance visualization, showing which neurological variables carry the most weight in predicting ADHD/ADD diagnosis in adolescent women."
         }
       },
       "wids2022": {
         "name": "WiDS Datathon 2022",
         "short": "Breast cancer detection",
-        "description": "Analysis of medical datasets to improve breast cancer detection accuracy. The project identified whether a patient would receive a definitive diagnosis within 90 days, using Machine Learning techniques on real sociodemographic and clinical data.",
-        "h1": "Exploratory analysis of clinical and sociodemographic data",
-        "h2": "Data normalization and missing value handling",
-        "h3": "Binary classification model training",
-        "h4": "Evaluation with AUC-ROC metrics",
+        "description": "Participation in the WiDS 2022 datathon to improve accuracy in early breast cancer detection. The project aimed to predict whether a patient would receive a definitive diagnosis within 90 days, using Machine Learning techniques on real sociodemographic and clinical data. Data normalization, missing value handling, and model evaluation with performance metrics suited for sensitive health contexts were performed.",
+        "h1": "Exploratory analysis of clinical and sociodemographic variables from the dataset",
+        "h2": "Data normalization and strategies for handling missing values",
+        "h3": "Training and comparison of binary classification models",
+        "h4": "Model evaluation with AUC-ROC metrics to ensure reliability in a medical context",
         "img1": {
           "title": "Exploratory Analysis",
-          "desc": "Visualization of distributions and correlations in the clinical dataset to identify whether a patient would receive a definitive diagnosis within 90 days."
+          "desc": "Visualization of distributions, correlations, and behavior of clinical dataset variables to identify features with the highest predictive power for whether a patient would receive a definitive diagnosis within 90 days."
         }
       },
       "prosalud": {
         "name": "ProSalud",
         "short": "Medical management system",
-        "description": "Medical management system for clinics that automates administrative and clinical processes such as appointments, records and billing, with treatment tracking and staff management.",
-        "h1": "ICD-10 diagnosis catalog and search",
-        "h2": "Clinical history management per patient",
-        "h3": "Billing module and receipt generation",
-        "h4": "Authentication and user roles",
+        "description": "Medical management system for clinics that automates administrative and clinical processes. It centralizes patient management, appointments, clinical records, and billing in a single platform. Includes an ICD-10 diagnosis catalog with integrated search, receipt generation module, and an authentication system with differentiated roles for doctors and administrative staff.",
+        "h1": "ICD-10 catalog with real-time search to speed up diagnosis registration",
+        "h2": "Complete clinical history management per patient with treatment tracking",
+        "h3": "Billing module with automatic receipt generation",
+        "h4": "Authentication system with differentiated roles for doctors and administrative staff",
         "img1": {
           "title": "Main Dashboard",
-          "desc": "System overview with quick access to patients, appointments and billing."
+          "desc": "System overview with quick access to patients, appointments, and billing, designed to minimize the steps required for the most frequent clinic tasks."
         }
       },
       "bookshelf": {
         "name": "BookShelf",
         "short": "Personal library management",
-        "description": "Personal library management system for cataloging books, authors and literary genres, with asynchronous AJAX loading, dynamic forms and advanced search.",
-        "h1": "Full CRUD with AJAX updates without reload",
-        "h2": "Data access with Dapper on SQL Server",
-        "h3": "Filtering and search by category and author",
-        "h4": "Responsive interface with custom CSS",
+        "description": "Web application for managing a personal library that allows cataloging books, authors, and literary genres. Implements dynamic updates via AJAX without page reload, optimized data access with Dapper on SQL Server, and a filtering and search system by category and author. The interface is fully responsive with custom CSS.",
+        "h1": "Full CRUD with dynamic AJAX updates without page reload",
+        "h2": "Efficient data access with Dapper on SQL Server for optimized queries",
+        "h3": "Real-time filtering and search system by category, author, and title",
+        "h4": "Fully responsive interface built with custom CSS without frameworks",
         "img1": {
           "title": "Book Catalog",
-          "desc": "Main catalog view with filtering and real-time search options."
+          "desc": "Main catalog view with real-time filtering and search options, displaying covers, authors, and genres for each book registered in the personal library."
         }
       }
     }
