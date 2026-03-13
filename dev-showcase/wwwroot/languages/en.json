@@ -302,37 +302,38 @@
       "blockTag": "Work",
       "daikin": {
         "name": "Daikin Manufacturing México",
-        "role": "Software Developer",
-        "period": "Sept 2024 – Dec 2025",
-        "description": "Development and support of enterprise applications in a .NET / SQL Server environment for a manufacturing plant.",
+        "role": "IT Trainee — Software Developer",
+        "period": "Sept 2024 – Mar 2026",
+        "description": "Internship period subcontracted by Probecarios to collaborate in the IT department of Daikin Manufacturing México, participating in internal application development, Oracle ERP support, and operational data analysis.",
         "resp": {
-          "maintenance": "Maintenance of critical production applications",
-          "apis": "Design and implementation of internal APIs",
-          "sql": "SQL query and stored procedure optimization",
+          "development": "Development and maintenance of internal web and desktop applications",
+          "oracle": "Oracle ERP user support: account management, responsibility assignments, and correction of supplier and site data",
+          "sql": "SQL query optimization and stored procedure development in SQL Server and Oracle SQL",
+          "analysis": "Operational data analysis and Excel dashboard generation for root cause identification",
           "ux": "UX/UI improvements in internal systems",
-          "agile": "Participation in agile methodologies and Scrum"
+          "agile": "Collaborative work with agile methodologies, Jira, and ServiceNow"
         },
         "projects": {
-          "overtime": "OverTime Request — Overtime request management",
-          "etiquetas": "Labels — Production label generation system",
-          "masterLabel": "Master Label — Master labeling control",
-          "budget": "Budget Control — Budget control module"
+          "budget": "Budget Control — Web application for monitoring variances between actual and budgeted expenses, integrating AP and GL from Oracle",
+          "etiquetas": "Labels — Desktop application for label generation and printing in Warehouse, reducing process time by over 50%",
+          "masterLabel": "Master Label — Web system for reprint analysis that reduced errors from ~8,000 to ~100 per month",
+          "overtime": "Overtime Request — Maintenance of the overtime cost calculation system with corporate SSO"
         },
         "img2": {
-          "title": "OverTime Request",
-          "desc": "Overtime request management and approval module with multi-level authorization flow."
+          "title": "Overtime Request",
+          "desc": "Maintenance of the system used by finance to calculate snack and transportation costs for production staff during overtime. Integrates SSO with corporate accounts, plant supervisor records, and transport routes with stops."
         },
         "img3": {
           "title": "Labels",
-          "desc": "Desktop application for managing label printing across production warehouse areas."
+          "desc": "Desktop application for Warehouse that queries supplier information from Oracle via API, generates barcode labels using iText, and manages printing. Configurable via JSON to adjust label size without developer intervention. Reduced process time by over 50%."
         },
         "img4": {
           "title": "Master Label",
-          "desc": "Web application for centralized registration and analysis of labeling errors."
+          "desc": "Web system developed to investigate massive Master Label reprints (8,000 in December 2024). The analysis identified the issue in two specific production lines; the implemented solution reduced reprints from ~8,000 to ~100 per month."
         },
         "img5": {
           "title": "Budget Control",
-          "desc": "Web application for automating financial processes and budget control."
+          "desc": "Finance tool that automates the processing of accounts payable (AP) and general ledger journals (GL) from Oracle, generating consolidated Excel files for cash flow analysis and budget variance monitoring."
         }
       }
     },
@@ -342,7 +343,7 @@
       "devportfolio": {
         "name": "DevPortfolio",
         "short": "Professional portfolio",
-        "description": "Professional web portfolio with spatial design and glassmorphism. Introduction section, skills with statistics and vocational charts, projects with interactive carousel and education section with certificates.",
+        "description": "Professional web portfolio with dark mode design, animated particles, typewriter effect, interactive carousel with touch support, vocational charts with Chart.js, and dynamic ES/EN multilanguage support.",
         "h1": "Dark mode design with animated particles",
         "h2": "Multilanguage ES/EN support with dynamic JSON",
         "h3": "Vocational charts with Chart.js",
@@ -353,36 +354,36 @@
           "desc": "Main view with typewriter effect, animated particles and navigation sidebar."
         }
       },
+      "wids2025": {
+        "name": "WiDS Datathon 2025",
+        "short": "ADHD detection in women",
+        "description": "Predictive model focused on early detection of ADHD/ADD in adolescent women, addressing the historical diagnostic bias against women. A classification model was designed and implemented using XGBoost, with a thorough data cleaning and preparation process prior to training.",
+        "h1": "XGBoost modeling for multiclass classification",
+        "h2": "Feature engineering on neuroimaging data",
+        "h3": "Variable importance analysis",
+        "h4": "Complete data cleaning and preprocessing pipeline",
+        "img1": {
+          "title": "XGBoost Model",
+          "desc": "Model results and feature importance visualization for ADHD/ADD detection in adolescent women."
+        }
+      },
       "wids2022": {
         "name": "WiDS Datathon 2022",
         "short": "Breast cancer detection",
-        "description": "Participation in the WiDS 2022 datathon focused on early breast cancer detection using Machine Learning models on real clinical data.",
-        "h1": "Exploratory analysis of clinical data",
-        "h2": "Preprocessing and missing value handling",
+        "description": "Analysis of medical datasets to improve breast cancer detection accuracy. The project identified whether a patient would receive a definitive diagnosis within 90 days, using Machine Learning techniques on real sociodemographic and clinical data.",
+        "h1": "Exploratory analysis of clinical and sociodemographic data",
+        "h2": "Data normalization and missing value handling",
         "h3": "Binary classification model training",
         "h4": "Evaluation with AUC-ROC metrics",
         "img1": {
           "title": "Exploratory Analysis",
-          "desc": "Visualization of distributions and correlations in the clinical dataset."
-        }
-      },
-      "wids2025": {
-        "name": "WiDS Datathon 2025",
-        "short": "ADHD detection in women",
-        "description": "Participation in the WiDS 2025 datathon aimed at detecting ADHD and ADD in adolescent women using neuroimaging data.",
-        "h1": "XGBoost modeling for multiclass classification",
-        "h2": "Feature engineering on neuroimaging data",
-        "h3": "Variable importance analysis",
-        "h4": "Complete preprocessing pipeline",
-        "img1": {
-          "title": "XGBoost Model",
-          "desc": "Model results and feature importance visualization."
+          "desc": "Visualization of distributions and correlations in the clinical dataset to identify whether a patient would receive a definitive diagnosis within 90 days."
         }
       },
       "prosalud": {
         "name": "ProSalud",
         "short": "Medical management system",
-        "description": "Medical management system with support for ICD-10 coding, patient clinical history and medical services billing module.",
+        "description": "Medical management system for clinics that automates administrative and clinical processes such as appointments, records and billing, with treatment tracking and staff management.",
         "h1": "ICD-10 diagnosis catalog and search",
         "h2": "Clinical history management per patient",
         "h3": "Billing module and receipt generation",
@@ -395,7 +396,7 @@
       "bookshelf": {
         "name": "BookShelf",
         "short": "Personal library management",
-        "description": "Web application for personal library management with dynamic AJAX updates and optimized data access with Dapper.",
+        "description": "Personal library management system for cataloging books, authors and literary genres, with asynchronous AJAX loading, dynamic forms and advanced search.",
         "h1": "Full CRUD with AJAX updates without reload",
         "h2": "Data access with Dapper on SQL Server",
         "h3": "Filtering and search by category and author",

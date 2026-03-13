@@ -302,37 +302,38 @@
       "blockTag": "Laboral",
       "daikin": {
         "name": "Daikin Manufacturing México",
-        "role": "Desarrollador de Software",
-        "period": "Sept 2024 – Dic 2025",
-        "description": "Desarrollo y soporte de aplicaciones empresariales utilizando arquitectura MVC con .NET y SQL Server, además del diseño, implementación y mantenimiento de APIs y bases de datos para sistemas críticos de producción.",
+        "role": "IT Trainee — Desarrollador de Software",
+        "period": "Sept 2024 – Mar 2026",
+        "description": "Periodo de prácticas subcontratado por Probecarios para colaborar en el área de sistemas de Daikin Manufacturing México, participando en desarrollo de aplicaciones internas, soporte de ERP Oracle y análisis de datos operativos.",
         "resp": {
-          "maintenance": "Mantenimiento de aplicaciones críticas de producción",
-          "apis": "Implementación de nuevas funcionalidades según especificaciones técnicas",
-          "sql": "Optimización de consultas SQL y desarrollo de procedimientos almacenados",
+          "development": "Desarrollo y mantenimiento de aplicaciones web y de escritorio internas",
+          "oracle": "Soporte a usuarios del ERP Oracle: gestión de cuentas, responsabilidades y corrección de datos de proveedores y sites",
+          "sql": "Optimización de consultas SQL y desarrollo de procedimientos almacenados en SQL Server y Oracle SQL",
+          "analysis": "Análisis de datos operativos y generación de dashboards en Excel para identificación de causas raíz",
           "ux": "Mejoras de UX/UI en sistemas internos",
-          "agile": "Trabajo colaborativo con metodologías ágiles y Scrum"
+          "agile": "Trabajo colaborativo con metodologías ágiles, Jira y ServiceNow"
         },
         "projects": {
-          "overtime": "OverTime Request — Aplicación de escritorio para el cálculo automatizado de costos de tiempo extra",
-          "etiquetas": "Etiquetas — Aplicación de escritorio para la gestión de impresión de almacenes",
-          "masterLabel": "Master Label — Aplicación web para el registro y análisis de errores",
-          "budget": "Budget Control — Aplicación web para la automatización de procesos financieros"
+          "budget": "Budget Control — Aplicación web para monitoreo de variaciones entre gastos reales y presupuestados, integrando AP y GL de Oracle",
+          "etiquetas": "Etiquetas — Aplicación de escritorio para generación e impresión de etiquetas en Warehouse, reduciendo tiempos en más del 50%",
+          "masterLabel": "Master Label — Sistema web para análisis de reimpresiones que redujo errores de ~8,000 a ~100 por mes",
+          "overtime": "Overtime Request — Mantenimiento del sistema de cálculo de costos de tiempo extra con SSO corporativo"
         },
         "img2": {
-          "title": "OverTime Request",
-          "desc": "Módulo de gestión y aprobación de solicitudes de tiempo extra con flujo de autorización multinivel."
+          "title": "Overtime Request",
+          "desc": "Mantenimiento del sistema utilizado por finanzas para calcular costos de snacks y transporte del personal de producción en horas extra. Integra SSO con cuentas corporativas, registros de supervisores por planta y rutas de transporte con sus paradas."
         },
         "img3": {
           "title": "Etiquetas",
-          "desc": "Aplicación de escritorio para la gestión de impresión de etiquetas en almacenes de producción."
+          "desc": "Aplicación de escritorio para Warehouse que consulta información de proveedores en Oracle vía API, genera etiquetas con código de barras usando iText y administra la impresión. Configurable mediante JSON para ajustar tamaño de etiqueta sin intervención del desarrollador. Redujo los tiempos de proceso en más del 50%."
         },
         "img4": {
           "title": "Master Label",
-          "desc": "Aplicación web para el registro centralizado y análisis de errores de etiquetado."
+          "desc": "Sistema web desarrollado para investigar reimpresiones masivas de Master Labels (8,000 en diciembre 2024). El análisis identificó el problema en dos líneas de producción específicas; la solución implementada redujo las reimpresiones de ~8,000 a ~100 por mes."
         },
         "img5": {
           "title": "Budget Control",
-          "desc": "Aplicación web para la automatización de procesos financieros y control presupuestal."
+          "desc": "Herramienta para el área de finanzas que automatiza el procesamiento de facturas por pagar (AP) y diarios generales de pólizas (GL) de Oracle, generando archivos Excel consolidados para el análisis de flujo de efectivo y monitoreo de variaciones presupuestales."
         }
       }
     },
@@ -342,7 +343,7 @@
       "devportfolio": {
         "name": "DevPortfolio",
         "short": "Portafolio profesional",
-        "description": "Portafolio web profesional con diseño espacial, animaciones de estrellas, interfaz con efectos de glasmorfismo, carrusel interactivo y diseño responsivo.",
+        "description": "Portafolio web profesional con diseño dark mode, partículas animadas, efecto typewriter, carrusel interactivo con soporte táctil, gráficas vocacionales con Chart.js y soporte multiidioma ES/EN dinámico.",
         "h1": "Diseño dark mode con partículas animadas",
         "h2": "Soporte multiidioma ES/EN con JSON dinámico",
         "h3": "Gráficas vocacionales con Chart.js",
@@ -353,36 +354,36 @@
           "desc": "Vista principal con efecto typewriter, partículas animadas y sidebar de navegación."
         }
       },
+      "wids2025": {
+        "name": "WiDS Datathon 2025",
+        "short": "Detección de TDAH en mujeres",
+        "description": "Modelo predictivo enfocado en la detección oportuna de TDAH/TDA en mujeres adolescentes, abordando el sesgo de diagnóstico histórico en mujeres. Se diseñó e implementó un modelo de clasificación con XGBoost, realizando un proceso profundo de limpieza y preparación de datos antes del entrenamiento.",
+        "h1": "Modelado con XGBoost para clasificación multiclase",
+        "h2": "Feature engineering sobre datos de neuroimagen",
+        "h3": "Análisis de importancia de variables",
+        "h4": "Pipeline completo de limpieza y preprocesamiento de datos",
+        "img1": {
+          "title": "Modelo XGBoost",
+          "desc": "Resultados del modelo y visualización de importancia de features para la detección de TDAH/TDA en mujeres adolescentes."
+        }
+      },
       "wids2022": {
         "name": "WiDS Datathon 2022",
         "short": "Detección de cáncer de mama",
-        "description": "Proyecto enfocado en la detección temprana de cáncer de mama mediante un modelo predictivo con machine learning.",
-        "h1": "Análisis exploratorio de datos clínicos",
-        "h2": "Preprocesamiento y manejo de valores faltantes",
+        "description": "Análisis de conjuntos de datos médicos para mejorar la precisión en detección de cáncer de mama. El proyecto identificó si una paciente recibiría diagnóstico definitivo en menos de 90 días, utilizando técnicas de Machine Learning sobre datos sociodemográficos y clínicos reales.",
+        "h1": "Análisis exploratorio de datos clínicos y sociodemográficos",
+        "h2": "Normalización de datos y manejo de valores faltantes",
         "h3": "Entrenamiento de modelos de clasificación binaria",
         "h4": "Evaluación con métricas AUC-ROC",
         "img1": {
           "title": "Análisis Exploratorio",
-          "desc": "Visualización de distribuciones y correlaciones en el dataset clínico."
-        }
-      },
-      "wids2025": {
-        "name": "WiDS Datathon 2025",
-        "short": "Detección de TDAH en mujeres",
-        "description": "Modelo predictivo para la identificación temprana de patrones asociados a TDAH y TDA en mujeres adolescentes.",
-        "h1": "Modelado con XGBoost para clasificación multiclase",
-        "h2": "Feature engineering sobre datos de neuroimagen",
-        "h3": "Análisis de importancia de variables",
-        "h4": "Pipeline completo de preprocesamiento",
-        "img1": {
-          "title": "Modelo XGBoost",
-          "desc": "Resultados del modelo y visualización de importancia de features."
+          "desc": "Visualización de distribuciones y correlaciones en el dataset clínico para identificar si una paciente recibiría diagnóstico definitivo en menos de 90 días."
         }
       },
       "prosalud": {
         "name": "ProSalud",
         "short": "Sistema de gestión médica",
-        "description": "Sistema de gestión médica para consultorios que automatiza procesos administrativos y clínicos.",
+        "description": "Sistema de gestión médica para consultorios que automatiza procesos administrativos y clínicos como citas, historiales y facturación, con seguimiento de tratamientos y gestión de personal.",
         "h1": "Catálogo y búsqueda de diagnósticos CIE-10",
         "h2": "Gestión de historial clínico por paciente",
         "h3": "Módulo de facturación y generación de recibos",
@@ -395,7 +396,7 @@
       "bookshelf": {
         "name": "BookShelf",
         "short": "Gestión de biblioteca personal",
-        "description": "Sistema de gestión de biblioteca personal para catalogar libros, autores y géneros literarios.",
+        "description": "Sistema de gestión de biblioteca personal para catalogar libros, autores y géneros literarios, con carga asíncrona mediante AJAX, formularios dinámicos y sistemas de búsqueda avanzada.",
         "h1": "CRUD completo con actualizaciones AJAX sin recarga",
         "h2": "Acceso a datos con Dapper sobre SQL Server",
         "h3": "Filtrado y búsqueda por categoría y autor",
