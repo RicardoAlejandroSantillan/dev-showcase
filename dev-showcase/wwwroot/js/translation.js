@@ -49,6 +49,24 @@ const resolveProfileKey = (path) => {
     return 'aboutContent_webDev';
 };
 
+const resolveRoleTitleKey = (path) => {
+    if (path.includes('/datascience')) return 'roleTitle_dataScience';
+    if (path.includes('/dataanalyst') ||
+        path.includes('/dataanalysis')) return 'roleTitle_dataAnalyst';
+    if (path.includes('/dataengineer')) return 'roleTitle_dataEngineer';
+    if (path.includes('/pydev')) return 'roleTitle_pyDev';
+    if (path.includes('/javadev')) return 'roleTitle_javaDev';
+    if (path.includes('/cdev')) return 'roleTitle_cDev';
+    return 'roleTitle_webDev';
+};
+
+const updateRoleTitle = (translations) => {
+    const el = document.getElementById('headerRoleTitle');
+    if (!el || !translations?.header) return;
+    const key = resolveRoleTitleKey(window.location.pathname.toLowerCase());
+    el.textContent = translations.header[key] ?? '';
+};
+
 const updateContent = (translations) => {
     if (!translations) return;
 
@@ -78,6 +96,8 @@ const updateContent = (translations) => {
         const value = resolvePath(translations, element.dataset.tooltipTranslate);
         if (value) element.dataset.tooltip = value;
     });
+
+    updateRoleTitle(translations);
 };
 
 const applyProgressBars = (translations) => {

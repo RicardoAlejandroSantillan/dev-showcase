@@ -320,3 +320,11 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
+
+.header-role-title {
+    font-size: 1.1rem;
+    color: var(--color-accent-red);
+    letter-spacing: 0.08em;
+    margin-top: 0.4rem;
+    font-weight: 500;
+}

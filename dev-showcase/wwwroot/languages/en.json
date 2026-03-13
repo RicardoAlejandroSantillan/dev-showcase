@@ -9,7 +9,14 @@
   },
   "header": {
     "hello": "#HELLO WORLD",
-    "name": "I'm Ricardo Alejandro Pérez Santillán"
+    "name": "I'm Ricardo Alejandro Pérez Santillán",
+    "roleTitle_webDev": "Web Developer",
+    "roleTitle_dataScience": "Data Scientist",
+    "roleTitle_dataAnalyst": "Data Analyst",
+    "roleTitle_dataEngineer": "Data Engineer",
+    "roleTitle_pyDev": "Python Developer",
+    "roleTitle_javaDev": "Java Developer",
+    "roleTitle_cDev": "C / C++ Developer"
   },
   "navigation": {
     "introduction": "Introduction",
@@ -34,10 +41,10 @@
     "aboutContent_webDev": "Web developer with a background in Information Technology Engineering and experience in developing and maintaining internal web applications. I have worked with C#, .NET, and SQL Server building systems with roles, dashboards, and reports oriented to enterprise environments. Focused on developing functional, structured web solutions aligned with the organization's operational needs.",
     "aboutContent_dataAnalyst": "Data Analyst with a background in Information Technology Engineering and practical experience in data analysis within industrial environments. Experience analyzing production, warehouse, and supply chain data to identify recurring errors, reworks, and data quality issues. Ability to build dashboards and reports that allow detecting patterns, root causes, and improvement opportunities. Analytical and structured profile, focused on data-driven decision making.",
     "aboutContent_DataAnalysis": "Data Analyst with a background in Information Technology Engineering and practical experience in data analysis within industrial environments. Experience analyzing production, warehouse, and supply chain data to identify recurring errors, reworks, and data quality issues. Ability to build dashboards and reports that allow detecting patterns, root causes, and improvement opportunities. Analytical and structured profile, focused on data-driven decision making.",
-    "aboutContent_dataEngineer": "Information Technology professional with experience in operational data analysis and development of solutions for enterprise data management and processing. I have worked with databases, process automation, and data analysis for production, warehouse, and supply chain environments. My focus is on building data pipelines, cleaning and transforming data, and generating reliable datasets for analysis and decision-making. Experience working with SQL, Python, and analytical tools to structure information from ERP systems and operational processes.",
-    "aboutContent_pyDev": "Software developer with a background in Information Technology and experience in process automation, data analysis, and development of internal tools. I have used Python for data manipulation, database integration, and scripting aimed at optimizing operational processes. Experience working with SQL, APIs, and data processing to build solutions that automate repetitive tasks and improve data availability for business teams.",
-    "aboutContent_javaDev": "Information Technology Engineer with experience in enterprise application development and maintenance of web systems used in industrial environments. I have participated in the development and support of internal applications for operational management, including implementation of roles, dashboards, and reports for administrative and production areas. Experience working with backend architecture, database integration, and development of solutions aimed at improving internal processes.",
-    "aboutContent_cDev": "Information Technology Engineer with strong foundations in low-level programming using C and C++. Experience developing efficient programs, managing memory, and solving problems using data structures and algorithms.",
+    "aboutContent_dataEngineer": "IT Professional with experience in operational data analysis and the development of solutions for managing and processing enterprise information. I have worked with databases, process automation, and data analysis for production, warehouse, and supply chain departments. My focus is on building data pipelines, data cleansing and transformation, and generating reliable datasets for analysis and decision-making. Experienced in SQL, Python, and analytical tools to structure data from ERP systems and operational processes.",
+    "aboutContent_pyDev": "Software Developer with a background in Information Technology and experience in process automation, data analysis, and internal tool development. I have leveraged Python for data manipulation, database integration, and creating scripts aimed at optimizing operational workflows. Experienced in SQL, APIs, and data processing to build solutions that automate repetitive tasks and improve information availability for business units.",
+    "aboutContent_javaDev": "IT Engineer with experience in enterprise application development and the maintenance of web systems used in industrial environments. I have contributed to the development and support of internal applications for operational management, including the implementation of role-based access control, dashboards, and reporting for administrative and production areas. Experienced in backend architecture, database integration, and developing solutions focused on improving internal processes.",
+    "aboutContent_cDev": "Information Technology Engineer with a solid foundation in low-level programming using C and C++. Experienced in developing programs focused on efficiency, memory management, and problem-solving through data structures and algorithms.",
     "skillsTitle": "Skills & Technologies",
     "panels": {
       "webDev": "Web Development",

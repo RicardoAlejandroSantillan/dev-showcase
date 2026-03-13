@@ -9,7 +9,14 @@
   },
   "header": {
     "hello": "#HOLA MUNDO",
-    "name": "Soy Ricardo Alejandro Pérez Santillán"
+    "name": "Soy Ricardo Alejandro Pérez Santillán",
+    "roleTitle_webDev": "Desarrollador Web",
+    "roleTitle_dataScience": "Científico de Datos",
+    "roleTitle_dataAnalyst": "Analista de Datos",
+    "roleTitle_dataEngineer": "Ingeniero de Datos",
+    "roleTitle_pyDev": "Desarrollador Python",
+    "roleTitle_javaDev": "Desarrollador Java",
+    "roleTitle_cDev": "Desarrollador C / C++"
   },
   "navigation": {
     "introduction": "Introducción",
