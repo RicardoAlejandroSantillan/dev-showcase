@@ -1,4 +1,4 @@
-﻿const DEFAULT_LANGUAGE = 'es';
+const DEFAULT_LANGUAGE = 'es';
 const SUPPORTED_LANGUAGES = ['es', 'en'];
 
 const resolveInitialLanguage = () => {
@@ -62,7 +62,14 @@ const resolveRoleTitleKey = (path) => {
 
 const updateRoleTitle = (translations) => {
     const el = document.getElementById('headerRoleTitle');
-    if (!el || !translations?.header) return;
+    if (!el) return;
+
+    if (document.querySelector('.notfound-container')) {
+        el.textContent = 'Rol no Encontrado';
+        return;
+    }
+
+    if (!translations?.header) return;
     const key = resolveRoleTitleKey(window.location.pathname.toLowerCase());
     el.textContent = translations.header[key] ?? '';
 };

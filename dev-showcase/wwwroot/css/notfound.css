@@ -1,0 +1,119 @@
+.notfound-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.notfound-panel {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    margin: auto auto;
+    margin-top: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.notfound-panel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.notfound-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.notfound-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--accent-primary, #4fc3f7);
+}
+
+.notfound-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.notfound-text {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.notfound-retry {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    .roles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.role-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: rgba(45, 45, 45, 0.4);
+    color: var(--color-text-primary, #ffffff);
+    text-decoration: none;
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.role-link-btn:hover {
+    background: rgba(30, 136, 229, 0.1);
+    border-color: var(--accent-primary, #4fc3f7);
+    color: var(--accent-primary, #4fc3f7);
+    transform: translateY(-2px);
+}
+
+.role-link-btn span {
+    font-weight: 700;
+    color: var(--accent-primary, #4fc3f7);
+    margin-left: 4px;
+    transition: all 0.3s ease;
+}
+
+.role-link-btn:hover span {
+    color: #d2d2e7;
+    text-shadow: 0 0 8px rgba(68, 172, 219, 0.8);
+}
+
+.main-return-btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    background: rgba(30, 136, 229, 0.2);
+    color: var(--accent-primary, #4fc3f7);
+    border: 1px solid rgba(84, 160, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.main-return-btn:hover {
+    background: rgba(30, 136, 229, 0.4);
+    transform: scale(1.05);
+}
