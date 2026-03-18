@@ -65,7 +65,7 @@ const updateRoleTitle = (translations) => {
     if (!el) return;
 
     if (document.querySelector('.notfound-container')) {
-        el.textContent = 'Rol no Encontrado';
+        el.textContent = translations?.header?.roleTitle_notFound || 'Rol no Encontrado';
         return;
     }
 

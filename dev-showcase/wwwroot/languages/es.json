@@ -16,7 +16,14 @@
     "roleTitle_dataEngineer": "Ingeniero de Datos",
     "roleTitle_pyDev": "Desarrollador Python",
     "roleTitle_javaDev": "Desarrollador Java",
-    "roleTitle_cDev": "Desarrollador C / C++"
+    "roleTitle_cDev": "Desarrollador C / C++",
+    "roleTitle_notFound": "Rol no Encontrado"
+  },
+  "notfound": {
+    "title": "Ruta no encontrada",
+    "message": "Parece que te has perdido. La ruta o el rol al que intentas acceder no existe.",
+    "retry": "Inténtalo de nuevo",
+    "goToRole": "ir al rol"
   },
   "navigation": {
     "introduction": "Introducción",

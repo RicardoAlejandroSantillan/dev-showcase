@@ -90,14 +90,14 @@
     transform: translateY(-2px);
 }
 
-.role-link-btn span {
+.role-link-btn .accent-span {
     font-weight: 700;
     color: var(--accent-primary, #4fc3f7);
     margin-left: 4px;
     transition: all 0.3s ease;
 }
 
-.role-link-btn:hover span {
+.role-link-btn:hover .accent-span {
     color: #d2d2e7;
     text-shadow: 0 0 8px rgba(68, 172, 219, 0.8);
 }

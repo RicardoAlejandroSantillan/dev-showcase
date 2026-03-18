@@ -16,7 +16,14 @@
     "roleTitle_dataEngineer": "Data Engineer",
     "roleTitle_pyDev": "Python Developer",
     "roleTitle_javaDev": "Java Developer",
-    "roleTitle_cDev": "C / C++ Developer"
+    "roleTitle_cDev": "C / C++ Developer",
+    "roleTitle_notFound": "Role Not Found"
+  },
+  "notfound": {
+    "title": "Route not found",
+    "message": "It seems you are lost. The route or role you are trying to access does not exist.",
+    "retry": "Try again",
+    "goToRole": "go to role"
   },
   "navigation": {
     "introduction": "Introduction",
