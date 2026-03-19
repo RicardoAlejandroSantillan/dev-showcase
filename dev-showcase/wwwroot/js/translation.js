@@ -62,16 +62,21 @@ const resolveRoleTitleKey = (path) => {
 
 const updateRoleTitle = (translations) => {
     const el = document.getElementById('headerRoleTitle');
-    if (!el) return;
+    const sidebarEl = document.getElementById('sidebarRoleTitle');
 
     if (document.querySelector('.notfound-container')) {
-        el.textContent = translations?.header?.roleTitle_notFound || 'Rol no Encontrado';
+        const notFoundText = translations?.header?.roleTitle_notFound || 'Rol no Encontrado';
+        if (el) el.textContent = notFoundText;
+        if (sidebarEl) sidebarEl.textContent = notFoundText;
         return;
     }
 
     if (!translations?.header) return;
     const key = resolveRoleTitleKey(window.location.pathname.toLowerCase());
-    el.textContent = translations.header[key] ?? '';
+    const roleText = translations.header[key] ?? '';
+    
+    if (el) el.textContent = roleText;
+    if (sidebarEl) sidebarEl.textContent = roleText;
 };
 
 const updateContent = (translations) => {
