@@ -20,7 +20,7 @@ const loadTranslations = async (language) => {
     if (translationCache[language]) return translationCache[language];
 
     try {
-        const response = await fetch(`/languages/${language}.json`);
+        const response = await fetch(`/languages/${language}.json?v=${new Date().getTime()}`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
         translationCache[language] = data;
@@ -46,6 +46,7 @@ const resolveProfileKey = (path) => {
     if (path.includes('/pydev')) return 'aboutContent_pyDev';
     if (path.includes('/javadev')) return 'aboutContent_javaDev';
     if (path.includes('/cdev')) return 'aboutContent_cDev';
+    if (path.includes('/fullstack')) return 'aboutContent_fullStack';
     return 'aboutContent_webDev';
 };
 
@@ -57,6 +58,7 @@ const resolveRoleTitleKey = (path) => {
     if (path.includes('/pydev')) return 'roleTitle_pyDev';
     if (path.includes('/javadev')) return 'roleTitle_javaDev';
     if (path.includes('/cdev')) return 'roleTitle_cDev';
+    if (path.includes('/fullstack')) return 'roleTitle_fullStack';
     return 'roleTitle_webDev';
 };
 
@@ -191,6 +193,7 @@ const CV_MAP = {
     pydev: { es: 'DesarrolladorPython', en: 'PythonDeveloper' },
     javadev: { es: 'DesarrolladorJava', en: 'JavaDeveloper' },
     cdev: { es: 'DesarrolladorC', en: 'cDeveloper' },
+    fullstack: { es: 'DesarrolladorFullStack', en: 'FullStackDeveloper' },
 };
 
 window.updateCVLink = () => {
@@ -224,6 +227,14 @@ const changeLanguage = async (language) => {
     animateVisibleBars();
     updateActiveButton(language);
     updateURL(language);
+
+    document.querySelectorAll('.role-link-btn').forEach(btn => {
+        let href = btn.getAttribute('href');
+        if (href) {
+            const cleanHref = href.replace(/^\/(es|en)(?=\/|$)/, '');
+            btn.setAttribute('href', `/${language}${cleanHref}`);
+        }
+    });
 
     localStorage.setItem('preferredLanguage', language);
 

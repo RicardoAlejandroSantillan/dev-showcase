@@ -18,7 +18,8 @@ namespace dev_showcase.Controllers
             "DataEngineer",
             "PyDev",
             "JavaDev",
-            "CDev"
+            "CDev",
+            "fullStack"
         };
 
         public IActionResult Profile(string profile)

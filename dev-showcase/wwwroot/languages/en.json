@@ -17,6 +17,7 @@
     "roleTitle_pyDev": "Python Developer",
     "roleTitle_javaDev": "Java Developer",
     "roleTitle_cDev": "C / C++ Developer",
+    "roleTitle_fullStack": "Full Stack Developer",
     "roleTitle_notFound": "Role Not Found"
   },
   "notfound": {
@@ -52,6 +53,7 @@
     "aboutContent_pyDev": "Software Developer with a background in Information Technology and experience in process automation, data analysis, and internal tool development. I have leveraged Python for data manipulation, database integration, and creating scripts aimed at optimizing operational workflows. Experienced in SQL, APIs, and data processing to build solutions that automate repetitive tasks and improve information availability for business units.",
     "aboutContent_javaDev": "IT Engineer with experience in enterprise application development and the maintenance of web systems used in industrial environments. I have contributed to the development and support of internal applications for operational management, including the implementation of role-based access control, dashboards, and reporting for administrative and production areas. Experienced in backend architecture, database integration, and developing solutions focused on improving internal processes.",
     "aboutContent_cDev": "Information Technology Engineer with a solid foundation in low-level programming using C and C++. Experienced in developing programs focused on efficiency, memory management, and problem-solving through data structures and algorithms.",
+    "aboutContent_fullStack": "I am an Information Technology Engineer with experience in full stack development using ASP.NET MVC, C#, and databases such as SQL Server and Oracle. I focus on building web applications that solve problems in industrial environments, integrating backend, frontend, and data to optimize processes and generate useful information for decision making. I work with an analytical and structured approach, prioritizing functional, scalable solutions with real operational impact.",
     "skillsTitle": "Skills & Technologies",
     "panels": {
       "webDev": "Web Development",
