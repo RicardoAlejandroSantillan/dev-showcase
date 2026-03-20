@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     new InfiniteCarousel({
         trackSelector: '.carousel-personal-project-track',
         cardSelector: '.carousel-personal-project-card',
@@ -56,7 +56,7 @@ class InfiniteCarousel {
 
         this.nextBtn.addEventListener('click', () => this.move('next'));
         this.prevBtn.addEventListener('click', () => this.move('prev'));
-        this.track.addEventListener('transitionend', () => this.handleTransitionEnd());
+        this.track.addEventListener('transitionend', (e) => this.handleTransitionEnd(e));
 
         window.addEventListener('resize', () => {
             clearTimeout(this.resizeTimer);
@@ -98,11 +98,11 @@ class InfiniteCarousel {
     }
 
     updateDimensions() {
-        const firstCard = this.track.querySelector('.carousel-card');
+        const firstCard = this.track.querySelector('.carousel-card') || this.originalCards[0];
         if (!firstCard) return;
 
         const trackStyle = window.getComputedStyle(this.track);
-        const cardWidth = firstCard.getBoundingClientRect().width;
+        const cardWidth = firstCard.getBoundingClientRect().width || firstCard.offsetWidth;
         const gap = parseFloat(trackStyle.gap) || 15;
 
         this.slideWidth = cardWidth + gap;
@@ -110,6 +110,9 @@ class InfiniteCarousel {
 
     move(direction) {
         if (this.isTransitioning) return;
+        if (this.slideWidth <= 15) this.updateDimensions();
+        if (this.slideWidth <= 15) return;
+
         this.isTransitioning = true;
         this.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
 
@@ -118,15 +121,30 @@ class InfiniteCarousel {
 
         this.updatePosition(true);
         this.updatePagination();
+
+        clearTimeout(this.transitionTimeout);
+        this.transitionTimeout = setTimeout(() => {
+            if (this.isTransitioning) this.handleTransitionEnd({ target: this.track });
+        }, 550);
+    }
+
+    getCenterOffset() {
+        if (!this.track || !this.track.parentElement || this.slideWidth <= 15) return 0;
+        const containerWidth = this.track.parentElement.clientWidth;
+        const trackStyle = window.getComputedStyle(this.track);
+        const gap = parseFloat(trackStyle.gap) || 15;
+        const cardWidth = this.slideWidth - gap;
+        return (containerWidth - cardWidth) / 2;
     }
 
     updatePosition(animate = true) {
-        const pos = -this.currentIndex * this.slideWidth;
+        const pos = -this.currentIndex * this.slideWidth + this.getCenterOffset();
         if (!animate) this.track.style.transition = 'none';
         this.track.style.transform = `translate3d(${pos}px, 0, 0)`;
     }
 
-    handleTransitionEnd() {
+    handleTransitionEnd(e) {
+        if (e && e.target !== this.track) return;
         this.isTransitioning = false;
 
         if (this.currentIndex >= this.totalOriginal + this.clonesCount) {
@@ -166,7 +184,7 @@ class InfiniteCarousel {
         this.isDragging = true;
         this.hasMoved = false;
         this.startPos = this.getPositionX(event);
-        this.prevTranslate = -this.currentIndex * this.slideWidth;
+        this.prevTranslate = -this.currentIndex * this.slideWidth + this.getCenterOffset();
         this.track.classList.add('dragging');
         cancelAnimationFrame(this.animationID);
     }
@@ -192,6 +210,7 @@ class InfiniteCarousel {
         if (!this.isDragging) return;
         this.isDragging = false;
         this.track.classList.remove('dragging');
+        cancelAnimationFrame(this.animationID);
 
         if (!this.hasMoved) {
             this.updatePosition(false);
@@ -212,6 +231,11 @@ class InfiniteCarousel {
 
         this.updatePosition(true);
         this.updatePagination();
+
+        clearTimeout(this.transitionTimeout);
+        this.transitionTimeout = setTimeout(() => {
+            if (this.isTransitioning) this.handleTransitionEnd({ target: this.track });
+        }, 450);
     }
 
     setupCardClickListeners() {
@@ -223,7 +247,7 @@ class InfiniteCarousel {
             }
 
             const card = e.target.closest('.carousel-card');
-            if (!card || card.classList.contains('clone')) return;
+            if (!card) return;
 
             const projectKey = card.dataset.project;
             if (!projectKey) return;

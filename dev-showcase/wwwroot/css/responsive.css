@@ -1,4 +1,4 @@
-﻿@media (max-width: 1200px) {
+@media (max-width: 1200px) {
     .vocational-bars-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -25,6 +25,11 @@
     .vocational-grid-lists,
     .proyecto-top-grid {
         grid-template-columns: 1fr;
+    }
+
+    .carousel-professional-work-card,
+    .carousel-personal-project-card {
+        flex: 0 0 calc(50% - 1.5rem);
     }
 }
 
@@ -75,6 +80,11 @@
         .carousel-arrow.right {
             right: 4px;
         }
+
+    .carousel-professional-work-card,
+    .carousel-personal-project-card {
+        flex: 0 0 calc(85% - 1.5rem);
+    }
 
     .language-selector {
         top: 0.75rem;
@@ -158,6 +168,11 @@
         top: -45px;
         width: 36px;
         height: 36px;
+    }
+
+    .carousel-professional-work-card,
+    .carousel-personal-project-card {
+        flex: 0 0 calc(100% - 1.5rem);
     }
 
     .language-selector {
