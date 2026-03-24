@@ -35,18 +35,21 @@
                 <p class="sidebar-role-title" id="sidebarRoleTitle"></p>
             </div>
 
-            <nav class="nav-menu">
-                <button class="nav-button active" data-section="introduction" data-translate="navigation.introduction">Introducción</button>
-                <button class="nav-button" data-section="skills" data-translate="navigation.skills">Habilidades</button>
-                <button class="nav-button" data-section="projects" data-translate="navigation.projects">Proyectos & Experiencia</button>
-                <button class="nav-button" data-section="education" data-translate="navigation.education">Educación</button>
-            </nav>
+            @if (ViewData["HideSidebarNav"] == null || !(bool)ViewData["HideSidebarNav"])
+            {
+                <nav class="nav-menu">
+                    <button class="nav-button active" data-section="introduction" data-translate="navigation.introduction">Introducción</button>
+                    <button class="nav-button" data-section="skills" data-translate="navigation.skills">Habilidades</button>
+                    <button class="nav-button" data-section="projects" data-translate="navigation.projects">Proyectos & Experiencia</button>
+                    <button class="nav-button" data-section="education" data-translate="navigation.education">Educación</button>
+                </nav>
 
-            <div class="cv-download-section">
-                <a href="~/documents/cv.pdf" download id="cvDownloadBtn" class="cv-download-btn" data-translate="navigation.downloadCV">
-                    Descargar CV
-                </a>
-            </div>
+                <div class="cv-download-section">
+                    <a href="~/documents/cv.pdf" download id="cvDownloadBtn" class="cv-download-btn" data-translate="navigation.downloadCV">
+                        Descargar CV
+                    </a>
+                </div>
+            }
 
             <div class="social-links-sidebar">
                 <h3 data-translate="sidebar.socialTitle">Redes Sociales</h3>
