@@ -19,7 +19,8 @@ namespace dev_showcase.Controllers
             "PyDev",
             "JavaDev",
             "CDev",
-            "fullStack"
+            "fullStack",
+            "erpDev"
         };
 
         public IActionResult Profile(string profile)

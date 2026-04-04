@@ -47,6 +47,7 @@ const resolveProfileKey = (path) => {
     if (path.includes('/javadev')) return 'aboutContent_javaDev';
     if (path.includes('/cdev')) return 'aboutContent_cDev';
     if (path.includes('/fullstack')) return 'aboutContent_fullStack';
+    if (path.includes('/erpdev')) return 'aboutContent_erpDev';
     return 'aboutContent_webDev';
 };
 
@@ -59,6 +60,7 @@ const resolveRoleTitleKey = (path) => {
     if (path.includes('/javadev')) return 'roleTitle_javaDev';
     if (path.includes('/cdev')) return 'roleTitle_cDev';
     if (path.includes('/fullstack')) return 'roleTitle_fullStack';
+    if (path.includes('/erpdev')) return 'roleTitle_erpDev';
     return 'roleTitle_webDev';
 };
 
@@ -194,6 +196,7 @@ const CV_MAP = {
     javadev: { es: 'DesarrolladorJava', en: 'JavaDeveloper' },
     cdev: { es: 'DesarrolladorC', en: 'cDeveloper' },
     fullstack: { es: 'DesarrolladorFullStack', en: 'FullStackDeveloper' },
+    erpdev: { es: 'DesarrolladorERP', en: 'ERPDeveloper' },
 };
 
 window.updateCVLink = () => {
