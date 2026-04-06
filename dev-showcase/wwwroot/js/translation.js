@@ -17,13 +17,18 @@ const resolveInitialLanguage = () => {
 const translationCache = {};
 
 const loadTranslations = async (language) => {
-    if (translationCache[language]) return translationCache[language];
+    const path = window.location.pathname.toLowerCase();
+    const profiles = Object.keys(CV_MAP);
+    let currentProfile = profiles.find(p => path.includes(`/${p}`)) || 'datascience';
+
+    const cacheKey = `${currentProfile}_${language}`;
+    if (translationCache[cacheKey]) return translationCache[cacheKey];
 
     try {
-        const response = await fetch(`/languages/${language}.json?v=${new Date().getTime()}`);
+        const response = await fetch(`/languages/${currentProfile}/${language}.json?v=${new Date().getTime()}`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
-        translationCache[language] = data;
+        translationCache[cacheKey] = data;
         return data;
     } catch (error) {
         if (language !== DEFAULT_LANGUAGE) {
@@ -38,31 +43,6 @@ const resolvePath = (obj, path) => {
     return path.split('.').reduce((acc, key) => acc?.[key], obj);
 };
 
-const resolveProfileKey = (path) => {
-    if (path.includes('/datascience')) return 'aboutContent_dataScience';
-    if (path.includes('/dataanalyst') ||
-        path.includes('/dataanalysis')) return 'aboutContent_dataAnalyst';
-    if (path.includes('/dataengineer')) return 'aboutContent_dataEngineer';
-    if (path.includes('/pydev')) return 'aboutContent_pyDev';
-    if (path.includes('/javadev')) return 'aboutContent_javaDev';
-    if (path.includes('/cdev')) return 'aboutContent_cDev';
-    if (path.includes('/fullstack')) return 'aboutContent_fullStack';
-    if (path.includes('/erpdev')) return 'aboutContent_erpDev';
-    return 'aboutContent_webDev';
-};
-
-const resolveRoleTitleKey = (path) => {
-    if (path.includes('/datascience')) return 'roleTitle_dataScience';
-    if (path.includes('/dataanalyst') ||
-        path.includes('/dataanalysis')) return 'roleTitle_dataAnalyst';
-    if (path.includes('/dataengineer')) return 'roleTitle_dataEngineer';
-    if (path.includes('/pydev')) return 'roleTitle_pyDev';
-    if (path.includes('/javadev')) return 'roleTitle_javaDev';
-    if (path.includes('/cdev')) return 'roleTitle_cDev';
-    if (path.includes('/fullstack')) return 'roleTitle_fullStack';
-    if (path.includes('/erpdev')) return 'roleTitle_erpDev';
-    return 'roleTitle_webDev';
-};
 
 const updateRoleTitle = (translations) => {
     const el = document.getElementById('headerRoleTitle');
@@ -76,8 +56,7 @@ const updateRoleTitle = (translations) => {
     }
 
     if (!translations?.header) return;
-    const key = resolveRoleTitleKey(window.location.pathname.toLowerCase());
-    const roleText = translations.header[key] ?? '';
+    const roleText = translations.header.roleTitle || '';
     
     if (el) el.textContent = roleText;
     if (sidebarEl) sidebarEl.textContent = roleText;
@@ -89,12 +68,7 @@ const updateContent = (translations) => {
     document.querySelectorAll('[data-translate]').forEach(element => {
         if (element.matches('.header-content h1')) return;
 
-        if (element.dataset.translate === 'introduction.aboutContent') {
-            const profileKey = resolveProfileKey(window.location.pathname.toLowerCase());
-            const value = translations.introduction[profileKey];
-            element.textContent = value || translations.introduction.aboutContent_webDev;
-            return;
-        }
+        // The `data-translate="introduction.aboutContent"` is now direct.
 
         const value = resolvePath(translations, element.dataset.translate);
         if (value === undefined || value === null) return;
