@@ -171,6 +171,7 @@ const CV_MAP = {
     cdev: { es: 'DesarrolladorC', en: 'cDeveloper' },
     fullstack: { es: 'DesarrolladorFullStack', en: 'FullStackDeveloper' },
     erpdev: { es: 'DesarrolladorERP', en: 'ERPDeveloper' },
+    itengineer: { es: 'IngenieroTI', en: 'ITEngineer' },
 };
 
 window.updateCVLink = () => {

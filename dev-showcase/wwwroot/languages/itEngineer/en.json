@@ -1,0 +1,614 @@
+{
+  "typewriter": {
+    "prefix": "I'm ",
+    "phrases": [
+      "Ricardo Alejandro Pérez Santillán",
+      "a Data enthusiast",
+      "an automation addict"
+    ]
+  },
+  "header": {
+    "hello": "#HELLO WORLD",
+    "name": "I'm Ricardo Alejandro Pérez Santillán",
+    "roleTitle": "IT Engineer"
+  },
+  "notfound": {
+    "title": "Route not found",
+    "message": "It seems you are lost. The route or role you are trying to access does not exist.",
+    "retry": "Try again",
+    "goToRole": "go to role"
+  },
+  "navigation": {
+    "introduction": "Introduction",
+    "skills": "Skills",
+    "projects": "Projects & Experience",
+    "education": "Education",
+    "downloadCV": "Download CV"
+  },
+  "sidebar": {
+    "socialTitle": "Social Media",
+    "tooltips": {
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "gmail": "Gmail"
+    }
+  },
+  "introduction": {
+    "aboutTitle": "About Me",
+    "skillsTitle": "Skills & Technologies",
+    "panels": {
+      "webDev": "Web Development",
+      "desktopDev": "Desktop Development",
+      "databases": "Databases",
+      "erp": "ERP",
+      "versionControl": "Version Control",
+      "methodologies": "Methodologies"
+    },
+    "certificationsTitle": "Certifications",
+    "certifications": {
+      "linguaskill": "Linguaskill B1 Certificate — June 2024",
+      "excel": "Excel Microsoft Office Specialist — 2019",
+      "word": "Word Microsoft Office Specialist — 2019",
+      "powerpoint": "PowerPoint Microsoft Office Specialist — 2019"
+    },
+    "goalTitle": "Professional Goal",
+    "goalContent": "Evolve toward Data Science roles while continuing to grow as a Full Stack Developer.",
+    "journeyTitle": "My Journey",
+    "journeyContent": "My journey through technology led me to study Information Technology Engineering at UTAN campus industrias in 2022. What I love about development is the creative process of building customized solutions for each project. My experience developing desktop applications strengthened my interest in creating solutions that directly impact the user experience. This path has led me to become interested in data science, where I see the potential to combine development with data analysis to create more complete solutions.",
+    "locationTitle": "Location",
+    "locationSubtitle": "Base of operations and geographic availability",
+    "locationAvailable": "Available for opportunities",
+    "locationRelocation": "Available for relocation if needed",
+    "mapHint": "Click the map to interact",
+    "aboutContent": "Information Technology Engineer focusing on software development and data analysis. Experience in building web applications using C#, ASP.NET MVC, and relational databases such as SQL Server and Oracle, aimed at process optimization in enterprise environments."
+  },
+  "skills": {
+    "title": "Skills",
+    "filters": {
+      "technical": "Technical Skills",
+      "soft": "Soft Skills",
+      "stats": "Statistics"
+    },
+    "panels": {
+      "webDev": "Web Development",
+      "dataScience": "Data Science",
+      "databases": "Databases",
+      "desktopDev": "Desktop Development",
+      "versionControl": "Version Control",
+      "generalProgramming": "General Programming"
+    },
+    "stats": {
+      "webTitle": "Web Development",
+      "webSubtitle": "Proficiency by technology",
+      "dataTitle": "Data Science",
+      "dataSubtitle": "Proficiency by technology",
+      "dbTitle": "Databases",
+      "dbSubtitle": "Proficiency by technology"
+    },
+    "logosTitle": "Technologies",
+    "logosSubtitle": "Tools and languages stack",
+    "progressBars": {
+      "webDev": {
+        "htmlcss": 90,
+        "aspnet": 85,
+        "csharp": 85,
+        "javascript": 65
+      },
+      "dataScience": {
+        "excel": 90,
+        "python": 75,
+        "powerbi": 75,
+        "pandasnumpy": 70,
+        "matplotlibseaborn": 65
+      },
+      "databases": {
+        "sqlserver": 85,
+        "oracle": 85,
+        "mysql": 80,
+        "derby": 30
+      },
+      "softSkills": {
+        "teamwork": 88,
+        "confidence": 82,
+        "independence": 85,
+        "initiative": 80,
+        "problemSolving": 90
+      }
+    },
+    "soft": {
+      "criticalThinking": "Critical Thinking",
+      "analyticalThinking": "Analytical Thinking",
+      "communication": "Effective Communication",
+      "teamwork": "Teamwork",
+      "adaptability": "Adaptability",
+      "timeManagement": "Time Management",
+      "attention": "Attention to Detail",
+      "persistence": "Persistence",
+      "workEthic": "Work Ethics",
+      "statsTitle": "Specific Competencies",
+      "statsSubtitle": "Development level by competency",
+      "competencies": {
+        "teamwork": "Teamwork",
+        "confidence": "Confidence",
+        "independence": "Independence",
+        "initiative": "Initiative",
+        "problemSolving": "Problem Solving"
+      }
+    },
+    "vocational": {
+      "filters": {
+        "profile": "Vocational Profile",
+        "aptitudes": "Aptitude Analysis"
+      },
+      "radarBadge": "RIASEC",
+      "radarTitle": "Vocational Profile",
+      "legend": {
+        "realistic": "Realistic",
+        "investigative": "Investigative",
+        "artistic": "Artistic",
+        "social": "Social",
+        "enterprising": "Enterprising",
+        "conventional": "Conventional"
+      },
+      "radarLabels": [
+        "Mechanics",
+        "Manual dexterity",
+        "Physical",
+        "Scientific",
+        "Visualization",
+        "Research",
+        "Creativity",
+        "Expression",
+        "Communication",
+        "Helping others",
+        "Teaching",
+        "Meeting people",
+        "Business",
+        "Entrepreneurship",
+        "Leading people",
+        "Administration",
+        "Organization",
+        "Data management"
+      ],
+      "datasets": {
+        "realistic": "Realistic",
+        "investigative": "Investigative",
+        "artistic": "Artistic",
+        "social": "Social",
+        "enterprising": "Enterprising",
+        "conventional": "Conventional"
+      },
+      "topSkills": "Top Aptitudes",
+      "topInterests": "Main Interests",
+      "topCareers": "Related Careers",
+      "lowSkills": "Aptitudes to Develop",
+      "lowInterests": "Minor Interests",
+      "lowCareers": "Less Related Careers",
+      "barLabels": {
+        "topSkills": [
+          "Visualization",
+          "Data management",
+          "Administration"
+        ],
+        "topInterests": [
+          "Conventional",
+          "Research"
+        ],
+        "topCareers": [
+          "Public Administration",
+          "Marketing",
+          "Auditor"
+        ],
+        "lowSkills": [
+          "Expression",
+          "Physical",
+          "Helping others"
+        ],
+        "lowInterests": [
+          "Artistic",
+          "Realistic",
+          "Social"
+        ],
+        "lowCareers": [
+          "Territorial Planning",
+          "Metallurgy & Materials",
+          "Urban Planning"
+        ],
+        "valoresOcupacionales": [
+          "Effort",
+          "Honesty",
+          "Respect",
+          "Responsibility",
+          "Service"
+        ]
+      },
+      "cognitiveLabels": [
+        "Verbal",
+        "Numerical",
+        "Logical"
+      ],
+      "cognitiveBadge": "Cognitive Profile",
+      "cognitiveTitle": "Cognitive Aptitudes (Scale 0–60)",
+      "cognitiveMe": "My Score",
+      "cognitiveAvg": "General Average",
+      "valoresTitle": "Occupational Values",
+      "aptitudesDeveloped": "Developed Aptitudes",
+      "aptitudesToDevelop": "Aptitudes to Develop",
+      "developed": {
+        "numerical": "Numerical ability",
+        "problemAnalysis": "Problem analysis",
+        "studyInclination": "Inclination to study",
+        "observation": "Observation",
+        "leadership": "Activity leadership"
+      },
+      "toDevelop": {
+        "authority": "Authority",
+        "physicalCondition": "Physical condition",
+        "persuasion": "Persuasion",
+        "quickReflexes": "Quick reflexes",
+        "composure": "Composure"
+      }
+    }
+  },
+  "chartsData": {
+    "riasec": {
+      "realistic": [
+        50,
+        44,
+        14,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "investigative": [
+        0,
+        0,
+        0,
+        56,
+        91,
+        37,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "artistic": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        33,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "social": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        36,
+        18,
+        70,
+        54,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "enterprising": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        55,
+        68,
+        47,
+        0,
+        0,
+        0
+      ],
+      "conventional": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        83,
+        62,
+        83
+      ]
+    },
+    "cognitive": {
+      "mine": [
+        47,
+        40,
+        47
+      ],
+      "avg": [
+        44,
+        34,
+        51
+      ]
+    },
+    "bars": {
+      "topSkills": [
+        91.89,
+        88.96,
+        88.78
+      ],
+      "topInterests": [
+        76.85,
+        62.16
+      ],
+      "topCareers": [
+        78.38,
+        73,
+        71.6
+      ],
+      "lowSkills": [
+        1.25,
+        14.86,
+        18.92
+      ],
+      "lowInterests": [
+        28.38,
+        30.63,
+        37.84
+      ],
+      "lowCareers": [
+        24.3,
+        24.3,
+        24.3
+      ],
+      "valoresOcupacionales": [
+        95,
+        98,
+        96,
+        97,
+        90
+      ]
+    }
+  },
+  "projects": {
+    "title": "Experience",
+    "filters": {
+      "work": "Work",
+      "personal": "Personal Projects"
+    },
+    "labels": {
+      "stack": "Stack:",
+      "role": "Role",
+      "description": "Description",
+      "responsibilities": "Responsibilities",
+      "internalProjects": "Internal Projects",
+      "highlights": "Highlights",
+      "period": "Period:"
+    },
+    "work": {
+      "blockTitle": "Professional Experience",
+      "blockTag": "Work",
+      "daikin": {
+        "name": "Daikin Manufacturing México",
+        "role": "IT Trainee — Software Developer (Probecarios)",
+        "period": "Sept 2024 – Mar 2026",
+        "description": "Internship period subcontracted by Probecarios to collaborate within the IT department of Daikin Manufacturing México. During this time I participated in the development and maintenance of internal enterprise applications, Oracle ERP support, and operational data analysis for production, finance, and warehouse areas.",
+        "resp": {
+          "development": "Development and maintenance of internal web and desktop applications for various operational areas of the plant",
+          "oracle": "Oracle ERP support: user account management, system responsibility assignments, and correction of errors in supplier and site data to maintain information consistency",
+          "sql": "SQL query optimization and stored procedure development in SQL Server and Oracle SQL for critical production systems",
+          "analysis": "Operational data analysis through Excel export and construction of dynamic tables and dashboards to identify patterns, root causes, and improvement opportunities",
+          "ux": "UX/UI improvements in internal systems aimed at reducing operational friction for end users",
+          "agile": "Collaborative work using agile methodologies with Jira for task management and ServiceNow for incident tracking"
+        },
+        "projects": {
+          "budget": "Budget Control — Web application for monitoring variances between actual and budgeted expenses, consolidating AP and GL data from Oracle",
+          "etiquetas": "Labels — Desktop application for label generation and printing in Warehouse with Oracle API integration, reducing process time by over 50%",
+          "masterLabel": "Master Label — Web system for label reprint analysis that reduced errors from ~8,000 to ~100 per month",
+          "overtime": "Overtime Request — Maintenance of the automated overtime cost calculation system with corporate SSO authentication"
+        },
+        "img5": {
+          "title": "Budget Control",
+          "desc": "Web tool developed for the finance area to mitigate operational risks by monitoring variances between actual and budgeted expenses. It automates the processing of accounts payable (AP) and general ledger journal entries (GL) from Oracle, consolidating account catalogs, departments, and locations. Generates Excel files with structured calculations to facilitate cash flow analysis. Built with ASP.NET Core 8.0 MVC, C#, SQL Server, Microsoft Identity, and EPPlus for Excel file handling."
+        },
+        "img3": {
+          "title": "Labels",
+          "desc": "Desktop application developed for the Warehouse area to improve supplier traceability for each product. It queries Oracle via API using the order number to retrieve the Supplier Part Number and Daikin Part Number, then sends the data to the printer to generate a label including a barcode for easy scanning. Label generation was implemented using iText NuGet 5.5.13.5. The system includes a JSON configuration file that allows users to adjust the label size without requiring code changes. Reduced process time by over 50%."
+        },
+        "img4": {
+          "title": "Master Label",
+          "desc": "Web system developed to investigate a critical issue: in December 2024, approximately 8,000 Master Labels were printed without information, generating a high level of rework. The application stored detailed data for each label including production line, description, Job, Item, Serial, LPN, OrdLine, OrdNumber, Sub Inventory, Address, and process status. The collected data was exported to Excel where dynamic tables and dashboards identified that most reprints originated in two specific production lines. Analysis revealed the issue was scanning speed preventing the system from assigning the LPN before printing. The solution was a 1.5-second delay implemented by the Oracle team, reducing reprints from ~8,000 to ~100 per month."
+        },
+        "img2": {
+          "title": "Overtime Request",
+          "desc": "Maintenance of the system used by the finance area to calculate costs generated by snacks and transportation for production staff during overtime. The application manages supervisor records by plant, transport routes and stops, automatically calculating costs associated with these services. Built with C#, ASP.NET, and Bootstrap, it integrates SSO authentication with Daikin corporate accounts to ensure secure and controlled access."
+        }
+      }
+    },
+    "personal": {
+      "blockTitle": "Personal Projects & Datathons",
+      "blockTag": "Personal",
+      "devportfolio": {
+        "name": "DevPortfolio",
+        "short": "Professional portfolio",
+        "description": "Professional web portfolio built on ASP.NET MVC with a simulated SPA architecture: all sections are rendered on the first server request and JS navigation hides and shows content without additional AJAX calls. Features dark mode design, animated header particles, multilingual typewriter effect, ES/EN translation system with dynamic JSON loading, RIASEC vocational charts with Chart.js, infinite carousel with touch support, and a downloadable CV that adapts to both language and active profile.",
+        "h1": "Dark mode design with animated particles in the header",
+        "h2": "ES/EN i18n system with dynamic JSON loading and data-translate contract",
+        "h3": "RIASEC vocational dashboard with 9 Chart.js instances",
+        "h4": "Infinite carousel by card cloning with drag and touch support",
+        "h5": "Dynamic downloadable CV: language and profile determine the file served",
+        "img1": {
+          "title": "Introduction Section",
+          "desc": "Main view with character-by-character typewriter animation, 20 floating particles generated in the header, SPA navigation sidebar, and language selector. The role title updates automatically based on the active profile route."
+        }
+      },
+      "wids2025": {
+        "name": "WiDS Datathon 2025",
+        "short": "ADHD detection in women",
+        "description": "Development of a predictive model for early identification of Attention Deficit Hyperactivity Disorder (ADHD/ADD) in adolescent women, with the goal of addressing the historical diagnostic bias affecting this group. The project used neuroimaging data from the WiDS 2025 datathon, applying a deep data cleaning process, feature engineering, and multiclass classification model training using XGBoost.",
+        "h1": "Multiclass classification model with XGBoost for ADHD/ADD detection",
+        "h2": "Feature engineering on neuroimaging data to improve class separability",
+        "h3": "Variable importance analysis to identify the most relevant diagnostic factors",
+        "h4": "Complete pipeline for cleaning, normalization, and preprocessing of neurological data",
+        "img1": {
+          "title": "XGBoost Model",
+          "desc": "Model results including classification metrics and feature importance visualization, showing which neurological variables carry the most weight in predicting ADHD/ADD diagnosis in adolescent women."
+        }
+      },
+      "wids2022": {
+        "name": "WiDS Datathon 2022",
+        "short": "Breast cancer detection",
+        "description": "Participation in the WiDS 2022 datathon to improve accuracy in early breast cancer detection. The project aimed to predict whether a patient would receive a definitive diagnosis within 90 days, using Machine Learning techniques on real sociodemographic and clinical data. Data normalization, missing value handling, and model evaluation with performance metrics suited for sensitive health contexts were performed.",
+        "h1": "Exploratory analysis of clinical and sociodemographic variables from the dataset",
+        "h2": "Data normalization and strategies for handling missing values",
+        "h3": "Training and comparison of binary classification models",
+        "h4": "Model evaluation with AUC-ROC metrics to ensure reliability in a medical context",
+        "img1": {
+          "title": "Exploratory Analysis",
+          "desc": "Visualization of distributions, correlations, and behavior of clinical dataset variables to identify features with the highest predictive power for whether a patient would receive a definitive diagnosis within 90 days."
+        }
+      },
+      "prosalud": {
+        "name": "ProSalud",
+        "short": "Medical management system",
+        "description": "Medical management system for clinics that automates administrative and clinical processes. It centralizes patient management, appointments, clinical records, and billing in a single platform. Includes an ICD-10 diagnosis catalog with integrated search, receipt generation module, and an authentication system with differentiated roles for doctors and administrative staff.",
+        "h1": "ICD-10 catalog with real-time search to speed up diagnosis registration",
+        "h2": "Complete clinical history management per patient with treatment tracking",
+        "h3": "Billing module with automatic receipt generation",
+        "h4": "Authentication system with differentiated roles for doctors and administrative staff",
+        "img1": {
+          "title": "Main Dashboard",
+          "desc": "System overview with quick access to patients, appointments, and billing, designed to minimize the steps required for the most frequent clinic tasks."
+        }
+      },
+      "bookshelf": {
+        "name": "BookShelf",
+        "short": "Personal library management",
+        "description": "Web application for managing a personal library that allows cataloging books, authors, and literary genres. Implements dynamic updates via AJAX without page reload, optimized data access with Dapper on SQL Server, and a filtering and search system by category and author. The interface is fully responsive with custom CSS.",
+        "h1": "Full CRUD with dynamic AJAX updates without page reload",
+        "h2": "Efficient data access with Dapper on SQL Server for optimized queries",
+        "h3": "Real-time filtering and search system by category, author, and title",
+        "h4": "Fully responsive interface built with custom CSS without frameworks",
+        "img1": {
+          "title": "Book Catalog",
+          "desc": "Main catalog view with real-time filtering and search options, displaying covers, authors, and genres for each book registered in the personal library."
+        }
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "filters": {
+      "preparation": "Training",
+      "certificates": "Certificates"
+    },
+    "labels": {
+      "period": "Period:"
+    },
+    "academic": {
+      "title": "Academic Training",
+      "forge": {
+        "institution": "Fundación Forge",
+        "program": "Professional competencies",
+        "period": "Nov 2025 – Dec 2025"
+      },
+      "smart": {
+        "institution": "Smart Teaching",
+        "program": "English Level B2 TOEFL IBT",
+        "period": "Feb 2025 – Nov 2025"
+      },
+      "utan": {
+        "institution": "Universidad Tangamanga",
+        "program": "Information Technology Engineering",
+        "period": "Jul 2022 – Aug 2025"
+      }
+    },
+    "professional": {
+      "title": "Professional Development",
+      "cluster": {
+        "institution": "Automotive Cluster",
+        "program": "Technological trends in the automotive sector"
+      }
+    },
+    "certificates": {
+      "forge": {
+        "title": "Forge Badges",
+        "commitment": "Commitment to Learning",
+        "teamwork": "Teamwork",
+        "achievement": "Achievement Orientation",
+        "leadership": "Personal Leadership",
+        "year": "2025"
+      },
+      "udemy": {
+        "title": "Udemy",
+        "javascript": "JavaScript — Expert",
+        "javascriptDate": "2024",
+        "python": "Python — Data Analysis",
+        "pythonDate": "2025"
+      },
+      "mos": {
+        "title": "Microsoft Office Specialist",
+        "excel": "Excel — MOS 2019",
+        "word": "Word — MOS 2019",
+        "powerpoint": "PowerPoint — MOS 2019",
+        "year": "2019"
+      }
+    }
+  }
+}

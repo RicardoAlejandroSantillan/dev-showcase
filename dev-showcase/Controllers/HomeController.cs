@@ -20,7 +20,8 @@ namespace dev_showcase.Controllers
             "JavaDev",
             "CDev",
             "fullStack",
-            "erpDev"
+            "erpDev",
+            "itEngineer"
         };
 
         public IActionResult Profile(string profile)
