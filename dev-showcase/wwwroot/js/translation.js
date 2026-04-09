@@ -19,7 +19,7 @@ const translationCache = {};
 const loadTranslations = async (language) => {
     const path = window.location.pathname.toLowerCase();
     const profiles = Object.keys(CV_MAP);
-    let currentProfile = profiles.find(p => path.includes(`/${p}`)) || 'datascience';
+    let currentProfile = profiles.find(p => path.includes(`/${p}`)) || 'itengineer';
 
     const cacheKey = `${currentProfile}_${language}`;
     if (translationCache[cacheKey]) return translationCache[cacheKey];
@@ -162,6 +162,7 @@ const syncLanguageWithServer = (language, returnUrl) => {
 };
 
 const CV_MAP = {
+    webdev: { es: 'DesarrolladorWeb', en: 'WebDeveloper' },
     datascience: { es: 'CientificoDeDatos', en: 'DataScience' },
     dataanalyst: { es: 'AnalistaDeDatos', en: 'DataAnalyst' },
     dataanalysis: { es: 'AnalistaDeDatos', en: 'DataAnalyst' },
@@ -182,9 +183,14 @@ window.updateCVLink = () => {
     const path = window.location.pathname.toLowerCase();
 
     const matchedKey = Object.keys(CV_MAP).find(key => path.includes(`/${key}`));
-    const profile = matchedKey ? CV_MAP[matchedKey] : { es: 'DesarrolladorWeb', en: 'WebDeveloper' };
+    const profileKey = matchedKey || 'itengineer';
 
-    btn.href = `/files/RicardoAlejandroPerezSantillan_${lang === 'en' ? profile.en : profile.es}.pdf`;
+    if (profileKey === 'itengineer') {
+        btn.href = `/files/${lang === 'en' ? 'CV_RicardoAlejandroPerezSantillan.pdf' : 'RicardoAlejandroPerezSantillan_CV.pdf'}`;
+    } else {
+        const profile = CV_MAP[profileKey];
+        btn.href = `/files/RicardoAlejandroPerezSantillan_${lang === 'en' ? profile.en : profile.es}.pdf`;
+    }
 };
 
 const changeLanguage = async (language) => {

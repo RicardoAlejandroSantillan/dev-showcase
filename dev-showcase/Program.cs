@@ -15,17 +15,16 @@ app.UseRouting();
 app.UseAuthorization();
 app.MapStaticAssets();
 
-app.MapGet("/", context =>
-{
-    context.Response.Redirect("/dataScience", permanent: false);
-    return Task.CompletedTask;
-});
+app.MapControllerRoute(
+    name: "root",
+    pattern: "",
+    defaults: new { controller = "Home", action = "Profile", profile = "itEngineer" });
 
-app.MapGet("/{lang:regex(^(es|en)$)}", (string lang, HttpContext context) =>
-{
-    context.Response.Redirect($"/{lang}/dataScience", permanent: false);
-    return Task.CompletedTask;
-});
+app.MapControllerRoute(
+    name: "langRoot",
+    pattern: "{lang}",
+    defaults: new { controller = "Home", action = "Profile", profile = "itEngineer" },
+    constraints: new { lang = "^(es|en)$" });
 
 app.MapControllerRoute(
     name: "profilesWithLang",
