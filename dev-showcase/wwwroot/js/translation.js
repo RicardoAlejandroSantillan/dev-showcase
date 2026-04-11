@@ -172,6 +172,7 @@ const CV_MAP = {
     cdev: { es: 'DesarrolladorC', en: 'cDeveloper' },
     fullstack: { es: 'DesarrolladorFullStack', en: 'FullStackDeveloper' },
     erpdev: { es: 'DesarrolladorERP', en: 'ERPDeveloper' },
+    netdeveloper: { es: 'DesarrolladorCnet', en: 'NetCDeveloper' },
     itengineer: { es: 'IngenieroTI', en: 'ITEngineer' },
 };
 

@@ -21,6 +21,7 @@ namespace dev_showcase.Controllers
             "CDev",
             "fullStack",
             "erpDev",
+            "netDeveloper",
             "itEngineer"
         };
 

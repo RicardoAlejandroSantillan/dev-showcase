@@ -33,14 +33,14 @@ app.MapControllerRoute(
     constraints: new
     {
         lang = "^(es|en)$",
-        profile = @"^(dataScience|webDev|dataAnalyst|DataAnalysis|DataEngineer|PyDev|JavaDev|CDev|fullStack|erpDev|itEngineer)$"
+        profile = @"^(dataScience|webDev|dataAnalyst|DataAnalysis|DataEngineer|PyDev|JavaDev|CDev|fullStack|erpDev|netDeveloper|itEngineer)$"
     });
 
 app.MapControllerRoute(
     name: "profiles",
     pattern: "{profile}",
     defaults: new { controller = "Home", action = "Profile" },
-    constraints: new { profile = @"^(dataScience|webDev|dataAnalyst|DataAnalysis|DataEngineer|PyDev|JavaDev|CDev|fullStack|erpDev|itEngineer)$" });
+    constraints: new { profile = @"^(dataScience|webDev|dataAnalyst|DataAnalysis|DataEngineer|PyDev|JavaDev|CDev|fullStack|erpDev|netDeveloper|itEngineer)$" });
 
 app.MapControllerRoute(
     name: "default",
