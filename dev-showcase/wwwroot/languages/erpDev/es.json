@@ -44,7 +44,19 @@
       "databases": "Bases de Datos",
       "erp": "ERP",
       "versionControl": "Control de Versiones",
-      "methodologies": "Metodologías"
+      "methodologies": "Metodologías",
+      "webDevIcon": "🌐",
+      "webDevDesc": "ASP.NET, Bootstrap, HTML, CSS, JavaScript",
+      "desktopDevIcon": "🖥️",
+      "desktopDevDesc": "C#, C, C++, Python, Java",
+      "databasesIcon": "🗄️",
+      "databasesDesc": "SQL Server, Derby",
+      "erpIcon": "🏢",
+      "erpDesc": "Oracle",
+      "versionControlIcon": "🔀",
+      "versionControlDesc": "Git, GitHub",
+      "methodologiesIcon": "⚙️",
+      "methodologiesDesc": "Ágil, Scrum"
     },
     "certificationsTitle": "Certificaciones",
     "certifications": {
@@ -217,10 +229,10 @@
           "Urbana"
         ],
         "valoresOcupacionales": [
-          "Esfuerzo",
           "Honestidad",
-          "Respeto",
           "Responsabilidad",
+          "Respeto",
+          "Esfuerzo",
           "Servicio"
         ]
       },
@@ -379,7 +391,7 @@
       "mine": [
         47,
         40,
-        47
+        53
       ],
       "avg": [
         44,
@@ -418,10 +430,10 @@
         24.3
       ],
       "valoresOcupacionales": [
-        95,
         98,
-        96,
         97,
+        96,
+        95,
         90
       ]
     }
@@ -478,6 +490,32 @@
         "img2": {
           "title": "Overtime Request",
           "desc": "Mantenimiento del sistema utilizado por el área de finanzas para calcular los costos generados por snacks y transporte del personal de producción durante horas extra. La aplicación gestiona registros de supervisores por planta, rutas de transporte y paradas, calculando de forma automatizada los costos asociados a estos servicios. Desarrollado con C#, ASP.NET y Bootstrap, integra autenticación SSO con las cuentas corporativas de Daikin para garantizar acceso seguro y controlado."
+        }
+      },
+      "saji": {
+        "name": "Grupo SAJI",
+        "role": "Consultor Odoo / Desarrollador Odoo",
+        "period": "Abril 2026 – Actualidad",
+        "description": "Como Consultor y Desarrollador ERP, lidero la transformación digital implementando, configurando a medida y optimizando Odoo ERP. Estructuro flujos operativos y de negocio en módulos como Ventas, Inventarios, Facturación y CRM, asegurando la eficiencia empresarial y la escalabilidad de la infraestructura digital. Llegué al proyecto para realizar el diseño de base de datos, adaptando cada proceso de la empresa para que sea funcional en la db, además de configurar los módulos necesarios.",
+        "resp": {
+          "database": "Analizo y diseño el modelo relacional de datos en PostgreSQL para soportar los flujos del ERP.",
+          "deployment": "Despliegue y configuración a medida de módulos críticos de Odoo alineados al modelo de negocio.",
+          "integration": "Implementación y personalización de módulos comerciales (CRM, Ventas, Automatización).",
+          "config": "Configuración de operaciones avanzadas: Servicio de Campo, Proyectos y Mesa de Ayuda.",
+          "supplyChain": "Optimización de flujos de cadena de suministro con Inventarios y Compras.",
+          "finance": "Configuración de la lógica de facturación electrónica y contabilidad local.",
+          "hr": "Automatización del control interno de recursos humanos: Asistencias, Ausencias y Nómina.",
+          "dashboards": "Creación de reportes dinámicos y tableros para toma de decisiones directivas.",
+          "apis": "Integración de módulos mediante APIs personalizadas conectadas a la base de datos.",
+          "web": "Diseño y programación de sitios comerciales integrados al motor web de Odoo."
+        },
+        "img1": {
+          "title": "Aplicación Interna de Gestión y Administración de Servidores",
+          "desc": "Diseño, arquitectura y programación de una plataforma interna customizada (desde Odoo usando Python y PostgreSQL) para la administración central de las instancias del ERP de Odoo."
+        },
+        "img2": {
+          "title": "Aplicación Interna de Gestión y Administración de Servidores",
+          "desc": "Diseño, arquitectura y programación de una plataforma interna customizada (desde Odoo usando Python y PostgreSQL) para la administración central de las instancias del ERP de Odoo."
         }
       }
     },

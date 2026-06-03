@@ -39,12 +39,24 @@
     "aboutTitle": "About Me",
     "skillsTitle": "Skills & Technologies",
     "panels": {
-      "webDev": "Web Development",
-      "desktopDev": "Desktop Development",
+      "webDev": "Analysis, Visualization & Modeling",
+      "webDevIcon": "📊",
+      "webDevDesc": "Power BI, Pandas, XGBoost, Data Mining",
+      "desktopDev": "Data Engineering & Architecture",
+      "desktopDevIcon": "⚙️",
+      "desktopDevDesc": "ETL Processes, Pipeline Automation, Web Scraping, APIs",
       "databases": "Databases",
-      "erp": "ERP",
-      "versionControl": "Version Control",
-      "methodologies": "Methodologies"
+      "databasesIcon": "🗄️",
+      "databasesDesc": "SQL Server, PostgreSQL, Oracle, Derby",
+      "erp": "Programming Languages",
+      "erpIcon": "💻",
+      "erpDesc": "Python, C#, Java, C++, JavaScript",
+      "versionControl": "Enterprise Systems & ERP",
+      "versionControlIcon": "🏢",
+      "versionControlDesc": "Odoo, Oracle ERP, Process Automation",
+      "methodologies": "Version Control & Methodologies",
+      "methodologiesIcon": "🛠️",
+      "methodologiesDesc": "Git, GitHub, Scrum, Agile Methodologies"
     },
     "certificationsTitle": "Certifications",
     "certifications": {
@@ -54,15 +66,15 @@
       "powerpoint": "PowerPoint Microsoft Office Specialist — 2019"
     },
     "goalTitle": "Professional Goal",
-    "goalContent": "Evolve toward Data Science roles while continuing to grow as a Full Stack Developer.",
+    "goalContent": "Orchestrate data infrastructures and train Machine Learning models that transform manual operations into accurate predictions, enabling intelligent, measurable, and real-time decision-making.",
     "journeyTitle": "My Journey",
-    "journeyContent": "My journey through technology led me to study Information Technology Engineering at UTAN campus industrias in 2022. What I love about development is the creative process of building customized solutions for each project. My experience developing desktop applications strengthened my interest in creating solutions that directly impact the user experience. This path has led me to become interested in data science, where I see the potential to combine development with data analysis to create more complete solutions.",
+    "journeyContent": "I started my career consolidating data flows and analytics in the manufacturing sector, where I reduced operational error margins by 98% through data auditing and dynamic dashboards. Currently, I scale business intelligence by implementing extraction pipelines on ERP ecosystems, while developing predictive models (Machine Learning) aimed at solving complex problems in various sectors, including public health, finance, and research.",
     "locationTitle": "Location",
     "locationSubtitle": "Base of operations and geographic availability",
     "locationAvailable": "Available for opportunities",
     "locationRelocation": "Available for relocation if needed",
     "mapHint": "Click the map to interact",
-    "aboutContent": "I am a software developer with a recent focus on Data Science. I have worked with .NET, SQL Server and automations, but in 2025 I started a formal transition toward data analysis and modeling. I have explored real challenges such as the WiDS 2022 datathon (breast cancer detection) and WiDS 2025 (ADHD detection in women). I am currently training in various data science tools with the goal of building complete end-to-end projects by early 2026. My solid engineering background allows me to approach data science from a practical, structured and product-oriented perspective."
+    "aboutContent": "I am a software engineer specialized in Data. I transform complex volumes of information into decisions. My focus lies in building predictive models, extracting business value through data mining, and automating data pipelining to eliminate uncertainty in the corporate environment.\n\nBy incorporating these capabilities, my work achieves greater operational agility, attaining profitability. By integrating data-oriented software solutions, I make it easier for teams to shift from reaction to proactivity. This not only optimizes resource performance, but also ensures that each new strategy is backed by quantifiable evidence."
   },
   "skills": {
     "title": "Skills",
@@ -217,10 +229,10 @@
           "Urban Planning"
         ],
         "valoresOcupacionales": [
-          "Effort",
           "Honesty",
-          "Respect",
           "Responsibility",
+          "Respect",
+          "Effort",
           "Service"
         ]
       },
@@ -379,7 +391,7 @@
       "mine": [
         47,
         40,
-        47
+        53
       ],
       "avg": [
         44,
@@ -418,10 +430,10 @@
         24.3
       ],
       "valoresOcupacionales": [
-        95,
         98,
-        96,
         97,
+        96,
+        95,
         90
       ]
     }
@@ -478,6 +490,32 @@
         "img2": {
           "title": "Overtime Request",
           "desc": "Maintenance of the system used by the finance area to calculate costs generated by snacks and transportation for production staff during overtime. The application manages supervisor records by plant, transport routes and stops, automatically calculating costs associated with these services. Built with C#, ASP.NET, and Bootstrap, it integrates SSO authentication with Daikin corporate accounts to ensure secure and controlled access."
+        }
+      },
+      "saji": {
+        "name": "Grupo SAJI",
+        "role": "Odoo Consultant / Odoo Developer",
+        "period": "April 2026 – Present",
+        "description": "I lead data-driven solutions within the Odoo ERP ecosystem. I design relational database models in PostgreSQL and build analytical workflows that extract critical operational data from business processes. I create complex dashboards that unify commercial, inventory, and financial KPIs, translating raw data into structured operational intelligence.",
+        "resp": {
+          "database": "Design and optimization of relational schemas in PostgreSQL for data analysis.",
+          "deployment": "Modeling and analyzing business flows in Odoo for metrics extraction.",
+          "integration": "Integration of commercial data flows (CRM, Sales) for conversion rate analysis.",
+          "config": "Configuration of metrics and KPIs in operational modules like Field Service.",
+          "supplyChain": "Analysis of inventory turnover and purchasing efficiency in the supply chain.",
+          "finance": "Analytical modeling of invoicing transactions and corporate accounting data.",
+          "hr": "Predictive analysis of attendance, time off, and payroll operational costs.",
+          "dashboards": "Creation of interactive executive dashboards and real-time KPI tracking.",
+          "apis": "Development of complex queries and data extraction via PostgreSQL APIs.",
+          "web": "Analytical optimization and conversion funnels for the Odoo-based website."
+        },
+        "img1": {
+          "title": "Internal Server Management and Administration Application",
+          "desc": "Design, architecture, and programming of a customized internal platform (built from Odoo using Python and PostgreSQL) for the centralized administration of Odoo ERP instances."
+        },
+        "img2": {
+          "title": "Internal Server Management and Administration Application",
+          "desc": "Design, architecture, and programming of a customized internal platform (built from Odoo using Python and PostgreSQL) for the centralized administration of Odoo ERP instances."
         }
       }
     },

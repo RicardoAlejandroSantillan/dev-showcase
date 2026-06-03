@@ -39,12 +39,24 @@
     "aboutTitle": "Acerca de Mí",
     "skillsTitle": "Habilidades y Tecnologías",
     "panels": {
-      "webDev": "Desarrollo Web",
-      "desktopDev": "Desarrollo de Escritorio",
+      "webDev": "Análisis, Visualización y Modelado",
+      "webDevIcon": "📊",
+      "webDevDesc": "Power BI, Pandas, XGBoost, Minería de Datos",
+      "desktopDev": "Ingeniería de Datos y Arquitectura",
+      "desktopDevIcon": "⚙️",
+      "desktopDevDesc": "Procesos ETL, Automatización de Pipelines, Web Scraping, APIs",
       "databases": "Bases de Datos",
-      "erp": "ERP",
-      "versionControl": "Control de Versiones",
-      "methodologies": "Metodologías"
+      "databasesIcon": "🗄️",
+      "databasesDesc": "SQL Server, PostgreSQL, Oracle, Derby",
+      "erp": "Lenguajes de Programación",
+      "erpIcon": "💻",
+      "erpDesc": "Python, C#, Java, C++, JavaScript",
+      "versionControl": "Sistemas Empresariales y ERP",
+      "versionControlIcon": "🏢",
+      "versionControlDesc": "Odoo, Oracle ERP, Automatización de Procesos",
+      "methodologies": "Control de Versiones y Metodologías",
+      "methodologiesIcon": "🛠️",
+      "methodologiesDesc": "Git, GitHub, Scrum, Metodologías Ágiles"
     },
     "certificationsTitle": "Certificaciones",
     "certifications": {
@@ -54,15 +66,15 @@
       "powerpoint": "PowerPoint Microsoft Office Specialist — 2019"
     },
     "goalTitle": "Meta Profesional",
-    "goalContent": "Evolucionar hacia roles de Ciencia de Datos mientras continúo creciendo como Desarrollador Full Stack.",
+    "goalContent": "Orquestar infraestructuras de datos y entrenar modelos de Machine Learning que hagan de las operaciones manuales en predicciones precisas, habilitando una toma de decisiones inteligente, medible y en tiempo real.",
     "journeyTitle": "Mi Trayectoria",
-    "journeyContent": "Mi trayectoria a través de la tecnología me llevó a estudiar en 2022 la carrera de Ingeniería en Tecnologías de la Información en UTAN campus industrias. Lo que me apasiona del desarrollo es el proceso creativo de construir soluciones personalizadas para cada proyecto a resolver. Mi experiencia desarrollando aplicaciones de escritorio fortaleció mi interés en crear soluciones que impacten directamente en la experiencia del usuario. Este camino me ha llevado a interesarme en la ciencia de datos, donde veo el potencial de combinar el desarrollo con el análisis de datos para crear soluciones más completas.",
+    "journeyContent": "Inicié mi carrera consolidando flujos de datos y analítica en el sector de manufactura, donde reduje márgenes de error operativo en un 98% mediante auditoría de datos y dashboards dinámicos. Actualmente, escalo la inteligencia de negocios implementando flujos de extracción sobre ecosistemas ERP, a la par que desarrollo modelos predictivos (Machine Learning) orientados a resolver problemas complejos en diversos sectores, entre ellos la salud pública, las finanzas y la investigación.",
     "locationTitle": "Ubicación",
     "locationSubtitle": "Base de operaciones y disponibilidad geográfica",
     "locationAvailable": "Disponible para oportunidades",
     "locationRelocation": "Disponible para reubicación en caso de ser necesario",
     "mapHint": "Haz clic en el mapa para interactuar",
-    "aboutContent": "Soy desarrollador de software con enfoque reciente en Ciencia de Datos. He trabajado con .NET, SQL Server y automatizaciones, pero en 2025 inicié una transición formal hacia análisis y modelado de datos. He explorado retos reales como los datathones WiDS 2022 (detección de cáncer de mama) y WiDS 2025 (detección de TDAH en mujeres). Actualmente me estoy formando en diversas herramientas de ciencia de datos con el objetivo de construir proyectos completos end-to-end de aquí a inicios de 2026. Mi base sólida en ingeniería me permite abordar la ciencia de datos desde una perspectiva práctica, estructurada y orientada a producto."
+    "aboutContent": "Soy un ingeniero de software especializado en Data. Transformo volúmenes complejos de información en decisiones. Mi enfoque radica en construir modelos predictivos, extraer valor de negocio mediante minería de datos y automatizar la canalización de la información para eliminar la incertidumbre en el entorno corporativo.\n\nAl incorporar estas capacidades, mi trabajo alcanza una mayor agilidad operativa, logrando rentabilidad. Al integrar soluciones de software orientadas a datos, facilito que los equipos pasen de la reacción a la proactividad. Esto no solo optimiza el rendimiento de los recursos, sino que asegura que cada nueva estrategia esté respaldada por evidencia cuantificable."
   },
   "skills": {
     "title": "Habilidades",
@@ -217,10 +229,10 @@
           "Urbana"
         ],
         "valoresOcupacionales": [
-          "Esfuerzo",
           "Honestidad",
-          "Respeto",
           "Responsabilidad",
+          "Respeto",
+          "Esfuerzo",
           "Servicio"
         ]
       },
@@ -379,7 +391,7 @@
       "mine": [
         47,
         40,
-        47
+        53
       ],
       "avg": [
         44,
@@ -418,10 +430,10 @@
         24.3
       ],
       "valoresOcupacionales": [
-        95,
         98,
-        96,
         97,
+        96,
+        95,
         90
       ]
     }
@@ -478,6 +490,32 @@
         "img2": {
           "title": "Overtime Request",
           "desc": "Mantenimiento del sistema utilizado por el área de finanzas para calcular los costos generados por snacks y transporte del personal de producción durante horas extra. La aplicación gestiona registros de supervisores por planta, rutas de transporte y paradas, calculando de forma automatizada los costos asociados a estos servicios. Desarrollado con C#, ASP.NET y Bootstrap, integra autenticación SSO con las cuentas corporativas de Daikin para garantizar acceso seguro y controlado."
+        }
+      },
+      "saji": {
+        "name": "Grupo SAJI",
+        "role": "Consultor Odoo / Desarrollador Odoo",
+        "period": "Abril 2026 – Actualidad",
+        "description": "Lidero soluciones basadas en datos (Data-Driven) en el ecosistema Odoo ERP. Diseño modelos de datos relacionales en PostgreSQL y desarrollo flujos analíticos que extraen información operativa crítica de los procesos de la empresa. Creo dashboards complejos que unifican KPIs comerciales, de inventario y financieros, traduciendo datos crudos en inteligencia operativa estructurada.",
+        "resp": {
+          "database": "Diseño y optimización de esquemas relacionales en PostgreSQL para análisis de datos.",
+          "deployment": "Modelado y análisis de flujos de negocio en Odoo para extracción de métricas.",
+          "integration": "Integración de flujos de datos comerciales (CRM, Ventas) para análisis de conversión.",
+          "config": "Configuración de métricas y KPIs en módulos operativos como Servicio de Campo.",
+          "supplyChain": "Análisis de rotación de inventarios y eficiencia de compras en la cadena de suministro.",
+          "finance": "Modelado analítico de transacciones de facturación y contabilidad empresarial.",
+          "hr": "Análisis predictivo de ausencias, asistencias y costos operativos de nóminas.",
+          "dashboards": "Creación de tableros directivos interactivos y tracking de KPIs en tiempo real.",
+          "apis": "Desarrollo de consultas complejas y extracción de datos mediante APIs PostgreSQL.",
+          "web": "Optimización analítica y embudos de conversión del sitio web basado en Odoo."
+        },
+        "img1": {
+          "title": "Aplicación Interna de Gestión y Administración de Servidores",
+          "desc": "Diseño, arquitectura y programación de una plataforma interna customizada (desde Odoo usando Python y PostgreSQL) para la administración central de las instancias del ERP de Odoo."
+        },
+        "img2": {
+          "title": "Aplicación Interna de Gestión y Administración de Servidores",
+          "desc": "Diseño, arquitectura y programación de una plataforma interna customizada (desde Odoo usando Python y PostgreSQL) para la administración central de las instancias del ERP de Odoo."
         }
       }
     },

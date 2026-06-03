@@ -44,7 +44,19 @@
       "databases": "Bases de Datos",
       "erp": "ERP",
       "versionControl": "Control de Versiones",
-      "methodologies": "Metodologías"
+      "methodologies": "Metodologías",
+      "webDevIcon": "🌐",
+      "webDevDesc": "ASP.NET, Bootstrap, HTML, CSS, JavaScript",
+      "desktopDevIcon": "🖥️",
+      "desktopDevDesc": "C#, C, C++, Python, Java",
+      "databasesIcon": "🗄️",
+      "databasesDesc": "SQL Server, Derby",
+      "erpIcon": "🏢",
+      "erpDesc": "Oracle",
+      "versionControlIcon": "🔀",
+      "versionControlDesc": "Git, GitHub",
+      "methodologiesIcon": "⚙️",
+      "methodologiesDesc": "Ágil, Scrum"
     },
     "certificationsTitle": "Certificaciones",
     "certifications": {
@@ -217,10 +229,10 @@
           "Urbana"
         ],
         "valoresOcupacionales": [
-          "Esfuerzo",
           "Honestidad",
-          "Respeto",
           "Responsabilidad",
+          "Respeto",
+          "Esfuerzo",
           "Servicio"
         ]
       },
@@ -379,7 +391,7 @@
       "mine": [
         47,
         40,
-        47
+        53
       ],
       "avg": [
         44,
@@ -418,10 +430,10 @@
         24.3
       ],
       "valoresOcupacionales": [
-        95,
         98,
-        96,
         97,
+        96,
+        95,
         90
       ]
     }
@@ -478,6 +490,32 @@
         "img2": {
           "title": "Overtime Request",
           "desc": "Mantenimiento del sistema utilizado por el área de finanzas para calcular los costos generados por snacks y transporte del personal de producción durante horas extra. La aplicación gestiona registros de supervisores por planta, rutas de transporte y paradas, calculando de forma automatizada los costos asociados a estos servicios. Desarrollado con C#, ASP.NET y Bootstrap, integra autenticación SSO con las cuentas corporativas de Daikin para garantizar acceso seguro y controlado."
+        }
+      },
+      "saji": {
+        "name": "Grupo SAJI",
+        "role": "Consultor Odoo / Desarrollador Odoo",
+        "period": "Abril 2026 – Actualidad",
+        "description": "Diseño, implemento y administro la arquitectura de datos del ecosistema Odoo ERP. Arquitecto bases de datos robustas en PostgreSQL, estructuro pipelines de datos (ETL) para conectar múltiples módulos de la empresa (Ventas, Inventario, Finanzas) y garantizo la integridad, consistencia y optimización de consultas de alto volumen para la toma de decisiones basada en datos.",
+        "resp": {
+          "database": "Diseño arquitectónico y modelado físico de bases de datos PostgreSQL optimizadas.",
+          "deployment": "Diseño de flujos de integración de datos (ETL) entre módulos ERP y almacenes de datos.",
+          "integration": "Pipeline de datos comerciales (CRM y Ventas) asegurando sincronización.",
+          "config": "Estructuración de registros operativos en proyectos y mesas de ayuda.",
+          "supplyChain": "Sincronización de catálogos y automatización de datos de compras e inventario.",
+          "finance": "Consolidación de transacciones financieras y contables en pipelines de datos.",
+          "hr": "Ingesta y procesamiento batch de datos de asistencias y nóminas.",
+          "dashboards": "Modelado de almacenes de datos optimizados para alimentar dashboards analíticos.",
+          "apis": "Diseño y consumo de APIs de backend eficientes conectadas a PostgreSQL.",
+          "web": "Estructuración de logs y base de datos relacional para el sitio web comercial."
+        },
+        "img1": {
+          "title": "Aplicación Interna de Gestión y Administración de Servidores",
+          "desc": "Diseño, arquitectura y programación de una plataforma interna customizada (desde Odoo usando Python y PostgreSQL) para la administración central de las instancias del ERP de Odoo."
+        },
+        "img2": {
+          "title": "Aplicación Interna de Gestión y Administración de Servidores",
+          "desc": "Diseño, arquitectura y programación de una plataforma interna customizada (desde Odoo usando Python y PostgreSQL) para la administración central de las instancias del ERP de Odoo."
         }
       }
     },

@@ -44,7 +44,19 @@
       "databases": "Bases de Datos",
       "erp": "ERP",
       "versionControl": "Control de Versiones",
-      "methodologies": "Metodologías"
+      "methodologies": "Metodologías",
+      "webDevIcon": "🌐",
+      "webDevDesc": "ASP.NET, Bootstrap, HTML, CSS, JavaScript",
+      "desktopDevIcon": "🖥️",
+      "desktopDevDesc": "C#, C, C++, Python, Java",
+      "databasesIcon": "🗄️",
+      "databasesDesc": "SQL Server, Derby",
+      "erpIcon": "🏢",
+      "erpDesc": "Oracle",
+      "versionControlIcon": "🔀",
+      "versionControlDesc": "Git, GitHub",
+      "methodologiesIcon": "⚙️",
+      "methodologiesDesc": "Ágil, Scrum"
     },
     "certificationsTitle": "Certificaciones",
     "certifications": {
@@ -217,10 +229,10 @@
           "Urbana"
         ],
         "valoresOcupacionales": [
-          "Esfuerzo",
           "Honestidad",
-          "Respeto",
           "Responsabilidad",
+          "Respeto",
+          "Esfuerzo",
           "Servicio"
         ]
       },
@@ -379,7 +391,7 @@
       "mine": [
         47,
         40,
-        47
+        53
       ],
       "avg": [
         44,
@@ -418,10 +430,10 @@
         24.3
       ],
       "valoresOcupacionales": [
-        95,
         98,
-        96,
         97,
+        96,
+        95,
         90
       ]
     }
@@ -478,6 +490,32 @@
         "img2": {
           "title": "Overtime Request",
           "desc": "Mantenimiento del sistema utilizado por el área de finanzas para calcular los costos generados por snacks y transporte del personal de producción durante horas extra. La aplicación gestiona registros de supervisores por planta, rutas de transporte y paradas, calculando de forma automatizada los costos asociados a estos servicios. Desarrollado con C#, ASP.NET y Bootstrap, integra autenticación SSO con las cuentas corporativas de Daikin para garantizar acceso seguro y controlado."
+        }
+      },
+      "saji": {
+        "name": "Grupo SAJI",
+        "role": "Consultor Odoo / Desarrollador Odoo",
+        "period": "Abril 2026 – Actualidad",
+        "description": "Desarrollo, personalizo e integro el ecosistema Odoo ERP mediante Python y PostgreSQL en el backend, conectando con tecnologías modernas de frontend. Diseño modelos relacionales, desarrollo APIs robustas, optimizo el motor de Odoo usando Python y construyo vistas dinámicas utilizando XML, JavaScript, HTML5 y CSS3.",
+        "resp": {
+          "database": "Optimización de bases de datos PostgreSQL y consultas SQL con el ORM de Python.",
+          "deployment": "Desarrollo de módulos a medida heredando y extendiendo clases de Odoo en Python.",
+          "integration": "Implementación full-stack de CRM y automatizaciones de marketing.",
+          "config": "Desarrollo de la lógica del backend para Servicio de Campo y Proyectos.",
+          "supplyChain": "Programación en Python de reglas de reabastecimiento y control de inventarios.",
+          "finance": "Desarrollo de integraciones API para facturación electrónica y timbrado.",
+          "hr": "Desarrollo de motores de cálculo dinámico para nóminas y asistencias.",
+          "dashboards": "Creación de widgets y controladores JSON/API para dashboards interactivos.",
+          "apis": "Desarrollo de APIs RESTful en Python y consumo de servicios externos.",
+          "web": "Maquetación full-stack de la página comercial usando el Framework QWeb de Odoo."
+        },
+        "img1": {
+          "title": "Aplicación Interna de Gestión y Administración de Servidores",
+          "desc": "Diseño, arquitectura y programación de una plataforma interna customizada (desde Odoo usando Python y PostgreSQL) para la administración central de las instancias del ERP de Odoo."
+        },
+        "img2": {
+          "title": "Aplicación Interna de Gestión y Administración de Servidores",
+          "desc": "Diseño, arquitectura y programación de una plataforma interna customizada (desde Odoo usando Python y PostgreSQL) para la administración central de las instancias del ERP de Odoo."
         }
       }
     },

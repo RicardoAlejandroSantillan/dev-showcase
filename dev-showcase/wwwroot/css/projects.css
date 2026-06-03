@@ -1,4 +1,4 @@
-﻿.projects-layout {
+.projects-layout {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: 2rem;
@@ -120,11 +120,23 @@
         transition: transform 0.5s ease;
     }
 
-    .carousel-card[data-project="Daikin"] img,
+    .carousel-card[data-project="Daikin"] img {
+        object-fit: contain;
+        padding: 12%;
+        background: #0d0d0d;
+    }
+
     .carousel-card[data-project="prosalud"] img,
     .carousel-card[data-project="bookshelf"] img {
         object-fit: contain;
-        padding: 12%;
+        padding: 3%;
+        background: #0d0d0d;
+    }
+
+    .carousel-card[data-project="wids2025"] img,
+    .carousel-card[data-project="wids2022"] img {
+        object-fit: contain;
+        padding: 6%;
         background: #0d0d0d;
     }
 
