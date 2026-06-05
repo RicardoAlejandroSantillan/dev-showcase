@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
     let radarChart = null;
     let cognitiveChart = null;
@@ -17,12 +17,31 @@
         conventional: { border: '#ec407a', fill: 'rgba(236,64,122,0.15)', point: '#ec407a' }
     };
 
+    const getAccentColor = () => window.activeRoleConfig?.theme?.accent || '#4fc3f7';
+    const getAccentBg = () => {
+        const hex = getAccentColor();
+        // Convert hex to rgb
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
+        return {
+            fill: `rgba(${r},${g},${b},0.22)`,
+            bg: `rgba(${r},${g},${b},0.75)`
+        };
+    };
+
     const COGNITIVE_COLORS = {
-        mine: { border: '#4fc3f7', fill: 'rgba(79,195,247,0.22)', point: '#4fc3f7' },
+        get mine() { 
+            const accent = getAccentColor();
+            return { border: accent, fill: getAccentBg().fill, point: accent };
+        },
         avg: { border: '#f06292', fill: 'rgba(240,98,146,0.15)', point: '#f06292' }
     };
 
-    const BAR_TOP = { bg: 'rgba(79,195,247,0.75)', border: 'rgba(79,195,247,1)' };
+    const BAR_TOP = { 
+        get bg() { return getAccentBg().bg; }, 
+        get border() { return getAccentColor(); } 
+    };
     const BAR_LOW = { bg: 'rgba(236,64,122,0.70)', border: 'rgba(236,64,122,1)' };
 
     const buildRadarData = () => {

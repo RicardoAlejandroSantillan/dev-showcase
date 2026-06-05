@@ -1,68 +1,30 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var menuToggle = document.getElementById('menuToggle');
-    var sidebar = document.getElementById('sidebar');
-    var menuOverlay = document.getElementById('menuOverlay');
-    var navButtons = document.querySelectorAll('.nav-button');
+// main.js - Orchestrator for dynamic role loading
 
-    if (!menuToggle || !sidebar || !menuOverlay) {
-        console.warn('[main.js] Elementos del menú no encontrados en el DOM.');
-        return;
+const ROLES = [
+    'CDev', 'DataAnalysis', 'dataAnalyst', 'DataEngineer', 
+    'dataScience', 'erpDev', 'fullStack', 'itEngineer', 
+    'JavaDev', 'netDeveloper', 'PyDev', 'webDev'
+];
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // 1. Identify current role from URL
+    const path = window.location.pathname.toLowerCase();
+    const activeRoleName = ROLES.find(r => path.includes(`/${r.toLowerCase()}`)) || 'itEngineer';
+    
+    // 2. Dynamically import the role configuration module
+    let activeRoleConfig = {};
+    try {
+        const module = await import(`./roles/${activeRoleName}.js`);
+        activeRoleConfig = module.default || module;
+        window.activeRoleConfig = activeRoleConfig;
+    } catch (err) {
+        console.warn(`[main.js] No se pudo cargar el rol ${activeRoleName}. Fallback a configuración por defecto.`, err);
     }
 
-    var isOpen = false;
+    // 3. Dynamic theme injection removed to standardize on global red theme
+    // (Variables fall back to base.css defaults)
 
-    function openMenu() {
-        isOpen = true;
-        sidebar.classList.add('active');
-        menuToggle.classList.add('active');
-        menuOverlay.classList.add('active');
-        document.documentElement.classList.add('menu-is-open');
-    }
-
-    function closeMenu() {
-        isOpen = false;
-        sidebar.classList.remove('active');
-        menuToggle.classList.remove('active');
-        menuOverlay.classList.remove('active');
-        document.documentElement.classList.remove('menu-is-open');
-    }
-
-    function handleToggleClick(e) {
-        e.preventDefault();
-        if (isOpen) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
-    }
-
-    menuToggle.addEventListener('click', handleToggleClick);
-    menuToggle.addEventListener('touchend', function (e) {
-        e.preventDefault();
-        if (isOpen) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
-    }, { passive: false });
-
-    menuOverlay.addEventListener('click', closeMenu);
-    menuOverlay.addEventListener('touchend', function (e) {
-        e.preventDefault();
-        closeMenu();
-    }, { passive: false });
-
-    navButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            if (window.innerWidth <= 1024 && isOpen) {
-                closeMenu();
-            }
-        });
-    });
-
-    window.addEventListener('resize', function () {
-        if (window.innerWidth > 1024 && isOpen) {
-            closeMenu();
-        }
-    });
+    // 4. Dispatch custom event to notify components that role configuration is loaded
+    const event = new CustomEvent('roleLoaded', { detail: { role: activeRoleName, config: activeRoleConfig } });
+    document.dispatchEvent(event);
 });
