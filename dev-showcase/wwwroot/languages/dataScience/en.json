@@ -84,42 +84,75 @@
       "stats": "Statistics"
     },
     "panels": {
-      "webDev": "Web Development",
-      "dataScience": "Data Science",
+      "webDev": "Analysis, Visualization & Modeling",
+      "webDevIcon": "📊",
+      "webDevDesc": "Power BI, Pandas, XGBoost, Data Mining",
+      "dataScience": "Data Engineering & Architecture",
+      "dataScienceIcon": "⚙️",
+      "dataScienceDesc": "ETL Processes, Pipeline Automation, Web Scraping, APIs",
       "databases": "Databases",
-      "desktopDev": "Desktop Development",
-      "versionControl": "Version Control",
-      "generalProgramming": "General Programming"
+      "databasesIcon": "🗄️",
+      "databasesDesc": "SQL Server, PostgreSQL, Oracle, Derby",
+      "desktopDev": "Programming Languages",
+      "desktopDevIcon": "💻",
+      "desktopDevDesc": "Python, C#, Java, C++, JavaScript",
+      "versionControl": "Enterprise Systems & ERP",
+      "versionControlIcon": "🏢",
+      "versionControlDesc": "Odoo, Oracle ERP, Process Automation",
+      "generalProgramming": "Version Control & Methodologies",
+      "generalProgrammingIcon": "🛠️",
+      "generalProgrammingDesc": "Git, GitHub, Scrum, Agile Methodologies"
     },
     "stats": {
-      "webTitle": "Web Development",
+      "webTitle": "Software Development & Architecture",
       "webSubtitle": "Proficiency by technology",
-      "dataTitle": "Data Science",
+      "dataTitle": "Data Science, Analytics & Infrastructure",
       "dataSubtitle": "Proficiency by technology",
-      "dbTitle": "Databases",
-      "dbSubtitle": "Proficiency by technology"
+      "dbTitle": "Management, Databases & ERP",
+      "dbSubtitle": "Proficiency by technology",
+      "labels": {
+        "webDev": {
+          "htmlcss": "C# / .NET",
+          "aspnet": "Python (Backend & Automation)",
+          "csharp": "HTML / CSS",
+          "javascript": "JavaScript"
+        },
+        "dataScience": {
+          "excel": "Pandas / NumPy (Data Manipulation)",
+          "python": "Docker (Containerization & MLOps)",
+          "powerbi": "XGBoost / Machine Learning",
+          "pandasnumpy": "Power BI (Business Intelligence)",
+          "matplotlibseaborn": ""
+        },
+        "databases": {
+          "sqlserver": "SQL Server",
+          "oracle": "Oracle SQL",
+          "mysql": "PostgreSQL",
+          "derby": "Odoo (Process Modeling)"
+        }
+      }
     },
     "logosTitle": "Technologies",
     "logosSubtitle": "Tools and languages stack",
     "progressBars": {
       "webDev": {
         "htmlcss": 90,
-        "aspnet": 85,
+        "aspnet": 90,
         "csharp": 85,
-        "javascript": 65
+        "javascript": 75
       },
       "dataScience": {
-        "excel": 90,
-        "python": 75,
-        "powerbi": 75,
-        "pandasnumpy": 70,
-        "matplotlibseaborn": 65
+        "excel": 85,
+        "python": 85,
+        "powerbi": 80,
+        "pandasnumpy": 80,
+        "matplotlibseaborn": null
       },
       "databases": {
-        "sqlserver": 85,
-        "oracle": 85,
-        "mysql": 80,
-        "derby": 30
+        "sqlserver": 90,
+        "oracle": 90,
+        "mysql": 85,
+        "derby": 80
       },
       "softSkills": {
         "teamwork": 88,

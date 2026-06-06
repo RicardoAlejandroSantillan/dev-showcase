@@ -68,10 +68,31 @@ const updateContent = (translations) => {
     document.querySelectorAll('[data-translate]').forEach(element => {
         if (element.matches('.header-content h1')) return;
 
-        // The `data-translate="introduction.aboutContent"` is now direct.
-
         const value = resolvePath(translations, element.dataset.translate);
-        if (value === undefined || value === null) return;
+        
+        // Handle null values to hide the corresponding component/item
+        if (value === null) {
+            if (element.closest('.glow-panel')) {
+                element.closest('.glow-panel').style.display = 'none';
+            } else if (element.closest('.stat-item')) {
+                element.closest('.stat-item').style.display = 'none';
+            } else {
+                element.style.display = 'none';
+            }
+            return;
+        } else if (value !== undefined) {
+            // Restore visibility if value is provided
+            if (element.closest('.glow-panel')) {
+                element.closest('.glow-panel').style.display = '';
+            } else if (element.closest('.stat-item')) {
+                element.closest('.stat-item').style.display = '';
+            } else {
+                element.style.display = '';
+            }
+        } else {
+            // If value is undefined, just return
+            return;
+        }
 
         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
             element.hasAttribute('placeholder')
@@ -96,12 +117,21 @@ const applyProgressBars = (translations) => {
 
     document.querySelectorAll('.stat-bar[data-bar-key]').forEach(bar => {
         const value = resolvePath(pBars, bar.getAttribute('data-bar-key'));
+        const statItem = bar.closest('.stat-item');
+
+        if (value === null || value === undefined) {
+            if (statItem) statItem.style.display = 'none';
+            return;
+        } else {
+            if (statItem) statItem.style.display = '';
+        }
+
         if (typeof value !== 'number') return;
 
         bar.setAttribute('data-percent', value);
         bar.style.setProperty('--target-width', value + '%');
 
-        const percentSpan = bar.closest('.stat-item')?.querySelector('.stat-percentage');
+        const percentSpan = statItem?.querySelector('.stat-percentage');
         if (percentSpan) percentSpan.textContent = value + '%';
     });
 };

@@ -84,42 +84,75 @@
       "stats": "Estadísticas"
     },
     "panels": {
-      "webDev": "Desarrollo Web",
-      "dataScience": "Ciencia de Datos",
+      "webDev": "Análisis, Visualización y Modelado",
+      "webDevIcon": "📊",
+      "webDevDesc": "Power BI, Pandas, XGBoost, Minería de Datos",
+      "dataScience": "Ingeniería de Datos y Arquitectura",
+      "dataScienceIcon": "⚙️",
+      "dataScienceDesc": "Procesos ETL, Automatización de Pipelines, Web Scraping, APIs",
       "databases": "Bases de Datos",
-      "desktopDev": "Desarrollo de Escritorio",
-      "versionControl": "Control de Versiones",
-      "generalProgramming": "Programación General"
+      "databasesIcon": "🗄️",
+      "databasesDesc": "SQL Server, PostgreSQL, Oracle, Derby",
+      "desktopDev": "Lenguajes de Programación",
+      "desktopDevIcon": "💻",
+      "desktopDevDesc": "Python, C#, Java, C++, JavaScript",
+      "versionControl": "Sistemas Empresariales y ERP",
+      "versionControlIcon": "🏢",
+      "versionControlDesc": "Odoo, Oracle ERP, Automatización de Procesos",
+      "generalProgramming": "Control de Versiones y Metodologías",
+      "generalProgrammingIcon": "🛠️",
+      "generalProgrammingDesc": "Git, GitHub, Scrum, Metodologías Ágiles"
     },
     "stats": {
-      "webTitle": "Desarrollo Web",
+      "webTitle": "Desarrollo y Arquitectura de Software",
       "webSubtitle": "Dominio por tecnología",
-      "dataTitle": "Ciencia de Datos",
+      "dataTitle": "Ciencia de Datos, Analítica e Infraestructura",
       "dataSubtitle": "Dominio por tecnología",
-      "dbTitle": "Bases de Datos",
-      "dbSubtitle": "Dominio por tecnología"
+      "dbTitle": "Gestión, Bases de Datos y ERP",
+      "dbSubtitle": "Dominio por tecnología",
+      "labels": {
+        "webDev": {
+          "htmlcss": "C# / .NET",
+          "aspnet": "Python (Backend & Automation)",
+          "csharp": "HTML / CSS",
+          "javascript": "JavaScript"
+        },
+        "dataScience": {
+          "excel": "Pandas / NumPy (Manipulación de Datos)",
+          "python": "Docker (Contenerización y MLOps)",
+          "powerbi": "XGBoost / Machine Learning",
+          "pandasnumpy": "Power BI (Inteligencia de Negocios)",
+          "matplotlibseaborn": ""
+        },
+        "databases": {
+          "sqlserver": "SQL Server",
+          "oracle": "Oracle SQL",
+          "mysql": "PostgreSQL",
+          "derby": "Odoo (Modelado de Procesos)"
+        }
+      }
     },
     "logosTitle": "Tecnologías",
     "logosSubtitle": "Stack de herramientas y lenguajes",
     "progressBars": {
       "webDev": {
         "htmlcss": 90,
-        "aspnet": 85,
+        "aspnet": 90,
         "csharp": 85,
-        "javascript": 65
+        "javascript": 75
       },
       "dataScience": {
-        "excel": 90,
-        "python": 75,
-        "powerbi": 75,
-        "pandasnumpy": 70,
-        "matplotlibseaborn": 65
+        "excel": 85,
+        "python": 85,
+        "powerbi": 80,
+        "pandasnumpy": 80,
+        "matplotlibseaborn": null
       },
       "databases": {
-        "sqlserver": 85,
-        "oracle": 85,
-        "mysql": 80,
-        "derby": 30
+        "sqlserver": 90,
+        "oracle": 90,
+        "mysql": 85,
+        "derby": 80
       },
       "softSkills": {
         "teamwork": 88,
