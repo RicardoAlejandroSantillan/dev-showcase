@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    new InfiniteCarousel({
+    window.personalCarousel = new InfiniteCarousel({
         trackSelector: '.carousel-personal-project-track',
         cardSelector: '.carousel-personal-project-card',
         prevBtnSelector: '.carousel-personal-project-arrow.left',
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         paginationContainer: '.carousel-personal-project-pagination'
     });
 
-    new InfiniteCarousel({
+    window.professionalCarousel = new InfiniteCarousel({
         trackSelector: '.carousel-professional-work-track',
         cardSelector: '.carousel-professional-work-card',
         prevBtnSelector: '.carousel-professional-work-arrow.left',
@@ -47,6 +47,31 @@ class InfiniteCarousel {
 
     getVisibleSlides() {
         return window.innerWidth > 1200 ? 2.1 : 1.1;
+    }
+
+    rebuild() {
+        if (!this.track) return;
+        
+        // Remove all current clone cards
+        this.track.querySelectorAll('.clone').forEach(clone => clone.remove());
+
+        // Get visible cards among the original cards remaining in the track
+        this.originalCards = Array.from(this.track.children).filter(card => {
+            return window.getComputedStyle(card).display !== 'none';
+        });
+
+        this.totalOriginal = this.originalCards.length;
+        if (this.totalOriginal === 0) return;
+
+        if (this.totalSpan) this.totalSpan.textContent = this.totalOriginal;
+        
+        this.clonesCount = Math.max(this.totalOriginal, Math.ceil(this.getVisibleSlides()) + 3);
+        this.currentIndex = this.clonesCount;
+
+        this.createClones();
+        this.updateDimensions();
+        this.updatePosition(false);
+        this.updatePagination();
     }
 
     init() {

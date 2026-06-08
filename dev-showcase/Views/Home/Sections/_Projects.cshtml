@@ -63,7 +63,7 @@
                     <div class="carousel-wrapper">
                         <div class="carousel-track-container">
                             <div class="carousel-track carousel-personal-project-track">
-                                <div class="carousel-card carousel-personal-project-card" data-project="devportfolio">
+                                <div class="carousel-card carousel-personal-project-card" data-project="devportfolio" data-translate="projects.personal.devportfolio" data-translate-hide-only>
                                     <img src="~/images/projects/DevPortfolio/portfolio-cover.webp" alt="DevPortfolio" />
                                     <div class="carousel-card-overlay">
                                         <h4 data-translate="projects.personal.devportfolio.name">DevPortfolio</h4>
@@ -91,7 +91,7 @@
                                         <p data-translate="projects.personal.prosalud.short">Sistema de gestión médica</p>
                                     </div>
                                 </div>
-                                <div class="carousel-card carousel-personal-project-card" data-project="bookshelf">
+                                <div class="carousel-card carousel-personal-project-card" data-project="bookshelf" data-translate="projects.personal.bookshelf" data-translate-hide-only>
                                     <img src="~/images/projects/BookShelf/cover.webp" alt="BookShelf" />
                                     <div class="carousel-card-overlay">
                                         <h4 data-translate="projects.personal.bookshelf.name">BookShelf</h4>
@@ -124,7 +124,7 @@
 
             <div class="lenguages-tech">
                 <span data-translate="projects.labels.stack">Stack:</span>
-                <span>ASP.NET Core 8.0 MVC, C#, SQL Server, Oracle SQL, MySQL, jQuery, Bootstrap, EPPlus, iText, Microsoft Identity, Power BI, Jira, ServiceNow, DataLoad</span>
+                <span data-translate="projects.work.daikin.stack">ASP.NET Core 8.0 MVC, C#, SQL Server, Oracle SQL, MySQL, jQuery, Bootstrap, EPPlus, iText, Microsoft Identity, Power BI, Jira, ServiceNow, DataLoad</span>
             </div>
 
             <h3 data-translate="projects.labels.role">Rol</h3>
@@ -143,6 +143,7 @@
                 <li data-translate="projects.work.daikin.resp.analysis">Análisis de datos operativos y generación de dashboards en Excel para identificación de causas raíz</li>
                 <li data-translate="projects.work.daikin.resp.ux">Mejoras de UX/UI en sistemas internos</li>
                 <li data-translate="projects.work.daikin.resp.agile">Trabajo colaborativo con metodologías ágiles, Jira y ServiceNow</li>
+                <li data-translate="projects.work.daikin.resp.extra" style="display: none;"></li>
             </ul>
 
             <h3 data-translate="projects.labels.internalProjects">Proyectos Internos</h3>
@@ -201,7 +202,7 @@
 
             <div class="lenguages-tech">
                 <span data-translate="projects.labels.stack">Stack:</span>
-                <span>Odoo ERP, Python, PostgreSQL, XML, JavaScript, HTML5, CSS3, APIs</span>
+                <span data-translate="projects.work.saji.stack">Odoo ERP, Python, PostgreSQL, XML, JavaScript, HTML5, CSS3, APIs</span>
             </div>
 
             <h3 data-translate="projects.labels.role">Rol</h3>
@@ -250,15 +251,33 @@
                         </p>
                     </div>
                 </div>
+                <div class="project-info" data-translate="projects.work.saji.img3" data-translate-hide-only style="display: none;">
+                    <div class="left-pnl img-pnl">
+                        <img src="~/images/projects/SAJI/SAJI.webp" alt="Grupo SAJI - Dashboards Analíticos" />
+                    </div>
+                    <div class="right-pnl info-pnl">
+                        <h4 data-translate="projects.work.saji.img3.title">Dashboards Analíticos SAJI</h4>
+                        <p data-translate="projects.work.saji.img3.desc"></p>
+                    </div>
+                </div>
+                <div class="project-info" data-translate="projects.work.saji.img4" data-translate-hide-only style="display: none;">
+                    <div class="left-pnl img-pnl">
+                        <img src="~/images/projects/SAJI/Odoo_Interface.webp" alt="Grupo SAJI - Monitor de Rendimiento de Datos" />
+                    </div>
+                    <div class="right-pnl info-pnl">
+                        <h4 data-translate="projects.work.saji.img4.title">Monitor de Rendimiento de Datos</h4>
+                        <p data-translate="projects.work.saji.img4.desc"></p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="project-info-card" id="devportfolio-info">
+        <div class="project-info-card" id="devportfolio-info" data-translate="projects.personal.devportfolio" data-translate-hide-only>
             <h2 data-translate="projects.personal.devportfolio.name">DevPortfolio</h2>
 
             <div class="lenguages-tech">
                 <span data-translate="projects.labels.stack">Stack:</span>
-                <span>ASP.NET MVC, C#, JavaScript, HTML5, CSS3, Chart.js, jQuery</span>
+                <span data-translate="projects.personal.devportfolio.stack">ASP.NET MVC, C#, JavaScript, HTML5, CSS3, Chart.js, jQuery</span>
             </div>
 
             <h3 data-translate="projects.labels.description">Descripción</h3>
@@ -294,7 +313,7 @@
 
             <div class="lenguages-tech">
                 <span data-translate="projects.labels.stack">Stack:</span>
-                <span>Python, Jupyter, Pandas, NumPy, XGBoost, Scikit-learn, Matplotlib, Seaborn</span>
+                <span data-translate="projects.personal.wids2025.stack">Python, Jupyter, Pandas, NumPy, XGBoost, Scikit-learn, Matplotlib, Seaborn</span>
             </div>
 
             <h3 data-translate="projects.labels.description">Descripción</h3>
@@ -310,6 +329,8 @@
                 <li data-translate="projects.personal.wids2025.h2">Feature engineering sobre datos de neuroimagen</li>
                 <li data-translate="projects.personal.wids2025.h3">Análisis de importancia de variables</li>
                 <li data-translate="projects.personal.wids2025.h4">Pipeline completo de limpieza y preprocesamiento de datos</li>
+                <li data-translate="projects.personal.wids2025.h5" style="display: none;"></li>
+                <li data-translate="projects.personal.wids2025.h6" style="display: none;"></li>
             </ul>
 
             <div class="img-project-container">
@@ -330,7 +351,7 @@
 
             <div class="lenguages-tech">
                 <span data-translate="projects.labels.stack">Stack:</span>
-                <span>Python, Jupyter, Pandas, NumPy, Scikit-learn, Matplotlib</span>
+                <span data-translate="projects.personal.wids2022.stack">Python, Jupyter, Pandas, NumPy, Scikit-learn, Matplotlib</span>
             </div>
 
             <h3 data-translate="projects.labels.description">Descripción</h3>
@@ -366,7 +387,7 @@
 
             <div class="lenguages-tech">
                 <span data-translate="projects.labels.stack">Stack:</span>
-                <span>ASP.NET MVC, C#, SQL Server, Dapper, jQuery, Bootstrap, HTML5, CSS3, JavaScript</span>
+                <span data-translate="projects.personal.prosalud.stack">ASP.NET MVC, C#, SQL Server, Dapper, jQuery, Bootstrap, HTML5, CSS3, JavaScript</span>
             </div>
 
             <h3 data-translate="projects.labels.description">Descripción</h3>
@@ -396,12 +417,12 @@
             </div>
         </div>
 
-        <div class="project-info-card" id="bookshelf-info">
+        <div class="project-info-card" id="bookshelf-info" data-translate="projects.personal.bookshelf" data-translate-hide-only>
             <h2 data-translate="projects.personal.bookshelf.name">BookShelf</h2>
 
             <div class="lenguages-tech">
                 <span data-translate="projects.labels.stack">Stack:</span>
-                <span>ASP.NET MVC, C#, SQL Server, Dapper, jQuery, Bootstrap, HTML5, CSS3, JavaScript</span>
+                <span data-translate="projects.personal.bookshelf.stack">ASP.NET MVC, C#, SQL Server, Dapper, jQuery, Bootstrap, HTML5, CSS3, JavaScript</span>
             </div>
 
             <h3 data-translate="projects.labels.description">Descripción</h3>

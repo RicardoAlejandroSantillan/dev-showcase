@@ -70,6 +70,16 @@ const updateContent = (translations) => {
 
         const value = resolvePath(translations, element.dataset.translate);
         
+        // Handle hide-only elements
+        if (element.hasAttribute('data-translate-hide-only')) {
+            if (value === null) {
+                element.style.display = 'none';
+            } else if (value !== undefined) {
+                element.style.display = '';
+            }
+            return;
+        }
+        
         // Handle null values to hide the corresponding component/item
         if (value === null) {
             if (element.closest('.glow-panel')) {
@@ -256,6 +266,10 @@ const changeLanguage = async (language) => {
     if (typeof window.initTypewriter === 'function') window.initTypewriter(language);
     if (typeof window.updateCVLink === 'function') window.updateCVLink();
     if (typeof window.refreshVocationalCharts === 'function') window.refreshVocationalCharts();
+
+    // Call carousel rebuilds
+    if (typeof window.personalCarousel?.rebuild === 'function') window.personalCarousel.rebuild();
+    if (typeof window.professionalCarousel?.rebuild === 'function') window.professionalCarousel.rebuild();
 
     syncLanguageWithServer(language, window.location.pathname);
 };

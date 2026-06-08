@@ -491,134 +491,117 @@
       "blockTag": "Work",
       "daikin": {
         "name": "Daikin Manufacturing México",
-        "role": "IT Trainee — Software Developer (Probecarios)",
+        "role": "Data Solutions Analyst",
         "period": "Sept 2024 – Mar 2026",
-        "description": "Internship period subcontracted by Probecarios to collaborate within the IT department of Daikin Manufacturing México. During this time I participated in the development and maintenance of internal enterprise applications, Oracle ERP support, and operational data analysis for production, finance, and warehouse areas.",
+        "stack": "ASP.NET Core 8.0 MVC, C#, SQL Server, Oracle SQL, MySQL, jQuery, Bootstrap, EPPlus, iText, Microsoft Identity, Power BI, Jira, ServiceNow, DataLoad",
+        "description": "Development of information processing tools aimed at unifying financial reports, identifying manufacturing bottlenecks, and cleaning databases to ensure integrity.",
         "resp": {
-          "development": "Development and maintenance of internal web and desktop applications for various operational areas of the plant",
-          "oracle": "Oracle ERP support: user account management, system responsibility assignments, and correction of errors in supplier and site data to maintain information consistency",
-          "sql": "SQL query optimization and stored procedure development in SQL Server and Oracle SQL for critical production systems",
-          "analysis": "Operational data analysis through Excel export and construction of dynamic tables and dashboards to identify patterns, root causes, and improvement opportunities",
-          "ux": "UX/UI improvements in internal systems aimed at reducing operational friction for end users",
-          "agile": "Collaborative work using agile methodologies with Jira for task management and ServiceNow for incident tracking"
-        },
-        "projects": {
-          "budget": "Budget Control — Web application for monitoring variances between actual and budgeted expenses, consolidating AP and GL data from Oracle",
-          "etiquetas": "Labels — Desktop application for label generation and printing in Warehouse with Oracle API integration, reducing process time by over 50%",
-          "masterLabel": "Master Label — Web system for label reprint analysis that reduced errors from ~8,000 to ~100 per month",
-          "overtime": "Overtime Request — Maintenance of the automated overtime cost calculation system with corporate SSO authentication"
+          "development": "I process and consolidate massive data flows from Oracle invoices and journal entries for analysis.",
+          "oracle": "I extract operational records from production lines, modeling dashboards to identify technical anomalies.",
+          "sql": "I clean and audit charts of accounts to maintain the consistency of financial information.",
+          "analysis": "I support the Oracle ERP, manage user accounts, assign system responsibilities, and correct errors in supplier and site data to maintain information consistency.",
+          "ux": "I optimize SQL queries and develop stored procedures in SQL Server and Oracle SQL for production systems.",
+          "agile": "I analyze operational data by exporting to Excel and building pivot tables and dynamic dashboards to identify patterns, root causes, and opportunities for improvement.",
+          "extra": "I collaborate using agile methodologies, using Jira for task management and ServiceNow for incident logging."
         },
         "img5": {
           "title": "Budget Control",
-          "desc": "Web tool developed for the finance area to mitigate operational risks by monitoring variances between actual and budgeted expenses. It automates the processing of accounts payable (AP) and general ledger journal entries (GL) from Oracle, consolidating account catalogs, departments, and locations. Generates Excel files with structured calculations to facilitate cash flow analysis. Built with ASP.NET Core 8.0 MVC, C#, SQL Server, Microsoft Identity, and EPPlus for Excel file handling."
+          "desc": "I develop a data extraction and processing solution for the finance department with the goal of mitigating operational risks by analytically monitoring variances between actual and budgeted expenses. I automate the data flow from accounts payable (AP) invoices and general ledger (GL) journal entries of the Oracle system, consolidating and normalizing scattered charts of accounts, departments, and locations using relational databases in SQL Server. I structure the computational logic in C# to cross-reference these financial variables and automatically transform operational data into structured, calculated information files using EPPlus. This enables the generation of clean datasets that facilitate advanced cash flow analysis and empower financial decision-making, supported by an ASP.NET Core 8.0 MVC architecture and Microsoft Identity for access management."
         },
         "img3": {
           "title": "Labels",
-          "desc": "Desktop application developed for the Warehouse area to improve supplier traceability for each product. It queries Oracle via API using the order number to retrieve the Supplier Part Number and Daikin Part Number, then sends the data to the printer to generate a label including a barcode for easy scanning. Label generation was implemented using iText NuGet 5.5.13.5. The system includes a JSON configuration file that allows users to adjust the label size without requiring code changes. Reduced process time by over 50%."
+          "desc": "I design and build a solution oriented towards data extraction and automation for the Warehouse area, focused on optimizing the traceability of supplier information associated with each product. I extract and process critical variables, such as the Supplier Part Number and Daikin Part Number, by consuming APIs connected to Oracle databases. I transform this data flow into a structured and physical format by automatically generating labels and barcodes using the iText library. By coupling this information with a configuration model based on JSON files, I guarantee the tool's scalability without needing to modify the code, reducing logistical processing times by more than 50%."
         },
         "img4": {
-          "title": "Master Label",
-          "desc": "Web system developed to investigate a critical issue: in December 2024, approximately 8,000 Master Labels were printed without information, generating a high level of rework. The application stored detailed data for each label including production line, description, Job, Item, Serial, LPN, OrdLine, OrdNumber, Sub Inventory, Address, and process status. The collected data was exported to Excel where dynamic tables and dashboards identified that most reprints originated in two specific production lines. Analysis revealed the issue was scanning speed preventing the system from assigning the LPN before printing. The solution was a 1.5-second delay implemented by the Oracle team, reducing reprints from ~8,000 to ~100 per month."
+          "title": "MasterLabels Analysis",
+          "desc": "I develop a web analytical platform (ASP.NET and MySQL) focused on diagnosing and resolving a critical and recurring quality issue that caused the printing of 300 to 8,000 blank labels per month, generating a severe impact of logistical rework. I structure the ingestion of large data volumes by capturing granular variables from each label (such as LPN, production line, order numbers, and process times), exporting and transforming this information into dashboards and pivot tables for evaluation. Through this analysis, I manage to isolate patterns, identify that incidents predominate on two specific lines, and discover that the root cause is a technical desynchronization between physical scanning speed and system assignment. This exact diagnosis, backed 100% by data, supports the implementation of a latency adjustment in the Oracle environment, successfully dropping the failure rate by 90%."
         },
         "img2": {
           "title": "Overtime Request",
-          "desc": "Maintenance of the system used by the finance area to calculate costs generated by snacks and transportation for production staff during overtime. The application manages supervisor records by plant, transport routes and stops, automatically calculating costs associated with these services. Built with C#, ASP.NET, and Bootstrap, it integrates SSO authentication with Daikin corporate accounts to ensure secure and controlled access."
+          "desc": "I manage and optimize a data processing platform oriented towards the finance department, designed to calculate and automate costs generated by logistics and food services during production personnel's overtime. I process and cross-reference multiple structured operational variables—such as supervisor records, transport routes, and logistics stops—to generate financial calculations that facilitate expense control and internal auditing. I support this business logic using a C# and ASP.NET architecture, integrating SSO authentication protocols to ensure the integrity, protection, and secure access of corporate information."
         }
       },
       "saji": {
         "name": "Grupo SAJI",
-        "role": "Odoo Consultant / Odoo Developer",
+        "role": "Data Analyst / BI Specialist",
         "period": "April 2026 – Present",
-        "description": "I lead data-driven solutions within the Odoo ERP ecosystem. I design relational database models in PostgreSQL and build analytical workflows that extract critical operational data from business processes. I create complex dashboards that unify commercial, inventory, and financial KPIs, translating raw data into structured operational intelligence.",
+        "stack": "Odoo ERP, Python, PostgreSQL, XML, JavaScript, HTML5, CSS3, APIs",
+        "description": "Directing the corporate analytical ecosystem. I extract, transform, and visualize information from the ERP to centralize business intelligence and guide decision-making with accurate metrics.",
         "resp": {
-          "database": "Design and optimization of relational schemas in PostgreSQL for data analysis.",
-          "deployment": "Modeling and analyzing business flows in Odoo for metrics extraction.",
-          "integration": "Integration of commercial data flows (CRM, Sales) for conversion rate analysis.",
-          "config": "Configuration of metrics and KPIs in operational modules like Field Service.",
-          "supplyChain": "Analysis of inventory turnover and purchasing efficiency in the supply chain.",
-          "finance": "Analytical modeling of invoicing transactions and corporate accounting data.",
-          "hr": "Predictive analysis of attendance, time off, and payroll operational costs.",
-          "dashboards": "Creation of interactive executive dashboards and real-time KPI tracking.",
-          "apis": "Development of complex queries and data extraction via PostgreSQL APIs.",
-          "web": "Analytical optimization and conversion funnels for the Odoo-based website."
+          "database": "I design relational schemas and pipelines in PostgreSQL.",
+          "deployment": "I develop complex queries and extraction APIs.",
+          "integration": "I model native business flows in Odoo.",
+          "config": "I build interactive real-time KPI dashboards.",
+          "supplyChain": "I transform raw databases into visual strategies.",
+          "finance": "I analyze accounting, invoicing, and supply chain.",
+          "hr": "I optimize web conversion funnels and CRM sales.",
+          "dashboards": "I configure metrics for operational modules such as Field Service.",
+          "apis": "I execute predictive analysis of payroll and attendance.",
+          "web": null
         },
         "img1": {
-          "title": "Internal Server Management and Administration Application",
-          "desc": "Design, architecture, and programming of a customized internal platform (built from Odoo using Python and PostgreSQL) for the centralized administration of Odoo ERP instances."
+          "title": "Database Development & Architecture",
+          "desc": "I analyze and architect the PostgreSQL model for the Odoo ERP ecosystem deployment. I translate the company's business rules and operational processes into a robust and scalable database structure, guaranteeing information integrity and optimizing performance for the ingestion, connection, and extraction of large volumes of data across different business modules."
         },
         "img2": {
-          "title": "Internal Server Management and Administration Application",
-          "desc": "Design, architecture, and programming of a customized internal platform (built from Odoo using Python and PostgreSQL) for the centralized administration of Odoo ERP instances."
+          "title": "Server Management & Administration",
+          "desc": "I design, structure, and program a customized internal platform developed in Python and PostgreSQL for the centralized management of Odoo ERP modules/instances. I automate the continuous monitoring of global server performance, streamline the editing of critical security configurations, and execute database maintenance, successfully mitigating downtime due to technical incidents."
+        },
+        "img3": {
+          "title": "SAJI Analytical Dashboards",
+          "desc": "I build and implement Business Intelligence solutions by developing multidimensional analytical dashboards. I extract and transform raw operational data into real-time interactive visualizations, allowing the tracking of KPIs in areas such as Sales, Inventories, and Finance, which facilitates management's evaluation of personnel performance, goal tracking, and support for data-driven decision making."
+        },
+        "img4": {
+          "title": "Data Performance Monitor",
+          "desc": "I develop an analytical tool oriented towards auditing and supervising the health of the technology ecosystem and database integrity. I extract and process performance metrics and state variables to identify infrastructure bottlenecks, guaranteeing the operational stability of the Odoo environment and ensuring that commercial and financial information flows operate without interruption."
         }
       }
     },
     "personal": {
-      "blockTitle": "Personal Projects & Datathons",
-      "blockTag": "Personal",
-      "devportfolio": {
-        "name": "DevPortfolio",
-        "short": "Professional portfolio",
-        "description": "Professional web portfolio built on ASP.NET MVC with a simulated SPA architecture: all sections are rendered on the first server request and JS navigation hides and shows content without additional AJAX calls. Features dark mode design, animated header particles, multilingual typewriter effect, ES/EN translation system with dynamic JSON loading, RIASEC vocational charts with Chart.js, infinite carousel with touch support, and a downloadable CV that adapts to both language and active profile.",
-        "h1": "Dark mode design with animated particles in the header",
-        "h2": "ES/EN i18n system with dynamic JSON loading and data-translate contract",
-        "h3": "RIASEC vocational dashboard with 9 Chart.js instances",
-        "h4": "Infinite carousel by card cloning with drag and touch support",
-        "h5": "Dynamic downloadable CV: language and profile determine the file served",
-        "img1": {
-          "title": "Introduction Section",
-          "desc": "Main view with character-by-character typewriter animation, 20 floating particles generated in the header, SPA navigation sidebar, and language selector. The role title updates automatically based on the active profile route."
-        }
-      },
+      "devportfolio": null,
+      "bookshelf": null,
       "wids2025": {
         "name": "WiDS Datathon 2025",
-        "short": "ADHD detection in women",
-        "description": "Development of a predictive model for early identification of Attention Deficit Hyperactivity Disorder (ADHD/ADD) in adolescent women, with the goal of addressing the historical diagnostic bias affecting this group. The project used neuroimaging data from the WiDS 2025 datathon, applying a deep data cleaning process, feature engineering, and multiclass classification model training using XGBoost.",
-        "h1": "Multiclass classification model with XGBoost for ADHD/ADD detection",
-        "h2": "Feature engineering on neuroimaging data to improve class separability",
-        "h3": "Variable importance analysis to identify the most relevant diagnostic factors",
-        "h4": "Complete pipeline for cleaning, normalization, and preprocessing of neurological data",
+        "short": "ADHD Prediction in Adolescent Girls",
+        "stack": "Python, Machine Learning, XGBoost, Pandas",
+        "description": "Building a Machine Learning classification model focused on the early detection of ADHD, mitigating historical diagnostic bias in women.",
+        "h1": "Deep cleaning and preprocessing of medical datasets.",
+        "h2": "Training of XGBoost model for high-precision classification.",
+        "h3": "Multiclass classification model with XGBoost for ADHD/ADD detection.",
+        "h4": "Feature engineering on neuroimaging data to improve class separability.",
+        "h5": "Feature importance analysis to identify the most relevant diagnostic factors.",
+        "h6": "Complete pipeline for cleaning, normalization, and preprocessing of neurological data.",
         "img1": {
-          "title": "XGBoost Model",
-          "desc": "Model results including classification metrics and feature importance visualization, showing which neurological variables carry the most weight in predicting ADHD/ADD diagnosis in adolescent women."
+          "title": "WiDS Datathon 2025: ADHD Prediction in Adolescent Girls",
+          "desc": "I design and implement a predictive Machine Learning model in Python, using the XGBoost algorithm, to detect ADHD in adolescent girls and mitigate historical clinical bias in its diagnosis. I execute a comprehensive data cleaning and preparation pipeline to feed the algorithm, evaluating its success through accuracy metrics, confusion matrices, and predictive performance charts. By visualizing feature importance, I isolate and demonstrate exactly which neurological and behavioral variables carry the most weight in predicting the disorder, ensuring the model's results are not only accurate but fully interpretable for analysis in healthcare settings."
         }
       },
       "wids2022": {
         "name": "WiDS Datathon 2022",
-        "short": "Breast cancer detection",
-        "description": "Participation in the WiDS 2022 datathon to improve accuracy in early breast cancer detection. The project aimed to predict whether a patient would receive a definitive diagnosis within 90 days, using Machine Learning techniques on real sociodemographic and clinical data. Data normalization, missing value handling, and model evaluation with performance metrics suited for sensitive health contexts were performed.",
-        "h1": "Exploratory analysis of clinical and sociodemographic variables from the dataset",
-        "h2": "Data normalization and strategies for handling missing values",
-        "h3": "Training and comparison of binary classification models",
-        "h4": "Model evaluation with AUC-ROC metrics to ensure reliability in a medical context",
+        "short": "Early Detection of Breast Cancer",
+        "stack": "Python, Machine Learning, Data Normalization",
+        "description": "Statistical and predictive analysis on medical and sociodemographic datasets to forecast definitive diagnoses in periods under 90 days.",
+        "h1": "Feature engineering on complex clinical records.",
+        "h2": "Performance metrics optimization and validation using AUC-ROC curves.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "Exploratory Analysis",
-          "desc": "Visualization of distributions, correlations, and behavior of clinical dataset variables to identify features with the highest predictive power for whether a patient would receive a definitive diagnosis within 90 days."
+          "title": "WiDS Datathon 2022: Early Detection of Breast Cancer",
+          "desc": "I execute statistical analyses and develop predictive Machine Learning models in Python focused on the early detection of breast cancer. I process medical and sociodemographic datasets using advanced normalization and feature engineering techniques, with the goal of forecasting diagnoses within a period of less than 90 days. I evaluate and guarantee the algorithm's reliability in a sensitive clinical context by optimizing performance metrics, validating its accuracy and predictive power through AUC-ROC curves."
         }
       },
       "prosalud": {
         "name": "ProSalud",
-        "short": "Medical management system",
-        "description": "Medical management system for clinics that automates administrative and clinical processes. It centralizes patient management, appointments, clinical records, and billing in a single platform. Includes an ICD-10 diagnosis catalog with integrated search, receipt generation module, and an authentication system with differentiated roles for doctors and administrative staff.",
-        "h1": "ICD-10 catalog with real-time search to speed up diagnosis registration",
-        "h2": "Complete clinical history management per patient with treatment tracking",
-        "h3": "Billing module with automatic receipt generation",
-        "h4": "Authentication system with differentiated roles for doctors and administrative staff",
+        "short": "ProSalud Management Platform",
+        "stack": "Python, Data Analysis, Architecture of Datos",
+        "description": "Development of a system focused on the centralization and management of clinical information, optimizing data queries to improve patient care.",
+        "h1": "Database structuring for clinical records.",
+        "h2": "Query optimization for sensitive information.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "Main Dashboard",
-          "desc": "System overview with quick access to patients, appointments, and billing, designed to minimize the steps required for the most frequent clinic tasks."
-        }
-      },
-      "bookshelf": {
-        "name": "BookShelf",
-        "short": "Personal library management",
-        "description": "Web application for managing a personal library that allows cataloging books, authors, and literary genres. Implements dynamic updates via AJAX without page reload, optimized data access with Dapper on SQL Server, and a filtering and search system by category and author. The interface is fully responsive with custom CSS.",
-        "h1": "Full CRUD with dynamic AJAX updates without page reload",
-        "h2": "Efficient data access with Dapper on SQL Server for optimized queries",
-        "h3": "Real-time filtering and search system by category, author, and title",
-        "h4": "Fully responsive interface built with custom CSS without frameworks",
-        "img1": {
-          "title": "Book Catalog",
-          "desc": "Main catalog view with real-time filtering and search options, displaying covers, authors, and genres for each book registered in the personal library."
+          "title": "ProSalud Management Platform",
+          "desc": "Development of a system focused on the centralization and management of clinical information, optimizing data queries to improve patient care."
         }
       }
     }
