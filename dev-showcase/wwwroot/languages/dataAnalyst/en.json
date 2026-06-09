@@ -39,24 +39,24 @@
     "aboutTitle": "About Me",
     "skillsTitle": "Skills & Technologies",
     "panels": {
-      "webDev": "Web Development",
-      "desktopDev": "Desktop Development",
-      "databases": "Databases",
-      "erp": "ERP",
-      "versionControl": "Version Control",
-      "methodologies": "Methodologies",
-      "webDevIcon": "🌐",
-      "webDevDesc": "ASP.NET, Bootstrap, HTML, CSS, JavaScript",
-      "desktopDevIcon": "🖥️",
-      "desktopDevDesc": "C#, C, C++, Python, Java",
+      "webDev": "Analysis, Business Intelligence & Visualization",
+      "desktopDev": "Data Processing & Cleaning",
+      "databases": "Databases & Relational Modeling",
+      "erp": "Programming Languages",
+      "versionControl": "Enterprise Systems & ERP",
+      "methodologies": "Version Control & Methodologies",
+      "webDevIcon": "📊",
+      "webDevDesc": "Power BI, Advanced Excel, Interactive Dashboards, Multidimensional Analysis",
+      "desktopDevIcon": "⚙️",
+      "desktopDevDesc": "ETL Processes, Pandas, Pipeline Automation, Data Mining",
       "databasesIcon": "🗄️",
-      "databasesDesc": "SQL Server, Derby",
-      "erpIcon": "🏢",
-      "erpDesc": "Oracle",
-      "versionControlIcon": "🔀",
-      "versionControlDesc": "Git, GitHub",
-      "methodologiesIcon": "⚙️",
-      "methodologiesDesc": "Agile, Scrum"
+      "databasesDesc": "SQL Server, PostgreSQL, Oracle SQL",
+      "erpIcon": "💻",
+      "erpDesc": "Python (Data Analysis), SQL, C#",
+      "versionControlIcon": "🏢",
+      "versionControlDesc": "Odoo, Oracle ERP, Financial Data Extraction",
+      "methodologiesIcon": "🛠️",
+      "methodologiesDesc": "Git, GitHub, Scrum, Agile Methodologies"
     },
     "certificationsTitle": "Certifications",
     "certifications": {
@@ -66,15 +66,15 @@
       "powerpoint": "PowerPoint Microsoft Office Specialist — 2019"
     },
     "goalTitle": "Professional Goal",
-    "goalContent": "Evolve toward Data Science roles while continuing to grow as a Full Stack Developer.",
+    "goalContent": "Orchestrate efficient data pipelines and build Business Intelligence environments that transform information into actionable metrics, enabling smart, measurable, and real-time corporate decision-making.",
     "journeyTitle": "My Journey",
-    "journeyContent": "My journey through technology led me to study Information Technology Engineering at UTAN campus industrias in 2022. What I love about development is the creative process of building customized solutions for each project. My experience developing desktop applications strengthened my interest in creating solutions that directly impact the user experience. This path has led me to become interested in data science, where I see the potential to combine development with data analysis to create more complete solutions.",
+    "journeyContent": "I started my career consolidating data flows and analytics in the global manufacturing sector, where I reduced logistics error margins by 98% through database auditing, variable crossing, and dashboards in Excel/Power BI. Currently, I lead business intelligence in the ERP consulting sector, implementing extraction pipelines with SQL and Python to centralize commercial and financial KPIs, while developing statistical analyses aimed at solving problems in sectors like healthcare and research.",
     "locationTitle": "Location",
     "locationSubtitle": "Base of operations and geographic availability",
     "locationAvailable": "Available for opportunities",
     "locationRelocation": "Available for relocation if needed",
     "mapHint": "Click the map to interact",
-    "aboutContent": "Data Analyst with a background in Information Technology Engineering and practical experience in data analysis within industrial environments. Experience analyzing production, warehouse, and supply chain data to identify recurring errors, reworks, and data quality issues. Ability to build dashboards and reports that allow detecting patterns, root causes, and improvement opportunities. Analytical and structured profile, focused on data-driven decision making."
+    "aboutContent": "I am a data analyst specializing in Business Intelligence and information architecture. I transform raw data volumes into strategic decisions. My focus lies in auditing databases, structuring information flows, and building dynamic dashboards that eliminate uncertainty in the corporate environment.\n\nBy incorporating these analytical capabilities, my work provides companies with enhanced operational visibility. By integrating accurate metrics and trend analysis, I facilitate better data clarity for executives and technical teams to make decisions. This not only optimizes resource performance and reduces bottlenecks, but also ensures that every business strategy is backed by quantifiable evidence."
   },
   "skills": {
     "title": "Skills",
@@ -84,42 +84,72 @@
       "stats": "Statistics"
     },
     "panels": {
-      "webDev": "Web Development",
-      "dataScience": "Data Science",
-      "databases": "Databases",
-      "desktopDev": "Desktop Development",
-      "versionControl": "Version Control",
-      "generalProgramming": "General Programming"
+      "webDev": "Analysis, Business Intelligence & Visualization",
+      "webDevIcon": "📊",
+      "webDevDesc": "Power BI, Advanced Excel, Interactive Dashboards, Multidimensional Analysis",
+      "dataScience": "Data Processing & Cleaning",
+      "dataScienceIcon": "⚙️",
+      "dataScienceDesc": "ETL Processes, Pandas, Pipeline Automation, Data Mining",
+      "databases": "Databases & Relational Modeling",
+      "databasesIcon": "🗄️",
+      "databasesDesc": "SQL Server, PostgreSQL, Oracle SQL",
+      "desktopDev": "Programming Languages",
+      "desktopDevIcon": "💻",
+      "desktopDevDesc": "Python (Data Analysis), SQL, C#",
+      "versionControl": "Enterprise Systems & ERP",
+      "versionControlIcon": "🏢",
+      "versionControlDesc": "Odoo, Oracle ERP, Financial Data Extraction",
+      "generalProgramming": "Version Control & Methodologies",
+      "generalProgrammingIcon": "🛠️",
+      "generalProgrammingDesc": "Git, GitHub, Scrum, Agile Methodologies"
     },
     "stats": {
-      "webTitle": "Web Development",
+      "webTitle": "Business Intelligence & Visualization",
       "webSubtitle": "Proficiency by technology",
-      "dataTitle": "Data Science",
+      "dataTitle": "Data Manipulation, Cleaning & Analysis",
       "dataSubtitle": "Proficiency by technology",
-      "dbTitle": "Databases",
-      "dbSubtitle": "Proficiency by technology"
+      "dbTitle": "Databases & Corporate Ecosystems",
+      "dbSubtitle": "Proficiency by technology",
+      "labels": {
+        "webDev": {
+          "htmlcss": "Power BI (Modeling & DAX)",
+          "aspnet": "Advanced Excel (Power Query, Pivot Tables)",
+          "csharp": "Dashboards & Key Performance Indicators (KPIs)"
+        },
+        "dataScience": {
+          "excel": "SQL / Complex Queries",
+          "python": "Python / Pandas",
+          "powerbi": "Data Mining & Extraction (ETL)"
+        },
+        "databases": {
+          "sqlserver": "SQL Server",
+          "oracle": "PostgreSQL",
+          "mysql": "Oracle SQL / Oracle ERP",
+          "derby": "Odoo (Analytical Process Modeling)"
+        }
+      }
     },
     "logosTitle": "Technologies",
     "logosSubtitle": "Tools and languages stack",
     "progressBars": {
       "webDev": {
-        "htmlcss": 90,
-        "aspnet": 85,
-        "csharp": 85,
-        "javascript": 65
+        "htmlcss": 85,
+        "aspnet": 90,
+        "csharp": 90,
+        "javascript": null
       },
       "dataScience": {
         "excel": 90,
-        "python": 75,
-        "powerbi": 75,
-        "pandasnumpy": 70,
-        "matplotlibseaborn": 65
+        "python": 85,
+        "powerbi": 85,
+        "pandasnumpy": null,
+        "matplotlibseaborn": null
       },
       "databases": {
-        "sqlserver": 85,
+        "sqlserver": 90,
         "oracle": 85,
-        "mysql": 80,
-        "derby": 30
+        "mysql": 85,
+        "derby": 80
       },
       "softSkills": {
         "teamwork": 88,

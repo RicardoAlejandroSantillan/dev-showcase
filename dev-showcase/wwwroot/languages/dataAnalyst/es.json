@@ -39,24 +39,24 @@
     "aboutTitle": "Acerca de Mí",
     "skillsTitle": "Habilidades y Tecnologías",
     "panels": {
-      "webDev": "Desarrollo Web",
-      "desktopDev": "Desarrollo de Escritorio",
-      "databases": "Bases de Datos",
-      "erp": "ERP",
-      "versionControl": "Control de Versiones",
-      "methodologies": "Metodologías",
-      "webDevIcon": "🌐",
-      "webDevDesc": "ASP.NET, Bootstrap, HTML, CSS, JavaScript",
-      "desktopDevIcon": "🖥️",
-      "desktopDevDesc": "C#, C, C++, Python, Java",
+      "webDev": "Análisis, Inteligencia de Negocios y Visualización",
+      "desktopDev": "Procesamiento y Limpieza de Datos",
+      "databases": "Bases de Datos y Modelado Relacional",
+      "erp": "Lenguajes de Programación",
+      "versionControl": "Sistemas Empresariales y ERP",
+      "methodologies": "Control de Versiones y Metodologías",
+      "webDevIcon": "📊",
+      "webDevDesc": "Power BI, Excel Avanzado, Dashboards Interactivos, Análisis Multidimensional",
+      "desktopDevIcon": "⚙️",
+      "desktopDevDesc": "Procesos ETL, Pandas, Automatización de Pipelines, Minería de Datos",
       "databasesIcon": "🗄️",
-      "databasesDesc": "SQL Server, Derby",
-      "erpIcon": "🏢",
-      "erpDesc": "Oracle",
-      "versionControlIcon": "🔀",
-      "versionControlDesc": "Git, GitHub",
-      "methodologiesIcon": "⚙️",
-      "methodologiesDesc": "Ágil, Scrum"
+      "databasesDesc": "SQL Server, PostgreSQL, Oracle SQL",
+      "erpIcon": "💻",
+      "erpDesc": "Python (Data Analysis), SQL, C#",
+      "versionControlIcon": "🏢",
+      "versionControlDesc": "Odoo, Oracle ERP, Extracción de Datos Financieros",
+      "methodologiesIcon": "🛠️",
+      "methodologiesDesc": "Git, GitHub, Scrum, Metodologías Ágiles"
     },
     "certificationsTitle": "Certificaciones",
     "certifications": {
@@ -66,15 +66,15 @@
       "powerpoint": "PowerPoint Microsoft Office Specialist — 2019"
     },
     "goalTitle": "Meta Profesional",
-    "goalContent": "Evolucionar hacia roles de Ciencia de Datos mientras continúo creciendo como Desarrollador Full Stack.",
+    "goalContent": "Orquestar canalizaciones de datos eficientes y construir entornos de Inteligencia de Negocios que transformen la información en métricas accionables, habilitando una toma de decisiones corporativa inteligente, medible y en tiempo real.",
     "journeyTitle": "Mi Trayectoria",
-    "journeyContent": "Mi trayectoria a través de la tecnología me llevó a estudiar en 2022 la carrera de Ingeniería en Tecnologías de la Información en UTAN campus industrias. Lo que me apasiona del desarrollo es el proceso creativo de construir soluciones personalizadas para cada proyecto a resolver. Mi experiencia desarrollando aplicaciones de escritorio fortaleció mi interés en crear soluciones que impacten directamente en la experiencia del usuario. Este camino me ha llevado a interesarme en la ciencia de datos, donde veo el potencial de combinar el desarrollo con el análisis de datos para crear soluciones más completas.",
+    "journeyContent": "Inicié mi carrera consolidando flujos de datos y analítica en el sector de manufactura global, donde reduje márgenes de error logístico en un 98% mediante auditoría de bases de datos, cruce de variables y dashboards en Excel/Power BI. Actualmente, dirijo la inteligencia de negocios en el sector de consultoría ERP, implementando pipelines de extracción con SQL y Python para centralizar KPIs comerciales y financieros, a la par que desarrollo análisis estadísticos orientados a resolver problemas en sectores como la salud y la investigación.",
     "locationTitle": "Ubicación",
     "locationSubtitle": "Base de operaciones y disponibilidad geográfica",
     "locationAvailable": "Disponible para oportunidades",
     "locationRelocation": "Disponible para reubicación en caso de ser necesario",
     "mapHint": "Haz clic en el mapa para interactuar",
-    "aboutContent": "Analista de Datos con formación en Ingeniería en Tecnologías de la Información y experiencia práctica en análisis de datos dentro de entornos industriales. Experiencia en el análisis de datos de producción, almacén y cadena de suministro para identificar errores recurrentes, reprocesos y problemas de calidad de datos. Capacidad para construir dashboards y reportes que permiten detectar patrones, causas raíz y oportunidades de mejora. Perfil analítico y estructurado, enfocado en la toma de decisiones basada en datos."
+    "aboutContent": "Soy un analista de datos especializado en Business Intelligence y arquitectura de la información. Transformo volúmenes de datos crudos en decisiones estratégicas. Mi enfoque radica en auditar bases de datos, estructurar flujos de información y construir dashboards dinámicos que eliminan la incertidumbre en el entorno corporativo.\n\nAl incorporar estas capacidades analíticas, mi trabajo dota a las empresas de una visibilidad operativa ampliada. Al integrar métricas exactas y análisis de tendencias, facilito que los directivos y equipos técnicos obtengan una mejor claridad en los datos para tomar decisiones. Esto no solo optimiza el rendimiento de los recursos y reduce cuellos de botella, sino que asegura que cada estrategia comercial esté respaldada por evidencia cuantificable."
   },
   "skills": {
     "title": "Habilidades",
@@ -84,42 +84,72 @@
       "stats": "Estadísticas"
     },
     "panels": {
-      "webDev": "Desarrollo Web",
-      "dataScience": "Ciencia de Datos",
-      "databases": "Bases de Datos",
-      "desktopDev": "Desarrollo de Escritorio",
-      "versionControl": "Control de Versiones",
-      "generalProgramming": "Programación General"
+      "webDev": "Análisis, Inteligencia de Negocios y Visualización",
+      "webDevIcon": "📊",
+      "webDevDesc": "Power BI, Excel Avanzado, Dashboards Interactivos, Análisis Multidimensional",
+      "dataScience": "Procesamiento y Limpieza de Datos",
+      "dataScienceIcon": "⚙️",
+      "dataScienceDesc": "Procesos ETL, Pandas, Automatización de Pipelines, Minería de Datos",
+      "databases": "Bases de Datos y Modelado Relacional",
+      "databasesIcon": "🗄️",
+      "databasesDesc": "SQL Server, PostgreSQL, Oracle SQL",
+      "desktopDev": "Lenguajes de Programación",
+      "desktopDevIcon": "💻",
+      "desktopDevDesc": "Python (Data Analysis), SQL, C#",
+      "versionControl": "Sistemas Empresariales y ERP",
+      "versionControlIcon": "🏢",
+      "versionControlDesc": "Odoo, Oracle ERP, Extracción de Datos Financieros",
+      "generalProgramming": "Control de Versiones y Metodologías",
+      "generalProgrammingIcon": "🛠️",
+      "generalProgrammingDesc": "Git, GitHub, Scrum, Metodologías Ágiles"
     },
     "stats": {
-      "webTitle": "Desarrollo Web",
+      "webTitle": "Inteligencia de Negocios y Visualización",
       "webSubtitle": "Dominio por tecnología",
-      "dataTitle": "Ciencia de Datos",
+      "dataTitle": "Manipulación, Limpieza y Análisis de Datos",
       "dataSubtitle": "Dominio por tecnología",
-      "dbTitle": "Bases de Datos",
-      "dbSubtitle": "Dominio por tecnología"
+      "dbTitle": "Bases de Datos y Ecosistemas Corporativos",
+      "dbSubtitle": "Dominio por tecnología",
+      "labels": {
+        "webDev": {
+          "htmlcss": "Power BI (Modelado y DAX)",
+          "aspnet": "Excel Avanzado (Power Query, Tablas Dinámicas)",
+          "csharp": "Dashboards e Indicadores (KPIs)"
+        },
+        "dataScience": {
+          "excel": "SQL / Consultas Complejas",
+          "python": "Python / Pandas",
+          "powerbi": "Minería y Extracción de Datos (ETL)"
+        },
+        "databases": {
+          "sqlserver": "SQL Server",
+          "oracle": "PostgreSQL",
+          "mysql": "Oracle SQL / Oracle ERP",
+          "derby": "Odoo (Modelado Analítico de Procesos)"
+        }
+      }
     },
     "logosTitle": "Tecnologías",
     "logosSubtitle": "Stack de herramientas y lenguajes",
     "progressBars": {
       "webDev": {
-        "htmlcss": 90,
-        "aspnet": 85,
-        "csharp": 85,
-        "javascript": 65
+        "htmlcss": 85,
+        "aspnet": 90,
+        "csharp": 90,
+        "javascript": null
       },
       "dataScience": {
         "excel": 90,
-        "python": 75,
-        "powerbi": 75,
-        "pandasnumpy": 70,
-        "matplotlibseaborn": 65
+        "python": 85,
+        "powerbi": 85,
+        "pandasnumpy": null,
+        "matplotlibseaborn": null
       },
       "databases": {
-        "sqlserver": 85,
+        "sqlserver": 90,
         "oracle": 85,
-        "mysql": 80,
-        "derby": 30
+        "mysql": 85,
+        "derby": 80
       },
       "softSkills": {
         "teamwork": 88,
