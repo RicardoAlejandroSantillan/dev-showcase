@@ -39,42 +39,42 @@
     "aboutTitle": "About Me",
     "skillsTitle": "Skills & Technologies",
     "panels": {
-      "webDev": "Web Development",
-      "desktopDev": "Desktop Development",
-      "databases": "Databases",
-      "erp": "ERP",
-      "versionControl": "Version Control",
-      "methodologies": "Methodologies",
+      "webDev": "Front-End Development & Interfaces",
+      "desktopDev": "Back-End Architecture & APIs",
+      "databases": "Databases & Modeling",
+      "erp": "Web Ecosystems & ERP",
+      "versionControl": "Version Control & Deployment",
+      "methodologies": "Version Control & Deployment",
       "webDevIcon": "🌐",
-      "webDevDesc": "ASP.NET, Bootstrap, HTML, CSS, JavaScript",
-      "desktopDevIcon": "🖥️",
-      "desktopDevDesc": "C#, C, C++, Python, Java",
+      "webDevDesc": "JavaScript, HTML5, CSS3, Bootstrap, jQuery, Responsive Design",
+      "desktopDevIcon": "⚙️",
+      "desktopDevDesc": "C#, ASP.NET Core 8.0 MVC, Python, REST API Consumption & Development",
       "databasesIcon": "🗄️",
-      "databasesDesc": "SQL Server, Derby",
+      "databasesDesc": "SQL Server, PostgreSQL, MySQL, Oracle SQL",
       "erpIcon": "🏢",
-      "erpDesc": "Oracle",
-      "versionControlIcon": "🔀",
-      "versionControlDesc": "Git, GitHub",
-      "methodologiesIcon": "⚙️",
-      "methodologiesDesc": "Agile, Scrum"
+      "erpDesc": "Web Development in Odoo, E-commerce Architecture, Microsoft Identity",
+      "versionControlIcon": "🛠️",
+      "versionControlDesc": "Git, GitHub, Docker, Production Environments, Agile Methodologies",
+      "methodologiesIcon": "🛠️",
+      "methodologiesDesc": "Git, GitHub, Docker, Production Environments, Agile Methodologies"
     },
     "certificationsTitle": "Certifications",
     "certifications": {
-      "linguaskill": "Linguaskill B1 Certificate — June 2024",
+      "linguaskill": "Linguaskill B1 Certificate — June 2024 (B2 Upper-Intermediate operational level)",
       "excel": "Excel Microsoft Office Specialist — 2019",
       "word": "Word Microsoft Office Specialist — 2019",
       "powerpoint": "PowerPoint Microsoft Office Specialist — 2019"
     },
     "goalTitle": "Professional Goal",
-    "goalContent": "Evolve toward Data Science roles while continuing to grow as a Full Stack Developer.",
+    "goalContent": "Architect and deploy web applications that merge a Back-End with Front-End interfaces, automating corporate workflows and enabling secure, scalable, and user-oriented digital platforms.",
     "journeyTitle": "My Journey",
-    "journeyContent": "My journey through technology led me to study Information Technology Engineering at UTAN campus industrias in 2022. What I love about development is the creative process of building customized solutions for each project. My experience developing desktop applications strengthened my interest in creating solutions that directly impact the user experience. This path has led me to become interested in data science, where I see the potential to combine development with data analysis to create more complete solutions.",
+    "journeyContent": "I started my career developing and optimizing web systems in the manufacturing sector, where I built ASP.NET Core platforms to automate logistical and financial calculations. Currently, I lead web development and software architecture in the ERP consulting sector, programming commercial portals, structuring PostgreSQL databases, and deploying internal applications to guarantee the technical stability of business operations.",
     "locationTitle": "Location",
     "locationSubtitle": "Base of operations and geographic availability",
     "locationAvailable": "Available for opportunities",
     "locationRelocation": "Available for relocation if needed",
     "mapHint": "Click the map to interact",
-    "aboutContent": "Web developer with a background in Information Technology Engineering and experience in developing and maintaining internal web applications. I have worked with C#, .NET, and SQL Server building systems with roles, dashboards, and reports oriented to enterprise environments. Focused on developing functional, structured web solutions aligned with the organization's operational needs."
+    "aboutContent": "I am a Web Developer focused on building software architectures and solutions. I transform business logic into fast and intuitive web applications. My focus is on designing the Back-End for efficient data processing and structuring the Front-End to improve the user experience, making it smooth and friction-free.\n\nMy work provides companies with high-performance platforms. By integrating web solutions and APIs, I make it easier for operational teams to interact with real-time information through accessible interfaces. This not only optimizes server performance and reduces load times, but also ensures that each developed module brings direct value to the business operation."
   },
   "skills": {
     "title": "Skills",
@@ -84,42 +84,73 @@
       "stats": "Statistics"
     },
     "panels": {
-      "webDev": "Web Development",
-      "dataScience": "Data Science",
-      "databases": "Databases",
-      "desktopDev": "Desktop Development",
-      "versionControl": "Version Control",
-      "generalProgramming": "General Programming"
+      "webDev": "Front-End Development & Interfaces",
+      "webDevIcon": "🌐",
+      "webDevDesc": "JavaScript, HTML5, CSS3, Bootstrap, jQuery, Responsive Design",
+      "dataScience": "Back-End Architecture & APIs",
+      "dataScienceIcon": "⚙️",
+      "dataScienceDesc": "C#, ASP.NET Core 8.0 MVC, Python, REST API Consumption & Development",
+      "databases": "Databases & Modeling",
+      "databasesIcon": "🗄️",
+      "databasesDesc": "SQL Server, PostgreSQL, MySQL, Oracle SQL",
+      "desktopDev": "Web Ecosystems & ERP",
+      "desktopDevIcon": "🏢",
+      "desktopDevDesc": "Web Development in Odoo, E-commerce Architecture, Microsoft Identity",
+      "versionControl": "Version Control & Deployment",
+      "versionControlIcon": "🛠️",
+      "versionControlDesc": "Git, GitHub, Docker, Production Environments, Agile Methodologies",
+      "generalProgramming": null
     },
     "stats": {
-      "webTitle": "Web Development",
+      "webTitle": "Back-End Architecture & Business Logic",
       "webSubtitle": "Proficiency by technology",
-      "dataTitle": "Data Science",
+      "dataTitle": "Front-End Development & UI/UX",
       "dataSubtitle": "Proficiency by technology",
-      "dbTitle": "Databases",
-      "dbSubtitle": "Proficiency by technology"
+      "dbTitle": "Databases & Web Ecosystems",
+      "dbSubtitle": "Proficiency by technology",
+      "labels": {
+        "webDev": {
+          "htmlcss": "C# / .NET Core",
+          "aspnet": "Python (Development & Automation)",
+          "csharp": "API Development & Consumption",
+          "javascript": null
+        },
+        "dataScience": {
+          "excel": "HTML5 / CSS3",
+          "python": "JavaScript / jQuery",
+          "powerbi": "Bootstrap & Responsive Design",
+          "pandasnumpy": null,
+          "matplotlibseaborn": null
+        },
+        "databases": {
+          "sqlserver": "SQL Server / PostgreSQL",
+          "oracle": "Odoo (Module Development & E-commerce)",
+          "mysql": "Version Control (Git/GitHub)",
+          "derby": null
+        }
+      }
     },
     "logosTitle": "Technologies",
     "logosSubtitle": "Tools and languages stack",
     "progressBars": {
       "webDev": {
         "htmlcss": 90,
-        "aspnet": 85,
+        "aspnet": 90,
         "csharp": 85,
-        "javascript": 65
+        "javascript": null
       },
       "dataScience": {
         "excel": 90,
-        "python": 75,
-        "powerbi": 75,
-        "pandasnumpy": 70,
-        "matplotlibseaborn": 65
+        "python": 80,
+        "powerbi": 85,
+        "pandasnumpy": null,
+        "matplotlibseaborn": null
       },
       "databases": {
-        "sqlserver": 85,
-        "oracle": 85,
-        "mysql": 80,
-        "derby": 30
+        "sqlserver": 90,
+        "oracle": 80,
+        "mysql": 85,
+        "derby": null
       },
       "softSkills": {
         "teamwork": 88,
@@ -457,136 +488,130 @@
       "blockTitle": "Professional Experience",
       "blockTag": "Work",
       "daikin": {
-        "name": "Daikin Manufacturing México",
-        "role": "IT Trainee — Software Developer (Probecarios)",
+        "name": "Daikin Manufacturing",
+        "role": "Web / Full Stack Developer",
         "period": "Sept 2024 – Mar 2026",
-        "description": "Internship period subcontracted by Probecarios to collaborate within the IT department of Daikin Manufacturing México. During this time I participated in the development and maintenance of internal enterprise applications, Oracle ERP support, and operational data analysis for production, finance, and warehouse areas.",
+        "description": "Development and implementation of corporate web applications and internal platforms oriented to automating financial reports, optimizing logistics traceability, and digitizing business workflows.",
         "resp": {
-          "development": "Development and maintenance of internal web and desktop applications for various operational areas of the plant",
-          "oracle": "Oracle ERP support: user account management, system responsibility assignments, and correction of errors in supplier and site data to maintain information consistency",
-          "sql": "SQL query optimization and stored procedure development in SQL Server and Oracle SQL for critical production systems",
-          "analysis": "Operational data analysis through Excel export and construction of dynamic tables and dashboards to identify patterns, root causes, and improvement opportunities",
-          "ux": "UX/UI improvements in internal systems aimed at reducing operational friction for end users",
-          "agile": "Collaborative work using agile methodologies with Jira for task management and ServiceNow for incident tracking"
+          "development": "Structure and develop complete web applications using the MVC pattern with ASP.NET Core and C#.",
+          "oracle": "Develop robust Back-End logic to consume and process massive data flows from Oracle APIs.",
+          "sql": "Optimize queries and program stored procedures in SQL Server to speed up response times on the server side.",
+          "analysis": "Integrate security and authentication protocols using Microsoft Identity and corporate SSO.",
+          "ux": "Design interactive and responsive user interfaces implementing HTML5, Bootstrap, and jQuery.",
+          "agile": "Provide technical support, fix bugs in production code, and guarantee the stability of deployed web portals."
         },
         "projects": {
-          "budget": "Budget Control — Web application for monitoring variances between actual and budgeted expenses, consolidating AP and GL data from Oracle",
-          "etiquetas": "Labels — Desktop application for label generation and printing in Warehouse with Oracle API integration, reducing process time by over 50%",
-          "masterLabel": "Master Label — Web system for label reprint analysis that reduced errors from ~8,000 to ~100 per month",
-          "overtime": "Overtime Request — Maintenance of the automated overtime cost calculation system with corporate SSO authentication"
+          "budget": "Budget Control Web Platform — Back-End Web Development | Corporate application in ASP.NET Core for cash flow automation.",
+          "etiquetas": "Labels — Desktop application for Warehouse label generation and printing with Oracle API integration, reducing process times by over 50%.",
+          "masterLabel": "MasterLabels Analytical System — Full Stack Web Development | Analytical web platform that identified the root cause of operational failures, reducing errors by 90%.",
+          "overtime": "Overtime Request Portal — Web Development and SSO | Maintenance and optimization of human resources and finance web system."
         },
         "img5": {
-          "title": "Budget Control",
-          "desc": "Web tool developed for the finance area to mitigate operational risks by monitoring variances between actual and budgeted expenses. It automates the processing of accounts payable (AP) and general ledger journal entries (GL) from Oracle, consolidating account catalogs, departments, and locations. Generates Excel files with structured calculations to facilitate cash flow analysis. Built with ASP.NET Core 8.0 MVC, C#, SQL Server, Microsoft Identity, and EPPlus for Excel file handling."
+          "title": "Budget Control Web Platform",
+          "desc": "I develop from scratch a corporate web application for the finance area with the goal of mitigating operational risks through expense monitoring. I structure the Back-End architecture in ASP.NET Core 8.0 using C# to automate the extraction and cross-referencing of data from the Oracle system, backing up the information in SQL Server databases. I connect this logic with a smooth user interface and integrate Microsoft Identity to manage secure access control, allowing the finance department to generate calculated reports instantly through the browser."
         },
         "img3": {
           "title": "Labels",
-          "desc": "Desktop application developed for the Warehouse area to improve supplier traceability for each product. It queries Oracle via API using the order number to retrieve the Supplier Part Number and Daikin Part Number, then sends the data to the printer to generate a label including a barcode for easy scanning. Label generation was implemented using iText NuGet 5.5.13.5. The system includes a JSON configuration file that allows users to adjust the label size without requiring code changes. Reduced process time by over 50%."
+          "desc": "Desktop application developed for the Warehouse area to improve supplier traceability associated with each product. It allows querying, based on the order number, the Supplier Part Number and the Daikin Part Number, connecting to an API that executes the query in Oracle. The data is sent directly to the printer to generate the label, which includes a barcode for easy scanning. Label generation was done with NuGet iText 5.5.13.5. The system incorporates a JSON configuration file that allows users to adjust the label size without requiring code changes. Reduced process times by over 50%."
         },
         "img4": {
-          "title": "Master Label",
-          "desc": "Web system developed to investigate a critical issue: in December 2024, approximately 8,000 Master Labels were printed without information, generating a high level of rework. The application stored detailed data for each label including production line, description, Job, Item, Serial, LPN, OrdLine, OrdNumber, Sub Inventory, Address, and process status. The collected data was exported to Excel where dynamic tables and dashboards identified that most reprints originated in two specific production lines. Analysis revealed the issue was scanning speed preventing the system from assigning the LPN before printing. The solution was a 1.5-second delay implemented by the Oracle team, reducing reprints from ~8,000 to ~100 per month."
+          "title": "MasterLabels Analytical System",
+          "desc": "I develop an analytical web platform (using ASP.NET and MySQL) focused on diagnosing and resolving technical desynchronization in printing logistics labels. I program the system to perform the ingestion of large volumes of granular data, building an interactive Front-End interface that renders dashboards and dynamic tables for user evaluation. This software solution isolated failure patterns in real-time, allowing the implementation of a latency adjustment on the server that plummeted the incidence rate from 8,000 to less than 100 monthly."
         },
         "img2": {
-          "title": "Overtime Request",
-          "desc": "Maintenance of the system used by the finance area to calculate costs generated by snacks and transportation for production staff during overtime. The application manages supervisor records by plant, transport routes and stops, automatically calculating costs associated with these services. Built with C#, ASP.NET, and Bootstrap, it integrates SSO authentication with Daikin corporate accounts to ensure secure and controlled access."
-        }
+          "title": "Overtime Request Portal",
+          "desc": "I manage and optimize an internal web application in C# and ASP.NET designed to calculate the costs generated by overtime logistics services. I program the Front-End with Bootstrap to ensure responsive navigation for supervisors by plant and structure the server-side logic to automate exact financial calculations. I reinforce the portal architecture by integrating SSO authentication protocols, ensuring that system access from any device is aligned with corporate cybersecurity policies."
+        },
+        "stack": "ASP.NET Core 8.0 MVC, C#, SQL Server, Oracle SQL, JavaScript, Bootstrap, jQuery, Microsoft Identity"
       },
       "saji": {
         "name": "Grupo SAJI",
-        "role": "Odoo Consultant / Odoo Developer",
+        "role": "Web Developer / Software Architect",
         "period": "April 2026 – Present",
-        "description": "I develop, customize, and integrate the Odoo ERP ecosystem using Python and PostgreSQL on the backend, connecting with modern frontend technologies. I design relational models, develop robust APIs, optimize the Odoo engine using Python, and build dynamic views using XML, JavaScript, HTML5, and CSS3.",
+        "description": "Leadership in the development and deployment of the company's digital ecosystem. I program custom modules, design the commercial web architecture, and build internal portals for the centralization of operations.",
         "resp": {
-          "database": "PostgreSQL database optimization and SQL queries with Python's ORM.",
-          "deployment": "Custom module development by inheriting and extending Odoo classes in Python.",
-          "integration": "Full-stack implementation of CRM and marketing automation flows.",
-          "config": "Development of backend business logic for Field Service and Projects.",
-          "supplyChain": "Python programming for replenishment rules and inventory valuation.",
-          "finance": "Development of API integrations for electronic invoicing and tax signing.",
-          "hr": "Development of dynamic calculation engines for payroll and attendance.",
-          "dashboards": "Creation of custom widgets and JSON/API controllers for interactive dashboards.",
-          "apis": "Development of RESTful APIs in Python and consumption of external services.",
-          "web": "Full-stack templating of the commercial webpage using Odoo's QWeb Framework."
+          "database": "Design relational schemas and structure databases in PostgreSQL for system deployment.",
+          "deployment": "Develop custom Back-End modules in Python to adapt the ERP to business logic.",
+          "integration": "Deploy web integrations of billing gateways, CRM, and customer service modules (Helpdesk).",
+          "config": "Build customized internal applications for the management and maintenance of cloud servers.",
+          "supplyChain": null,
+          "finance": null,
+          "hr": null,
+          "dashboards": "Optimize load times (Performance) and improve user experience (UI/UX) of the corporate site.",
+          "apis": "Develop and consume RESTful APIs to connect internal operational modules bidirectionally.",
+          "web": "Design and program the commercial website and the E-commerce environment using the Odoo ecosystem (HTML/CSS/JS)."
         },
         "img1": {
-          "title": "Internal Server Management and Administration Application",
-          "desc": "Design, architecture, and programming of a customized internal platform (built from Odoo using Python and PostgreSQL) for the centralized administration of Odoo ERP instances."
+          "title": "Corporate E-commerce Web Development",
+          "desc": "I architect, design, and program the commercial website and the E-commerce platform of the company leveraging Odoo's web infrastructure. I build dynamic and intuitive interfaces using HTML5, CSS3, and JavaScript, guaranteeing a 100% responsive design oriented towards user conversion. I optimize the Front-End architecture to ensure minimal load times and connect web navigation directly with internal CRM and Sales modules in the Back-End, unifying the customer experience with the company's operations."
         },
         "img2": {
-          "title": "Internal Server Management and Administration Application",
-          "desc": "Design, architecture, and programming of a customized internal platform (built from Odoo using Python and PostgreSQL) for the centralized administration of Odoo ERP instances."
-        }
+          "title": "Server Administration Web Platform",
+          "desc": "I design, structure, and program a fully customized internal web platform (developed with Python and PostgreSQL databases) exclusive for the centralized administration of ERP cloud instances. Through this application, I enable advanced capabilities to monitor server performance in real-time, edit critical security configurations through a clean interface, and execute technical maintenance routines, drastically reducing operational downtime."
+        },
+        "stack": "Python, JavaScript, HTML5, CSS3, PostgreSQL, Odoo Web, APIs REST"
       }
     },
     "personal": {
       "blockTitle": "Personal Projects & Datathons",
       "blockTag": "Personal",
       "devportfolio": {
-        "name": "DevPortfolio",
-        "short": "Professional portfolio",
-        "description": "Professional web portfolio built on ASP.NET MVC with a simulated SPA architecture: all sections are rendered on the first server request and JS navigation hides and shows content without additional AJAX calls. Features dark mode design, animated header particles, multilingual typewriter effect, ES/EN translation system with dynamic JSON loading, RIASEC vocational charts with Chart.js, infinite carousel with touch support, and a downloadable CV that adapts to both language and active profile.",
-        "h1": "Dark mode design with animated particles in the header",
-        "h2": "ES/EN i18n system with dynamic JSON loading and data-translate contract",
-        "h3": "RIASEC vocational dashboard with 9 Chart.js instances",
-        "h4": "Infinite carousel by card cloning with drag and touch support",
-        "h5": "Dynamic downloadable CV: language and profile determine the file served",
+        "name": "DevPortfolio (Web Architecture)",
+        "short": "DevPortfolio Web Platform",
+        "description": "Interactive web portfolio optimized for presenting software architectures and database models with a highly scalable design.",
+        "h1": "Information architecture oriented to user experience (UI/UX).",
+        "h2": "Front-End programming with dynamic rendering for carousel visualization.",
+        "h3": null,
+        "h4": null,
+        "h5": null,
         "img1": {
-          "title": "Introduction Section",
-          "desc": "Main view with character-by-character typewriter animation, 20 floating particles generated in the header, SPA navigation sidebar, and language selector. The role title updates automatically based on the active profile route."
-        }
+          "title": "DevPortfolio (Web Architecture)",
+          "desc": "I build and implement an interactive and highly scalable web platform designed specifically for exposing corporate software. I structure the interface under robust UI/UX principles, applying dynamic rendering in the Front-End code to fluidly feed carousels and information cards. I ensure a responsive, agile, and visually appealing browsing experience, demonstrating my technical ability to build modern interfaces that run perfectly on any browser and device."
+        },
+        "stack": "Front-End, UI/UX, Dynamic Rendering, HTML/CSS/JS"
       },
       "wids2025": {
-        "name": "WiDS Datathon 2025",
-        "short": "ADHD detection in women",
-        "description": "Development of a predictive model for early identification of Attention Deficit Hyperactivity Disorder (ADHD/ADD) in adolescent women, with the goal of addressing the historical diagnostic bias affecting this group. The project used neuroimaging data from the WiDS 2025 datathon, applying a deep data cleaning process, feature engineering, and multiclass classification model training using XGBoost.",
-        "h1": "Multiclass classification model with XGBoost for ADHD/ADD detection",
-        "h2": "Feature engineering on neuroimaging data to improve class separability",
-        "h3": "Variable importance analysis to identify the most relevant diagnostic factors",
-        "h4": "Complete pipeline for cleaning, normalization, and preprocessing of neurological data",
+        "name": "WiDS Datathons (Predictive Models)",
+        "short": "Python Development in Health Analytics (ADHD and Breast Cancer)",
+        "description": "Development of Python scripts and implementation of complex algorithms to structure large volumes of medical data into executable technological solutions.",
+        "h1": "Advanced Python programming for preprocessing and cleaning structured data.",
+        "h2": "Implementation and optimization of classification algorithms (XGBoost).",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "XGBoost Model",
-          "desc": "Model results including classification metrics and feature importance visualization, showing which neurological variables carry the most weight in predicting ADHD/ADD diagnosis in adolescent women."
-        }
+          "title": "WiDS Datathons (Predictive Models)",
+          "desc": "I program and implement complex scripts in Python aimed at the massive processing of data to resolve clinical challenges (ADHD and Breast Cancer). I execute the software architecture necessary to clean, transform, and structure fragmented medical databases, feeding the computational logic of predictive algorithms (such as XGBoost). I guarantee the robustness of the code by evaluating server performance and ensuring that mathematical model outputs integrate perfectly as reliable technological solutions for the healthcare environment."
+        },
+        "stack": "Python, Computational Logic, Algorithms, Data Structures"
       },
-      "wids2022": {
-        "name": "WiDS Datathon 2022",
-        "short": "Breast cancer detection",
-        "description": "Participation in the WiDS 2022 datathon to improve accuracy in early breast cancer detection. The project aimed to predict whether a patient would receive a definitive diagnosis within 90 days, using Machine Learning techniques on real sociodemographic and clinical data. Data normalization, missing value handling, and model evaluation with performance metrics suited for sensitive health contexts were performed.",
-        "h1": "Exploratory analysis of clinical and sociodemographic variables from the dataset",
-        "h2": "Data normalization and strategies for handling missing values",
-        "h3": "Training and comparison of binary classification models",
-        "h4": "Model evaluation with AUC-ROC metrics to ensure reliability in a medical context",
-        "img1": {
-          "title": "Exploratory Analysis",
-          "desc": "Visualization of distributions, correlations, and behavior of clinical dataset variables to identify features with the highest predictive power for whether a patient would receive a definitive diagnosis within 90 days."
-        }
-      },
+      "wids2022": null,
       "prosalud": {
-        "name": "ProSalud",
-        "short": "Medical management system",
-        "description": "Medical management system for clinics that automates administrative and clinical processes. It centralizes patient management, appointments, clinical records, and billing in a single platform. Includes an ICD-10 diagnosis catalog with integrated search, receipt generation module, and an authentication system with differentiated roles for doctors and administrative staff.",
-        "h1": "ICD-10 catalog with real-time search to speed up diagnosis registration",
-        "h2": "Complete clinical history management per patient with treatment tracking",
-        "h3": "Billing module with automatic receipt generation",
-        "h4": "Authentication system with differentiated roles for doctors and administrative staff",
+        "name": "Plataforma ProSalud",
+        "short": "ProSalud Web Management Platform",
+        "description": "Development of an application focused on the centralization and efficient management of clinical information, optimizing data queries through server-side logic.",
+        "h1": "Back-End architecture to structure clinical records.",
+        "h2": "Optimization of server queries for sensitive medical information.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "Main Dashboard",
-          "desc": "System overview with quick access to patients, appointments, and billing, designed to minimize the steps required for the most frequent clinic tasks."
-        }
+          "title": "ProSalud Management Platform",
+          "desc": "I design and structure an application focused on the efficient web management of clinical information. I architect the Back-End in Python and model robust relational databases for the secure storage of medical histories. I optimize the computational logic of server requests, ensuring that the extraction of sensitive data to the graphical interface is agile and has the highest standards of traceability, drastically improving digital operations in care centers."
+        },
+        "stack": "Python, Databases, Back-End Architecture"
       },
       "bookshelf": {
-        "name": "BookShelf",
-        "short": "Personal library management",
-        "description": "Web application for managing a personal library that allows cataloging books, authors, and literary genres. Implements dynamic updates via AJAX without page reload, optimized data access with Dapper on SQL Server, and a filtering and search system by category and author. The interface is fully responsive with custom CSS.",
-        "h1": "Full CRUD with dynamic AJAX updates without page reload",
-        "h2": "Efficient data access with Dapper on SQL Server for optimized queries",
-        "h3": "Real-time filtering and search system by category, author, and title",
-        "h4": "Fully responsive interface built with custom CSS without frameworks",
+        "name": "Sistema Web BookShelf",
+        "short": "BookShelf Web Application",
+        "description": "Web system for catalog collection categorization and filtering, applying database modeling to structure dynamic catalogs.",
+        "h1": "Server-side logic and connection to relational databases.",
+        "h2": "Development of advanced filtering algorithms and real-time rendering.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "Book Catalog",
-          "desc": "Main catalog view with real-time filtering and search options, displaying covers, authors, and genres for each book registered in the personal library."
-        }
+          "title": "BookShelf Analytical System",
+          "desc": "I develop the relational schema and underlying server logic for a web application for managing bibliographic catalogs. I structure the Back-End to process, normalize, and send fragmented information to the client's view. I implement solid dynamic filtering logic that optimizes the platform's internal search engines, allowing users to browse, query, and render records in fully responsive grids (Data Grids) with minimal latency times."
+        },
+        "stack": "Relational Modeling, SQL, Back-End Logic"
       }
     }
   },

@@ -487,136 +487,133 @@
       "blockTitle": "Professional Experience",
       "blockTag": "Work",
       "daikin": {
-        "name": "Daikin Manufacturing México",
-        "role": "IT Trainee — Software Developer (Probecarios)",
+        "name": "Daikin Manufacturing",
+        "role": "Data Solutions Analyst",
         "period": "Sept 2024 – Mar 2026",
-        "description": "Internship period subcontracted by Probecarios to collaborate within the IT department of Daikin Manufacturing México. During this time I participated in the development and maintenance of internal enterprise applications, Oracle ERP support, and operational data analysis for production, finance, and warehouse areas.",
+        "description": "Development of data processing solutions oriented to unify financial reports, identify manufacturing bottlenecks, and clean databases to ensure their analytical integrity.",
         "resp": {
-          "development": "Development and maintenance of internal web and desktop applications for various operational areas of the plant",
-          "oracle": "Oracle ERP support: user account management, system responsibility assignments, and correction of errors in supplier and site data to maintain information consistency",
-          "sql": "SQL query optimization and stored procedure development in SQL Server and Oracle SQL for critical production systems",
-          "analysis": "Operational data analysis through Excel export and construction of dynamic tables and dashboards to identify patterns, root causes, and improvement opportunities",
-          "ux": "UX/UI improvements in internal systems aimed at reducing operational friction for end users",
-          "agile": "Collaborative work using agile methodologies with Jira for task management and ServiceNow for incident tracking"
+          "development": "Process and consolidate massive data flows from Oracle invoices and journal entries for financial analysis.",
+          "oracle": "Extract operational records from production lines, modeling dashboards to identify anomalies.",
+          "sql": "Clean and audit charts of accounts to maintain information consistency.",
+          "analysis": "Optimize SQL queries and develop stored procedures in SQL Server and Oracle SQL to speed up data extraction.",
+          "ux": "Analyze operational data by exporting and building tables and dynamic dashboards to identify patterns and root causes.",
+          "agile": "Guarantee data integrity by correcting inconsistencies in supplier and location records."
         },
         "projects": {
-          "budget": "Budget Control — Web application for monitoring variances between actual and budgeted expenses, consolidating AP and GL data from Oracle",
-          "etiquetas": "Labels — Desktop application for label generation and printing in Warehouse with Oracle API integration, reducing process time by over 50%",
-          "masterLabel": "Master Label — Web system for label reprint analysis that reduced errors from ~8,000 to ~100 per month",
-          "overtime": "Overtime Request — Maintenance of the automated overtime cost calculation system with corporate SSO authentication"
+          "budget": "Budget Control — Financial Analysis & Automation | Oracle data extraction for advanced cash flow analysis.",
+          "etiquetas": "Labels — Desktop application for Warehouse with Oracle API integration, reducing process time by over 50%",
+          "masterLabel": "MasterLabels Analysis — Data Mining & Operational Diagnosis | Analysis of production records that identified the root cause of failures, reducing errors by 90%.",
+          "overtime": "Overtime Request — Optimization & Operational Cost Calculation | Analysis of logistics variables for internal auditing."
         },
         "img5": {
           "title": "Budget Control",
-          "desc": "Web tool developed for the finance area to mitigate operational risks by monitoring variances between actual and budgeted expenses. It automates the processing of accounts payable (AP) and general ledger journal entries (GL) from Oracle, consolidating account catalogs, departments, and locations. Generates Excel files with structured calculations to facilitate cash flow analysis. Built with ASP.NET Core 8.0 MVC, C#, SQL Server, Microsoft Identity, and EPPlus for Excel file handling."
+          "desc": "I develop an analytical solution for data extraction and processing for the finance department to mitigate operational risks by monitoring variances between actual and budgeted expenses. I automate the flow of information from accounts payable invoices and general journal entries from the Oracle system, consolidating and normalizing dispersed catalogs through relational databases in SQL Server. I transform these operational data into datasets and calculate them automatically, generating clean reports that facilitate advanced cash flow analysis and empower decision making."
         },
         "img3": {
           "title": "Labels",
           "desc": "Desktop application developed for the Warehouse area to improve supplier traceability for each product. It queries Oracle via API using the order number to retrieve the Supplier Part Number and Daikin Part Number, then sends the data to the printer to generate a label including a barcode for easy scanning. Label generation was implemented using iText NuGet 5.5.13.5. The system includes a JSON configuration file that allows users to adjust the label size without requiring code changes. Reduced process time by over 50%."
         },
         "img4": {
-          "title": "Master Label",
-          "desc": "Web system developed to investigate a critical issue: in December 2024, approximately 8,000 Master Labels were printed without information, generating a high level of rework. The application stored detailed data for each label including production line, description, Job, Item, Serial, LPN, OrdLine, OrdNumber, Sub Inventory, Address, and process status. The collected data was exported to Excel where dynamic tables and dashboards identified that most reprints originated in two specific production lines. Analysis revealed the issue was scanning speed preventing the system from assigning the LPN before printing. The solution was a 1.5-second delay implemented by the Oracle team, reducing reprints from ~8,000 to ~100 per month."
+          "title": "MasterLabels Analysis",
+          "desc": "I develop an analytical platform focused on diagnosing and resolving a critical quality issue that caused the printing of 8,000 blank labels per month. I structure the ingestion of large volumes of data by capturing granular variables from each label, exporting and transforming this information into dashboards and pivot tables for evaluation. Through this multidimensional analysis, I isolate patterns, identify failure trends in specific lines, and discover the technical root cause through data. This precise diagnosis supports a structural adjustment in the Oracle environment, reducing the logistics failure rate to less than 100 occurrences monthly."
         },
         "img2": {
           "title": "Overtime Request",
-          "desc": "Maintenance of the system used by the finance area to calculate costs generated by snacks and transportation for production staff during overtime. The application manages supervisor records by plant, transport routes and stops, automatically calculating costs associated with these services. Built with C#, ASP.NET, and Bootstrap, it integrates SSO authentication with Daikin corporate accounts to ensure secure and controlled access."
-        }
+          "desc": "I manage and optimize a data processing platform oriented to the finance area, designed to calculate the costs generated by logistics services during overtime. I process and cross-reference multiple structured variables—such as personnel records, transport routes, and times—to automate precise financial calculations. This structuring of information facilitates expense control, improves budget visibility, and speeds up data-backed internal audit processes."
+        },
+        "stack": "SQL Server, Oracle SQL, Power BI, Advanced Excel, Python, C#, ASP.NET Core"
       },
       "saji": {
         "name": "Grupo SAJI",
-        "role": "Odoo Consultant / Odoo Developer",
+        "role": "Data Analyst / BI Specialist",
         "period": "April 2026 – Present",
-        "description": "I lead data-driven solutions within the Odoo ERP ecosystem. I design relational database models in PostgreSQL and build analytical workflows that extract critical operational data from business processes. I create complex dashboards that unify commercial, inventory, and financial KPIs, translating raw data into structured operational intelligence.",
+        "description": "Management of the corporate analytical ecosystem. I extract, transform, and visualize information from the ERP to centralize business intelligence and guide decision-making with exact metrics.",
         "resp": {
-          "database": "Design and optimization of relational schemas in PostgreSQL for data analysis.",
-          "deployment": "Modeling and analyzing business flows in Odoo for metrics extraction.",
-          "integration": "Integration of commercial data flows (CRM, Sales) for conversion rate analysis.",
-          "config": "Configuration of metrics and KPIs in operational modules like Field Service.",
-          "supplyChain": "Analysis of inventory turnover and purchasing efficiency in the supply chain.",
-          "finance": "Analytical modeling of invoicing transactions and corporate accounting data.",
-          "hr": "Predictive analysis of attendance, time off, and payroll operational costs.",
-          "dashboards": "Creation of interactive executive dashboards and real-time KPI tracking.",
-          "apis": "Development of complex queries and data extraction via PostgreSQL APIs.",
-          "web": "Analytical optimization and conversion funnels for the Odoo-based website."
+          "database": "Design relational schemas and extraction pipelines in PostgreSQL.",
+          "deployment": "Develop complex SQL queries to cross-reference information from multiple modules.",
+          "integration": "Optimize conversion funnels and analyze sales performance (CRM).",
+          "config": "Configure operational efficiency metrics for service areas.",
+          "supplyChain": null,
+          "finance": "Analyze transactions of accounting, billing, and supply chain turnover.",
+          "hr": "Perform predictive and descriptive analysis on payroll operating costs.",
+          "dashboards": "Build interactive KPI dashboards in real time for executive management.",
+          "apis": null,
+          "web": "Transform raw databases into understandable visual strategies."
         },
         "img1": {
-          "title": "Internal Server Management and Administration Application",
-          "desc": "Design, architecture, and programming of a customized internal platform (built from Odoo using Python and PostgreSQL) for the centralized administration of Odoo ERP instances."
+          "title": "Data Architecture and ERP Ecosystem",
+          "desc": "I analyze and architect the core relational model in PostgreSQL for the deployment of the ERP ecosystem. I translate the business rules and operational processes of the company into a normalized database structure, guaranteeing information integrity and optimizing performance for the ingestion, connection, and report extraction from large volumes of data among different departments."
         },
         "img2": {
-          "title": "Internal Server Management and Administration Application",
-          "desc": "Design, architecture, and programming of a customized internal platform (built from Odoo using Python and PostgreSQL) for the centralized administration of Odoo ERP instances."
-        }
+          "title": "Data Performance Monitor",
+          "desc": "I develop an analytical tool aimed at continuously auditing and monitoring database integrity and overall technological ecosystem health. I extract and process performance metrics to proactively identify bottlenecks in information ingestion, ensuring that commercial and financial data flows are always available, clean, and ready for analysis."
+        },
+        "img3": {
+          "title": "SAJI Analytical Dashboards",
+          "desc": "I build and implement comprehensive Business Intelligence solutions through the development of multidimensional analytical dashboards. I extract and transform raw operational data into real-time interactive visualizations, allowing detailed tracking of critical KPIs in key areas such as Sales, Inventory, and Finance, which helps management evaluate employee performance, track goals, and make corporate decisions based entirely on data."
+        },
+        "stack": "PostgreSQL, SQL, Odoo ERP, Python, Power BI, APIs, Excel"
       }
     },
     "personal": {
       "blockTitle": "Personal Projects & Datathons",
       "blockTag": "Personal",
-      "devportfolio": {
-        "name": "DevPortfolio",
-        "short": "Professional portfolio",
-        "description": "Professional web portfolio built on ASP.NET MVC with a simulated SPA architecture: all sections are rendered on the first server request and JS navigation hides and shows content without additional AJAX calls. Features dark mode design, animated header particles, multilingual typewriter effect, ES/EN translation system with dynamic JSON loading, RIASEC vocational charts with Chart.js, infinite carousel with touch support, and a downloadable CV that adapts to both language and active profile.",
-        "h1": "Dark mode design with animated particles in the header",
-        "h2": "ES/EN i18n system with dynamic JSON loading and data-translate contract",
-        "h3": "RIASEC vocational dashboard with 9 Chart.js instances",
-        "h4": "Infinite carousel by card cloning with drag and touch support",
-        "h5": "Dynamic downloadable CV: language and profile determine the file served",
-        "img1": {
-          "title": "Introduction Section",
-          "desc": "Main view with character-by-character typewriter animation, 20 floating particles generated in the header, SPA navigation sidebar, and language selector. The role title updates automatically based on the active profile route."
-        }
-      },
+      "devportfolio": null,
       "wids2025": {
         "name": "WiDS Datathon 2025",
-        "short": "ADHD detection in women",
-        "description": "Development of a predictive model for early identification of Attention Deficit Hyperactivity Disorder (ADHD/ADD) in adolescent women, with the goal of addressing the historical diagnostic bias affecting this group. The project used neuroimaging data from the WiDS 2025 datathon, applying a deep data cleaning process, feature engineering, and multiclass classification model training using XGBoost.",
-        "h1": "Multiclass classification model with XGBoost for ADHD/ADD detection",
-        "h2": "Feature engineering on neuroimaging data to improve class separability",
-        "h3": "Variable importance analysis to identify the most relevant diagnostic factors",
-        "h4": "Complete pipeline for cleaning, normalization, and preprocessing of neurological data",
+        "short": "ADHD Predictive Analysis in Adolescent Females",
+        "description": "Deep data cleaning, exploratory analysis, and medical data modeling focused on identifying clinical patterns for ADHD detection, mitigating diagnostic bias.",
+        "h1": "Deep data cleaning and preprocessing of complex medical datasets.",
+        "h2": "Variable importance analysis (Feature Engineering) to identify relevant neurological factors.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "XGBoost Model",
-          "desc": "Model results including classification metrics and feature importance visualization, showing which neurological variables carry the most weight in predicting ADHD/ADD diagnosis in adolescent women."
-        }
+          "title": "WiDS Datathon 2025: ADHD Predictive Analysis",
+          "desc": "I design and execute a comprehensive pipeline of cleaning, normalization, and exploratory analysis on complex medical and neuroimaging datasets. I identify statistical correlations and isolate key neurological variables using feature engineering techniques, feeding a predictive model (XGBoost) designed to timely detect ADHD in adolescent females. I guarantee the validity of the results by evaluating exact analytical metrics and confusion matrices, ensuring that the findings extracted from the data are fully interpretable and actionable for public health environments."
+        },
+        "stack": "Python, Pandas, Statistical Analysis, Data Cleaning"
       },
       "wids2022": {
         "name": "WiDS Datathon 2022",
-        "short": "Breast cancer detection",
-        "description": "Participation in the WiDS 2022 datathon to improve accuracy in early breast cancer detection. The project aimed to predict whether a patient would receive a definitive diagnosis within 90 days, using Machine Learning techniques on real sociodemographic and clinical data. Data normalization, missing value handling, and model evaluation with performance metrics suited for sensitive health contexts were performed.",
-        "h1": "Exploratory analysis of clinical and sociodemographic variables from the dataset",
-        "h2": "Data normalization and strategies for handling missing values",
-        "h3": "Training and comparison of binary classification models",
-        "h4": "Model evaluation with AUC-ROC metrics to ensure reliability in a medical context",
+        "short": "Breast Cancer Statistical Analysis",
+        "description": "Statistical analysis of medical and sociodemographic datasets to forecast clinical diagnosis times.",
+        "h1": "Extraction and normalization of fragmented clinical records.",
+        "h2": "Demographic data crossing and analytical validation using AUC-ROC metrics.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "Exploratory Analysis",
-          "desc": "Visualization of distributions, correlations, and behavior of clinical dataset variables to identify features with the highest predictive power for whether a patient would receive a definitive diagnosis within 90 days."
-        }
+          "title": "WiDS Datathon 2022: Data-Driven Oncological Analysis",
+          "desc": "I execute detailed statistical analyses in Python focused on early breast cancer detection. I process and audit large medical and sociodemographic datasets using advanced normalization, cleaning, and variable crossing techniques. The analytical goal is to forecast definitive diagnoses in periods of less than 90 days, rigorously validating the statistical reliability of the extracted data using AUC-ROC performance curves to bring mathematical precision to oncological decisions."
+        },
+        "stack": "Python, Data Normalization, Pandas, Demographic Analysis"
       },
       "prosalud": {
-        "name": "ProSalud",
-        "short": "Medical management system",
-        "description": "Medical management system for clinics that automates administrative and clinical processes. It centralizes patient management, appointments, clinical records, and billing in a single platform. Includes an ICD-10 diagnosis catalog with integrated search, receipt generation module, and an authentication system with differentiated roles for doctors and administrative staff.",
-        "h1": "ICD-10 catalog with real-time search to speed up diagnosis registration",
-        "h2": "Complete clinical history management per patient with treatment tracking",
-        "h3": "Billing module with automatic receipt generation",
-        "h4": "Authentication system with differentiated roles for doctors and administrative staff",
+        "name": "ProSalud Platform",
+        "short": "ProSalud Analytical Centralization",
+        "description": "Structuring and centralization of clinical databases to optimize patient information query and analysis.",
+        "h1": "Relational database modeling for clinical histories.",
+        "h2": "SQL query optimization for sensitive information extraction.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "Main Dashboard",
-          "desc": "System overview with quick access to patients, appointments, and billing, designed to minimize the steps required for the most frequent clinic tasks."
-        }
+          "title": "ProSalud Management Platform",
+          "desc": "I design and structure a data architecture oriented to the centralization and efficient analytical management of clinical information. I normalize robust relational databases for storing medical histories and optimize the logic of SQL queries, ensuring agile report extraction. I equip the system with analytical capabilities that drastically improve record traceability, helping users cross-reference data to elevate operational efficiency in care processes."
+        },
+        "stack": "SQL, Data Architecture, Data Analysis"
       },
       "bookshelf": {
-        "name": "BookShelf",
-        "short": "Personal library management",
-        "description": "Web application for managing a personal library that allows cataloging books, authors, and literary genres. Implements dynamic updates via AJAX without page reload, optimized data access with Dapper on SQL Server, and a filtering and search system by category and author. The interface is fully responsive with custom CSS.",
-        "h1": "Full CRUD with dynamic AJAX updates without page reload",
-        "h2": "Efficient data access with Dapper on SQL Server for optimized queries",
-        "h3": "Real-time filtering and search system by category, author, and title",
-        "h4": "Fully responsive interface built with custom CSS without frameworks",
+        "name": "BookShelf System",
+        "short": "BookShelf Analysis and Classification",
+        "description": "Analytical system for categorizing and filtering collections applying data modeling to structure large volumes of information.",
+        "h1": "Relational schema modeling and catalog cleaning.",
+        "h2": "Development of dynamic filter logic and real-time data crossing.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "Book Catalog",
-          "desc": "Main catalog view with real-time filtering and search options, displaying covers, authors, and genres for each book registered in the personal library."
-        }
+          "title": "BookShelf Analytical System",
+          "desc": "I structure and develop the underlying relational model for an analytical catalog management system. I apply cleaning and data architecture principles to classify and normalize fragmented information. I implement dynamic filter logic and query algorithms that optimize search engines, allowing the extraction, crossing, and categorization of records in interactive real-time data grids with minimal latency."
+        },
+        "stack": "Relational Modeling, Data Mining, SQL"
       }
     }
   },
