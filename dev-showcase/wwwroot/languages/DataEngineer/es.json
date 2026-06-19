@@ -39,42 +39,42 @@
     "aboutTitle": "Acerca de Mí",
     "skillsTitle": "Habilidades y Tecnologías",
     "panels": {
-      "webDev": "Desarrollo Web",
-      "desktopDev": "Desarrollo de Escritorio",
-      "databases": "Bases de Datos",
-      "erp": "ERP",
-      "versionControl": "Control de Versiones",
-      "methodologies": "Metodologías",
-      "webDevIcon": "🌐",
-      "webDevDesc": "ASP.NET, Bootstrap, HTML, CSS, JavaScript",
-      "desktopDevIcon": "🖥️",
-      "desktopDevDesc": "C#, C, C++, Python, Java",
-      "databasesIcon": "🗄️",
-      "databasesDesc": "SQL Server, Derby",
+      "webDev": "Arquitectura de Datos y Procesos ETL",
+      "desktopDev": "Bases de Datos y Modelado Relacional",
+      "databases": "Lenguajes de Programación y APIs",
+      "erp": "Ecosistemas Corporativos y Extracción",
+      "versionControl": "Infraestructura, Control de Versiones y Despliegue",
+      "methodologies": "Infraestructura, Control de Versiones y Despliegue",
+      "webDevIcon": "⚙️",
+      "webDevDesc": "Pipelines de Datos, Extracción, Transformación y Carga ETL, Limpieza de Datos",
+      "desktopDevIcon": "🗄️",
+      "desktopDevDesc": "SQL Server, PostgreSQL, Oracle SQL, Normalización de Datos",
+      "databasesIcon": "💻",
+      "databasesDesc": "Python (Data Pipelines), SQL Avanzado, C#, Desarrollo y Consumo de APIs REST",
       "erpIcon": "🏢",
-      "erpDesc": "Oracle",
-      "versionControlIcon": "🔀",
-      "versionControlDesc": "Git, GitHub",
-      "methodologiesIcon": "⚙️",
-      "methodologiesDesc": "Ágil, Scrum"
+      "erpDesc": "Odoo ERP, Oracle ERP, Automatización de Flujos Financieros y Logísticos",
+      "versionControlIcon": "🛠️",
+      "versionControlDesc": "Docker, Git, GitHub, Metodologías Ágiles, Mantenimiento de Servidores",
+      "methodologiesIcon": "🛠️",
+      "methodologiesDesc": "Docker, Git, GitHub, Metodologías Ágiles, Mantenimiento de Servidores"
     },
     "certificationsTitle": "Certificaciones",
     "certifications": {
-      "linguaskill": "Certificado Linguaskill B1 — Junio 2024",
+      "linguaskill": "Certificado Linguaskill B1 — Junio 2024 (Nivel operativo B2 Upper-Intermediate)",
       "excel": "Excel Microsoft Office Specialist — 2019",
       "word": "Word Microsoft Office Specialist — 2019",
       "powerpoint": "PowerPoint Microsoft Office Specialist — 2019"
     },
     "goalTitle": "Meta Profesional",
-    "goalContent": "Evolucionar hacia roles de Ciencia de Datos mientras continúo creciendo como Desarrollador Full Stack.",
+    "goalContent": "Diseñar y orquestar infraestructuras de datos escalables y automatizadas que garanticen el flujo ininterrumpido y la integridad de la información corporativa, habilitando entornos analíticos de alto rendimiento.",
     "journeyTitle": "Mi Trayectoria",
-    "journeyContent": "Mi trayectoria a través de la tecnología me llevó a estudiar en 2022 la carrera de Ingeniería en Tecnologías de la Información en UTAN campus industrias. Lo que me apasiona del desarrollo es el proceso creativo de construir soluciones personalizadas para cada proyecto a resolver. Mi experiencia desarrollando aplicaciones de escritorio fortaleció mi interés en crear soluciones que impacten directamente en la experiencia del usuario. Este camino me ha llevado a interesarme en la ciencia de datos, donde veo el potencial de combinar el desarrollo con el análisis de datos para crear soluciones más completas.",
+    "journeyContent": "Inicié mi carrera construyendo flujos de extracción de datos en el sector de manufactura global, automatizando la alimentación de información desde Oracle hacia SQL Server. Actualmente, lidero la arquitectura de datos en el sector de consultoría ERP, diseñando esquemas en PostgreSQL y desarrollando pipelines en Python para centralizar operaciones comerciales, asegurando la estabilidad técnica y el rendimiento de los servidores en la nube.",
     "locationTitle": "Ubicación",
     "locationSubtitle": "Base de operaciones y disponibilidad geográfica",
     "locationAvailable": "Disponible para oportunidades",
     "locationRelocation": "Disponible para reubicación en caso de ser necesario",
     "mapHint": "Haz clic en el mapa para interactuar",
-    "aboutContent": "Profesional en Tecnologías de la Información con experiencia en análisis de datos operativos y desarrollo de soluciones para la gestión y procesamiento de información empresarial. He trabajado con bases de datos, automatización de procesos y análisis de datos para áreas de producción, almacén y cadena de suministro. Mi enfoque está en la construcción de pipelines de datos, limpieza y transformación de información, y generación de datasets confiables para análisis y toma de decisiones. Experiencia trabajando con SQL, Python y herramientas de análisis para estructurar información proveniente de sistemas ERP y procesos operativos."
+    "aboutContent": "Soy un Ingeniero de Datos enfocado en el diseño, construcción y optimización de infraestructuras de datos escalables. Hago de los ecosistemas de información, pipelines fluidos y centralizados. Mi enfoque radica en la creación y organización de procesos ETL, la arquitectura de bases de datos relacionales y la automatización de la extracción de datos.\n\nMi trabajo garantiza la disponibilidad, integridad y calidad del dato. Al integrar APIs y modelar esquemas relacionales eficientes, facilito que los flujos de información se procesen en tiempo real y sin cuellos de botella. Esto no solo optimiza el rendimiento de los servidores de bases de datos, sino que asegura que los equipos de Business Intelligence y Ciencia de Datos cuenten con cimientos sólidos para fundamentar la toma de decisiones."
   },
   "skills": {
     "title": "Habilidades",
@@ -84,42 +84,73 @@
       "stats": "Estadísticas"
     },
     "panels": {
-      "webDev": "Desarrollo Web",
-      "dataScience": "Ciencia de Datos",
-      "databases": "Bases de Datos",
-      "desktopDev": "Desarrollo de Escritorio",
-      "versionControl": "Control de Versiones",
-      "generalProgramming": "Programación General"
+      "webDev": "Arquitectura de Datos y Procesos ETL",
+      "webDevIcon": "⚙️",
+      "webDevDesc": "Pipelines de Datos, Extracción, Transformación y Carga (ETL / ELT), Limpieza de Datos",
+      "dataScience": "Bases de Datos y Modelado Relacional",
+      "dataScienceIcon": "🗄️",
+      "dataScienceDesc": "SQL Server, PostgreSQL, Oracle SQL, Normalización de Datos",
+      "databases": "Lenguajes de Programación y APIs",
+      "databasesIcon": "💻",
+      "databasesDesc": "Python (Data Pipelines), SQL Avanzado, C#, Desarrollo y Consumo de APIs REST",
+      "desktopDev": "Ecosistemas Corporativos y Extracción",
+      "desktopDevIcon": "🏢",
+      "desktopDevDesc": "Odoo ERP, Oracle ERP, Automatización de Flujos Financieros y Logísticos",
+      "versionControl": "Infraestructura, Control de Versiones y Despliegue",
+      "versionControlIcon": "🛠️",
+      "versionControlDesc": "Docker, Git, GitHub, Metodologías Ágiles, Mantenimiento de Servidores",
+      "generalProgramming": null
     },
     "stats": {
-      "webTitle": "Desarrollo Web",
+      "webTitle": "Bases de Datos y Modelado Relacional",
       "webSubtitle": "Dominio por tecnología",
-      "dataTitle": "Ciencia de Datos",
+      "dataTitle": "Ingeniería de Datos y Automatización (ETL)",
       "dataSubtitle": "Dominio por tecnología",
-      "dbTitle": "Bases de Datos",
-      "dbSubtitle": "Dominio por tecnología"
+      "dbTitle": "Infraestructura y Ecosistemas Web",
+      "dbSubtitle": "Dominio por tecnología",
+      "labels": {
+        "webDev": {
+          "htmlcss": "SQL / Consultas Complejas y Optimización",
+          "aspnet": "SQL Server / PostgreSQL",
+          "csharp": "Oracle SQL",
+          "javascript": "Modelado y Arquitectura de Datos"
+        },
+        "dataScience": {
+          "excel": "Python (Data Pipelines y Automatización)",
+          "python": "Procesos ETL y Limpieza de Datos (Pandas)",
+          "powerbi": "C# / .NET Core (Ingesta de Datos)",
+          "pandasnumpy": null,
+          "matplotlibseaborn": null
+        },
+        "databases": {
+          "sqlserver": "Desarrollo y Consumo de APIs",
+          "oracle": "Odoo (Arquitectura Backend y Datos)",
+          "mysql": "Control de Versiones (Git/GitHub)",
+          "derby": null
+        }
+      }
     },
     "logosTitle": "Tecnologías",
     "logosSubtitle": "Stack de herramientas y lenguajes",
     "progressBars": {
       "webDev": {
         "htmlcss": 90,
-        "aspnet": 85,
+        "aspnet": 90,
         "csharp": 85,
-        "javascript": 65
+        "javascript": 90
       },
       "dataScience": {
         "excel": 90,
-        "python": 75,
-        "powerbi": 75,
-        "pandasnumpy": 70,
-        "matplotlibseaborn": 65
+        "python": 85,
+        "powerbi": 85,
+        "pandasnumpy": null,
+        "matplotlibseaborn": null
       },
       "databases": {
         "sqlserver": 85,
-        "oracle": 85,
-        "mysql": 80,
-        "derby": 30
+        "oracle": 80,
+        "mysql": 85,
+        "derby": null
       },
       "softSkills": {
         "teamwork": 88,
@@ -457,136 +488,133 @@
       "blockTitle": "Experiencia Profesional",
       "blockTag": "Laboral",
       "daikin": {
-        "name": "Daikin Manufacturing México",
-        "role": "IT Trainee — Desarrollador de Software (Probecarios)",
+        "name": "Daikin Manufacturing",
+        "role": "Data Engineer / Data Solutions Analyst",
         "period": "Sept 2024 – Mar 2026",
-        "description": "Periodo de prácticas subcontratado por Probecarios para colaborar dentro del área de sistemas de Daikin Manufacturing México. Durante este tiempo participé en el desarrollo y mantenimiento de aplicaciones empresariales internas, soporte del ERP Oracle y análisis de datos operativos para áreas de producción, finanzas y almacén.",
+        "description": "Desarrollo de arquitecturas de procesamiento y canalización de información para unificar silos de datos financieros, optimizando bases de datos operativas para asegurar su integridad y disponibilidad.",
         "resp": {
-          "development": "Desarrollo y mantenimiento de aplicaciones web y de escritorio internas para distintas áreas operativas de la planta",
-          "oracle": "Soporte al ERP Oracle: gestión de cuentas de usuario, asignación de responsabilidades del sistema y corrección de errores en datos de proveedores y sites para mantener la consistencia de la información",
-          "sql": "Optimización de consultas SQL y desarrollo de procedimientos almacenados en SQL Server y Oracle SQL para sistemas críticos de producción",
-          "analysis": "Análisis de datos operativos mediante exportación a Excel y construcción de tablas y dashboards dinámicos para identificar patrones, causas raíz y oportunidades de mejora",
-          "ux": "Mejoras de UX/UI en sistemas internos orientadas a reducir fricción operativa para el usuario final",
-          "agile": "Trabajo colaborativo con metodologías ágiles utilizando Jira para gestión de tareas y ServiceNow para registro de incidencias"
+          "development": "Estructuro y ejecuto procesos ETL masivos para extraer información financiera desde facturas y pólizas de Oracle.",
+          "oracle": "Desarrollo procedimientos almacenados complejos y optimizo consultas en SQL Server y Oracle SQL para minimizar tiempos de respuesta.",
+          "sql": "Desarrollo lógica en C# para transformar flujos de datos operativos en formatos estructurados.",
+          "analysis": "Audito e implemento procesos de limpieza profunda sobre bases de datos para mantener la consistencia de la información logística.",
+          "ux": "Garantizo la integridad técnica de los registros maestros, corrigiendo inconsistencias desde la raíz del sistema.",
+          "agile": null
         },
         "projects": {
-          "budget": "Budget Control — Aplicación web para el monitoreo de variaciones entre gastos reales y presupuestados, consolidando datos de AP y GL de Oracle",
+          "budget": "Pipeline de Datos Budget Control — Arquitectura ETL y Automatización | Construcción de pipeline para la extracción de datos desde Oracle.",
           "etiquetas": "Etiquetas — Aplicación de escritorio para generación e impresión de etiquetas en Warehouse con integración a Oracle vía API, reduciendo tiempos de proceso en más del 50%",
-          "masterLabel": "Master Label — Sistema web para el análisis de reimpresiones de etiquetas que permitió reducir errores de ~8,000 a ~100 por mes",
-          "overtime": "Overtime Request — Mantenimiento del sistema de cálculo automatizado de costos de tiempo extra con autenticación SSO corporativa"
+          "masterLabel": "Arquitectura de Datos MasterLabels — Optimización de Bases de Datos | Estructuración de ingesta masiva de registros para reducir fallos operativos en un 90%.",
+          "overtime": "Sistema de Procesamiento Overtime Request — Ingesta y Cruce de Datos | Desarrollo de lógica Back-End para el cálculo de costos operativos."
         },
         "img5": {
-          "title": "Budget Control",
-          "desc": "Herramienta web desarrollada para el área de finanzas con el objetivo de mitigar riesgos operativos mediante el monitoreo de variaciones entre gastos reales y presupuestados. Automatiza el procesamiento de información proveniente de facturas por pagar (AP) y diarios generales de pólizas (GL) de Oracle, consolidando catálogos de cuentas, departamentos y ubicaciones. Genera archivos Excel con cálculos e información estructurada para facilitar el análisis de flujo de efectivo. Desarrollado con ASP.NET Core 8.0 MVC, C#, SQL Server, Microsoft Identity y EPPlus para el manejo de archivos Excel."
+          "title": "Pipeline de Datos Budget Control",
+          "desc": "Desarrollo la infraestructura de ingesta de datos para el área de finanzas con el objetivo de automatizar el monitoreo de presupuestos. Estructuro un proceso ETL robusto en C# que extrae información masiva proveniente de facturas por pagar y diarios generales de pólizas del sistema Oracle. Normalizo catálogos dispersos modelando esquemas relacionales en SQL Server. Transformo estos datos crudos en datasets calculados y limpios de forma automática."
         },
         "img3": {
           "title": "Etiquetas",
           "desc": "Aplicación de escritorio desarrollada para el área de Warehouse con el propósito de mejorar la trazabilidad de proveedores asociados a cada producto. Permite consultar, a partir del número de orden, el Supplier Part Number y el Daikin Part Number conectándose a una API que ejecuta la consulta en Oracle. Los datos se envían directamente a la impresora para generar la etiqueta, la cual incluye un código de barras para facilitar el escaneo. La generación de etiquetas se realizó con el NuGet iText 5.5.13.5. El sistema incorpora un archivo de configuración JSON que permite a los usuarios ajustar el tamaño de la etiqueta sin requerir cambios en el código. Redujo los tiempos de proceso en más del 50%."
         },
         "img4": {
-          "title": "Master Label",
-          "desc": "Sistema web desarrollado para investigar un problema crítico: en diciembre de 2024 se imprimieron alrededor de 8,000 Master Labels sin información, generando un alto nivel de retrabajo. La aplicación almacenaba datos detallados de cada etiqueta: línea de producción, descripción, Job, Item, Serial, LPN, OrdLine, OrdNumber, Sub Inventory, Address y estatus del proceso. La información recopilada fue exportada a Excel, donde se construyeron tablas y dashboards dinámicos que identificaron que la mayoría de reimpresiones se originaban en dos líneas específicas. El análisis reveló que el problema era la velocidad de escaneo, que no permitía asignar el LPN antes de imprimir. La solución fue un delay de 1.5 segundos implementado por el equipo de Oracle, reduciendo las reimpresiones de ~8,000 a ~100 por mes."
+          "title": "Arquitectura de Datos MasterLabels",
+          "desc": "Construyo la arquitectura de base de datos y la canalización de información (utilizando ASP.NET y MySQL) para diagnosticar un problema crítico en la impresión de etiquetas logísticas. Estructuro la ingesta de grandes volúmenes de datos mediante la captura eficiente de variables granulares (LPN, líneas, tiempos). Optimizo las consultas para soportar la carga masiva y exportar esta información hacia la capa analítica. Este procesamiento robusto de datos permitió descubrir la causa raíz técnica y fundamentar un ajuste de latencia en Oracle que desplomó la tasa de incidencias mensuales."
         },
         "img2": {
-          "title": "Overtime Request",
-          "desc": "Mantenimiento del sistema utilizado por el área de finanzas para calcular los costos generados por snacks y transporte del personal de producción durante horas extra. La aplicación gestiona registros de supervisores por planta, rutas de transporte y paradas, calculando de forma automatizada los costos asociados a estos servicios. Desarrollado con C#, ASP.NET y Bootstrap, integra autenticación SSO con las cuentas corporativas de Daikin para garantizar acceso seguro y controlado."
-        }
+          "title": "Sistema de Procesamiento Overtime Request",
+          "desc": "Arquitecto la estructura de datos y el flujo de procesamiento de una plataforma interna diseñada para calcular costos logísticos. Diseño el modelo relacional para almacenar y cruzar múltiples variables (registros de personal, rutas, tiempos) mediante consultas SQL optimizadas. Implemento esta lógica en C# garantizando que los cálculos financieros se procesen con rapidez y exactitud desde el lado del servidor, asegurando la integridad de los datos para los procesos de auditoría interna corporativa."
+        },
+        "stack": "SQL Server, Oracle SQL, Python, C#, ASP.NET Core, APIs, Procesos ETL"
       },
       "saji": {
         "name": "Grupo SAJI",
-        "role": "Consultor Odoo / Desarrollador Odoo",
+        "role": "Data Engineer / Especialista en Base de Datos",
         "period": "Abril 2026 – Actualidad",
-        "description": "Diseño, implemento y administro la arquitectura de datos del ecosistema Odoo ERP. Arquitecto bases de datos robustas en PostgreSQL, estructuro pipelines de datos (ETL) para conectar múltiples módulos de la empresa (Ventas, Inventario, Finanzas) y garantizo la integridad, consistencia y optimización de consultas de alto volumen para la toma de decisiones basada en datos.",
+        "description": "Dirección de la infraestructura de datos corporativa. Modelo esquemas relacionales, construyo APIs de extracción y orquesto pipelines en PostgreSQL para unificar el ecosistema ERP y alimentar la inteligencia de negocios.",
         "resp": {
-          "database": "Diseño arquitectónico y modelado físico de bases de datos PostgreSQL optimizadas.",
-          "deployment": "Diseño de flujos de integración de datos (ETL) entre módulos ERP y almacenes de datos.",
-          "integration": "Pipeline de datos comerciales (CRM y Ventas) asegurando sincronización.",
-          "config": "Estructuración de registros operativos en proyectos y mesas de ayuda.",
-          "supplyChain": "Sincronización de catálogos y automatización de datos de compras e inventario.",
-          "finance": "Consolidación de transacciones financieras y contables en pipelines de datos.",
-          "hr": "Ingesta y procesamiento batch de datos de asistencias y nóminas.",
-          "dashboards": "Modelado de almacenes de datos optimizados para alimentar dashboards analíticos.",
-          "apis": "Diseño y consumo de APIs de backend eficientes conectadas a PostgreSQL.",
-          "web": "Estructuración de logs y base de datos relacional para el sitio web comercial."
+          "database": "Analizo y arquitecto el modelo relacional core en PostgreSQL para el despliegue del ecosistema ERP.",
+          "deployment": "Desarrollo consultas SQL complejas para la extracción y cruce masivo de información entre módulos.",
+          "integration": "Construyo y consumo APIs RESTful para orquestar el flujo de datos bidireccional entre sistemas internos.",
+          "config": "Ejecuto procesos de transformación y limpieza de bases de datos crudas para habilitar reportes directivos.",
+          "supplyChain": "Modelo la arquitectura de datos para transacciones de facturación, contabilidad e inventarios.",
+          "finance": "Desarrollo rutinas automatizadas en Python para el mantenimiento y supervisión de las bases de datos.",
+          "hr": "Configuro el almacenamiento de información y métricas para módulos operativos de servicio de campo.",
+          "dashboards": null,
+          "apis": null,
+          "web": null
         },
         "img1": {
-          "title": "Aplicación Interna de Gestión y Administración de Servidores",
-          "desc": "Diseño, arquitectura y programación de una plataforma interna customizada (desde Odoo usando Python y PostgreSQL) para la administración central de las instancias del ERP de Odoo."
+          "title": "Arquitectura de Datos y Ecosistema ERP",
+          "desc": "Analizo, diseño y arquitecto el modelo relacional central en PostgreSQL para el despliegue del ecosistema corporativo ERP. Traslado flujos de trabajo complejos y reglas de negocio hacia una estructura de base de datos rígidamente normalizada. Garantizo la integridad referencial de la información y optimizo los índices para asegurar un rendimiento superior durante la ingesta masiva, conexión y extracción de datos cruzados entre los distintos departamentos operativos de la empresa."
         },
         "img2": {
-          "title": "Aplicación Interna de Gestión y Administración de Servidores",
-          "desc": "Diseño, arquitectura y programación de una plataforma interna customizada (desde Odoo usando Python y PostgreSQL) para la administración central de las instancias del ERP de Odoo."
-        }
+          "title": "Canalización de Datos para Dashboards SAJI",
+          "desc": "Orquesto la infraestructura de datos subyacente para alimentar el entorno de Inteligencia de Negocios de la empresa. Desarrollo pipelines de extracción en PostgreSQL y Python que consultan bases de datos operativas crudas, transforman la información y la sirven en tiempo real hacia las capas de visualización. Esta ingeniería de datos asegura que la dirección corporativa consulte KPIs comerciales, logísticos y financieros con latencia mínima y cero inconsistencias."
+        },
+        "img3": {
+          "title": "Monitor de Rendimiento de Datos",
+          "desc": "Desarrollo e implemento scripts de automatización orientados a auditar continuamente la integridad de las bases de datos y la salud de los servidores. Extraigo métricas técnicas de rendimiento mediante código en Python para identificar cuellos de botella en la infraestructura de datos de forma proactiva. Automatizo tareas de mantenimiento para prevenir tiempos de inactividad, asegurando que los canales de información empresarial operen sin interrupciones."
+        },
+        "stack": "PostgreSQL, Python, Consultas SQL Avanzadas, APIs REST, Odoo ERP"
       }
     },
     "personal": {
       "blockTitle": "Proyectos Personales & Datathones",
       "blockTag": "Personal",
-      "devportfolio": {
-        "name": "DevPortfolio",
-        "short": "Portafolio profesional",
-        "description": "Portafolio web profesional construido sobre ASP.NET MVC con arquitectura SPA simulada: todas las secciones se renderizan en el primer request del servidor y la navegación JS oculta y muestra contenido sin llamadas AJAX adicionales. Cuenta con diseño dark mode, partículas animadas en el header, efecto typewriter multilingüe, sistema de traducción ES/EN con carga dinámica de JSON, gráficas vocacionales RIASEC con Chart.js, carrusel infinito con soporte táctil y CV descargable por idioma.",
-        "h1": "Diseño dark mode con partículas animadas en el header",
-        "h2": "Sistema i18n ES/EN con carga dinámica de JSON y data-translate",
-        "h3": "Dashboard vocacional RIASEC con 9 gráficas Chart.js",
-        "h4": "Carrusel infinito por clonado de tarjetas con soporte drag y touch",
-        "h5": "CV descargable dinámico: idioma y perfil determinan el archivo",
-        "img1": {
-          "title": "Sección Introducción",
-          "desc": "Vista principal con efecto typewriter animado caracter a caracter, 20 partículas flotantes generadas en el header, sidebar de navegación SPA y selector de idioma. El título del rol cambia automáticamente según la ruta del perfil activo."
-        }
-      },
+      "devportfolio": null,
       "wids2025": {
-        "name": "WiDS Datathon 2025",
-        "short": "Detección de TDAH en mujeres",
-        "description": "Desarrollo de un modelo predictivo para la identificación temprana de Trastorno por Déficit de Atención e Hiperactividad (TDAH/TDA) en mujeres adolescentes, con el objetivo de abordar el sesgo de diagnóstico histórico que afecta a este grupo. El proyecto utilizó datos de neuroimagen provenientes del datathon WiDS 2025, aplicando un proceso profundo de limpieza, ingeniería de características y entrenamiento de modelos de clasificación multiclase con XGBoost.",
-        "h1": "Modelo de clasificación multiclase con XGBoost para detección de TDAH/TDA",
-        "h2": "Feature engineering sobre datos de neuroimagen para mejorar la separabilidad de clases",
-        "h3": "Análisis de importancia de variables para identificar los factores más relevantes del diagnóstico",
-        "h4": "Pipeline completo de limpieza, normalización y preprocesamiento de datos neurológicos",
+        "name": "WiDS Datathon 2025: Pipeline Predictivo TDAH",
+        "short": "Canalización y Preprocesamiento de Datos de Salud (TDAH)",
+        "description": "Desarrollo de pipelines de limpieza profunda y normalización sobre conjuntos de datos médicos complejos para alimentar algoritmos de clasificación.",
+        "h1": "Arquitectura de canalizaciones (Pipelines) para limpieza y preprocesamiento de datos masivos.",
+        "h2": "Aplicación de Feature Engineering sobre registros médicos crudos.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "Modelo XGBoost",
-          "desc": "Resultados del modelo incluyendo métricas de clasificación y visualización de importancia de features, evidenciando qué variables neurológicas tienen mayor peso en la predicción del diagnóstico de TDAH/TDA en mujeres adolescentes."
-        }
+          "title": "WiDS Datathon 2025: Pipeline Predictivo TDAH",
+          "desc": "Diseño y construyo un pipeline de datos robusto e integral en Python orientado al preprocesamiento de volúmenes complejos de información médica. Aplico procesos de limpieza, imputación de valores nulos y normalización estricta sobre bases de datos de neuroimagen. Mediante técnicas avanzadas de Feature Engineering, transformo los datos crudos en tensores estructurados y altamente separables, garantizando que el entorno de datos sea óptimo para la ingesta y entrenamiento del modelo de Machine Learning (XGBoost) con métricas de exactitud clínica."
+        },
+        "stack": "Python, Pandas, Procesos ETL, Normalización de Datos"
       },
       "wids2022": {
-        "name": "WiDS Datathon 2022",
-        "short": "Detección de cáncer de mama",
-        "description": "Participación en el datathon WiDS 2022 con el objetivo de mejorar la precisión en la detección temprana de cáncer de mama. El proyecto buscaba predecir si una paciente recibiría un diagnóstico definitivo en un periodo menor a 90 días, utilizando técnicas de Machine Learning sobre datos sociodemográficos y clínicos reales. Se realizó normalización de datos, manejo de valores faltantes y evaluación de modelos con métricas de rendimiento orientadas a contextos de salud sensibles.",
-        "h1": "Análisis exploratorio de variables clínicas y sociodemográficas del dataset",
-        "h2": "Normalización de datos y estrategias para el manejo de valores faltantes",
-        "h3": "Entrenamiento y comparación de modelos de clasificación binaria",
-        "h4": "Evaluación de modelos con métricas AUC-ROC para garantizar fiabilidad en contexto médico",
+        "name": "WiDS Datathon 2022: Datos Oncológicos Data-Driven",
+        "short": "Normalización y Cruce de Datos Oncológicos",
+        "description": "Procesamiento, auditoría y fusión de bases de datos médicas y sociodemográficas para habilitar pronósticos clínicos.",
+        "h1": "Procesos de normalización avanzada sobre registros fragmentados.",
+        "h2": "Fusión de conjuntos de datos heterogéneos para análisis demográfico.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "Análisis Exploratorio",
-          "desc": "Visualización de distribuciones, correlaciones y comportamiento de variables clínicas del dataset para identificar las características con mayor capacidad predictiva sobre si una paciente recibiría diagnóstico definitivo en menos de 90 días."
-        }
+          "title": "WiDS Datathon 2022: Datos Oncológicos Data-Driven",
+          "desc": "Desarrollo los procesos de extracción y transformación necesarios para analizar conjuntos masivos de datos oncológicos. Audito y cruzo bases de datos médicas heterogéneas con registros sociodemográficos, ejecutando técnicas avanzadas de normalización en Python para homologar los formatos. Este esfuerzo de ingeniería de datos garantizó la integridad de los conjuntos de entrenamiento, permitiendo que las capas analíticas posteriores lograran evaluar con éxito la probabilidad de diagnósticos definitivos en periodos menores a 90 días."
+        },
+        "stack": "Python, Normalización, Extracción de Datos, Bases de Datos Relacionales"
       },
       "prosalud": {
-        "name": "ProSalud",
-        "short": "Sistema de gestión médica",
-        "description": "Sistema de gestión médica para consultorios que automatiza procesos administrativos y clínicos. Centraliza el manejo de pacientes, citas, historiales clínicos y facturación en una sola plataforma. Incluye catálogo de diagnósticos CIE-10 con búsqueda integrada, módulo de generación de recibos y sistema de autenticación con roles diferenciados para médicos y personal administrativo.",
-        "h1": "Catálogo CIE-10 con búsqueda en tiempo real para agilizar el registro de diagnósticos",
-        "h2": "Gestión de historial clínico completo por paciente con seguimiento de tratamientos",
-        "h3": "Módulo de facturación con generación automática de recibos",
-        "h4": "Sistema de autenticación con roles diferenciados para médicos y personal administrativo",
+        "name": "Plataforma de Gestión ProSalud",
+        "short": "Arquitectura de Datos Clínicos ProSalud",
+        "description": "Estructuración del modelo relacional para centralizar expedientes médicos y optimizar la extracción de información.",
+        "h1": "Modelado de bases de datos relacionales para historiales clínicos.",
+        "h2": "Optimización de índices y consultas SQL para información de alta concurrencia.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "Dashboard Principal",
-          "desc": "Vista general del sistema con accesos directos a pacientes, citas y facturación, diseñada para minimizar los pasos necesarios en las tareas más frecuentes del consultorio."
-        }
+          "title": "Plataforma de Gestión ProSalud",
+          "desc": "Arquitecto desde cero el modelo relacional de bases de datos enfocado en la centralización y seguridad de la información clínica. Estructuro las tablas maestras para el resguardo de expedientes médicos bajo estrictos estándares de integridad de datos. Optimizo los índices y el motor de consultas SQL para reducir la complejidad computacional, garantizando que los servidores respondan de manera veloz y eficiente a las peticiones del panel analítico del sistema, elevando la eficiencia operativa del personal de salud."
+        },
+        "stack": "PostgreSQL, SQL, Arquitectura de Datos"
       },
       "bookshelf": {
-        "name": "BookShelf",
-        "short": "Gestión de biblioteca personal",
-        "description": "Aplicación web para la gestión de una biblioteca personal que permite catalogar libros, autores y géneros literarios. Implementa actualizaciones dinámicas mediante AJAX sin recarga de página, acceso a datos optimizado con Dapper sobre SQL Server y un sistema de búsqueda y filtrado por categoría y autor. La interfaz es completamente responsiva con CSS personalizado.",
-        "h1": "CRUD completo con actualizaciones dinámicas AJAX sin recarga de página",
-        "h2": "Acceso a datos eficiente con Dapper sobre SQL Server para consultas optimizadas",
-        "h3": "Sistema de filtrado y búsqueda por categoría, autor y título en tiempo real",
-        "h4": "Interfaz completamente responsiva construida con CSS personalizado sin frameworks",
+        "name": "Sistema Analítico BookShelf",
+        "short": "Modelado Relacional BookShelf",
+        "description": "Diseño de base de datos para la categorización masiva de colecciones, aplicando esquemas relacionales para optimizar la carga de información.",
+        "h1": "Diseño de esquemas relacionales altamente normalizados.",
+        "h2": "Lógica de base de datos para algoritmos de filtrado concurrentes.",
+        "h3": null,
+        "h4": null,
         "img1": {
-          "title": "Catálogo de Libros",
-          "desc": "Vista principal del catálogo con opciones de filtrado y búsqueda en tiempo real, mostrando portadas, autores y géneros de cada libro registrado en la biblioteca personal."
-        }
+          "title": "Sistema Analítico BookShelf",
+          "desc": "Estructuro el modelo de base de datos subyacente para un sistema de gestión de catálogos masivos. Aplico principios avanzados de arquitectura de la información para clasificar, limpiar y normalizar registros bibliográficos altamente fragmentados. Implemento procedimientos de consulta a nivel servidor (SQL) que procesan la lógica de filtrado dinámico de datos, optimizando la capacidad del motor de base de datos para extraer, cruzar y retornar información hacia las cuadrículas interactivas del usuario con latencia mínima."
+        },
+        "stack": "Modelado Relacional, SQL, Procesamiento de Datos"
       }
     }
   },
