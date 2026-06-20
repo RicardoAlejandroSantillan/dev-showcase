@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (target) {
             target.classList.add('active');
             target.scrollTop = 0;
+            
+            // Desplazar suavemente la ventana hacia arriba al cambiar de sección
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
 
         navButtons.forEach(btn => {
