@@ -9,6 +9,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const prepContent = document.getElementById('preparation-content');
     const certContent = document.getElementById('certificates-content');
 
+    function smoothScrollToTop(duration = 500) {
+        const startPosition = window.scrollY || window.pageYOffset;
+        if (startPosition === 0) return;
+
+        const originalScrollBehavior = document.documentElement.style.scrollBehavior;
+        document.documentElement.style.scrollBehavior = 'auto';
+
+        const startTime = performance.now();
+
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function animateScroll(currentTime) {
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            const ease = easeInOutCubic(progress);
+
+            window.scrollTo(0, startPosition * (1 - ease));
+
+            if (progress < 1) {
+                requestAnimationFrame(animateScroll);
+            } else {
+                document.documentElement.style.scrollBehavior = originalScrollBehavior;
+            }
+        }
+
+        requestAnimationFrame(animateScroll);
+    }
+
     function switchSection(targetId) {
         contentSections.forEach(section => section.classList.remove('active'));
 
@@ -17,11 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
             target.classList.add('active');
             target.scrollTop = 0;
             
-            // Desplazar suavemente la ventana hacia arriba al cambiar de sección
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            // Desplazar suavemente la ventana hacia arriba en exactamente 0.5s (500ms)
+            smoothScrollToTop(500);
         }
 
         navButtons.forEach(btn => {
